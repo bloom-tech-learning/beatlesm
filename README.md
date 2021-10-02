@@ -3,7 +3,7 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...  **[Reference](https://github.com/beatlesm/beatlesm/blob/main/web2.md)**
+- 🔭 I’m currently working on ...  
 
 - 🌱 I’m currently learning ... **[Web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 
@@ -14,3 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
+[Reference](https://github.com/beatlesm/beatlesm/blob/main/web2.md)
+
+-   [beatlesm](https://github.com/beatlesm/beatlesm)
+-   [web](https://github.com/beatlesm/web)
