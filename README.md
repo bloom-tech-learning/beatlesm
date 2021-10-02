@@ -5,12 +5,9 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on **[https://github.com/beatlesm/web](https://github.com/beatlesm/web)**
-- 🌱 I’m currently learning ... **[https://wesbos.com/javascript30](https://wesbos.com/javascript30)**
-- 🌱 I’m currently learning ... **[https://wesbos.com/javascript](https://wesbos.com/javascript)**
+- 🔭 I’m currently working on **[Reference](https://github.com/beatlesm/beatlesm/blob/main/web2.md)**
 
-- 🌱 I’m currently learning ... **[Reference](https://github.com/beatlesm/beatlesm/blob/main/web2.md)**
-
+- 🌱 I’m currently learning ... 
 - 🌱 I’m currently learning ... **[Web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 
 
