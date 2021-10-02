@@ -9,9 +9,9 @@ Here are some ideas to get you started:
 - 🌱 I’m currently learning ... **[https://wesbos.com/javascript30](https://wesbos.com/javascript30)**
 - 🌱 I’m currently learning ... **[https://wesbos.com/javascript](https://wesbos.com/javascript)**
 
-- 🌱 I’m currently learning ... **[Reference](https://github.com/beatlesm/beatlesm/blob/main/weblearning.md)**
+- 🌱 I’m currently learning ... **[Reference](https://github.com/beatlesm/beatlesm/blob/main/web2)**
 
-- 🌱 I’m currently learning ... **[Web 2.1](https://github.com/beatlesm/web/tree/main/2.1)**
+- 🌱 I’m currently learning ... **[Web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 
 
 - 👯 I’m looking to collaborate on ...
