@@ -2,6 +2,8 @@
 
 
 Here are some ideas:
+- 🌱 I’m currently learning ... **[https://wesbos.com/javascript30](https://wesbos.com/javascript30)**
+- 🌱 I’m currently learning ... **[https://wesbos.com/javascript](https://wesbos.com/javascript)**
 
 - 🌱 I’m currently learning ... **[web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 - 🌱 I’m currently learning ...
