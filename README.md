@@ -9,6 +9,7 @@ Here are some ideas to get you started:
 
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/web-guided-project-react-components-1](https://github.com/beatlesm/web-guided-project-react-components-1)**
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/react-stateful-widgets](https://github.com/beatlesm/react-stateful-widgets)**
+- 🌱 I’m currently learning ... **[https://github.com/beatlesm/React-Components-Insta-Clone](https://github.com/beatlesm/React-Components-Insta-Clone)**
 
 - 🌱 I’m currently learning ... **[https://github.com/LambdaSchool/web-guided-project-react-components-1](https://github.com/LambdaSchool/web-guided-project-react-components-1)**
 
