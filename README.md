@@ -9,6 +9,7 @@ Here are some ideas to get you started:
 
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/web-guided-project-react-components-1](https://github.com/beatlesm/web-guided-project-react-components-1)**
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/web-guided-project-react-components-2](https://github.com/beatlesm/web-guided-project-react-components-2)**
+
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/react-stateful-widgets](https://github.com/beatlesm/react-stateful-widgets)**
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/React-Components-Insta-Clone](https://github.com/beatlesm/React-Components-Insta-Clone)**
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/nasa-photo-of-the-day](https://github.com/beatlesm/nasa-photo-of-the-day)**
@@ -25,4 +26,4 @@ Here are some ideas to get you started:
 
 [Reference](https://github.com/beatlesm/beatlesm/blob/main/Ref.md)
 
--   [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
+-   [Back home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
