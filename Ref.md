@@ -32,6 +32,5 @@ Here are some ideas:
 
 - ⚡ Fun fact: ...
 
-
-- [Back home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
+[Back home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
 
