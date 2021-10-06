@@ -9,6 +9,8 @@ Here are some ideas to get you started:
 
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/web-guided-project-react-components-1](https://github.com/beatlesm/web-guided-project-react-components-1)**
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/web-guided-project-react-components-2](https://github.com/beatlesm/web-guided-project-react-components-2)**
+- 🌱 I’m currently learning ... **[https://github.com/beatlesm/web-guided-project-component-side-effects](https://github.com/beatlesm/web-guided-project-component-side-effects)**
+
 
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/react-stateful-widgets](https://github.com/beatlesm/react-stateful-widgets)**
 - 🌱 I’m currently learning ... **[https://github.com/beatlesm/React-Components-Insta-Clone](https://github.com/beatlesm/React-Components-Insta-Clone)**
@@ -16,6 +18,8 @@ Here are some ideas to get you started:
 
 - 🌱 I’m currently learning ... **[https://github.com/LambdaSchool/web-guided-project-react-components-1](https://github.com/LambdaSchool/web-guided-project-react-components-1)**
 - 🌱 I’m currently learning ... **[https://github.com/LambdaSchool/web-guided-project-react-components-2](https://github.com/LambdaSchool/web-guided-project-react-components-2)**
+- 🌱 I’m currently learning ... **[https://github.com/LambdaSchool/web-guided-project-component-side-effects](https://github.com/LambdaSchool/web-guided-project-component-side-effects)**
+
 
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
