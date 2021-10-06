@@ -30,7 +30,7 @@ Here are some ideas:
 - **[https://github.com/LambdaSchool/web-guided-project-components-2](https://github.com/LambdaSchool/web-guided-project-components-2)**
 - **[https://github.com/LambdaSchool/web-sprint-challenge-applied-javascript](https://github.com/LambdaSchool/web-sprint-challenge-applied-javascript)**
 
-
+- ⚡ Fun fact: ...
 
 
 - [Back home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
