@@ -7,6 +7,7 @@ Here are some ideas:
 -   **[https://github.com/beatlesm/web-guided-project-react-components-1](https://github.com/beatlesm/web-guided-project-react-components-1)**
 -   **[https://github.com/beatlesm/web-guided-project-react-components-2](https://github.com/beatlesm/web-guided-project-react-components-2)**
 -   **[https://github.com/beatlesm/web-guided-project-component-side-effects](https://github.com/beatlesm/web-guided-project-component-side-effects)**
+-   **[https://github.com/beatlesm/web-guided-project-styling-components](https://github.com/beatlesm/web-guided-project-styling-components)**
 
 -   **[https://github.com/beatlesm/react-stateful-widgets](https://github.com/beatlesm/react-stateful-widgets)**
 -   **[https://github.com/beatlesm/React-Components-Insta-Clone](https://github.com/beatlesm/React-Components-Insta-Clone)**
@@ -15,6 +16,8 @@ Here are some ideas:
 -   **[https://github.com/LambdaSchool/web-guided-project-react-components-1](https://github.com/LambdaSchool/web-guided-project-react-components-1)**
 -   **[https://github.com/LambdaSchool/web-guided-project-react-components-2](https://github.com/LambdaSchool/web-guided-project-react-components-2)**
 -   **[https://github.com/LambdaSchool/web-guided-project-component-side-effects](https://github.com/LambdaSchool/web-guided-project-component-side-effects)**
+-   **[https://github.com/LambdaSchool/web-guided-project-styling-components](https://github.com/LambdaSchool/web-guided-project-styling-components)**
+
 
 - 🌱 I’m currently learning ... **[web 2.1](https://github.com/beatlesm/web/tree/main/2.1)**
 
