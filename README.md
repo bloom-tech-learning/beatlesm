@@ -9,6 +9,7 @@ Here are some ideas to get you started:
 
 -   **[https://github.com/beatlesm/web-guided-project-react-router](https://github.com/beatlesm/web-guided-project-react-router)**
 
+-   **[https://github.com/beatlesm/React-Router-Movies](https://github.com/beatlesm/React-Router-Movies)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
 
