@@ -2,6 +2,14 @@
 
 
 Here are some ideas:
+
+- 🌱 I’m currently learning ... **[Web 2.3](https://github.com/beatlesm/web/tree/main/2.3)**
+
+-   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
+
+
+-   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
+
 - 🌱 I’m currently learning ... **[web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 
 -   **[https://github.com/beatlesm/web-guided-project-react-components-1](https://github.com/beatlesm/web-guided-project-react-components-1)**
