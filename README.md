@@ -11,6 +11,7 @@ Here are some ideas to get you started:
 -   **[https://github.com/beatlesm/web-guided-project-form-management](https://github.com/beatlesm/web-guided-project-form-management)**
 
 -   **[https://github.com/beatlesm/React-Router-Movies](https://github.com/beatlesm/React-Router-Movies)**
+-   **[https://github.com/beatlesm/team-builder](https://github.com/beatlesm/team-builder)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
 -   **[https://github.com/LambdaSchool/web-guided-project-form-management](https://github.com/LambdaSchool/web-guided-project-form-management)**
