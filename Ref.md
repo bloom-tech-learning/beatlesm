@@ -7,12 +7,15 @@ Here are some ideas:
 
 -   **[https://github.com/beatlesm/web-guided-project-react-router](https://github.com/beatlesm/web-guided-project-react-router)**
 -   **[https://github.com/beatlesm/web-guided-project-form-management](https://github.com/beatlesm/web-guided-project-form-management)**
+-   **[https://github.com/beatlesm/web-guided-project-advanced-forms](https://github.com/beatlesm/web-guided-project-advanced-forms)**
 
 -   **[https://github.com/beatlesm/React-Router-Movies](https://github.com/beatlesm/React-Router-Movies)**
 -   **[https://github.com/beatlesm/team-builder](https://github.com/beatlesm/team-builder)**
+-   **[https://github.com/beatlesm/User-Onboarding](https://github.com/beatlesm/User-Onboarding)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
 -   **[https://github.com/LambdaSchool/web-guided-project-form-management](https://github.com/LambdaSchool/web-guided-project-form-management)**
+-   **[https://github.com/LambdaSchool/web-guided-project-advanced-forms](https://github.com/LambdaSchool/web-guided-project-advanced-forms)**
 
 - 🌱 I’m currently learning ... **[web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 
