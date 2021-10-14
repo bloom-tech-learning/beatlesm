@@ -14,6 +14,7 @@ Here are some ideas to get you started:
 -   **[https://github.com/beatlesm/React-Router-Movies](https://github.com/beatlesm/React-Router-Movies)**
 -   **[https://github.com/beatlesm/team-builder](https://github.com/beatlesm/team-builder)**
 -   **[https://github.com/beatlesm/User-Onboarding](https://github.com/beatlesm/User-Onboarding)**
+-   **[https://github.com/beatlesm/Cypress-Testing](https://github.com/beatlesm/Cypress-Testing)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
 -   **[https://github.com/LambdaSchool/web-guided-project-form-management](https://github.com/LambdaSchool/web-guided-project-form-management)**
@@ -28,4 +29,4 @@ Here are some ideas to get you started:
 
 [Reference](https://github.com/beatlesm/beatlesm/blob/main/Ref.md)
 
-- [Back home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
+- [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
