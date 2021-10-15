@@ -9,6 +9,7 @@ Here are some ideas:
 -   **[https://github.com/beatlesm/web-guided-project-form-management](https://github.com/beatlesm/web-guided-project-form-management)**
 -   **[https://github.com/beatlesm/web-guided-project-advanced-forms](https://github.com/beatlesm/web-guided-project-advanced-forms)**
 -   **[https://github.com/beatlesm/web-guided-project-cypress](https://github.com/beatlesm/web-guided-project-cypress)**
+-   **[https://github.com/beatlesm/caseybook2](https://github.com/beatlesm/caseybook2)**
 
 -   **[https://github.com/beatlesm/React-Router-Movies](https://github.com/beatlesm/React-Router-Movies)**
 -   **[https://github.com/beatlesm/team-builder](https://github.com/beatlesm/team-builder)**
@@ -19,6 +20,7 @@ Here are some ideas:
 -   **[https://github.com/LambdaSchool/web-guided-project-form-management](https://github.com/LambdaSchool/web-guided-project-form-management)**
 -   **[https://github.com/LambdaSchool/web-guided-project-advanced-forms](https://github.com/LambdaSchool/web-guided-project-advanced-forms)**
 -   **[https://github.com/LambdaSchool/web-guided-project-cypress](https://github.com/LambdaSchool/web-guided-project-cypress)**
+-   **[https://github.com/CRHarding/caseybook2](https://github.com/CRHarding/caseybook2)**
 
 - 🌱 I’m currently learning ... **[web 2.2](https://github.com/beatlesm/web/tree/main/2.2)**
 
