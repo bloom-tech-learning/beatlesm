@@ -5,24 +5,7 @@ Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...  
 
-- 🌱 I’m currently learning ... **[Web 2.3](https://github.com/beatlesm/web/tree/main/2.3)**
-
--   **[https://github.com/beatlesm/web-guided-project-react-router](https://github.com/beatlesm/web-guided-project-react-router)**
--   **[https://github.com/beatlesm/web-guided-project-form-management](https://github.com/beatlesm/web-guided-project-form-management)**
--   **[https://github.com/beatlesm/web-guided-project-advanced-forms](https://github.com/beatlesm/web-guided-project-advanced-forms)**
--   **[https://github.com/beatlesm/web-guided-project-cypress](https://github.com/beatlesm/web-guided-project-cypress)**
--   **[https://github.com/beatlesm/caseybook2](https://github.com/beatlesm/caseybook2)**
-
--   **[https://github.com/beatlesm/React-Router-Movies](https://github.com/beatlesm/React-Router-Movies)**
--   **[https://github.com/beatlesm/team-builder](https://github.com/beatlesm/team-builder)**
--   **[https://github.com/beatlesm/User-Onboarding](https://github.com/beatlesm/User-Onboarding)**
--   **[https://github.com/beatlesm/Cypress-Testing](https://github.com/beatlesm/Cypress-Testing)**
-
--   **[https://github.com/LambdaSchool/web-guided-project-react-router](https://github.com/LambdaSchool/web-guided-project-react-router)**
--   **[https://github.com/LambdaSchool/web-guided-project-form-management](https://github.com/LambdaSchool/web-guided-project-form-management)**
--   **[https://github.com/LambdaSchool/web-guided-project-advanced-forms](https://github.com/LambdaSchool/web-guided-project-advanced-forms)**
--   **[https://github.com/LambdaSchool/web-guided-project-cypress](https://github.com/LambdaSchool/web-guided-project-cypress)**
--   **[https://github.com/CRHarding/caseybook2](https://github.com/CRHarding/caseybook2)**
+- 🌱 I’m currently learning ... **[Web 2.4](https://github.com/beatlesm/web/tree/main/2.4)**
 
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
