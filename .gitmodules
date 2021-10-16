@@ -85,3 +85,15 @@
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I"]
 	path = Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I
 	url = git@github.com:beatlesm/DOM-I.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/web-guided-project-dom-2"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/web-guided-project-dom-2
+	url = git@github.com:beatlesm/web-guided-project-dom-2.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/DOM-II"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/DOM-II
+	url = git@github.com:beatlesm/DOM-II.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/web-guided-project-components-1"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/web-guided-project-components-1
+	url = git@github.com:beatlesm/web-guided-project-components-1.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components
+	url = git@github.com:beatlesm/Newsfeed-Components.git
