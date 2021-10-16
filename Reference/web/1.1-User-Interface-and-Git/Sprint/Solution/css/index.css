@@ -1,0 +1,310 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+	}
+ol, ul {
+	list-style: none;
+	}
+/* tables still need cell spacing="0" in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+	}
+/* remove possible quote marks (") from <q> & <blockquote> */
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+	}
+blockquote, q {
+	quotes: "" "";
+	}
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+    /* make border for design purpose */
+	/* border: 1px solid red; */
+}
+/* General styles */
+
+html{
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #4f4f4f;
+	font-family: 'Roboto Mono', monospace;
+	/* background-color: #DDB9A3; */
+}
+
+/* section {
+	padding: 4% 0;
+} */
+
+a{
+    text-decoration:none;
+    letter-spacing:3px;
+    color:#4F4F4F;
+    font-family: 'PT Sans', sans-serif;
+}
+
+a:hover{
+    color:#fcb131;
+}
+
+i{
+    font-size: 2rem;
+    /* font-size: 5rem; */
+}
+
+/* CSS Style */
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+p {
+    line-height: 1.4;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.hide {
+    display: none;
+}
+
+/* Header Section styles*/
+
+header nav{
+    /* position:fixed; */
+    width:100%;
+    top: 0;
+    background-color:rgba(255, 255, 255, 0.8);
+    align-items:center;
+    /* height: 7vh;  */
+    /* padding: 20px 2%; */
+    /* font-size: 14px; */
+    /* z-index: 999; */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.links{
+    width:70%;
+    align-items:center;
+    display:flex;
+    justify-content:space-evenly;
+}
+.logo{
+    width: 30%;
+    /* margin-left:3%; */
+    height: 10vh;
+    margin-top: 2%;
+    margin-bottom: 0;
+   
+}
+
+
+.jumbo{   
+    width: 100%;
+    height: 10vh;
+    background-size:cover;
+    background-repeat:no-repeat; 
+    background-image: url(/img/jumbo.jpg)
+}
+
+.jumbo-about{
+    width: 100%;
+    height: 10vh;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-image: url(/img/jumbo-about.png)
+}
+
+/* Top Section Styles */
+.top-content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+ .text-container {
+    /* width: 48%; */
+    padding: 0 1%;
+    padding-bottom: 20px;  
+}
+
+.top-content .text-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.middle-content {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;
+}
+
+.middle-content h2 {
+    padding: 0 2%;
+    margin-bottom: 0;
+}
+
+.middle-content .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.middle-content .boxes .box {
+    width: 12.5%;
+    height: 100px;
+    background: black;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box1 {
+    background: teal;
+}
+
+#box2 {
+    background: gold;
+}
+
+
+#box3 {
+    background: cadetblue;
+}
+
+#box4 {
+    background: coral;
+}
+
+#box5 {
+    background: crimson;
+}
+
+#box6 {
+    background: forestgreen;
+}
+
+#box7 {
+    background: darkorchid;
+}
+
+#box8 {
+    background: hotpink;
+}
+
+#box9 {
+    background: indigo;
+}
+
+#box10 {
+    background: dodgerblue;
+}
+
+.bottom-content {
+    display: flex;
+    margin: 2% 2% 20px;
+    justify-content: space-around;
+}
+
+.bottom-content .text-container {
+    padding-right: 4%;
+}
+
+.bottom-content .text-container:last-child {
+    padding-right: 0;
+}
+
+footer {
+    width: 100%;
+    background: black;
+}
+
+footer nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    font-size: 14px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* About page middle section */
+
+.about-middle{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+}
+.about-middle div{
+    width:40%;
+    /* height:30vh; */
+    /* margin:4% 0; */
+    padding: 20px 2%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    border-bottom: 1px dashed black;
+    /* display:flex; */
+    /* align-items:flex-end; */
+}
+/* .about-middle div .hide{
+    width:70%;
+    height:10vh;
+    background-color:#fff;
+    display:none;
+} */
+.about-middle div .hide h2{
+        font-size:2.2rem;
+    }
+.about-middle div:hover .hide{
+    display:block;
+}
