@@ -121,3 +121,6 @@
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks"]
 	path = Reference/web/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks
 	url = git@github.com:beatlesm/Array-Methods-and-Callbacks.git
+[submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_1-Scope-and-Closure/web-module-challenge-scope-and-closure"]
+	path = Reference/web/1.3-JavaScript-Fundamentals/Module_1-Scope-and-Closure/web-module-challenge-scope-and-closure
+	url = git@github.com:beatlesm/web-module-challenge-scope-and-closure.git
