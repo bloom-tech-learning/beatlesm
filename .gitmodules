@@ -130,3 +130,6 @@
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects"]
 	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects
 	url = git@github.com:beatlesm/web-module-challenge-objects.git
+[submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays"]
+	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays
+	url = git@github.com:beatlesm/web-module-challenge-arrays.git
