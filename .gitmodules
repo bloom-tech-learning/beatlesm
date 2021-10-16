@@ -127,3 +127,6 @@
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Sprint/web-sprint-challenge-advanced-css-and-intro-js"]
 	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Sprint/web-sprint-challenge-advanced-css-and-intro-js
 	url = git@github.com:beatlesm/web-sprint-challenge-advanced-css-and-intro-js.git
+[submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects"]
+	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects
+	url = git@github.com:beatlesm/web-module-challenge-objects.git
