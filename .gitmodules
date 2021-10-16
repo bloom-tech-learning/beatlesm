@@ -1,3 +1,12 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Sprint/web-sprint-challenge-single-page-applications"]
 	path = Reference/web/2.3-Single-Page-Applications/Sprint/web-sprint-challenge-single-page-applications
 	url = https://github.com/beatlesm/web-sprint-challenge-single-page-applications
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress
+	url = git@github.com:LambdaSchool/web-guided-project-cypress.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/caseybook2"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/caseybook2
+	url = git@github.com:CRHarding/caseybook2.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing
+	url = git@github.com:beatlesm/Cypress-Testing.git
