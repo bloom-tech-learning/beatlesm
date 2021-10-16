@@ -145,3 +145,6 @@
 [submodule "Reference/web/1.1-User-Interface-and-Git/Module_4-CSS-Layouts/User-Interface-II"]
 	path = Reference/web/1.1-User-Interface-and-Git/Module_4-CSS-Layouts/User-Interface-II
 	url = git@github.com:beatlesm/User-Interface-II.git
+[submodule "Reference/web/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css"]
+	path = Reference/web/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css
+	url = git@github.com:beatlesm/web-module-project-intro-css.git
