@@ -1,0 +1,364 @@
+/* RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* body {
+	line-height: 1;
+} */
+/* ol, ul {
+	list-style: none;
+} */
+/* blockquote, q {
+	quotes: none;
+} */
+/* blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} */
+/* RESET CSS END*/
+
+/* Universal slector */
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+	/* border: 1px solid red; */
+}
+
+/* General styles */
+html{
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: #4f4f4f;
+	font-family: 'Source Sans Pro', sans-serif; 
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+ }
+/* button{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    padding: 3% 5%;
+    margin-top: 5%; */
+}
+h1, h2, h3{
+    font-family: 'Oxygen', sans-serif;
+     letter-spacing: 3px;
+    text-align: center;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+p{
+    font-size: 1.8rem;
+}
+section, footer{
+    padding: 4% 0;
+}
+a {
+	font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
+}
+span {
+	font-weight: bold;
+}
+section {
+	padding: 4% 0;
+}
+
+/* Add CSS styling here */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width:100%;
+  /*put a border around everything to see where it stops and starts*/
+    /* border:1px solid grey; */
+}
+/*General Styles*/
+html{
+    font-size:62.5%;
+}
+body{
+    font-size:1.8rem;
+    line-height: 1.5;
+    color:#4F4F4F;
+    font-family: 'PT Sans', sans-serif;
+    background-color:#FFFAFA;
+}
+h1, h2, h3, h4{
+    letter-spacing: 3px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size:2.5rem;
+}
+section{
+    padding: 4% 0;
+}
+a{
+    text-decoration:none;
+    letter-spacing:3px;
+    color:#4F4F4F;
+    font-family: 'PT Sans', sans-serif;
+}
+a:hover{
+    color:#fcb131;
+}
+/* i{
+    font-size: 5rem;
+} */
+
+/*header section styles*/
+header nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background-color:rgba(255, 255, 255, 0.8);
+    
+    align-items:center;
+    height:10vh;
+    z-index: 999;
+    display:flex;
+    justify-content:space-between;
+}
+.logo{
+    width:20%;
+    margin-left:3%;
+}
+.links{
+    width:50%;
+    align-items:center;
+    display:flex;
+    justify-content:space-evenly;
+}
+/*Top Section Styles*/
+#top{
+    height:85vh;
+    background-image:url(https://beatlesm.s3.us-west-1.amazonaws.com/iamgs/jan-huber-tkE5nutsKt8-unsplash.jpg);
+    margin-top:5%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center top;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/*Gallery Section Styles*/
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery div{
+    width:30%;
+    height:40vh;
+    margin:4% 0;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    /* display:flex;
+    align-items:flex-end; */
+}
+.gallery div .hide{
+    width:70%;
+    height:10vh;
+    background-color:#fff;
+    display:none;
+}
+.gallery div .hide h2{
+        font-size:2.2rem;
+    }
+.gallery div:hover .hide{
+    display:block;
+}
+
+/*Footer Section Styles*/
+
+footer{
+    background-color:rgba(222,222,222,255);
+    /* color:#fff; */
+    padding:2% 0;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer div{
+    width:30%;
+}
+nav.social{
+    display:flex;
+    justify-content: space-around;
+    margin:10%;
+ 
+}
+nav.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav.main a{
+    margin: 2% 0;
+}
+.copyright{
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+}
+
+
+/*Media Queries*/
+
+
+/*Tablet*/
+@media (max-width: 800px){
+    .links{
+        width:70%;
+    }
+    #about .text{
+        width:80%;
+    }
+    .gallery div .hide{
+        background-color:#fff;
+        display:block;
+        width:70%;
+        /* border-radius: 50%; */
+    }
+
+    
+    .gallery div .hide h2{
+        font-size:2.2rem;
+    }
+    .contact-info{
+        width:50%;
+    }
+    .img-container{
+        width:80%;
+    }
+    .left{
+        width:60%;
+    }
+    .right{
+        width:40%;
+    }
+}
+
+/*phone*/
+@media (max-width: 500px){
+    header nav{
+        flex-direction:column;
+        height:18vh;
+        /* background: transparent; */
+        /* background-color: black;
+        color:white; */
+    }
+   
+
+    .logo{
+        width:100%;
+        margin-left: 0;
+        /* margin_top:3%; */
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links{
+        width:100%;
+        margin-left: 0;
+        height: 80%;
+        align-items:center;
+        display:flex;
+        flex-direction: column;
+    }
+
+   
+    .container{
+        flex-wrap:wrap;
+    }
+    .box{
+        width:90%;
+        margin:4% 0;
+    }
+    #about .text{
+        width:90%;
+    }
+    .gallery div{
+        width:100%;
+        height: 50%;
+        margin: 3%;
+    }
+
+    .gallery img{
+        border-radius: 1.5%;
+    }
+
+    
+    footer{
+        flex-wrap:wrap;
+    }
+    footer div{
+        width:100%;
+        /* margin:4% 0; */
+    }
+    nav.main{
+        background-color:rgba(255, 255, 255, 0.8);
+    }
+    nav.social {
+        height: 5%;
+    }
+    .copyright{
+        justify-content:center;
+    }
+}
