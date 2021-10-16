@@ -64,3 +64,9 @@
 [submodule "Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone"]
 	path = Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone
 	url = git@github.com:beatlesm/React-Components-Insta-Clone.git
+[submodule "Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/nasa-photo-of-the-day"]
+	path = Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/nasa-photo-of-the-day
+	url = git@github.com:beatlesm/nasa-photo-of-the-day.git
+[submodule "Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects"]
+	path = Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects
+	url = git@github.com:beatlesm/web-guided-project-component-side-effects.git
