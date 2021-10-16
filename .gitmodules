@@ -118,3 +118,6 @@
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype"]
 	path = Reference/web/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype
 	url = git@github.com:beatlesm/JS-Exercise-Prototype.git
+[submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks"]
+	path = Reference/web/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks
+	url = git@github.com:beatlesm/Array-Methods-and-Callbacks.git
