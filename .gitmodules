@@ -19,3 +19,9 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/Cypress-Testing"]
 	path = Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/Cypress-Testing
 	url = git@github.com:beatlesm/Cypress-Testing.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/User-Onboarding"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/User-Onboarding
+	url = git@github.com:beatlesm/User-Onboarding.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-advanced-forms"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-advanced-forms
+	url = git@github.com:beatlesm/web-guided-project-advanced-forms.git
