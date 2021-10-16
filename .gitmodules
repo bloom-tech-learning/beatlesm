@@ -115,3 +115,6 @@
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_4-Classes/JS-Exercise-Classes"]
 	path = Reference/web/1.3-JavaScript-Fundamentals/Module_4-Classes/JS-Exercise-Classes
 	url = git@github.com:beatlesm/JS-Exercise-Classes.git
+[submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype"]
+	path = Reference/web/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype
+	url = git@github.com:beatlesm/JS-Exercise-Prototype.git
