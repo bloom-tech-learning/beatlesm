@@ -139,3 +139,6 @@
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II"]
 	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II
 	url = git@github.com:beatlesm/User-Interface-II.git
+[submodule "Reference/web/1.1-User-Interface-and-Git/Sprint/web-Sprint-Challenge-User-Interface-and-Git"]
+	path = Reference/web/1.1-User-Interface-and-Git/Sprint/web-Sprint-Challenge-User-Interface-and-Git
+	url = git@github.com:beatlesm/web-Sprint-Challenge-User-Interface-and-Git.git
