@@ -49,3 +49,6 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/User-Onboarding"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/User-Onboarding
 	url = git@github.com:beatlesm/User-Onboarding.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Sprint/caseybook2"]
+	path = Reference/web/2.3-Single-Page-Applications/Sprint/caseybook2
+	url = git@github.com:beatlesm/caseybook2.git
