@@ -3,7 +3,7 @@
 	url = https://github.com/beatlesm/web-sprint-challenge-single-page-applications
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress
-	url = git@github.com:LambdaSchool/web-guided-project-cypress.git
+	url = git@github.com:beatlesm/web-guided-project-cypress.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/caseybook2"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/caseybook2
 	url = git@github.com:CRHarding/caseybook2.git
