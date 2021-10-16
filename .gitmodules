@@ -79,3 +79,9 @@
 [submodule "Reference/web/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react"]
 	path = Reference/web/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react
 	url = git@github.com:beatlesm/web-sprint-challenge-intro-to-react.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/web-guided-project-dom-1"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/web-guided-project-dom-1
+	url = git@github.com:beatlesm/web-guided-project-dom-1.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I
+	url = git@github.com:beatlesm/DOM-I.git
