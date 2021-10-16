@@ -31,3 +31,9 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-form-management"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-form-management
 	url = git@github.com:beatlesm/web-guided-project-form-management.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/web-guided-project-react-router"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/web-guided-project-react-router
+	url = git@github.com:beatlesm/web-guided-project-react-router.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies
+	url = git@github.com:beatlesm/React-Router-Movies.git
