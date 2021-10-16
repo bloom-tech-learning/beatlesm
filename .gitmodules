@@ -106,3 +106,6 @@
 [submodule "Reference/web/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript"]
 	path = Reference/web/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript
 	url = git@github.com:beatlesm/web-sprint-challenge-applied-javascript.git
+[submodule "Reference/wes/JavaScript30"]
+	path = Reference/wes/JavaScript30
+	url = git@github.com:wesbos/JavaScript30.git
