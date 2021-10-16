@@ -148,3 +148,6 @@
 [submodule "Reference/web/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css"]
 	path = Reference/web/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css
 	url = git@github.com:beatlesm/web-module-project-intro-css.git
+[submodule "Reference/web/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project"]
+	path = Reference/web/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project
+	url = git@github.com:beatlesm/Git-for-Web-Development-Project.git
