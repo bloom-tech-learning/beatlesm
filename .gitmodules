@@ -58,3 +58,9 @@
 [submodule "Reference/web/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/react-stateful-widgets"]
 	path = Reference/web/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/react-stateful-widgets
 	url = git@github.com:beatlesm/react-stateful-widgets.git
+[submodule "Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/web-guided-project-react-components-2"]
+	path = Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/web-guided-project-react-components-2
+	url = git@github.com:beatlesm/web-guided-project-react-components-2.git
+[submodule "Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone"]
+	path = Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone
+	url = git@github.com:beatlesm/React-Components-Insta-Clone.git
