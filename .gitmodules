@@ -133,3 +133,6 @@
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays"]
 	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays
 	url = git@github.com:beatlesm/web-module-challenge-arrays.git
+[submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript"]
+	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript
+	url = git@github.com:beatlesm/Introduction-to-JavaScript.git
