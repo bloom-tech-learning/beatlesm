@@ -97,3 +97,9 @@
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components"]
 	path = Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components
 	url = git@github.com:beatlesm/Newsfeed-Components.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/web-guided-project-components-2"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/web-guided-project-components-2
+	url = git@github.com:beatlesm/web-guided-project-components-2.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard"]
+	path = Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard
+	url = git@github.com:beatlesm/github-usercard.git
