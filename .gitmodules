@@ -103,3 +103,6 @@
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard"]
 	path = Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard
 	url = git@github.com:beatlesm/github-usercard.git
+[submodule "Reference/web/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript"]
+	path = Reference/web/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript
+	url = git@github.com:beatlesm/web-sprint-challenge-applied-javascript.git
