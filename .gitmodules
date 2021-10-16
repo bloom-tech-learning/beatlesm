@@ -37,3 +37,9 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies
 	url = git@github.com:beatlesm/React-Router-Movies.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/web-guided-project-form-management"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/web-guided-project-form-management
+	url = git@github.com:beatlesm/web-guided-project-form-management.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/team-builder"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/team-builder
+	url = git@github.com:beatlesm/team-builder.git
