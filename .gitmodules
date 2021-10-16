@@ -10,3 +10,12 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing
 	url = git@github.com:beatlesm/Cypress-Testing.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/web-guided-project-cypress"]
+	path = Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/web-guided-project-cypress
+	url = git@github.com:beatlesm/web-guided-project-cypress.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/caseybook2"]
+	path = Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/caseybook2
+	url = git@github.com:beatlesm/caseybook2.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/Cypress-Testing"]
+	path = Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/Cypress-Testing
+	url = git@github.com:beatlesm/Cypress-Testing.git
