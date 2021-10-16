@@ -136,3 +136,6 @@
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript"]
 	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript
 	url = git@github.com:beatlesm/Introduction-to-JavaScript.git
+[submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II"]
+	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II
+	url = git@github.com:beatlesm/User-Interface-II.git
