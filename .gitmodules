@@ -76,3 +76,6 @@
 [submodule "Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day"]
 	path = Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day
 	url = git@github.com:beatlesm/nasa-photo-of-the-day.git
+[submodule "Reference/web/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react"]
+	path = Reference/web/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react
+	url = git@github.com:beatlesm/web-sprint-challenge-intro-to-react.git
