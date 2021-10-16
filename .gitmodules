@@ -25,3 +25,9 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-advanced-forms"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-advanced-forms
 	url = git@github.com:beatlesm/web-guided-project-advanced-forms.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/team-builder"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/team-builder
+	url = git@github.com:beatlesm/team-builder.git
+[submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-form-management"]
+	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-form-management
+	url = git@github.com:beatlesm/web-guided-project-form-management.git
