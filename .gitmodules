@@ -70,3 +70,9 @@
 [submodule "Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects"]
 	path = Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects
 	url = git@github.com:beatlesm/web-guided-project-component-side-effects.git
+[submodule "Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/web-guided-project-styling-components"]
+	path = Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/web-guided-project-styling-components
+	url = git@github.com:beatlesm/web-guided-project-styling-components.git
+[submodule "Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day"]
+	path = Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day
+	url = git@github.com:beatlesm/nasa-photo-of-the-day.git
