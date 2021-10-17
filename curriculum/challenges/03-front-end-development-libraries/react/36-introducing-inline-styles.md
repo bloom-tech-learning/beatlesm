@@ -1,11 +1,3 @@
----
-id: 5a24c314108439a4d4036181
-title: Introducing Inline Styles
-challengeType: 6
-forumTopicId: 301395
-dashedName: introducing-inline-styles
----
-
 # --description--
 
 There are other complex concepts that add powerful capabilities to your React code. But you may be wondering about the more simple problem of how to style those JSX elements you create in React. You likely know that it won't be exactly the same as working with HTML because of [the way you apply classes to JSX elements](/learn/front-end-development-libraries/react/define-an-html-class-in-jsx).
@@ -31,64 +23,6 @@ Notice how we camelCase the `fontSize` property? This is because React will not 
 Add a `style` attribute to the `div` in the code editor to give the text a color of red and font size of `72px`.
 
 Note that you can optionally set the font size to be a number, omitting the units `px`, or write it as `72px`.
-# --hints--
-
-The component should render a `div` element.
-
-```js
-assert(
-  (function () {
-    const mockedComponent = Enzyme.mount(React.createElement(Colorful));
-    return mockedComponent.children().type() === 'div';
-  })()
-);
-```
-
-The `div` element should have a color of `red`.
-
-```js
-assert(
-  (function () {
-    const mockedComponent = Enzyme.mount(React.createElement(Colorful));
-    return mockedComponent.children().props().style.color === 'red';
-  })()
-);
-```
-
-The `div` element should have a font size of `72px`.
-
-```js
-assert(
-  (function () {
-    const mockedComponent = Enzyme.mount(React.createElement(Colorful));
-    return (
-      mockedComponent.children().props().style.fontSize === 72 ||
-      mockedComponent.children().props().style.fontSize === '72' ||
-      mockedComponent.children().props().style.fontSize === '72px'
-    );
-  })()
-);
-```
-
-# --seed--
-
-## --after-user-code--
-
-```jsx
-ReactDOM.render(<Colorful />, document.getElementById('root'))
-```
-
-## --seed-contents--
-
-```jsx
-class Colorful extends React.Component {
-  render() {
-    return (
-      <div>Big Red</div>
-    );
-  }
-};
-```
 
 # --solutions--
 

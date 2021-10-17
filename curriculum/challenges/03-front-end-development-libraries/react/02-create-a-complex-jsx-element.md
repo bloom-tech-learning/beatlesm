@@ -1,4 +1,4 @@
-# Create a Complex JSX ElementPassed
+# <center>02 - Create a Complex JSX Element</center>
 
 The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
 

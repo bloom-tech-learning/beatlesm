@@ -1,11 +1,3 @@
----
-id: 5a24c314108439a4d4036162
-title: Create a Stateless Functional Component
-challengeType: 6
-forumTopicId: 301392
-dashedName: create-a-stateless-functional-component
----
-
 # --description--
 
 Components are the core of React. Everything in React is a component and here you will learn how to create one.
@@ -31,61 +23,6 @@ Because a JSX component represents HTML, you could put several components togeth
 The code editor has a function called `MyComponent`. Complete this function so it returns a single `div` element which contains some string of text.
 
 **Note:** The text is considered a child of the `div` element, so you will not be able to use a self-closing tag.
-
-# --hints--
-
-`MyComponent` should return JSX.
-
-```js
-assert(
-  (function () {
-    const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
-    return mockedComponent.length === 1;
-  })()
-);
-```
-
-`MyComponent` should return a `div` element.
-
-```js
-assert(
-  (function () {
-    const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
-    return mockedComponent.children().type() === 'div';
-  })()
-);
-```
-
-The `div` element should contain a string of text.
-
-```js
-assert(
-  (function () {
-    const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
-    return mockedComponent.find('div').text() !== '';
-  })()
-);
-```
-
-# --seed--
-
-## --after-user-code--
-
-```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
-```
-
-## --seed-contents--
-
-```jsx
-const MyComponent = function() {
-  // Change code below this line
-
-
-
-  // Change code above this line
-}
-```
 
 # --solutions--
 
