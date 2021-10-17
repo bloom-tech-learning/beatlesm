@@ -151,3 +151,6 @@
 [submodule "Reference/web/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project"]
 	path = Reference/web/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project
 	url = git@github.com:beatlesm/Git-for-Web-Development-Project.git
+[submodule "curriculum/wes/JavaScript30"]
+	path = curriculum/wes/JavaScript30
+	url = git@github.com:beatlesm/JavaScript30.git
