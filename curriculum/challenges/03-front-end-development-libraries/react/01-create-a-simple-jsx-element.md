@@ -1,12 +1,4 @@
----
-id: 587d7dbc367417b2b2512bb1
-title: Create a Simple JSX Element
-challengeType: 6
-forumTopicId: 301390
-dashedName: create-a-simple-jsx-element
----
-
-# --description--
+# Create a Simple JSX ElementPassed
 
 React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.
 
@@ -18,39 +10,11 @@ However, because JSX is not valid JavaScript, JSX code must be compiled into Jav
 
 It's worth noting that under the hood the challenges are calling `ReactDOM.render(JSX, document.getElementById('root'))`. This function call is what places your JSX into React's own lightweight representation of the DOM. React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.
 
-# --instructions--
+## Qustion - instructions
 
 The current code uses JSX to assign a `div` element to the constant `JSX`. Replace the `div` with an `h1` element and add the text `Hello JSX!` inside it.
 
-# --hints--
-
-The constant `JSX` should return an `h1` element.
-
-```js
-assert(JSX.type === 'h1');
-```
-
-The `h1` tag should include the text `Hello JSX!`
-
-```js
-assert(Enzyme.shallow(JSX).contains('Hello JSX!'));
-```
-
-# --seed--
-
-## --after-user-code--
-
-```jsx
-ReactDOM.render(JSX, document.getElementById('root'))
-```
-
-## --seed-contents--
-
-```jsx
-const JSX = <div></div>;
-```
-
-# --solutions--
+## Answer - solutions
 
 ```jsx
 const JSX = <h1>Hello JSX!</h1>;
