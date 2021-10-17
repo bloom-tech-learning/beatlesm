@@ -1,5 +1,8 @@
 # <center>02 - Create a Complex JSX Element</center>
 
+[previous](01-create-a-simple-jsx-element)
+[next](03-add-comments-in-jsx)
+
 The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
 
 One important thing to know about nested JSX is that it must return a single element.
@@ -48,3 +51,6 @@ const JSX = (
   </ul>
 </div>);
 ```
+
+[previous](01-create-a-simple-jsx-element)
+[next](03-add-comments-in-jsx)
