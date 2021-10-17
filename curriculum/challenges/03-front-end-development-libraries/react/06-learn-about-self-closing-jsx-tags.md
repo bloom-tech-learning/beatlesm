@@ -1,11 +1,3 @@
----
-id: 5a24c314108439a4d4036161
-title: Learn About Self-Closing JSX Tags
-challengeType: 6
-forumTopicId: 301396
-dashedName: learn-about-self-closing-jsx-tags
----
-
 # --description--
 
 So far, you’ve seen how JSX differs from HTML in a key way with the use of `className` vs. `class` for defining HTML classes.
@@ -21,46 +13,6 @@ In JSX, the rules are a little different. Any JSX element can be written with a 
 # --instructions--
 
 Fix the errors in the code editor so that it is valid JSX and successfully transpiles. Make sure you don't change any of the content - you only need to close tags where they are needed.
-
-# --hints--
-
-The constant `JSX` should return a `div` element.
-
-```js
-assert.strictEqual(JSX.type, 'div');
-```
-
-The `div` should contain a `br` tag.
-
-```js
-assert(Enzyme.shallow(JSX).find('br').length === 1);
-```
-
-The `div` should contain an `hr` tag.
-
-```js
-assert(Enzyme.shallow(JSX).find('hr').length === 1);
-```
-
-# --seed--
-
-## --after-user-code--
-
-```jsx
-ReactDOM.render(JSX, document.getElementById('root'))
-```
-
-## --seed-contents--
-
-```jsx
-const JSX = (
-  <div>
-    <h2>Welcome to React!</h2> <br >
-    <p>Be sure to close all tags!</p>
-    <hr >
-  </div>
-);
-```
 
 # --solutions--
 

@@ -1,11 +1,3 @@
----
-id: 5a24c314108439a4d4036171
-title: Render State in the User Interface
-challengeType: 6
-forumTopicId: 301409
-dashedName: render-state-in-the-user-interface
----
-
 # --description--
 
 Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is stateful, it will always have access to the data in `state` in its `render()` method. You can access the data with `this.state`.
@@ -21,74 +13,6 @@ Note that if you make a component stateful, no other components are aware of its
 In the code editor, `MyComponent` is already stateful. Define an `h1` tag in the component's render method which renders the value of `name` from the component's state.
 
 **Note:** The `h1` should only render the value from `state` and nothing else. In JSX, any code you write with curly braces `{ }` will be treated as JavaScript. So to access the value from `state` just enclose the reference in curly braces.
-
-# --hints--
-
-`MyComponent` should have a key `name` with value `freeCodeCamp` stored in its state.
-
-```js
-assert(
-  Enzyme.mount(React.createElement(MyComponent)).state('name') ===
-    'freeCodeCamp'
-);
-```
-
-`MyComponent` should render an `h1` header enclosed in a single `div`.
-
-```js
-assert(
-  /<div><h1>.*<\/h1><\/div>/.test(
-    Enzyme.mount(React.createElement(MyComponent)).html()
-  )
-);
-```
-
-The rendered `h1` header should only contain text rendered from the component's state.
-
-```js
-async () => {
-  const waitForIt = (fn) =>
-    new Promise((resolve, reject) => setTimeout(() => resolve(fn()), 250));
-  const mockedComponent = Enzyme.mount(React.createElement(MyComponent));
-  const first = () => {
-    mockedComponent.setState({ name: 'TestName' });
-    return waitForIt(() => mockedComponent.html());
-  };
-  const firstValue = await first();
-  const getValue = firstValue.replace(/\s/g, '');
-  assert(getValue === '<div><h1>TestName</h1></div>');
-};
-```
-
-# --seed--
-
-## --after-user-code--
-
-```jsx
-ReactDOM.render(<MyComponent />, document.getElementById('root'))
-```
-
-## --seed-contents--
-
-```jsx
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'freeCodeCamp'
-    }
-  }
-  render() {
-    return (
-      <div>
-        { /* Change code below this line */ }
-
-        { /* Change code above this line */ }
-      </div>
-    );
-  }
-};
-```
 
 # --solutions--
 
