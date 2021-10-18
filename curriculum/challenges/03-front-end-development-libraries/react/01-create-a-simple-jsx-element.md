@@ -23,6 +23,6 @@ const JSX = <h1>Hello JSX!</h1>;
 ```
 
 
-[Previous page]() | [Next page](02-create-a-complex-jsx-element.md)
+[Previous page](01-create-a-simple-jsx-element.md) | [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home](./README.md) 
+#### [Home](/03-front-end-development-libraries/01-create-a-simple-jsx-element.md) 
