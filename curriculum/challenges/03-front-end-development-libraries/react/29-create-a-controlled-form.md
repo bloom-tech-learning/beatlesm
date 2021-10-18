@@ -1,4 +1,4 @@
-# --description--
+# <center>07 </center>
 
 The last challenge showed that React can control the internal state for certain elements like `input` and `textarea`, which makes them controlled components. This applies to other form elements as well, including the regular HTML `form` element.
 

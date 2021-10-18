@@ -1,4 +1,4 @@
-# <center>01 - Create a Simple JSX ElementPassed</center>
+# <center>01 - Create a Simple JSX Element</center>
 
 [Next page](02-create-a-complex-jsx-element.md)
 
@@ -26,4 +26,5 @@ const JSX = <h1>Hello JSX!</h1>;
 
 [React page](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) | [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home](./main/curriculum/challenges/03-front-end-development-libraries/react) 
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
+

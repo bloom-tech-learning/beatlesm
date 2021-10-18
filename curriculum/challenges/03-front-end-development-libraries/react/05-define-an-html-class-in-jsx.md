@@ -1,4 +1,4 @@
-# <center>05 Define an html class in jsx</center>
+# <center>05 Define an HTML Class in JSX</center>
 
 Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
 
@@ -20,3 +20,8 @@ const JSX = (
   <h1>Add a class to this div</h1>
 </div>);
 ```
+
+[Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
+

@@ -1,4 +1,4 @@
-# --description--
+# <center>07 </center>
 
 You can design a more complex stateful component by combining the concepts covered so far. These include initializing `state`, writing methods that set `state`, and assigning click handlers to trigger these methods.
 

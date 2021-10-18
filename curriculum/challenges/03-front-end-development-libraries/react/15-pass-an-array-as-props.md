@@ -1,4 +1,4 @@
-# --description--
+# <center>15 Pass an Array as Props</center>
 
 The last challenge demonstrated how to pass information from a parent component to a child component as `props` or properties. This challenge looks at how arrays can be passed as `props`. To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
 

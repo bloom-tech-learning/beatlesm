@@ -1,4 +1,4 @@
-# --description--
+# <center>07 Create a Stateless Functional Component</center>
 
 Components are the core of React. Everything in React is a component and here you will learn how to create one.
 
