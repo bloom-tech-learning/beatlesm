@@ -1,7 +1,9 @@
 # <center>02 - Create a Complex JSX Element</center>
 
-[previous](01-create-a-simple-jsx-element)
-[next](03-add-comments-in-jsx)
+[Previous page](01-create-a-simple-jsx-element.md) | [Next page](03-add-comments-in-jsx.md)
+
+#### [Home](01-create-a-simple-jsx-element.md) 
+
 
 The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
 
@@ -52,6 +54,6 @@ const JSX = (
 </div>);
 ```
 
-[Previous page]() | [Next page](03-add-comments-in-jsx.md)
+[Previous page](01-create-a-simple-jsx-element.md) | [Next page](03-add-comments-in-jsx.md)
 
 #### [Home](01-create-a-simple-jsx-element.md) 

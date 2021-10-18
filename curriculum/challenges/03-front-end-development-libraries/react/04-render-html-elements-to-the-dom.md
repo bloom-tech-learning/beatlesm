@@ -1,5 +1,9 @@
 # <center>04 - Render HTML Elements to the DOM</center>
 
+[Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
+
+#### [Home](01-create-a-simple-jsx-element.md) 
+
 So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
 
 ReactDOM offers a simple method to render React elements to the DOM which looks like this: `ReactDOM.render(componentToRender, targetNode)`, where the first argument is the React element or component that you want to render, and the second argument is the DOM node that you want to render the component to.
@@ -22,3 +26,7 @@ const JSX = (
 // Change code below this line
 ReactDOM.render(JSX, document.getElementById('challenge-node'));
 ```
+
+[Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
+
+#### [Home](01-create-a-simple-jsx-element.md) 
