@@ -1,4 +1,4 @@
-# <center>10 Use React to Render Nested Components</center>
+# <center>10 - Use React to Render Nested Components</center>
 
 The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.
 
