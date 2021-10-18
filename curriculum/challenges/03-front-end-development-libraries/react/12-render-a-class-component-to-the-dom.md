@@ -1,4 +1,4 @@
-# <center>07 </center>
+# <center>12 Render a Class Component to the DOM</center>
 
 You may remember using the ReactDOM API in an earlier challenge to render JSX elements to the DOM. The process for rendering React components will look very similar. The past few challenges focused on components and composition, so the rendering was done for you behind the scenes. However, none of the React code you write will render to the DOM without making a call to the ReactDOM API.
 
