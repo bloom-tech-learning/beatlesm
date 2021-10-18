@@ -1,4 +1,4 @@
-# --description--
+# <center>07 </center>
 
 The ability to set default props is a useful feature in React. The way to override the default props is to explicitly set the prop values for a component.
 

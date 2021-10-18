@@ -1,4 +1,4 @@
-# <center>03 - Add comments in jsx</center>
+# <center>03 - Add Comments in JSX</center>
 
 [Previous page](02-create-a-complex-jsx-element.md) | [Next page](04-render-html-elements-to-the-dom.md)
 

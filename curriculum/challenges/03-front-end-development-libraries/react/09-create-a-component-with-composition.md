@@ -1,4 +1,4 @@
-# --description--
+# <center>07 </center>
 
 Now we will look at how we can compose multiple React components together. Imagine you are building an app and have created three components: a `Navbar`, `Dashboard`, and `Footer`.
 

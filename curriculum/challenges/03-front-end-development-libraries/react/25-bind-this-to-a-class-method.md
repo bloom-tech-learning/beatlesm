@@ -1,4 +1,4 @@
-# --description--
+# <center>07 </center>
 
 In addition to setting and updating `state`, you can also define methods for your component class. A class method typically needs to use the `this` keyword so it can access properties on the class (such as `state` and `props`) inside the scope of the method. There are a few ways to allow your class methods to access `this`.
 

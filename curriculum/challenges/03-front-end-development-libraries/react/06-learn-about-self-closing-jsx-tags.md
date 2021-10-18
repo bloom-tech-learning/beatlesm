@@ -1,4 +1,4 @@
-# --description--
+# <center>06 Learn About Self-Closing JSX Tags</center> 
 
 So far, you’ve seen how JSX differs from HTML in a key way with the use of `className` vs. `class` for defining HTML classes.
 
