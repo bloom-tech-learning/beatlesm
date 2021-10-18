@@ -2,8 +2,6 @@
 
 [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
-
 
 React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.
 
@@ -28,4 +26,4 @@ const JSX = <h1>Hello JSX!</h1>;
 
 [React page](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) | [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
+#### [Home](./main/curriculum/challenges/03-front-end-development-libraries/react) 

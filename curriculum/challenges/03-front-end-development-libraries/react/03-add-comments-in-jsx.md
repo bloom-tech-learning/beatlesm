@@ -26,4 +26,4 @@ const JSX = (
 
 [Previous page](02-create-a-complex-jsx-element.md) | [Next page](04-render-html-elements-to-the-dom.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 

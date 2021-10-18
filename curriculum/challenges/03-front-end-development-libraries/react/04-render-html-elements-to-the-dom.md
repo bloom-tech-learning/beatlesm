@@ -29,4 +29,4 @@ ReactDOM.render(JSX, document.getElementById('challenge-node'));
 
 [Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
