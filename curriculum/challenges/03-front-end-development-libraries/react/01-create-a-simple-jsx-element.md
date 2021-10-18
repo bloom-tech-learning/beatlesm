@@ -22,4 +22,7 @@ The current code uses JSX to assign a `div` element to the constant `JSX`. Repla
 const JSX = <h1>Hello JSX!</h1>;
 ```
 
-[next](02-create-a-complex-jsx-element)
+
+[Previous page]() | [Next page](02-create-a-complex-jsx-element.md)
+
+#### [Home](./README.md) 

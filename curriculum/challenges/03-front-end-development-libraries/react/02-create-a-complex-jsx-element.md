@@ -52,5 +52,6 @@ const JSX = (
 </div>);
 ```
 
-[previous](01-create-a-simple-jsx-element)
-[next](03-add-comments-in-jsx)
+[Previous page]() | [Next page](03-add-comments-in-jsx.md)
+
+#### [Home](01-create-a-simple-jsx-element.md) 
