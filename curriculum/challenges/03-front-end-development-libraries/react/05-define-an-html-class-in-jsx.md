@@ -1,4 +1,4 @@
-# --description--
+# <center>05 Define an html class in jsx</center>
 
 Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
 

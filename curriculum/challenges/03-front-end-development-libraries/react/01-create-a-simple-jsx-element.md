@@ -1,6 +1,9 @@
 # <center>01 - Create a Simple JSX ElementPassed</center>
 
-[next](02-create-a-complex-jsx-element)
+[Next page](02-create-a-complex-jsx-element.md)
+
+#### [Home](01-create-a-simple-jsx-element.md) 
+
 
 React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.
 
