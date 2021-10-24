@@ -1,8 +1,8 @@
 ### Hi there 👋
 
 
-01-create-a-simple-jsx-element.md
-02-create-a-complex-jsx-element.md
+[01 - Create a Simple JSX Element](01-create-a-simple-jsx-element.md)
+[02 - Create a Complex JSX Element](02-create-a-complex-jsx-element.md)
 03-add-comments-in-jsx.md
 04-render-html-elements-to-the-dom.md
 05-define-an-html-class-in-jsx.md
