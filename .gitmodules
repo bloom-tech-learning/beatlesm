@@ -154,3 +154,6 @@
 [submodule "curriculum/wes/JavaScript30"]
 	path = curriculum/wes/JavaScript30
 	url = git@github.com:beatlesm/JavaScript30.git
+[submodule "Reference/web/3.1-Advanced-React/Module_1-Class-Components/web-module-project-class-components"]
+	path = Reference/web/3.1-Advanced-React/Module_1-Class-Components/web-module-project-class-components
+	url = https://github.com/beatlesm/web-module-project-class-components
