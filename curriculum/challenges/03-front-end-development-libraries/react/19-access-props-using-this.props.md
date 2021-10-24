@@ -1,4 +1,4 @@
-# <center>07 </center>
+# <center>19 - Access Props Using this.propsPassed</center>
 
 The last several challenges covered the basic ways to pass props to child components. But what if the child component that you're passing a prop to is an ES6 class component, rather than a stateless functional component? The ES6 class component uses a slightly different convention to access props.
 

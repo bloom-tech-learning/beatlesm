@@ -1,4 +1,4 @@
-# <center>07 </center>
+# <center>43 - Change Inline CSS Conditionally Based on Component State</center>
 
 At this point, you've seen several applications of conditional rendering and the use of inline styles. Here's one more example that combines both of these topics. You can also render CSS conditionally based on the state of a React component. To do this, you check for a condition, and if that condition is met, you modify the styles object that's assigned to the JSX elements in the render method.
 

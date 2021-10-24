@@ -1,4 +1,4 @@
-# <center>07 </center>
+# <center>22 - Render State in the User Interface</center>
 
 Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is stateful, it will always have access to the data in `state` in its `render()` method. You can access the data with `this.state`.
 
