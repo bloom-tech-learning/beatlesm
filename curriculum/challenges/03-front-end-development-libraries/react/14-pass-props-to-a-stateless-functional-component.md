@@ -16,11 +16,11 @@ const Welcome = (props) => <h1>Hello, {props.user}!</h1>
 
 It is standard to call this value `props` and when dealing with stateless functional components, you basically consider it as an argument to a function which returns JSX. You can access the value of the argument in the function body. With class components, you will see this is a little different.
 
-# --instructions--
+## instructions 
 
 There are `Calendar` and `CurrentDate` components in the code editor. When rendering `CurrentDate` from the `Calendar` component, pass in a property of `date` assigned to the current date from JavaScript's `Date` object. Then access this `prop` in the `CurrentDate` component, showing its value within the `p` tags. Note that for `prop` values to be evaluated as JavaScript, they must be enclosed in curly brackets, for instance `date={Date()}`.
 
-# --solutions--
+## solutions 
 
 ```jsx
 const CurrentDate = (props) => {

@@ -2,7 +2,7 @@
 
 The last challenge showed that React can control the internal state for certain elements like `input` and `textarea`, which makes them controlled components. This applies to other form elements as well, including the regular HTML `form` element.
 
-# --instructions--
+## instructions 
 
 The `MyForm` component is set up with an empty `form` with a submit handler. The submit handler will be called when the form is submitted.
 
@@ -12,7 +12,7 @@ We've added a button which submits the form. You can see it has the `type` set t
 
 Finally, create an `h1` tag after the `form` which renders the `submit` value from the component's `state`. You can then type in the form and click the button (or press enter), and you should see your input rendered to the page.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class MyForm extends React.Component {

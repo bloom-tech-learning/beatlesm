@@ -18,13 +18,13 @@ JSX elements use the `style` attribute, but because of the way JSX is transpiled
 
 Notice how we camelCase the `fontSize` property? This is because React will not accept kebab-case keys in the style object. React will apply the correct property name for us in the HTML.
 
-# --instructions--
+## instructions 
 
 Add a `style` attribute to the `div` in the code editor to give the text a color of red and font size of `72px`.
 
 Note that you can optionally set the font size to be a number, omitting the units `px`, or write it as `72px`.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class Colorful extends React.Component {

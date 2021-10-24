@@ -18,13 +18,13 @@ After being transpiled, the `<div>` will have a CSS class of `customClass`.
 
 Because a JSX component represents HTML, you could put several components together to create a more complex HTML page. This is one of the key advantages of the component architecture React provides. It allows you to compose your UI from many separate, isolated components. This makes it easier to build and maintain complex user interfaces.
 
-# --instructions--
+## instructions 
 
 The code editor has a function called `MyComponent`. Complete this function so it returns a single `div` element which contains some string of text.
 
 **Note:** The text is considered a child of the `div` element, so you will not be able to use a self-closing tag.
 
-# --solutions--
+## solutions 
 
 ```jsx
 const MyComponent = function() {

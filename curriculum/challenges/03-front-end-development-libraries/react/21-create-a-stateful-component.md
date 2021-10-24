@@ -13,11 +13,11 @@ this.state = {
 
 You have access to the `state` object throughout the life of your component. You can update it, render it in your UI, and pass it as props to child components. The `state` object can be as complex or as simple as you need it to be. Note that you must create a class component by extending `React.Component` in order to create `state` like this.
 
-# --instructions--
+## instructions 
 
 There is a component in the code editor that is trying to render a `name` property from its `state`. However, there is no `state` defined. Initialize the component with `state` in the `constructor` and assign your name to a property of `name`.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class StatefulComponent extends React.Component {
