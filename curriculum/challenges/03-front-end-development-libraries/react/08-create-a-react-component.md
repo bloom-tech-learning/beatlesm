@@ -1,5 +1,10 @@
 # <center>08 - Create a React Component</center>
 
+[Previous page](07-create-a-stateless-functional-component.md) | [Next page](09-create-a-component-with-composition.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 The other way to define a React component is with the ES6 `class` syntax. In the following example, `Kitten` extends `React.Component`:
 
 ```jsx
@@ -40,3 +45,7 @@ class MyComponent extends React.Component {
   }
 };
 ```
+
+[Previous page](07-create-a-stateless-functional-component.md) | [Next page](09-create-a-component-with-composition.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)

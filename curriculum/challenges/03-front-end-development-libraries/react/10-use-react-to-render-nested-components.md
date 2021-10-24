@@ -1,5 +1,10 @@
 # <center>10 - Use React to Render Nested Components</center>
 
+[Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.
 
 Component composition is one of React's powerful features. When you work with React, it is important to start thinking about your user interface in terms of components like the App example in the last challenge. You break down your UI into its basic building blocks, and those pieces become the components. This helps to separate the code responsible for the UI from the code responsible for handling your application logic. It can greatly simplify the development and maintenance of complex projects.
@@ -52,3 +57,7 @@ class TypesOfFood extends React.Component {
   }
 };
 ```
+
+[Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
