@@ -157,3 +157,12 @@
 [submodule "Reference/web/3.1-Advanced-React/Module_1-Class-Components/web-module-project-class-components"]
 	path = Reference/web/3.1-Advanced-React/Module_1-Class-Components/web-module-project-class-components
 	url = https://github.com/beatlesm/web-module-project-class-components
+[submodule "Reference/web/3.1-Advanced-React/Module_2-The-React-Lifecycle/web-module-project-lifecycle"]
+	path = Reference/web/3.1-Advanced-React/Module_2-The-React-Lifecycle/web-module-project-lifecycle
+	url = https://github.com/beatlesm/web-module-project-lifecycle
+[submodule "Reference/web/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/web-module-project-custom-hook"]
+	path = Reference/web/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/web-module-project-custom-hook
+	url = https://github.com/beatlesm/web-module-project-custom-hook
+[submodule "Reference/web/3.1-Advanced-React/Module_4-Testing-Web-Applications/web-module-project-testing-web-apps"]
+	path = Reference/web/3.1-Advanced-React/Module_4-Testing-Web-Applications/web-module-project-testing-web-apps
+	url = https://github.com/beatlesm/web-module-project-testing-web-apps
