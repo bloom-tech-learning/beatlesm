@@ -12,7 +12,7 @@ Note: Some browser extensions, such as ad-blockers and script-blockers can inter
 
 ## Courses
 
-### [Basic JavaScript]()
+### [Basic JavaScript](./basic-javascript/READFME.md)
 
 JavaScript is a scripting language you can use to make web pages interactive. It is one of the core technologies of the web, along with HTML and CSS, and is supported by all modern browsers.
 
