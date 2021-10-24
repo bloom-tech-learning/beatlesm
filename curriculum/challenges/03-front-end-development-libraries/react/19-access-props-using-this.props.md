@@ -1,5 +1,10 @@
 # <center>19 - Access Props Using this.propsPassed</center>
 
+[Previous page](18-use-proptypes-to-define-the-props-you-expect.md) | [Next page](20-review-using-props-with-stateless-functional-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 The last several challenges covered the basic ways to pass props to child components. But what if the child component that you're passing a prop to is an ES6 class component, rather than a stateless functional component? The ES6 class component uses a slightly different convention to access props.
 
 Anytime you refer to a class component within itself, you use the `this` keyword. To access props within a class component, you preface the code that you use to access it with `this`. For example, if an ES6 class component has a prop called `data`, you write `{this.props.data}` in JSX.
@@ -44,3 +49,6 @@ class ResetPassword extends React.Component {
   }
 };
 ```
+[Previous page](18-use-proptypes-to-define-the-props-you-expect.md) | [Next page](20-review-using-props-with-stateless-functional-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
