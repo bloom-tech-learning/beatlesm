@@ -4,7 +4,7 @@ Conditional rendering is useful, but you may need your components to render an u
 
 For example, you create a simple "To Do List" app. As the programmer, you have no way of knowing how many items a user might have on their list. You need to set up your component to dynamically render the correct number of list elements long before someone using the program decides that today is laundry day.
 
-# --instructions--
+## instructions 
 
 The code editor has most of the `MyToDoList` component set up. Some of this code should look familiar if you completed the controlled form challenge. You'll notice a `textarea` and a `button`, along with a couple of methods that track their states, but nothing is rendered to the page yet.
 
@@ -12,7 +12,7 @@ Inside the `constructor`, create a `this.state` object and define two states: `u
 
 **Note:** You may know that all sibling child elements created by a mapping operation like this do need to be supplied with a unique `key` attribute. Don't worry, this is the topic of the next challenge.
 
-# --solutions--
+## solutions 
 
 ```jsx
 const textAreaStyles = {

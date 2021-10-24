@@ -6,11 +6,11 @@ The `map` array method is a powerful tool that you will use often when working w
 let onlineUsers = users.filter(user => user.online);
 ```
 
-# --instructions--
+## instructions 
 
 In the code editor, `MyComponent`'s `state` is initialized with an array of users. Some users are online and some aren't. Filter the array so you see only the users who are online. To do this, first use `filter` to return a new array containing only the users whose `online` property is `true`. Then, in the `renderOnline` variable, map over the filtered array, and return a `li` element for each user that contains the text of their `username`. Be sure to include a unique `key` as well, like in the last challenges.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class MyComponent extends React.Component {
