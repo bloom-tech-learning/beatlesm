@@ -1,5 +1,10 @@
 # <center>05 Define an HTML Class in JSX</center>
 
+[Previous page](04-render-html-elements-to-the-dom.md) | [Next page](06-learn-about-self-closing-jsx-tags.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
 
 So far, it may seem that HTML and JSX are exactly the same.
@@ -21,7 +26,7 @@ const JSX = (
 </div>);
 ```
 
-[Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
+[Previous page](04-render-html-elements-to-the-dom.md) | [Next page](06-learn-about-self-closing-jsx-tags.md)
 
 #### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
 

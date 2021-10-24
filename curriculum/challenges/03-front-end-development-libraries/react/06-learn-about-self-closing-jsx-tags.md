@@ -1,5 +1,10 @@
 # <center>06 Learn About Self-Closing JSX Tags</center> 
 
+[Previous page](05-define-an-html-class-in-jsx.md) | [Next page](07-create-a-stateless-functional-component.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 So far, you’ve seen how JSX differs from HTML in a key way with the use of `className` vs. `class` for defining HTML classes.
 
 Another important way in which JSX differs from HTML is in the idea of the self-closing tag.
@@ -25,3 +30,7 @@ const JSX = (
 </div>
 );
 ```
+
+[Previous page](05-define-an-html-class-in-jsx.md) | [Next page](07-create-a-stateless-functional-component.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
