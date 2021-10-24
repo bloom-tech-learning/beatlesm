@@ -1,4 +1,4 @@
-# <center>19 - Access Props Using this.propsPassed</center>
+# <center>19 - Access Props Using this.props</center>
 
 [Previous page](18-use-proptypes-to-define-the-props-you-expect.md) | [Next page](20-review-using-props-with-stateless-functional-components.md)
 
