@@ -1,5 +1,10 @@
 # <center>22 - Render State in the User Interface</center>
 
+[Previous page](21-create-a-stateful-component.md) | [Next page](23-render-state-in-the-user-interface-another-way.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is stateful, it will always have access to the data in `state` in its `render()` method. You can access the data with `this.state`.
 
 If you want to access a state value within the `return` of the render method, you have to enclose the value in curly braces.
@@ -35,3 +40,9 @@ class MyComponent extends React.Component {
   }
 };
 ```
+
+[Previous page](21-create-a-stateful-component.md) | [Next page](23-render-state-in-the-user-interface-another-way.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+

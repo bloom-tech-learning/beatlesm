@@ -1,5 +1,10 @@
 # <center>23 - Render State in the User Interface Another Way</center>
 
+[Previous page](22-render-state-in-the-user-interface.md) | [Next page](24-set-state-with-this.setstate.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 There is another way to access `state` in a component. In the `render()` method, before the `return` statement, you can write JavaScript directly. For example, you could declare functions, access data from `state` or `props`, perform computations on this data, and so on. Then, you can assign any data to variables, which you have access to in the `return` statement.
 
 ## instructions 
@@ -32,3 +37,7 @@ class MyComponent extends React.Component {
   }
 };
 ```
+
+[Previous page](22-render-state-in-the-user-interface.md) | [Next page](24-set-state-with-this.setstate.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
