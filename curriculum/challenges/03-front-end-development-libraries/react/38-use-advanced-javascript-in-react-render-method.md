@@ -1,4 +1,4 @@
-# <center>07 </center>
+# <center>38 - Use Advanced JavaScript in React Render Method</center>
 
 In previous challenges, you learned how to inject JavaScript code into JSX code using curly braces, `{ }`, for tasks like accessing props, passing props, accessing state, inserting comments into your code, and most recently, styling your components. These are all common use cases to put JavaScript in JSX, but they aren't the only way that you can utilize JavaScript code in your React components.
 

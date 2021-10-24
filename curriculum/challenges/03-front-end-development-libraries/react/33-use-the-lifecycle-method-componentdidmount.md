@@ -1,4 +1,4 @@
-# <center>07 </center>
+# <center>33 - Use the Lifecycle Method componentDidMount</center>
 
 Most web developers, at some point, need to call an API endpoint to retrieve data. If you're working with React, it's important to know where to perform this action.
 
