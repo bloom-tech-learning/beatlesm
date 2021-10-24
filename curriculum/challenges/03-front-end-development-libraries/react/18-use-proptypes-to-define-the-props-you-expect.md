@@ -1,5 +1,10 @@
 # <center>18 - Use PropTypes to Define the Props You Expect</center>
 
+[Previous page](17-override-default-props.md) | [Next page](19-access-props-using-this.props.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 React provides useful type-checking features to verify that components receive props of the correct type. For example, your application makes an API call to retrieve data that you expect to be in an array, which is then passed to a component as a prop. You can set `propTypes` on your component to require the data to be of type `array`. This will throw a useful warning when the data is of any other type.
 
 It's considered a best practice to set `propTypes` when you know the type of a prop ahead of time. You can define a `propTypes` property for a component in the same way you defined `defaultProps`. Doing this will check that props of a given key are present with a given type. Here's an example to require the type `function` for a prop called `handleClick`:
@@ -42,3 +47,7 @@ class ShoppingCart extends React.Component {
   }
 };
 ```
+
+[Previous page](17-override-default-props.md) | [Next page](19-access-props-using-this.props.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)

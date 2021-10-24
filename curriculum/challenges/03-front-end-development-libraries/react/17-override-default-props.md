@@ -1,5 +1,11 @@
 # <center>17 - Override Default Props</center>
 
+[Previous page](16-use-default-props.md) | [Next page](18-use-proptypes-to-define-the-props-you-expect.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
+
 The ability to set default props is a useful feature in React. The way to override the default props is to explicitly set the prop values for a component.
 
 ## instructions 
@@ -30,3 +36,7 @@ class ShoppingCart extends React.Component {
   }
 };
 ```
+
+[Previous page](16-use-default-props.md) | [Next page](18-use-proptypes-to-define-the-props-you-expect.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
