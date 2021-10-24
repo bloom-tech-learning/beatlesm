@@ -1,5 +1,10 @@
 # <center>39 - Render with an If-Else Condition</center>
 
+[Previous page](38-use-advanced-javascript-in-react-render-method.md) | [Next page](40-use-&&-for-a-more-concise-conditional.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 Another application of using JavaScript to control your rendered view is to tie the elements that are rendered to a condition. When the condition is true, one view renders. When it's false, it's a different view. You can do this with a standard `if/else` statement in the `render()` method of a React component.
 
 ## instructions 
@@ -43,3 +48,7 @@ class MyComponent extends React.Component {
   }
 };
 ```
+
+[Previous page](38-use-advanced-javascript-in-react-render-method.md) | [Next page](40-use-&&-for-a-more-concise-conditional.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)

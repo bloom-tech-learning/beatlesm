@@ -1,5 +1,10 @@
 # <center>44 - Use Array.map() to Dynamically Render Elements</center>
 
+[Previous page](43-change-inline-css-conditionally-based-on-component-state.md) | [Next page](45-give-sibling-elements-a-unique-key-attribute.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 Conditional rendering is useful, but you may need your components to render an unknown number of elements. Often in reactive programming, a programmer has no way to know what the state of an application is until runtime, because so much depends on a user's interaction with that program. Programmers need to write their code to correctly handle that unknown state ahead of time. Using `Array.map()` in React illustrates this concept.
 
 For example, you create a simple "To Do List" app. As the programmer, you have no way of knowing how many items a user might have on their list. You need to set up your component to dynamically render the correct number of list elements long before someone using the program decides that today is laundry day.
@@ -62,3 +67,7 @@ class MyToDoList extends React.Component {
   }
 }
 ```
+
+[Previous page](43-change-inline-css-conditionally-based-on-component-state.md) | [Next page](45-give-sibling-elements-a-unique-key-attribute.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)

@@ -1,5 +1,10 @@
 # <center>43 - Change Inline CSS Conditionally Based on Component State</center>
 
+[Previous page](42-render-conditionally-from-props.md) | [Next page](44-use-array.map-to-dynamically-render-elements.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 At this point, you've seen several applications of conditional rendering and the use of inline styles. Here's one more example that combines both of these topics. You can also render CSS conditionally based on the state of a React component. To do this, you check for a condition, and if that condition is met, you modify the styles object that's assigned to the JSX elements in the render method.
 
 This paradigm is important to understand because it is a dramatic shift from the more traditional approach of applying styles by modifying DOM elements directly (which is very common with jQuery, for example). In that approach, you must keep track of when elements change and also handle the actual manipulation directly. It can become difficult to keep track of changes, potentially making your UI unpredictable. When you set a style object based on a condition, you describe how the UI should look as a function of the application's state. There is a clear flow of information that only moves in one direction. This is the preferred method when writing applications with React.
@@ -42,3 +47,7 @@ class GateKeeper extends React.Component {
   }
 };
 ```
+
+[Previous page](42-render-conditionally-from-props.md) | [Next page](44-use-array.map-to-dynamically-render-elements.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)

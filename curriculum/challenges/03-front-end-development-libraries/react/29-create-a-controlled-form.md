@@ -1,5 +1,10 @@
 # <center>29 - Create a Controlled Form</center>
 
+[Previous page](28-create-a-controlled-input.md) | [Next page](30-pass-state-as-props-to-child-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 The last challenge showed that React can control the internal state for certain elements like `input` and `textarea`, which makes them controlled components. This applies to other form elements as well, including the regular HTML `form` element.
 
 ## instructions 
@@ -49,3 +54,8 @@ class MyForm extends React.Component {
   }
 }
 ```
+
+[Previous page](28-create-a-controlled-input.md) | [Next page](30-pass-state-as-props-to-child-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
