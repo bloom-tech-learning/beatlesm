@@ -1,4 +1,4 @@
-# <center>06 Learn About Self-Closing JSX Tags</center> 
+# <center>06 - Learn About Self-Closing JSX Tags</center> 
 
 [Previous page](05-define-an-html-class-in-jsx.md) | [Next page](07-create-a-stateless-functional-component.md)
 

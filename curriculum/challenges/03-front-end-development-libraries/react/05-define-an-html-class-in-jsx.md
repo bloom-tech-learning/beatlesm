@@ -1,4 +1,4 @@
-# <center>05 Define an HTML Class in JSX</center>
+# <center>05 - Define an HTML Class in JSX</center>
 
 [Previous page](04-render-html-elements-to-the-dom.md) | [Next page](06-learn-about-self-closing-jsx-tags.md)
 
