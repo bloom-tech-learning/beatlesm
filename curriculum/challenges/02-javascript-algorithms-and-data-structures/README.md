@@ -76,6 +76,6 @@ This is it — time to put your new JavaScript skills to work. These projects ar
 
 Complete these 5 JavaScript projects to earn the JavaScript Algorithms and Data Structures certification.
 
-### [Claim Your Certification](../02-javascript-algorithms-and-data-structures/README.md)
+### [Claim Your Certification](../challenges/02-javascript-algorithms-and-data-structures/README.md)
 
 Complete the following steps to claim and view your JavaScript Algorithms and Data Structures Certification
