@@ -67,4 +67,5 @@ class MyComponent extends React.Component {
 }
 ```
 
-[Previous page](45-give-sibling-elements-a-unique-key-attribute.md) | [Next page](#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react))
+[Previous page](45-give-sibling-elements-a-unique-key-attribute.md) | [Next page](47-render-react-on-the-server-with-rendertostring.md)
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
