@@ -28,7 +28,7 @@ Sass, or "Syntactically Awesome StyleSheets", is a language extension of CSS. It
 
 In this Sass course, you'll learn how to store data in variables, nest CSS, create reusable styles with mixins, add logic and loops to your styles, and more.
 
-### React
+### [React]((./react/README.md))
 
 React is a popular JavaScript library for building reusable, component-driven user interfaces for web pages or applications.
 
@@ -36,7 +36,7 @@ React combines HTML with JavaScript functionality into its own markup language c
 
 In this course, you'll learn how to create different React components, manage data in the form of state props, use different lifecycle methods like componentDidMount, and much more.
 
-### [Redux](./README.md)
+### [Redux](./redux/README.md)
 
 As applications grow in size and scope, managing shared data becomes much more difficult. Redux is defined as a "predictable state container for JavaScript apps" that helps ensure your apps work predictably, and are easier to test.
 
