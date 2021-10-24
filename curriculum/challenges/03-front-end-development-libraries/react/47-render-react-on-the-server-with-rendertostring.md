@@ -23,3 +23,6 @@ class App extends React.Component {
 // Change code below this line
 ReactDOMServer.renderToString(<App/>);
 ```
+[Previous page](46-use-array.filter-to-dynamically-filter-an-array.md) | 
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
