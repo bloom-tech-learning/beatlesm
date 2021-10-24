@@ -1,6 +1,6 @@
 # <center>11 - Compose React Components</center>
 
-[Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
+[Previous page](10-use-react-to-render-nested-components.md) | [Next page](12-render-a-class-component-to-the-dom.md)
 
 #### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
 
@@ -51,6 +51,6 @@ class TypesOfFood extends React.Component {
 };
 ```
 
-[Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
+[Previous page](10-use-react-to-render-nested-components.md) | [Next page](12-render-a-class-component-to-the-dom.md)
 
 #### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
