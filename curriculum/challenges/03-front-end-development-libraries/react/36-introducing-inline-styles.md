@@ -1,5 +1,10 @@
 # <center>36 - Introducing Inline Styles</center>
 
+[Previous page](35-optimize-re-renders-with-shouldcomponentupdate.md) | [Next page](37-add-inline-styles-in-react.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 There are other complex concepts that add powerful capabilities to your React code. But you may be wondering about the more simple problem of how to style those JSX elements you create in React. You likely know that it won't be exactly the same as working with HTML because of [the way you apply classes to JSX elements](/learn/front-end-development-libraries/react/define-an-html-class-in-jsx).
 
 If you import styles from a stylesheet, it isn't much different at all. You apply a class to your JSX element using the `className` attribute, and apply styles to the class in your stylesheet. Another option is to apply inline styles, which are very common in ReactJS development.
@@ -35,3 +40,7 @@ class Colorful extends React.Component {
   }
 };
 ```
+
+[Previous page](35-optimize-re-renders-with-shouldcomponentupdate.md) | [Next page](37-add-inline-styles-in-react.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
