@@ -27,6 +27,6 @@ class App extends React.Component {
 // Change code below this line
 ReactDOMServer.renderToString(<App/>);
 ```
-[Previous page](46-use-array.filter-to-dynamically-filter-an-array.md) | [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+[Previous page](46-use-array.filter-to-dynamically-filter-an-array.md) | [First Page](01-create-a-simple-jsx-element.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
