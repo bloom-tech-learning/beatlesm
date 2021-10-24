@@ -36,7 +36,7 @@ React combines HTML with JavaScript functionality into its own markup language c
 
 In this course, you'll learn how to create different React components, manage data in the form of state props, use different lifecycle methods like componentDidMount, and much more.
 
-### Redux
+### [Redux](./README.md)
 
 As applications grow in size and scope, managing shared data becomes much more difficult. Redux is defined as a "predictable state container for JavaScript apps" that helps ensure your apps work predictably, and are easier to test.
 
