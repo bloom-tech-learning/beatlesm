@@ -8,11 +8,11 @@ JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readabi
 
 To put comments inside JSX, you use the syntax `{/* */}` to wrap around the comment text.
 
-# --instructions--
+## instructions 
 
 The code editor has a JSX element similar to what you created in the last challenge. Add a comment somewhere within the provided `div` element, without modifying the existing `h1` or `p` elements.
 
-# --solutions--
+## solutions 
 
 ```jsx
 const JSX = (

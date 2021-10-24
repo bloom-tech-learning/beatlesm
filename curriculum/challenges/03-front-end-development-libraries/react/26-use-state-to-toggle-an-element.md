@@ -26,7 +26,7 @@ this.setState(state => ({
 
 Note that you have to wrap the object literal in parentheses, otherwise JavaScript thinks it's a block of code.
 
-# --instructions--
+## instructions 
 
 `MyComponent` has a `visibility` property which is initialized to `false`. The render method returns one view if the value of `visibility` is true, and a different view if it is false.
 
@@ -36,7 +36,7 @@ Finally, click the button to see the conditional rendering of the component base
 
 **Hint:** Don't forget to bind the `this` keyword to the method in the `constructor`!
 
-# --solutions--
+## solutions 
 
 ```jsx
 class MyComponent extends React.Component {

@@ -4,11 +4,11 @@ The last several challenges covered the basic ways to pass props to child compon
 
 Anytime you refer to a class component within itself, you use the `this` keyword. To access props within a class component, you preface the code that you use to access it with `this`. For example, if an ES6 class component has a prop called `data`, you write `{this.props.data}` in JSX.
 
-# --instructions--
+## instructions 
 
 Render an instance of the `ReturnTempPassword` component in the parent component `ResetPassword`. Here, give `ReturnTempPassword` a prop of `tempPassword` and assign it a value of a string that is at least 8 characters long. Within the child, `ReturnTempPassword`, access the `tempPassword` prop within the `strong` tags to make sure the user sees the temporary password.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class ReturnTempPassword extends React.Component {

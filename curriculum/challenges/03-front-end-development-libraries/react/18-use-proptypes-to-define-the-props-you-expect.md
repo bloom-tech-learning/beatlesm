@@ -12,11 +12,11 @@ In the example above, the `PropTypes.func` part checks that `handleClick` is a f
 
 **Note:** As of React v15.5.0, `PropTypes` is imported independently from React, like this: `import PropTypes from 'prop-types';`
 
-# --instructions--
+## instructions 
 
 Define `propTypes` for the `Items` component to require `quantity` as a prop and verify that it is of type `number`.
 
-# --solutions--
+## solutions 
 
 ```jsx
 const Items = (props) => {

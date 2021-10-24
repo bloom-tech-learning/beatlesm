@@ -4,11 +4,11 @@ React components have several special methods that provide opportunities to perf
 
 **Note:** The `componentWillMount` Lifecycle method will be deprecated in a future version of 16.X and removed in version 17. [(Source)](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
-# --instructions--
+## instructions 
 
 The `componentWillMount()` method is called before the `render()` method when a component is being mounted to the DOM. Log something to the console within `componentWillMount()` - you may want to have your browser console open to see the output.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class MyComponent extends React.Component {
