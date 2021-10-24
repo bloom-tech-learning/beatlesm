@@ -7,7 +7,6 @@
 -   [05 - Define an HTML Class in JSX](05-define-an-html-class-in-jsx.md)
 -   [06 - Learn About Self-Closing JSX Tags](06-learn-about-self-closing-jsx-tags.md)
 -   [07 - Create a Stateless Functional Component](07-create-a-stateless-functional-component.md)
-
 -   [08 - Create a React Component](08-create-a-react-component.md)
 -   [09 - Create a Component with Composition](09-create-a-component-with-composition.md)
 -   [10 - Use React to Render Nested Components](10-use-react-to-render-nested-components.md)
