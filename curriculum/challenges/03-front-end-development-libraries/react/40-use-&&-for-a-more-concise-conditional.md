@@ -8,11 +8,11 @@ The `if/else` statements worked in the last challenge, but there's a more concis
 
 If the `condition` is `true`, the markup will be returned. If the condition is `false`, the operation will immediately return `false` after evaluating the `condition` and return nothing. You can include these statements directly in your JSX and string multiple conditions together by writing `&&` after each one. This allows you to handle more complex conditional logic in your `render()` method without repeating a lot of code.
 
-# --instructions--
+## instructions 
 
 Solve the previous example again, so the `h1` only renders if `display` is `true`, but use the `&&` logical operator instead of an `if/else` statement.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class MyComponent extends React.Component {

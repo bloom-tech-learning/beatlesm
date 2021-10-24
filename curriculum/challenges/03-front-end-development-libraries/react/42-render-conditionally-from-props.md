@@ -4,7 +4,7 @@ So far, you've seen how to use `if/else`, `&&`, and the ternary operator (`condi
 
 In this challenge, you'll set up a child component to make rendering decisions based on props. You'll also use the ternary operator, but you can see how several of the other concepts that were covered in the last few challenges might be just as useful in this context.
 
-# --instructions--
+## instructions 
 
 The code editor has two components that are partially defined for you: a parent called `GameOfChance`, and a child called `Results`. They are used to create a simple game where the user presses a button to see if they win or lose.
 
@@ -12,7 +12,7 @@ First, you'll need a simple expression that randomly returns a different value e
 
 Now you have an expression that you can use to make a randomized decision in the code. Next you need to implement this. Render the `Results` component as a child of `GameOfChance`, and pass in `expression` as a prop called `fiftyFifty`. In the `Results` component, write a ternary expression to render the `h1` element with the text `You Win!` or `You Lose!` based on the `fiftyFifty` prop that's being passed in from `GameOfChance`. Finally, make sure the `handleClick()` method is correctly counting each turn so the user knows how many times they've played. This also serves to let the user know the component has actually updated in case they win or lose twice in a row.
 
-# --solutions--
+## solutions 
 
 ```jsx
 class Results extends React.Component {
