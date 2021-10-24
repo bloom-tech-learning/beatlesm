@@ -1,5 +1,10 @@
 # <center>12 - Render a Class Component to the DOM</center>
 
+[Previous page](11-compose-react-components.md) | [Next page](13-write-a-react-component-from-scratch.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+
+
 You may remember using the ReactDOM API in an earlier challenge to render JSX elements to the DOM. The process for rendering React components will look very similar. The past few challenges focused on components and composition, so the rendering was done for you behind the scenes. However, none of the React code you write will render to the DOM without making a call to the ReactDOM API.
 
 Here's a refresher on the syntax: `ReactDOM.render(componentToRender, targetNode)`. The first argument is the React component that you want to render. The second argument is the DOM node that you want to render that component within.
@@ -33,3 +38,7 @@ class TypesOfFood extends React.Component {
 // Change code below this line
 ReactDOM.render(<TypesOfFood />, document.getElementById('challenge-node'));
 ```
+
+[Previous page](11-compose-react-components.md) | [Next page](13-write-a-react-component-from-scratch.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)

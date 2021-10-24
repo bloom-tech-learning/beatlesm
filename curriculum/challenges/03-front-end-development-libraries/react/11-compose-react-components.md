@@ -45,3 +45,7 @@ class TypesOfFood extends React.Component {
     }
 };
 ```
+
+[Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
+
+#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
