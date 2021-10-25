@@ -2,7 +2,7 @@
 
 [Previous page](42-render-conditionally-from-props.md) | [Next page](44-use-array.map-to-dynamically-render-elements.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 At this point, you've seen several applications of conditional rendering and the use of inline styles. Here's one more example that combines both of these topics. You can also render CSS conditionally based on the state of a React component. To do this, you check for a condition, and if that condition is met, you modify the styles object that's assigned to the JSX elements in the render method.
@@ -50,4 +50,4 @@ class GateKeeper extends React.Component {
 
 [Previous page](42-render-conditionally-from-props.md) | [Next page](44-use-array.map-to-dynamically-render-elements.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

@@ -2,7 +2,7 @@
 
 [Previous page](37-add-inline-styles-in-react.md) | [Next page](39-render-with-an-if-else-condition.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 In previous challenges, you learned how to inject JavaScript code into JSX code using curly braces, `{ }`, for tasks like accessing props, passing props, accessing state, inserting comments into your code, and most recently, styling your components. These are all common use cases to put JavaScript in JSX, but they aren't the only way that you can utilize JavaScript code in your React components.
@@ -89,4 +89,4 @@ class MagicEightBall extends React.Component {
 
 [Previous page](37-add-inline-styles-in-react.md) | [Next page](39-render-with-an-if-else-condition.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

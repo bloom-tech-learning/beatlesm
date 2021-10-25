@@ -2,7 +2,7 @@
 
 [Previous page](45-give-sibling-elements-a-unique-key-attribute.md) | [Next page](47-render-react-on-the-server-with-rendertostring.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 The `map` array method is a powerful tool that you will use often when working with React. Another method related to `map` is `filter`, which filters the contents of an array based on a condition, then returns a new array. For example, if you have an array of users that all have a property `online` which can be set to `true` or `false`, you can filter only those users that are online by writing:
@@ -68,4 +68,4 @@ class MyComponent extends React.Component {
 ```
 
 [Previous page](45-give-sibling-elements-a-unique-key-attribute.md) | [Next page](47-render-react-on-the-server-with-rendertostring.md)
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

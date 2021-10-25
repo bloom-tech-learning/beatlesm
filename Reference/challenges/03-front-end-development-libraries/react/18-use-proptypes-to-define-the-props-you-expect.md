@@ -2,7 +2,7 @@
 
 [Previous page](17-override-default-props.md) | [Next page](19-access-props-using-this.props.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 React provides useful type-checking features to verify that components receive props of the correct type. For example, your application makes an API call to retrieve data that you expect to be in an array, which is then passed to a component as a prop. You can set `propTypes` on your component to require the data to be of type `array`. This will throw a useful warning when the data is of any other type.
@@ -50,4 +50,4 @@ class ShoppingCart extends React.Component {
 
 [Previous page](17-override-default-props.md) | [Next page](19-access-props-using-this.props.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

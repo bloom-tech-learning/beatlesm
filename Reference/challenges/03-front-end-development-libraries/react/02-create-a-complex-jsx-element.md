@@ -2,7 +2,7 @@
 
 [Previous page](01-create-a-simple-jsx-element.md) | [Next page](03-add-comments-in-jsx.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
+#### [Home - React](./README.md)
 
 
 The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.
@@ -56,4 +56,4 @@ const JSX = (
 
 [Previous page](01-create-a-simple-jsx-element.md) | [Next page](03-add-comments-in-jsx.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
+#### [Home - React](./README.md) 

@@ -2,7 +2,7 @@
 
 [Previous page](34-add-event-listeners.md) | [Next page](36-introducing-inline-styles.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 So far, if any component receives new `state` or new `props`, it re-renders itself and all its children. This is usually okay. But React provides a lifecycle method you can call when child components receive new `state` or `props`, and declare specifically if the components should update or not. The method is `shouldComponentUpdate()`, and it takes `nextProps` and `nextState` as parameters.
@@ -60,4 +60,4 @@ class Controller extends React.Component {
 
 [Previous page](34-add-event-listeners.md) | [Next page](36-introducing-inline-styles.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

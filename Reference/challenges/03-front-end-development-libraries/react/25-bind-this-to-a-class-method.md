@@ -2,7 +2,7 @@
 
 [Previous page](24-set-state-with-this.setstate.md) | [Next page](26-use-state-to-toggle-an-element.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 In addition to setting and updating `state`, you can also define methods for your component class. A class method typically needs to use the `this` keyword so it can access properties on the class (such as `state` and `props`) inside the scope of the method. There are a few ways to allow your class methods to access `this`.
@@ -48,4 +48,4 @@ class MyComponent extends React.Component {
 
 [Previous page](24-set-state-with-this.setstate.md) | [Next page](26-use-state-to-toggle-an-element.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

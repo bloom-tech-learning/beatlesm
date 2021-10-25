@@ -2,7 +2,7 @@
 
 [Previous page](02-create-a-complex-jsx-element.md) | [Next page](04-render-html-elements-to-the-dom.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
+#### [Home - React](./README.md) 
 
 JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. Like most programming languages, JSX has its own way to do this.
 
@@ -26,4 +26,4 @@ const JSX = (
 
 [Previous page](02-create-a-complex-jsx-element.md) | [Next page](04-render-html-elements-to-the-dom.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
+#### [Home - React](./README.md)

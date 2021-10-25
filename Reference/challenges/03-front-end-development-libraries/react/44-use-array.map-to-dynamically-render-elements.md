@@ -2,7 +2,7 @@
 
 [Previous page](43-change-inline-css-conditionally-based-on-component-state.md) | [Next page](45-give-sibling-elements-a-unique-key-attribute.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 Conditional rendering is useful, but you may need your components to render an unknown number of elements. Often in reactive programming, a programmer has no way to know what the state of an application is until runtime, because so much depends on a user's interaction with that program. Programmers need to write their code to correctly handle that unknown state ahead of time. Using `Array.map()` in React illustrates this concept.
@@ -70,4 +70,4 @@ class MyToDoList extends React.Component {
 
 [Previous page](43-change-inline-css-conditionally-based-on-component-state.md) | [Next page](45-give-sibling-elements-a-unique-key-attribute.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

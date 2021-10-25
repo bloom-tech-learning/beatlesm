@@ -2,7 +2,7 @@
 
 [Previous page](04-render-html-elements-to-the-dom.md) | [Next page](06-learn-about-self-closing-jsx-tags.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.
@@ -28,5 +28,5 @@ const JSX = (
 
 [Previous page](04-render-html-elements-to-the-dom.md) | [Next page](06-learn-about-self-closing-jsx-tags.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
+#### [Home - React](./README.md) 
 

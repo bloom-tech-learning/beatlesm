@@ -2,8 +2,7 @@
 
 [Previous page](06-learn-about-self-closing-jsx-tags.md) | [Next page](08-create-a-react-component.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
-
+#### [Home - React](./README.md)
 
 Components are the core of React. Everything in React is a component and here you will learn how to create one.
 
@@ -46,4 +45,4 @@ const MyComponent = function() {
 
 [Previous page](06-learn-about-self-closing-jsx-tags.md) | [Next page](08-create-a-react-component.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

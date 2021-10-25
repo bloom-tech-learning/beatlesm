@@ -2,7 +2,7 @@
 
 [Previous page](25-bind-this-to-a-class-method.md) | [Next page](27-write-a-simple-counter.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 Sometimes you might need to know the previous state when updating the state. However, state updates may be asynchronous - this means React may batch multiple `setState()` calls into a single update. This means you can't rely on the previous value of `this.state` or `this.props` when calculating the next value. So, you should not use code like this:
@@ -78,4 +78,4 @@ class MyComponent extends React.Component {
 
 [Previous page](25-bind-this-to-a-class-method.md) | [Next page](27-write-a-simple-counter.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

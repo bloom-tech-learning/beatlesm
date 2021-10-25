@@ -2,7 +2,7 @@
 
 [Previous page](36-introducing-inline-styles.md) | [Next page](38-use-advanced-javascript-in-react-render-method.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 You may have noticed in the last challenge that there were several other syntax differences from HTML inline styles in addition to the `style` attribute set to a JavaScript object. First, the names of certain CSS style properties use camel case. For example, the last challenge set the size of the font with `fontSize` instead of `font-size`. Hyphenated words like `font-size` are invalid syntax for JavaScript object properties, so React uses camel case. As a rule, any hyphenated style properties are written using camel case in JSX.
@@ -35,4 +35,4 @@ class Colorful extends React.Component {
 
 [Previous page](36-introducing-inline-styles.md) | [Next page](38-use-advanced-javascript-in-react-render-method.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

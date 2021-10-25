@@ -2,7 +2,7 @@
 
 [Previous page](14-pass-props-to-a-stateless-functional-component.md) | [Next page](16-use-default-props.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 The last challenge demonstrated how to pass information from a parent component to a child component as `props` or properties. This challenge looks at how arrays can be passed as `props`. To pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
@@ -46,4 +46,4 @@ class ToDo extends React.Component {
 
 [Previous page](14-pass-props-to-a-stateless-functional-component.md) | [Next page](16-use-default-props.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

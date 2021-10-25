@@ -2,7 +2,7 @@
 
 [Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.
@@ -60,4 +60,4 @@ class TypesOfFood extends React.Component {
 
 [Previous page](09-create-a-component-with-composition.md) | [Next page](11-compose-react-components.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

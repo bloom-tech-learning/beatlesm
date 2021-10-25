@@ -2,7 +2,7 @@
 
 [Previous page](18-use-proptypes-to-define-the-props-you-expect.md) | [Next page](20-review-using-props-with-stateless-functional-components.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 The last several challenges covered the basic ways to pass props to child components. But what if the child component that you're passing a prop to is an ES6 class component, rather than a stateless functional component? The ES6 class component uses a slightly different convention to access props.
@@ -51,4 +51,4 @@ class ResetPassword extends React.Component {
 ```
 [Previous page](18-use-proptypes-to-define-the-props-you-expect.md) | [Next page](20-review-using-props-with-stateless-functional-components.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

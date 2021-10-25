@@ -2,7 +2,7 @@
 
 [Previous page](26-use-state-to-toggle-an-element.md) | [Next page](28-create-a-controlled-input.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 You can design a more complex stateful component by combining the concepts covered so far. These include initializing `state`, writing methods that set `state`, and assigning click handlers to trigger these methods.
@@ -56,4 +56,4 @@ class Counter extends React.Component {
 
 [Previous page](26-use-state-to-toggle-an-element.md) | [Next page](28-create-a-controlled-input.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

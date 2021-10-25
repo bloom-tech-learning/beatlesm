@@ -2,7 +2,7 @@
 
 [Previous page](23-render-state-in-the-user-interface-another-way.md) | [Next page](25-bind-this-to-a-class-method.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 The previous challenges covered component `state` and how to initialize state in the `constructor`. There is also a way to change the component's `state`. React provides a method for updating component `state` called `setState`. You call the `setState` method within your component class like so: `this.setState()`, passing in an object with key-value pairs. The keys are your state properties and the values are the updated state data. For instance, if we were storing a `username` in state and wanted to update it, it would look like this:
@@ -52,4 +52,4 @@ class MyComponent extends React.Component {
 
 [Previous page](23-render-state-in-the-user-interface-another-way.md) | [Next page](25-bind-this-to-a-class-method.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
