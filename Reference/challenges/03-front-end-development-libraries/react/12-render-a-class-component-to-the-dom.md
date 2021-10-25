@@ -2,7 +2,7 @@
 
 [Previous page](11-compose-react-components.md) | [Next page](13-write-a-react-component-from-scratch.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 You may remember using the ReactDOM API in an earlier challenge to render JSX elements to the DOM. The process for rendering React components will look very similar. The past few challenges focused on components and composition, so the rendering was done for you behind the scenes. However, none of the React code you write will render to the DOM without making a call to the ReactDOM API.
@@ -41,4 +41,4 @@ ReactDOM.render(<TypesOfFood />, document.getElementById('challenge-node'));
 
 [Previous page](11-compose-react-components.md) | [Next page](13-write-a-react-component-from-scratch.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

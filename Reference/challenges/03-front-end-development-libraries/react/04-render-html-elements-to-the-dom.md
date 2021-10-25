@@ -2,7 +2,8 @@
 
 [Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
 
-#### [Home](01-create-a-simple-jsx-element.md) 
+#### [Home - React](./README.md)
+
 
 So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.
 
@@ -29,4 +30,4 @@ ReactDOM.render(JSX, document.getElementById('challenge-node'));
 
 [Previous page](03-add-comments-in-jsx.md) | [Next page](05-define-an-html-class-in-jsx.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) 
+#### [Home - React](./README.md)

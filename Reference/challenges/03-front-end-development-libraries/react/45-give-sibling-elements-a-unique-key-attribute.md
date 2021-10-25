@@ -2,7 +2,7 @@
 
 [Previous page](44-use-array.map-to-dynamically-render-elements.md) | [Next page](46-use-array.filter-to-dynamically-filter-an-array.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 The last challenge showed how the `map` method is used to dynamically render a number of elements based on user input. However, there was an important piece missing from that example. When you create an array of elements, each one needs a `key` attribute set to a unique value. React uses these keys to keep track of which items are added, changed, or removed. This helps make the re-rendering process more efficient when the list is modified in any way.  
@@ -42,4 +42,4 @@ function Frameworks() {
 
 [Previous page](44-use-array.map-to-dynamically-render-elements.md) | [Next page](46-use-array.filter-to-dynamically-filter-an-array.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

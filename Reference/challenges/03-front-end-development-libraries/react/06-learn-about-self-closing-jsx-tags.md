@@ -2,7 +2,7 @@
 
 [Previous page](05-define-an-html-class-in-jsx.md) | [Next page](07-create-a-stateless-functional-component.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 So far, you’ve seen how JSX differs from HTML in a key way with the use of `className` vs. `class` for defining HTML classes.
@@ -33,4 +33,4 @@ const JSX = (
 
 [Previous page](05-define-an-html-class-in-jsx.md) | [Next page](07-create-a-stateless-functional-component.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

@@ -2,7 +2,7 @@
 
 [Previous page](08-create-a-react-component.md) | [Next page](10-use-react-to-render-nested-components.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 Now we will look at how we can compose multiple React components together. Imagine you are building an app and have created three components: a `Navbar`, `Dashboard`, and `Footer`.
@@ -57,4 +57,4 @@ class ParentComponent extends React.Component {
 
 [Previous page](08-create-a-react-component.md) | [Next page](10-use-react-to-render-nested-components.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

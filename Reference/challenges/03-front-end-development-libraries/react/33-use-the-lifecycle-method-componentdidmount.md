@@ -2,7 +2,7 @@
 
 [Previous page](32-use-the-lifecycle-method-componentwillmount.md) | [Next page](34-add-event-listeners.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 Most web developers, at some point, need to call an API endpoint to retrieve data. If you're working with React, it's important to know where to perform this action.
@@ -42,4 +42,4 @@ class MyComponent extends React.Component {
 
 [Previous page](32-use-the-lifecycle-method-componentwillmount.md) | [Next page](34-add-event-listeners.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

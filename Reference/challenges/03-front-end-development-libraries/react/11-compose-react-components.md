@@ -2,7 +2,7 @@
 
 [Previous page](10-use-react-to-render-nested-components.md) | [Next page](12-render-a-class-component-to-the-dom.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 As the challenges continue to use more complex compositions with React components and JSX, there is one important point to note. Rendering ES6 style class components within other components is no different than rendering the simple components you used in the last few challenges. You can render JSX elements, stateless functional components, and ES6 class components within other components.
@@ -53,4 +53,4 @@ class TypesOfFood extends React.Component {
 
 [Previous page](10-use-react-to-render-nested-components.md) | [Next page](12-render-a-class-component-to-the-dom.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

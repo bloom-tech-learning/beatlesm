@@ -2,7 +2,7 @@
 
 [Previous page](21-create-a-stateful-component.md) | [Next page](23-render-state-in-the-user-interface-another-way.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 Once you define a component's initial state, you can display any part of it in the UI that is rendered. If a component is stateful, it will always have access to the data in `state` in its `render()` method. You can access the data with `this.state`.
@@ -43,6 +43,6 @@ class MyComponent extends React.Component {
 
 [Previous page](21-create-a-stateful-component.md) | [Next page](23-render-state-in-the-user-interface-another-way.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 

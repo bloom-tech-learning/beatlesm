@@ -2,7 +2,7 @@
 
 [Previous page](29-create-a-controlled-form.md) | [Next page](31-pass-a-callback-as-props.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 You saw a lot of examples that passed props to child JSX elements and child React components in previous challenges. You may be wondering where those props come from. A common pattern is to have a stateful component containing the `state` important to your app, that then renders child components. You want these components to have access to some pieces of that `state`, which are passed in as props.
@@ -49,4 +49,4 @@ class Navbar extends React.Component {
 
 [Previous page](29-create-a-controlled-form.md) | [Next page](31-pass-a-callback-as-props.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)

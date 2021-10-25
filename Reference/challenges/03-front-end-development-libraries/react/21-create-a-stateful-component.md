@@ -3,7 +3,7 @@
 
 [Previous page](20-review-using-props-with-stateless-functional-components.md) | [Next page](22-render-state-in-the-user-interface.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
 
 
 One of the most important topics in React is `state`. State consists of any data your application needs to know about, that can change over time. You want your apps to respond to state changes and present an updated UI when necessary. React offers a nice solution for the state management of modern web applications.
@@ -44,4 +44,4 @@ class StatefulComponent extends React.Component {
 
 [Previous page](20-review-using-props-with-stateless-functional-components.md) | [Next page](22-render-state-in-the-user-interface.md)
 
-#### [Home](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react)
+#### [Home - React](./README.md)
