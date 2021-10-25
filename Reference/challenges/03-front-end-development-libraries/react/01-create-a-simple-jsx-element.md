@@ -2,7 +2,7 @@
 
 [Home - React](./README.md) | [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home - react](../react/README.md) 
+#### [Home - react](../../03-front-end-development-libraries/react/README.md)  
 
 
 React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.
@@ -28,5 +28,5 @@ const JSX = <h1>Hello JSX!</h1>;
 
 [Home - React](./README.md) | [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home - react](../react/README.md) 
+#### [Home - react](../../03-front-end-development-libraries/react/README.md) 
 
