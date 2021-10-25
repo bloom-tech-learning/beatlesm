@@ -8,7 +8,6 @@ Here are some ideas to get you started:
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
 
 
-
 -   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
