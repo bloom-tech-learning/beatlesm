@@ -92,4 +92,4 @@ Let's take the functionality of this class component that we built earlier and e
 -   Now inside of the ```App``` class pass in that ```RenderMessage``` component and pass down a message prop to ```RenderMessage```. This message prop should be set equal to the message property on the state object.
 -   Once it's all wired up properly you've done it!
 
-[Previous](../README.md) | [Next](./Obeject_2.md)
+[Previous](../README.md) | [Next](./Object_2.md)
