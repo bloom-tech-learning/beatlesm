@@ -1,6 +1,6 @@
 # Objective 2 - Share Data Between Components Using State and Props
 
-[Click here] (https://codesandbox.io/s/yk37ykmyrz) to access the code within this video's follow-along exercise.
+[Click here](https://codesandbox.io/s/yk37ykmyrz) to access the code within this video's follow-along exercise.
 
 ## Overview
 
