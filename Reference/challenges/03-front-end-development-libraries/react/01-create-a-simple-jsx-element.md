@@ -26,7 +26,7 @@ const JSX = <h1>Hello JSX!</h1>;
 ```
 
 
-[Home - React](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries/react) | [Next page](02-create-a-complex-jsx-element.md)
+[Home - React](./README.md) | [Next page](02-create-a-complex-jsx-element.md)
 
-#### [Home - front end](https://github.com/beatlesm/beatlesm/tree/main/curriculum/challenges/03-front-end-development-libraries) 
+#### [Home - front end](../03-front-end-development-libraries/react/README.md) 
 
