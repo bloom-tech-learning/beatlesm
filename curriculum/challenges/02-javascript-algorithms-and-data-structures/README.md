@@ -66,7 +66,7 @@ Functional Programming is another popular approach to software development. In F
 
 In this course, you'll learn the core concepts of Functional Programming including pure functions, how to avoid mutations, and how to write cleaner code with methods like .map() and .filter().
 
-### [Intermediate Algorithm Scripting](./intermediate-algorithm-scripting/REAME>md)
+### [Intermediate Algorithm Scripting](./intermediate-algorithm-scripting/REAME.md)
 
 Now that you know the basics of algorithmic thinking, along with OOP and Functional Programming, test your skills with the Intermediate Algorithm Scripting challenges.
 
