@@ -183,4 +183,4 @@ When a user clicks submit, show the data that's on state in an alert statement.
 
 Stretch loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
 
-[Previous](./Obeject_1.md) | [Next](./Obeject_3.md)
+[Previous](./Object_1.md) | [Next](./Object_3.md)
