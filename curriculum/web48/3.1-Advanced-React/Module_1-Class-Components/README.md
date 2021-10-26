@@ -16,7 +16,7 @@
 
 ### [Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM](./Objects/Object_1.md)
 
-- ***[Class Components Check For Understanding](./Objects/Understanding.md target="_blank)***
+- ***[Class Components Check For Understanding](./Objects/Understanding.md) ***
 
 ### [Objective 2 - Share Data Between Components Using State and Props](./Objects/Object_2.md)
 
