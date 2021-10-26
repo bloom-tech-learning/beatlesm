@@ -1,4 +1,4 @@
-[back to home](https://github.com/beatlesm/)
+[back to home](../README.md)
 
 ## [Module 1 - Class Components](https://github.com/beatlesm/web/tree/main/3.1/Module311)
 
