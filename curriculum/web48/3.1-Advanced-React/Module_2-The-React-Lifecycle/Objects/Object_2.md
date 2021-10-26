@@ -1,186 +1,120 @@
-# Objective 2 - Share Data Between Components Using State and Props
-
-[Click here](https://codesandbox.io/s/yk37ykmyrz) to access the code within this video's follow-along exercise.
+# Objective 2 - Properly Explain What the Constructor and Render Methods Do and What Their Place is in the React Component Lifecycle
 
 ## Overview
 
-Up until this point, our applications have been fairly simple. One or two components with a bit of state to allow for interaction. As our applications grow, so to do the complexity way components relate to each other. To do this, it helps to see our components as being structure in a ```parent / child``` relationship.
+### The Constructor Function
 
-Here is an example of a more complicated application hierarchy.
+You already know all about the ```constructor``` function as it pertains to ```classes``` in JavaScript. It's not much different in React. The constructor's purpose in React is to create components with inciting state data for the initial render. Any other props that the component receives on state can be done through the constructor function. We also used to bind all of our event handlers to the component via the constructor, and now we don't have to because of some special ```ESNext``` syntax that allows us to use arrow functions on our ```class methods```. 
 
-![hierarchy](./app_hierarchy.png)
+The following snippet is an example of this.
 
-Simple or complex, every application needs shared, persistent data to run.
-
-Currently, we have been using ```state``` to hold that data. Unlike statically defined data within our component, state is persistent, changeable and can flow into other components through use of ```prop drilling```. Changes to state immediately rerender the parts of our components effected by that change of state in a process called ```reactivity```. When working with more complex component trees, state always runs from a ```parent``` component down to a ```child```.
-
-![app_hierarchy_2](./app_hierarchy_2.png)
-
-What if we want to modify that data? Just as we can pass parent state down through props, we can also pass functions that modify child state! Executing these functions in our child components will cause state to change at our parent level components, resulting in reactive rendering throughout our application!
-
-![app_hierarchy_3](app_hierarchy_3.png)
-
-We have already seen how to pass state through props using functional components. Now, let's take a look at how we work with state-in-class-based components.
-
-## Follow Along
-
-Consider the following component:
 ```
-class App extends React.Component {
-  constructor() {
-    super();
+eventHandler = () => this.setState({ foo: 'bar' });
+```
+We will have ample time to practice application set up with state data via the constructor, so for now, soak in these examples.
+
+Let's say we have some data from an external file living within our application. Let's say, too, that we want our component to render a list of that data out to the DOM. We would need to import the external data as an array (we don't care about the shape or type of data, just that it lives on an array) and use the constructor to set it up on state.
+
+```
+import React from 'react';
+import { data } from './extraneousSource.js';
+
+class MyComponent extends React.Component {
+  constructor() { // if I wanted to receive some props here I could pass them in through the constructor! constructor(props)...
+    super(); // if i receive props through the constructor I will need to pass them back through super(props);
     this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Hello, {this.state.welcomeMessage}!</h1>
-      </div>
-    );
-  }
-}
-```
-Let's create a sub component using functional components to hold our welcome message.
-```
-const WelcomeBanner = (props) =>
-{
-  return(<h1>Hello, {props.message}!</h1>);
-}
-```
-Now, lets refactor our component using React classes.
-```
-class WelcomeBanner extends React.Component {
-    render(){
-        return(
-        <div>
-            <h1>Hello, {this.props.message}</h1>
-        </div>
+       arbitraryStateData: data,
     }
-}
-```
-
-Notice that props are not passed in as they were in functional components. Instead, props are attached to the this object, just like state.
-
-Great! We are sharing data between a component's state and a component's props. This means that when the state object changes, so too will the props.
-
-Now let's add in the ability to modify that state. To do this, we will need to:
-
--   Connect a state change method to an event listener in our child component.
--   Create the substance of that method in our parent.
--   Pass that method to the child through props.
-
-Let's start at the bottom, our child component. Let's say that we want to use a form to dynamically update our message statement. This small component should do nicely:
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-};
-```
-The only problem is, we don't have access to state all the way down here! Let's build out our state changing method where it belongs, in App.js our ```parent```. While we are at it, let's add our form component to our rendering so we can see it in the first place.
-
-```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
-
-  updateStateMessage = (e)=> {
-    this.setState({welcomeMessage:e.target.value});
-  }
-
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-        <FormComponent updateStateMessage={this.updateStateMessage}/>
-      </div>
-    );
-  }
-};
-```
-And there we go! We successfully passed our ```state data``` downstream through ```props``` in WelcomeBanner. At the same time, we can also successful pass data back upstream by executing ```state modifying functions``` passed through props in FormComponent.
-
-## Challenge
-
-Using the components we just created (App, FormComponent, and MessageComponent), try building out a form to allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
-
-When a user clicks submit, show the data that's on state in an ```alert``` statement.
-
-### Stretch 
-
-Loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item and watch the magic happen.
-
--   We're going to be updating some state on a parent component.
--   That state will be wired up to a few other components as we pass the props around.
--   We will also be passing around a few handler functions that help us update/delete our state.
-
-Lets set up a form component that we can use to update our message component from above.
-
-```
-const WelcomeBanner = props => <h1>Hello, {props.message}!</h1>;
-
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-      </div>
-    );
   }
 }
 ```
-Now let's build a form component that can handle some data defined on state, below on the child components.
+This is how we use the constructor in the mounting phase of our component's lifecycle. Now that our data is set up on state, we can access it during our render portion of the mounting phase.
+
+In conclusion, the constructor function on a React class' component's purpose is to serve up initial state data for when the time comes to mount up your DOM elements.
+
+### The Render Method
+
+The ```render()``` method is one of the React lifecycle methods that is used to tell React, to return some piece of DOM. The React virtual DOM will then handle the steps to mount those DOM pieces.
+
+The ```render()``` method is required for a class component, and without it, the component won't work.
+
+```render``` should be a pure function, meaning it should return the same thing each time you call it. Its concern is to look at ```this.props``` and ```this.state``` and return some DOM element, a boolean, an array of DOM elements, and a couple of other things that you may want to reference or look into later.
+
+The function is there to return what your component should render to the screen. Though many developers ignore it, the component is an important lifecycle method and should be regarded as such.
+
+Another essential item to remember about ```render``` is that it is called not only in the ```Mounting Phase``` of the component lifecycle but also during the ```Updating Phase```. This duality makes the ```render()``` method unique because it exists across multiple phases.
+
+Now that we have our state data set up for us, we can use that state data to give a list of elements to React and let it do it's thing. Inside the render method of our component, let's return a list of items that the arbitraryStateData property (found on our state object) will generate.
 
 ```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-  );
-};
-```
-We will need to build out a change handler function on our App component that we can pass down to the form. In addition, we'll have to define the prop as updateStateMessage in order to make our onChange event handler work out properly.
-```
-messageChangeHandler = event => {
-  this.setState({welcomeMessage: event.target.value});
-};
-
-render() {
+render () {
   return (
     <div>
-      <WelcomeBanner message={this.state.welcomeMessage} updateStateMessage={this.updateStateMessage}/>
+        // map returns an array remember? So lets give react an array of JSX elements and let it perform it's magic. For this example we'll assume this list is a string.
+        {this.state.arbitraryStateData.map(data => <div>{data}</div>)}
     </div>
   );
 }
 ```
+
+One last thing to note is that any changes from ```setState``` invoke a call to our ```render``` method as well. We'll discuss more on this later, but it's important to remember that ```render()``` is called during mounting, and will be reinvoked if anything changes in our state object. You can think of the state object and render methods as existing together. The state object is like the bigger brother to the ```render``` function, it tells the ```render``` function what to do, and the render function obeys.
+
+In conclusion, the ```render()``` method is how we tell React what data we want to turn into DOM elements. ```render()``` is necessary for every class component we create because we need it to return ```<JSX/>``` elements. It is involved in the ```Mounting Phase``` and the ```Updating Phase``` of our component's lifecycle.
+
+Continue to think about these methods as the mounting methods in our component LifeCycle as you create more and more professional-looking code.
+
+## Follow Along
+
+Let's build out some friends together using [this code sandbox link](https://codesandbox.io/s/5v3pql3y8x){:target="_blank"}
+
+Once there, you should see a page that renders out a ```<h1>``` and ```<p>``` tags. You should also notice a ```people.js``` file that contains an array of objects with this shape.
+
+```
+{
+  "id": 1,
+  "first_name": "Suzi",
+  "last_name": "Claiden",
+  "email": "sclaiden0@arizona.edu",
+  "occupation": "Biostatistician II",
+  "friends": [
+      {
+          "firstName": "Gabe",
+          "lastName": "Lemery"
+      }
+  ]
+}
+```
+
+This is the data that our application will consume. Using the React LifeCycle methods, we will discuss how to get this data from one place to another.
+
+Let's start at the beginning with our constructor method. But, first, let's define a name for our state data. Our data object is all about people, so let's call our state object "persons" (intentionally not "people," so that we can tell the two apart.)
+
+Let's import the people and set them up on our constructor's state object.
+
+```
+import { people } from "./people";
+
+...
+constructor() {
+  super();
+  this.state = {
+    persons: people
+  };
+}
+...
+
+```
+
+Now that we imported data, we can loop over that friend's array and generate a DOM element for each item in the array.
+
 ## Challenge
 
-Using the following tools:
+Now you're going to extend the Friends App that we built together [link](){:target="_blank"} by completing the following tasks.
 
--   Class component
--   functional FormComponent, MessageComponent
--   click, and change handlers
--   ```setState```
-Build out a form that will allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
+- Notice that each person object has an array of friends assigned to it.
+- The goal for the stretch problem will be to have a FriendsList drop-down built out that hides the friends for each person until it is clicked on.
+- Once a user clicks on your FriendsList card, display that user's friends.
 
-When a user clicks submit, show the data that's on state in an alert statement.
 
-Stretch loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
 
 [Previous](./Object_1.md) | [Next](./Object_3.md)
