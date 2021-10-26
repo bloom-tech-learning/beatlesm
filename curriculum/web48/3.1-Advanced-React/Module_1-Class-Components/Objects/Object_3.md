@@ -138,4 +138,6 @@ Fork the code provided above and do the following.
 
 
 
-[Previous](./Object_2.md) | [Module 1](../../Module_1-Class-Components/README.md)
+[Previous](./Object_2.md) | [Next](./Understanding.md)
+
+
