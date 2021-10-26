@@ -3,7 +3,16 @@
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...  
+- 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/README.md)**
+
+-   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
+
+
+-   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+-   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)**
+
+
+-   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
 
 - 🌱 I’m currently learning ... 
 - 👯 I’m looking to collaborate on ...
