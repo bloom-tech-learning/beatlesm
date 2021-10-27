@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+h1{
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;  
+}
+
+h3{
+  font-size: 1.8rem; 
+}
+
+.user {
+  display: flex;
+  flex-wrap: wrap;   
+  /* align-items: center; */
+  /* padding: 2%; */
+  /* border: 1px solid red; */
+}
+
+.follower{
+  display: flex;
+  flex-wrap: wrap;   
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* padding: 2%; */
+  /* border: 1px solid red; */
+}
+
+.follower-card{  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  padding: 1%;
+  /* margin: 1%; */
+  /* border: 1px solid red; */
+  /* width: 17%; */
+}
+
+.user-info {
+  /* font-size: 2.5rem; */
+  /* display: flex;
+  flex-direction: column; */
+  margin: 2%;
+  /* border: 1px solid red; */
+}
+
+input  {
+  /* margin: 1%; */
+  font-size: 2.0rem;
+  height: 3.5rem;
+  width: 370px;
+  margin: 8px 8px 8px 8px;
+  border: 1px solid rgb(100, 97, 97);
+}
+
+button{
+  /* margin: 1%; */
+  font-size: 2.0rem;
+  height: 3.5rem;
+  width: 370px;
+  margin: 8px 8px 8px 8px
+}
+
+/* .card button {
+  margin: 1.5%;
+}
+
+.special-p {
+  width: 30%;
+} */
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
