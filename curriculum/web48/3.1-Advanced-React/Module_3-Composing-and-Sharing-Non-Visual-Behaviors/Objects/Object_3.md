@@ -30,7 +30,7 @@ const useLocalStorage = (key, initialValue) => {
 
 Let's walk through what we're doing here. First, we pass in a key-value (like: "input1," "input2" ) and an ```initialValue```. These two parameters (key and value) are used in the ```useState``` hook call and used immediately inside our custom hooks. Instead of just passing in an initial value to this ```useState``` hook, we are using an anonymous arrow function as a callback to do two things:
 
-1.  Check if the ```window.localStorage``` has a specific item (retrieved by key) in it
+1.  Check if the ```window.localStorage``` has a specific item (retrieved by ```key```) in it
 1.  Return that item from local storage if it exists or the initialValue otherwise
 
 Because of this, our hook can now successfully check to see if a specific state item exists in ```localStorage```, and it can use that item if it exists instead of the provided ```initialValue```. Then, we also have a ```setValue``` function that takes a ```value``` as a parameter, sets it to the current ```storedValue``` by using the ```setStoredValue``` provided by ```useState```, and sets it ```localStorage```. As our state is now stored, our custom hook will check here on refresh to see if the state exists.
