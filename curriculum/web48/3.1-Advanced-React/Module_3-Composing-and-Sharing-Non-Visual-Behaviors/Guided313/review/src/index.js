@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles.scss';
-import AppFunc from './AppFunc';
-import AppClass from './AppClass';
-import App from './App';
-import App2 from './App2';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App2/>, rootElement);
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  rootElement
+);
