@@ -1,4 +1,4 @@
-# Class Components Check For Understanding - Web48 - Module 3.1.1
+# Module 3.1.1 - Class Components
 
 ## Question 1
 
