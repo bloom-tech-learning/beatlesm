@@ -14,3 +14,5 @@
 ### [Objective 2 - Properly Explain What the Constructor and Render Methods Do and What Their Place is in the React Component Lifecycle](./Objects/Object_2.md)
 
 ### [Objective 3 - Use the componentDidMount Function to Set a Component's State Post Render](./Objects/Object_3.md)
+
+### [Check For Understanding](./Objects/Understanding.md)
