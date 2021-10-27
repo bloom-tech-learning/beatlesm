@@ -2,45 +2,35 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
+import useForm from './../hooks/useForm';
+import useLocalStorage from './../hooks/useLocalStorage';
+
 import Button from "../theme/Button";
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: "flex",
-    flexWrap: "wrap"
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1)
-  },
-  dense: {
-    marginTop: theme.spacing(2)
-  },
-  menu: {
-    width: 200
-  }
-}));
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email:""
+}
+
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [firstName, setFirstName] = useState("");
 
-  const handleChanges = e => {
-    setFirstName(e.target.value);
-  };
+  const [values, handleChanges, clearForm]  = useForm(initialValues);
+  const [name, setName] = useLocalStorage("name", "Warren");
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(firstName);
-  };
-
-  const clearForm = e => {
-    e.preventDefault();
-    setFirstName("");
+    alert(`${values.firstName} ${values.lastName} ${values.email}`);
   };
 
   return (
     <div p={2} className="form">
+      <h3>{name}</h3>
+      <button onClick={()=> {
+        setName("AllisChrison");
+      }}>Change Name</button>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
@@ -49,7 +39,27 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             name="firstName"
-            value={firstName}
+            value={values.firstName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-name"
+            label="Last Name"
+            className={classes.textField}
+            name="lastName"
+            value={values.lastName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-name"
+            label="Email"
+            className={classes.textField}
+            name="email"
+            value={values.email}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
@@ -67,3 +77,20 @@ export default function SignupForm() {
     </div>
   );
 }
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap"
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1)
+  },
+  dense: {
+    marginTop: theme.spacing(2)
+  },
+  menu: {
+    width: 200
+  }
+}));
