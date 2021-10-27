@@ -2,11 +2,11 @@
 
 [back to Web48 - 3.1](../README.md)
 
-#### [Assignment 3.1.4](https://github.com/beatlesm/web/tree/main/3.1/Module311/Assignment311):
+#### [Assignment 3.1.4](./Assign314/README.md):
 
 -   **[https://github.com/LambdaSchool/React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)**
    
-#### [Guided project 3.1.4](https://github.com/beatlesm/web/tree/main/2.3/Module231/guided231):
+#### [Guided project 3.1.4](./Guided314):
 
 
 ### Objective 1 - Use React-Testing Library for Testing React Components

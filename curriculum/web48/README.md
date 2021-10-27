@@ -7,7 +7,7 @@ Here are some ideas to get you started:
 
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
 -   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
--   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
+-   **[https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)**
 
 
 
@@ -18,7 +18,8 @@ Here are some ideas to get you started:
 
 -   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
 -   **[https://github.com/LambdaSchool/web-guided-project-lifecycle](https://github.com/LambdaSchool/web-guided-project-lifecycle)**
--   **[https://github.com/LambdaSchool/web-guided-project-lifecycle](https://github.com/LambdaSchool/web-guided-project-lifecycle)**
+-   **[https://github.com/LambdaSchool/web-guided-project-custom-hook](https://github.com/LambdaSchool/web-guided-project-custom-hook)**
+
 
 
 [Reference](https://github.com/beatlesm/beatlesm/tree/main/Reference/web)
