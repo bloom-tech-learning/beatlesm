@@ -7,6 +7,8 @@ Here are some ideas to get you started:
 
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
 -   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
+-   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
+
 
 
 -   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
@@ -16,6 +18,8 @@ Here are some ideas to get you started:
 
 -   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
 -   **[https://github.com/LambdaSchool/web-guided-project-lifecycle](https://github.com/LambdaSchool/web-guided-project-lifecycle)**
+-   **[https://github.com/LambdaSchool/web-guided-project-lifecycle](https://github.com/LambdaSchool/web-guided-project-lifecycle)**
+
 
 - 🌱 I’m currently learning ... 
 - 👯 I’m looking to collaborate on ...
