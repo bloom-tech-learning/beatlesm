@@ -1,14 +1,14 @@
 [submodule "Reference/web/2.3-Single-Page-Applications/Sprint/web-sprint-challenge-single-page-applications"]
-	path = Reference/web/2.3-Single-Page-Applications/Sprint/web-sprint-challenge-single-page-applications
+	path = curriculum/web48/2.3-Single-Page-Applications/Sprint/web-sprint-challenge-single-page-applications
 	url = https://github.com/beatlesm/web-sprint-challenge-single-page-applications
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_4-cypress.io/web-guided-project-cypress
 	url = git@github.com:beatlesm/web-guided-project-cypress.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/caseybook2"]
 	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/caseybook2
 	url = git@github.com:CRHarding/caseybook2.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_4-cypress.io/Cypress-Testing
 	url = git@github.com:beatlesm/Cypress-Testing.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/web-guided-project-cypress"]
 	path = Reference/web/2.3-Single-Page-Applications/Module+_4-cypress.io/web-guided-project-cypress
@@ -32,124 +32,124 @@
 	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form-Mannagement/web-guided-project-form-management
 	url = git@github.com:beatlesm/web-guided-project-form-management.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/web-guided-project-react-router"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/web-guided-project-react-router
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_1-React-Router/web-guided-project-react-router
 	url = git@github.com:beatlesm/web-guided-project-react-router.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_1-React-Router/React-Router-Movies
 	url = git@github.com:beatlesm/React-Router-Movies.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/web-guided-project-form-management"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/web-guided-project-form-management
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_2-Form-Management/web-guided-project-form-management
 	url = git@github.com:beatlesm/web-guided-project-form-management.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/team-builder"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_2-Form-Management/team-builder
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_2-Form-Management/team-builder
 	url = git@github.com:beatlesm/team-builder.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/web-guided-project-advanced-forms"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/web-guided-project-advanced-forms
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/web-guided-project-advanced-forms
 	url = git@github.com:beatlesm/web-guided-project-advanced-forms.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/User-Onboarding"]
-	path = Reference/web/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/User-Onboarding
+	path = curriculum/web48/2.3-Single-Page-Applications/Module_3-Advanced-Form_management/User-Onboarding
 	url = git@github.com:beatlesm/User-Onboarding.git
 [submodule "Reference/web/2.3-Single-Page-Applications/Sprint/caseybook2"]
-	path = Reference/web/2.3-Single-Page-Applications/Sprint/caseybook2
+	path = curriculum/web48/2.3-Single-Page-Applications/Sprint/caseybook2
 	url = git@github.com:beatlesm/caseybook2.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/web-guided-project-react-components-1"]
-	path = Reference/web/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/web-guided-project-react-components-1
+	path = curriculum/web48/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/web-guided-project-react-components-1
 	url = git@github.com:beatlesm/web-guided-project-react-components-1.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/react-stateful-widgets"]
-	path = Reference/web/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/react-stateful-widgets
+	path = curriculum/web48/2.2-Intro-to-React/Module_1-React-Component-and-Component-States/react-stateful-widgets
 	url = git@github.com:beatlesm/react-stateful-widgets.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/web-guided-project-react-components-2"]
-	path = Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/web-guided-project-react-components-2
+	path = curriculum/web48/2.2-Intro-to-React/Module_2-Composing-React-Components/web-guided-project-react-components-2
 	url = git@github.com:beatlesm/web-guided-project-react-components-2.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone"]
-	path = Reference/web/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone
+	path = curriculum/web48/2.2-Intro-to-React/Module_2-Composing-React-Components/React-Components-Insta-Clone
 	url = git@github.com:beatlesm/React-Components-Insta-Clone.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/nasa-photo-of-the-day"]
-	path = Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/nasa-photo-of-the-day
+	path = curriculum/web48/2.2-Intro-to-React/Module_3-Composing-Side-Effects/nasa-photo-of-the-day
 	url = git@github.com:beatlesm/nasa-photo-of-the-day.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects"]
-	path = Reference/web/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects
+	path = curriculum/web48/2.2-Intro-to-React/Module_3-Composing-Side-Effects/web-guided-project-component-side-effects
 	url = git@github.com:beatlesm/web-guided-project-component-side-effects.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/web-guided-project-styling-components"]
-	path = Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/web-guided-project-styling-components
+	path = curriculum/web48/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/web-guided-project-styling-components
 	url = git@github.com:beatlesm/web-guided-project-styling-components.git
 [submodule "Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day"]
-	path = Reference/web/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day
+	path = curriculum/web48/2.2-Intro-to-React/Module_4-Advanced-Styling-Techniques/nasa-photo-of-the-day
 	url = git@github.com:beatlesm/nasa-photo-of-the-day.git
 [submodule "Reference/web/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react"]
-	path = Reference/web/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react
+	path = curriculum/web48/2.2-Intro-to-React/Sprint/web-sprint-challenge-intro-to-react
 	url = git@github.com:beatlesm/web-sprint-challenge-intro-to-react.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/web-guided-project-dom-1"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/web-guided-project-dom-1
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_1-DOM-I/web-guided-project-dom-1
 	url = git@github.com:beatlesm/web-guided-project-dom-1.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_1-DOM-I/DOM-I
 	url = git@github.com:beatlesm/DOM-I.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/web-guided-project-dom-2"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/web-guided-project-dom-2
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_2-DOM-II/web-guided-project-dom-2
 	url = git@github.com:beatlesm/web-guided-project-dom-2.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/DOM-II"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_2-DOM-II/DOM-II
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_2-DOM-II/DOM-II
 	url = git@github.com:beatlesm/DOM-II.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/web-guided-project-components-1"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/web-guided-project-components-1
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_3-Components-I/web-guided-project-components-1
 	url = git@github.com:beatlesm/web-guided-project-components-1.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_3-Components-I/Newsfeed-Components
 	url = git@github.com:beatlesm/Newsfeed-Components.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/web-guided-project-components-2"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/web-guided-project-components-2
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_4-Components-II/web-guided-project-components-2
 	url = git@github.com:beatlesm/web-guided-project-components-2.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard"]
-	path = Reference/web/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard
+	path = curriculum/web48/2.1-Applied-JavaScript/Module_4-Components-II/github-usercard
 	url = git@github.com:beatlesm/github-usercard.git
 [submodule "Reference/web/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript"]
-	path = Reference/web/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript
+	path = curriculum/web48/2.1-Applied-JavaScript/Sprint/web-sprint-challenge-applied-javascript
 	url = git@github.com:beatlesm/web-sprint-challenge-applied-javascript.git
 [submodule "Reference/wes/JavaScript30"]
 	path = Reference/wes/JavaScript30
 	url = git@github.com:wesbos/JavaScript30.git
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Sprint/web-sprint-challenge-javascript-fundamentals"]
-	path = Reference/web/1.3-JavaScript-Fundamentals/Sprint/web-sprint-challenge-javascript-fundamentals
+	path = curriculum/web48/1.3-JavaScript-Fundamentals/Sprint/web-sprint-challenge-javascript-fundamentals
 	url = git@github.com:beatlesm/web-sprint-challenge-javascript-fundamentals.git
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_4-Classes/JS-Exercise-Classes"]
-	path = Reference/web/1.3-JavaScript-Fundamentals/Module_4-Classes/JS-Exercise-Classes
+	path = curriculum/web48/1.3-JavaScript-Fundamentals/Module_4-Classes/JS-Exercise-Classes
 	url = git@github.com:beatlesm/JS-Exercise-Classes.git
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype"]
-	path = Reference/web/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype
+	path = curriculum/web48/1.3-JavaScript-Fundamentals/Module_3-Prototypes-and-Inheritance/JS-Exercise-Prototype
 	url = git@github.com:beatlesm/JS-Exercise-Prototype.git
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks"]
-	path = Reference/web/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks
+	path = curriculum/web48/1.3-JavaScript-Fundamentals/Module_2-Advanced-Array-Methods/Array-Methods-and-Callbacks
 	url = git@github.com:beatlesm/Array-Methods-and-Callbacks.git
 [submodule "Reference/web/1.3-JavaScript-Fundamentals/Module_1-Scope-and-Closure/web-module-challenge-scope-and-closure"]
-	path = Reference/web/1.3-JavaScript-Fundamentals/Module_1-Scope-and-Closure/web-module-challenge-scope-and-closure
+	path = curriculum/web48/1.3-JavaScript-Fundamentals/Module_1-Scope-and-Closure/web-module-challenge-scope-and-closure
 	url = git@github.com:beatlesm/web-module-challenge-scope-and-closure.git
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Sprint/web-sprint-challenge-advanced-css-and-intro-js"]
-	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Sprint/web-sprint-challenge-advanced-css-and-intro-js
+	path = curriculum/web48/1.2-Advanced-CSS-and-Intro-JavaScript/Sprint/web-sprint-challenge-advanced-css-and-intro-js
 	url = git@github.com:beatlesm/web-sprint-challenge-advanced-css-and-intro-js.git
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects"]
-	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects
+	path = curriculum/web48/1.2-Advanced-CSS-and-Intro-JavaScript/Module_4-Objects/web-module-challenge-objects
 	url = git@github.com:beatlesm/web-module-challenge-objects.git
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays"]
-	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays
+	path = curriculum/web48/1.2-Advanced-CSS-and-Intro-JavaScript/Module_3-Arrays/web-module-challenge-arrays
 	url = git@github.com:beatlesm/web-module-challenge-arrays.git
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript"]
-	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript
+	path = curriculum/web48/1.2-Advanced-CSS-and-Intro-JavaScript/Module_2-Intro-to-JavaScript/Introduction-to-JavaScript
 	url = git@github.com:beatlesm/Introduction-to-JavaScript.git
 [submodule "Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II"]
-	path = Reference/web/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II
+	path = curriculum/web48/1.2-Advanced-CSS-and-Intro-JavaScript/Module_1-Responsive-Web-Design/User-Interface-II
 	url = git@github.com:beatlesm/User-Interface-II.git
 [submodule "Reference/web/1.1-User-Interface-and-Git/Sprint/web-Sprint-Challenge-User-Interface-and-Git"]
-	path = Reference/web/1.1-User-Interface-and-Git/Sprint/web-Sprint-Challenge-User-Interface-and-Git
+	path = curriculum/web48/1.1-User-Interface-and-Git/Sprint/web-Sprint-Challenge-User-Interface-and-Git
 	url = git@github.com:beatlesm/web-Sprint-Challenge-User-Interface-and-Git.git
 [submodule "Reference/web/1.1-User-Interface-and-Git/Module_4-CSS-Layouts/User-Interface-II"]
-	path = Reference/web/1.1-User-Interface-and-Git/Module_4-CSS-Layouts/User-Interface-II
+	path = curriculum/web48/1.1-User-Interface-and-Git/Module_4-CSS-Layouts/User-Interface-II
 	url = git@github.com:beatlesm/User-Interface-II.git
 [submodule "Reference/web/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css"]
-	path = Reference/web/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css
+	path = curriculum/web48/1.1-User-Interface-and-Git/Module_3-Intro-CSS/web-module-project-intro-css
 	url = git@github.com:beatlesm/web-module-project-intro-css.git
 [submodule "Reference/web/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project"]
-	path = Reference/web/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project
+	path = curriculum/web48/1.1-User-Interface-and-Git/Module_2-Git-for-web-Development/Git-for-Web-Development-Project
 	url = git@github.com:beatlesm/Git-for-Web-Development-Project.git
 [submodule "curriculum/wes/JavaScript30"]
 	path = curriculum/wes/JavaScript30
