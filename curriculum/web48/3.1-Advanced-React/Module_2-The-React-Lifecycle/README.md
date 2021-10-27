@@ -2,11 +2,13 @@
 
 [back to Web48 - 3.1](../README.md)
 
-#### [Assignment 3.1.2](https://github.com/beatlesm/web/tree/main/3.1/Module311/Assignment311):
+#### [Assignment 3.1.2](./Assign312/README.md):
 
--   **[https://github.com/LambdaSchool/React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)**
+-   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)****
    
-#### [Guided project 3.1.12](https://github.com/beatlesm/web/tree/main/2.3/Module231/guided231):
+#### [Guided project 3.1.2](./Guided312):
+
+-   **[Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
 
 
 ### [Objective 1 - Describe the Three Phases of the React Component Lifecycle](./Objects/Object_1.md)

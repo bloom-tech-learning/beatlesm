@@ -2,11 +2,13 @@
 
 [back to Web48 - 3.1](../README.md)
 
-#### [Assignment 3.1.1](https://github.com/beatlesm/web/tree/main/3.1/Module311/Assignment311):
+#### [Assignment 3.1.3](./Assign313/README.md):
 
--   **[https://github.com/LambdaSchool/React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)**
+-   **[https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)**
    
-#### [Guided project 2.3.1](https://github.com/beatlesm/web/tree/main/2.3/Module231/guided231):
+#### [Guided project 3.1.3](./Guided313):
+
+-   **[Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
 
 
 ### [Objective 1 - define stateful logic](./Objects/Object_1.md)

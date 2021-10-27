@@ -2,11 +2,11 @@
 
 [back to Web48 - 3.1](../README.md)
 
-#### [Assignment 3.1.1](https://github.com/beatlesm/web/tree/main/3.1/Module311/Assignment311):
+#### [Assignment 3.1.1](./Assign311/README.md):
 
 -   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
    
-#### [Guided project 2.3.1](https://github.com/beatlesm/web/tree/main/3.1/Module311/guided311):
+#### [Guided project 3.1.1](./Guided311):
 
 -   [Youtube - Web 48 - Class Components With Warren C. Longmire](https://www.youtube.com/watch?v=Nc4-l2NrOD4)
 
