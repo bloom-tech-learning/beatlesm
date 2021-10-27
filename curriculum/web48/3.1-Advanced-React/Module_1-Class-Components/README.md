@@ -28,3 +28,15 @@
 ### [Check For Understanding](./Objects/Understanding.md)
 
 
+### Today’s Office Hours:
+
+-	Hey all! Today we did a brief review of array methods, classes in (and out) of React, and some good old fashion debugging.
+
+	-	[Meeting Recording](https://lambdaschool.zoom.us/rec/share/y--FjsRZE6gICVZnuU3zDLIDCz_qbYUg_H0w1zTboroyYtCWPP038AKnUK73Ztac.tkS4VgMxQPMh8uB_)
+
+-	You can find the code for the session [here](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js):
+
+
+### 
+
+
