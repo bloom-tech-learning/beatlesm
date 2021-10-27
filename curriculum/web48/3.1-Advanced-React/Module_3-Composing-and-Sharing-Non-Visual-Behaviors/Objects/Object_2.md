@@ -1,186 +1,198 @@
-# Objective 2 - Share Data Between Components Using State and Props
-
-[Click here](https://codesandbox.io/s/yk37ykmyrz) to access the code within this video's follow-along exercise.
+# Objective 2 - Apply Non-Visual Behavior (Stateful Logic) With Custom Hooks
 
 ## Overview
 
-Up until this point, our applications have been fairly simple. One or two components with a bit of state to allow for interaction. As our applications grow, so to do the complexity way components relate to each other. To do this, it helps to see our components as being structure in a ```parent / child``` relationship.
+Custom hooks are called this because you are building the hook yourself (customizing it) to apply non-visual behavior and stateful logic throughout your components. This way, you can reuse the same hook over and over again. In addition, custom hooks follow the same naming patterns that you've already learned (i.e., prefacing the function name with use, as in useState). Thus, you can build a reusable custom hook for anything from handling controlled inputs to managing event listeners or watching for key presses.
 
-Here is an example of a more complicated application hierarchy.
+```
+import React, { useState } from "react";
 
-![hierarchy](./app_hierarchy.png)
+const DynamicTitle = () => {
+  const [title, setTitle] = useState("This is a class component");
+  const [inputText, setInputText] = useState("");
 
-Simple or complex, every application needs shared, persistent data to run.
+  const handleChanges = e => {
+    setInputText(e.target.value);
+  };
 
-Currently, we have been using ```state``` to hold that data. Unlike statically defined data within our component, state is persistent, changeable and can flow into other components through use of ```prop drilling```. Changes to state immediately rerender the parts of our components effected by that change of state in a process called ```reactivity```. When working with more complex component trees, state always runs from a ```parent``` component down to a ```child```.
+  const changeTitle = e => {
+    e.preventDefault();
+    setTitle(inputText);
+    setInputText("");
+  };
 
-![app_hierarchy_2](./app_hierarchy_2.png)
+  return (
+    <div className="Wrapper">
+      <h1 className="Title">{title}</h1>
+      <form onSubmit={changeTitle}>
+        <div className="Input">
+          <input
+            className="Input-text"
+            id="input"
+            name="inputText"
+            onChange={handleChanges}
+            placeholder="Create new title"
+            type="text"
+            value={inputText}
+          />
+          <label htmlFor="input" className="Input-label">
+            New title
+          </label>
+        </div>
+      </form>
+    </div>
+  );
+};
 
-What if we want to modify that data? Just as we can pass parent state down through props, we can also pass functions that modify child state! Executing these functions in our child components will cause state to change at our parent level components, resulting in reactive rendering throughout our application!
+export default DynamicTitle;
+```
 
-![app_hierarchy_3](app_hierarchy_3.png)
+See how we have a ```useState``` hook, a ```handleChange``` function to update based on any changes, and a ```changeTitle``` function to change the actual title of the component when we submit the form?
 
-We have already seen how to pass state through props using functional components. Now, let's take a look at how we work with state-in-class-based components.
+Now, what happens if we need to issue state for multiple ```input``` tags? If we were to follow the lead of the patterns shown above, we would end up having to rewrite large amounts of our code for each ```useState``` call that we've invoked in order to create state for our second, third, and fourth ```input```s.
+
+Instead, let's build out our custom hook to reuse stateful logic. In this way, we avoid repeating code unnecessarily. Read the following function and try to guess what each piece of code is doing:
+
+```
+export const useInput = initialValue => {
+  const [value, setValue] = useState(initialValue);
+  const handleChanges = updatedValue => {
+    setValue(updatedValue);
+  };
+  return [value, setValue, handleChanges];
+};
+```
+
+In this ```useInput``` custom hook function, we're taking in an ```initialValue``` and returning three new values. We pass ```initialValue``` as a parameter on the function. ```initialValue``` is then passed into the ```useState``` hook, which returns an array with our ```value``` variable and ```setValue``` function (just the same as what you've used up to this point).
+
+Next, we have a ```handleChanges``` function that uses the ```setValue``` function to update state to a new value. Finally, we return an array from our ```useInput``` custom hook containing the ```value``` variable, the ```setValue``` function, and the ```handleChanges``` function.
+
+Let's take a look at this custom hook when it's imported and used in a component.
+
+```
+import React, { useState } from "react";
+import { useInput } from "./useInput.js";
+
+const CustomForm = () => {
+  const [username, setUsername, handleUsername] = useInput("");
+  const [password, setPassword, handlePassword] = useInput("");
+  const [email, setEmail, handleEmail] = useInput("");
+
+  const resetValues = e => {
+    e.preventDefault();
+    setUsername("");
+    setPassword("");
+    setEmail("");
+  };
+
+  return (
+    <form onSubmit={resetValues}>
+      <input
+        className="username-text"
+        id="username"
+        name="username"
+        onChange={e => handleUsername(e.target.value)}
+        placeholder="Username"
+        type="text"
+        value={username}
+      />
+      <input
+        className="password-test"
+        id="password"
+        name="password"
+        onChange={e => handlePassword(e.target.value)}
+        placeholder="Password"
+        type="password"
+        value={password}
+      />
+      <input
+        className="email-text"
+        id="email"
+        name="email"
+        onChange={e => handleEmail(e.target.value)}
+        placeholder="Email"
+        type="text"
+        value={email}
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default CustomForm;
+
+```
+
+Whoa. That looks crazy, right? Don't worry. We're going to dissect this whole script to figure out exactly what each part is doing.
+
+First off, notice that we're invoking the ```useInput``` custom hook three times at the top of the component and passing in an empty string as each one's initial value:
+
+```
+const [username, setUsername, handleUsername] = useInput("");
+const [password, setPassword, handlePassword] = useInput("");
+const [email, setEmail, handleEmail] = useInput("");
+```
+
+Our useInput hook returns a new copy of our custom hook and state each time. Also, because array destructuring is based on positioning and not the name, we are allowed by JavaScript to name each of the three items returned from useInput in different ways. This is why we can set the first item to username, the second to setUsername, and the third to handleUsername while the next two useInput calls return differently-named variables and functions.
+
+From these invocations, it now becomes easy to rig up each of our input tags in our JSX just the same as we did before. Here they are again for your reference:
+
+```
+<form onSubmit={resetValues}>
+  <input
+    className="username-text"
+    id = "username";
+    name = "username";
+    onChange={e => handleUsername(e.target.value)}
+    placeholder = "Username";
+    type = "text";
+    value={username}
+  />
+  <input
+    className="password-test"
+    id = "password";
+    name = "password";
+    onChange={e => handlePassword(e.target.value)}
+    placeholder = "Password";
+    type = "password";
+    value={password}
+  />
+  <input
+    className="email-text"
+    id = "email";
+    name = "email";
+    onChange={e => handleEmail(e.target.value)}
+    placeholder = "Email";
+    type = "text";
+    value={email}
+  />
+  <button type="submit">Submit</button>
+</form>
+```
+
+Notice how we are setting our ```handleUsername```, ```handlePassword```, and ```handleEmail``` functions to process changes to the input. Remember how we returned a ```handleChanges``` function from our custom hook? Well, we've renamed them here (again, thanks to array destructuring) and are using them just the same as before. However, now, we have less code for them in our component.
+
+The final thing you should notice is the ```resetValue``` function. When we invoke it, we use the ```setValues``` returned from each ```useInput``` (again, each one is named differently) and pass it in our reset value (in this case, an empty string). Isn't this an easy way to change your state?
+
+Here they are again for your reference:
+
+```
+const resetValues = e => {
+  e.preventDefault();
+  setUsername("");
+  setPassword("");
+  setEmail("");
+};
+```
+
+By building a custom hook, we can skip writing out all of the stateful logic for our non-visual behavior. Custom hooks produce beautiful, DRY code that is easy to read and use. You have built a reusable piece of code that makes it easy for you to import anywhere in your application and build out stateful logic in any of your components.
 
 ## Follow Along
 
-Consider the following component:
-```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
+Now that you can identify custom hook logic and how you might create and use it in your components, go back to several components you've built over the last week. Then, refactor the state of those components in some forms you made to use the useInput custom hook from the component in the examples above.
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, {this.state.welcomeMessage}!</h1>
-      </div>
-    );
-  }
-}
-```
-Let's create a sub component using functional components to hold our welcome message.
-```
-const WelcomeBanner = (props) =>
-{
-  return(<h1>Hello, {props.message}!</h1>);
-}
-```
-Now, lets refactor our component using React classes.
-```
-class WelcomeBanner extends React.Component {
-    render(){
-        return(
-        <div>
-            <h1>Hello, {this.props.message}</h1>
-        </div>
-    }
-}
-```
 
-Notice that props are not passed in as they were in functional components. Instead, props are attached to the this object, just like state.
 
-Great! We are sharing data between a component's state and a component's props. This means that when the state object changes, so too will the props.
 
-Now let's add in the ability to modify that state. To do this, we will need to:
-
--   Connect a state change method to an event listener in our child component.
--   Create the substance of that method in our parent.
--   Pass that method to the child through props.
-
-Let's start at the bottom, our child component. Let's say that we want to use a form to dynamically update our message statement. This small component should do nicely:
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-};
-```
-The only problem is, we don't have access to state all the way down here! Let's build out our state changing method where it belongs, in App.js our ```parent```. While we are at it, let's add our form component to our rendering so we can see it in the first place.
-
-```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
-
-  updateStateMessage = (e)=> {
-    this.setState({welcomeMessage:e.target.value});
-  }
-
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-        <FormComponent updateStateMessage={this.updateStateMessage}/>
-      </div>
-    );
-  }
-};
-```
-And there we go! We successfully passed our ```state data``` downstream through ```props``` in WelcomeBanner. At the same time, we can also successful pass data back upstream by executing ```state modifying functions``` passed through props in FormComponent.
-
-## Challenge
-
-Using the components we just created (App, FormComponent, and MessageComponent), try building out a form to allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
-
-When a user clicks submit, show the data that's on state in an ```alert``` statement.
-
-### Stretch 
-
-Loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item and watch the magic happen.
-
--   We're going to be updating some state on a parent component.
--   That state will be wired up to a few other components as we pass the props around.
--   We will also be passing around a few handler functions that help us update/delete our state.
-
-Lets set up a form component that we can use to update our message component from above.
-
-```
-const WelcomeBanner = props => <h1>Hello, {props.message}!</h1>;
-
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-      </div>
-    );
-  }
-}
-```
-Now let's build a form component that can handle some data defined on state, below on the child components.
-
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-  );
-};
-```
-We will need to build out a change handler function on our App component that we can pass down to the form. In addition, we'll have to define the prop as updateStateMessage in order to make our onChange event handler work out properly.
-```
-messageChangeHandler = event => {
-  this.setState({welcomeMessage: event.target.value});
-};
-
-render() {
-  return (
-    <div>
-      <WelcomeBanner message={this.state.welcomeMessage} updateStateMessage={this.updateStateMessage}/>
-    </div>
-  );
-}
-```
-## Challenge
-
-Using the following tools:
-
--   Class component
--   functional FormComponent, MessageComponent
--   click, and change handlers
--   ```setState```
-Build out a form that will allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
-
-When a user clicks submit, show the data that's on state in an alert statement.
-
-Stretch loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
 
 [Previous](./Object_1.md) | [Next](./Object_3.md)
