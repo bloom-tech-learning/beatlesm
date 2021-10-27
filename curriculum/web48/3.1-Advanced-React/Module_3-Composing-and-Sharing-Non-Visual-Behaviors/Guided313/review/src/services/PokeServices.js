@@ -1,5 +1,7 @@
-import data from "./../../data";
+import data from "../../data";
 
-export const getPokemon = ()=>{
-    return(data);
-}
+const getPokemon = () => { 
+    return (data);
+  }
+
+export {getPokemon, data};
