@@ -1,4 +1,4 @@
-# Class Components Check For Understanding - Web48 - Module 3.1.1
+# Web48 - Module 3.1.2 - The React Lifecycle
 
 ## Question 1
 
