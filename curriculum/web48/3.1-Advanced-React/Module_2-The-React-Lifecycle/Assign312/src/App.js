@@ -1,96 +1,71 @@
 import React from 'react'
+import axios from 'axios'
 
-import './components/Todo.css'
-import TodoForm from './components/TodoForm'
-import TodoList from './components/TodoList'
+import FollowerList from './components/FollowerList'
 
-const todoTasks = [
-    {
-      task: 'Organize Garage',
-      id: 1528817077286,
-      completed: false
-    },
-    {
-      task: 'Bake Cookies',
-      id: 1528817084358,
-      completed: true
-    }
-  ];
- 
+import './App.css'
 
 class App extends React.Component {
-
-  constructor () {
-    // you will need a place to store your state in this component.
-    // design `App` to be the parent component of your application.
-    // this component is going to take care of state, and any change handlers you need to work with your state
-    super ();
-    this.state = {
-      todoTasks: todoTasks
-    }
+  state = {
+    user:[],
+    input: ""
   }
 
-  handleClear = ()=> {
-    //1. Clear Completed
-    // -  handle button click
-    // -  setState of tasklist
-    // -  take this.state.todotasks and return only task completed = true
+  componentDidMount() {
+    axios.get('https://api.github.com/users/beatlesm')
+        .then(res=> {
+          // debugger
+          this.setState({
+            ...this.state,
+            user: res.data
+          });  
+        })
+        .catch(err=> {
+            console.log(err);
+        });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();    
+    axios.get(`https://api.github.com/users/${this.state.input}`)
+        .then(resp=> {
+            this.setState({
+                ...this.state,
+                user: resp.data
+            })
+        })
+        .catch(err=> {
+            console.log(err);
+        })
+}
+
+  handleChange = (e) => {
     this.setState({
-      ...this.state,
-      todoTasks: this.state.todoTasks.filter(task=> !task.completed)
-    });
-  }
+        ...this.state,
+        input: e.target.value
+    });  
+    console.log('input', this.state.input);  
+}
 
-  handleAddTask = (task) => {
-    //2. Add Task
-    // - create a newTask
-    // - setState and retain old state
-    // - save all current todoTasks and add on newTask to the end
-    const newTask = {
-      task: task,
-      id: Date.now(),
-      completed: false
-    };
-
-    this.setState({
-      ...this.state,
-      todoTasks: [...this.state.todoTasks, newTask]
-    });
-  }
-
-  handleToggleTask = (task) => {
-    //3. Toggle Task
-    // - setState and retain old state
-    // - find the item that matches our clicked item id
-    // - replace that item with same but completed flipped
-    // - leave all other items alone
-
-    this.setState({
-      ...this.state,
-      todoTasks: this.state.todoTasks.map(todoTask => {
-        if (todoTask.id === task.id) {
-          return {
-            ...todoTask,
-            completed: !todoTask.completed //(grocery.purchased)? false: true
-          }
-        }
-        return todoTask;
-      })
-    });
-  }
-  
-  
   render() {
-    return (
-      <div className = "App">
-        <div className="header"> 
-          <h2>Welcome to your Todo App!</h2>
-          <TodoForm handleAddTask={this.handleAddTask}/>
-        </div>
-        <TodoList handleToggleTask={this.handleToggleTask} todoTasks={this.state.todoTasks}/>
-        <button onClick={this.handleClear} className="clear-btn">Clear Complete</button>
-      </div>
-    );
+    return(
+      <div className="container">      
+        <h1> GITHUB INFO</h1>
+        <form className="form"> 
+          <input value={this.state.input} onChange={this.handleChange}/>
+          <button onClick={this.handleSubmit}>Search</button>
+          <div className="user">
+              <img src={this.state.user.avatar_url} alt={this.state.user.login} width ="400"/>
+              <div className= "user-info">
+                  <h2>{this.state.user.name}</h2>
+                  <h3>TOTAL REPOS: {this.state.user.public_repos} </h3>
+                  <h3>TOTAL Followers: {this.state.user.followers} </h3>
+              </div>                             
+          </div>
+          <h2> Followers: </h2>
+          <FollowerList user={this.state.user}/>
+        </form>           
+      </div>);
   }
 }
 
