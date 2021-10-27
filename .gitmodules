@@ -169,3 +169,6 @@
 [submodule "curriculum/web48/3.1-Advanced-React/Module_1-Class-Components/web-guided-project-class-components"]
 	path = curriculum/web48/3.1-Advanced-React/Module_1-Class-Components/web-guided-project-class-components
 	url = https://github.com/beatlesm/web-guided-project-class-components.git
+[submodule "curriculum/web48/3.1-Advanced-React/Module_2-The-React-Lifecycle/web-guided-project-lifecycle"]
+	path = curriculum/web48/3.1-Advanced-React/Module_2-The-React-Lifecycle/web-guided-project-lifecycle
+	url = https://github.com/beatlesm/web-guided-project-lifecycle.git
