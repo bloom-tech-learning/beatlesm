@@ -1,15 +1,15 @@
-import React, { useState, useEffect} from 'react';
-import axios from 'axios';
-import { getPokemon } from './../services/PokeServices';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import getPokemonData from  '../../data'
 
 const usePokeState = () => {
+
     const [pokemen, setPokemen] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState({});
   
     useEffect(() => {
-      setPokemen(getPokemon());
+      setPokemen(getPokemonData);
     }, []);
-  
   
     const handlePoke = (id) => {
       axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
@@ -18,7 +18,8 @@ const usePokeState = () => {
         });
     };
   
-    return([handlePoke, pokemen, selectedPokemon]);
-}
+    return ([handlePoke, pokemen, selectedPokemon]);
+  
+  }
 
-export default usePokeState;
+  export  {usePokeState};

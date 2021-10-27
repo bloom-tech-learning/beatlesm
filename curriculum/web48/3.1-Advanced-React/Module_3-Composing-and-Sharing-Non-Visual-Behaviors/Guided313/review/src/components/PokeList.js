@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const PokeList = (props)=> {
+const PokeList = (props) => {
+
     const {pokemen, handlePoke} = props;
 
-    return (<div id="pokeList">
-        {pokemen.map((pokemon) => (
+    return (
+        <div id="pokeList">
+            {pokemen.map((pokemon) => (
             <div
                 onClick={() => handlePoke(pokemon.id)}
                 key={pokemon.id}
@@ -18,7 +20,8 @@ const PokeList = (props)=> {
                 </div>
             </div>
             ))}
-    </div>);
+        </div>    
+    );
 }
 
 export default PokeList;
