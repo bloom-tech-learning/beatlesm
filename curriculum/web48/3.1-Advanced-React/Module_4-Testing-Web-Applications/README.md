@@ -8,6 +8,8 @@
    
 #### [Guided project 3.1.4](./Guided314):
 
+-   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
+
 
 ### Objective 1 - Use React-Testing Library for Testing React Components
 

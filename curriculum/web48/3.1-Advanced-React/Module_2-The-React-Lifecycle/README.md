@@ -8,7 +8,7 @@
    
 #### [Guided project 3.1.2](./Guided312):
 
--   **[Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
+-   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
 
 
 ### [Objective 1 - Describe the Three Phases of the React Component Lifecycle](./Objects/Object_1.md)
