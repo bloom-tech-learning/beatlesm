@@ -133,7 +133,7 @@ const [password, setPassword, handlePassword] = useInput("");
 const [email, setEmail, handleEmail] = useInput("");
 ```
 
-Our useInput hook returns a new copy of our custom hook and state each time. Also, because array destructuring is based on positioning and not the name, we are allowed by JavaScript to name each of the three items returned from useInput in different ways. This is why we can set the first item to username, the second to setUsername, and the third to handleUsername while the next two useInput calls return differently-named variables and functions.
+Our ```useInput``` hook returns a new copy of our custom hook and state each time. Also, because array destructuring is based on positioning and not the name, we are allowed by JavaScript to name each of the three items returned from ```useInput``` in different ways. This is why we can set the first item to ```username```, the second to ```setUsername```, and the third to ```handleUsername``` while the next two ```useInput``` calls return differently-named variables and functions.
 
 From these invocations, it now becomes easy to rig up each of our input tags in our JSX just the same as we did before. Here they are again for your reference:
 
