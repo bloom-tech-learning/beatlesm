@@ -33,4 +33,4 @@ Here are some ideas to get you started:
 
 [Class](./curriculum/web48/README.md)
 
-- [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
+- [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/beatlesm/tree/main/curriculum/web48)

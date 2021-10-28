@@ -52,4 +52,4 @@
 
 
 
-[Previous](./Object_2.md) | [Module 1](../../Module_4-Testing-Web-Applications/README.md)
+[Previous](./Object_2.md) | [Module 1](../../Module_1-Class-Components/README.md)
