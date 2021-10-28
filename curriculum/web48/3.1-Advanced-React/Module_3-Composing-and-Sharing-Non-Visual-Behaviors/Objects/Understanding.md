@@ -1,30 +1,52 @@
-# Web48 - Module 3.1.3 - Composing and Sharing Non-Visual Behaviors 
+# Web48 - Module 3.1.3 - Composing and Sharing Non-Visual Behaviors Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  Which of the following would NOT be considered "stateful logic"?
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+- ```const [name, setName] = useState("value")``` 
+- ```const handleClear= ()=>{ setName(""); }``` 
+- ```const handleClick= ()=>{ setName("new name"); })``` 
+- ```<h2 className="sub-header">{name}</h2>``` 
+ 
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: The display of state is not stateful logic.
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  If you had a custom hook called ```useWindowSize``` whose return value was ```[height, width]```, how would you use this hook in your component?
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- ```const [height, width] = useState();``` 
+- ```const [height] = useHeight(); const [width] = useWidth();``` 
+- ```const [height, width] = useWindowSize();``` 
+- ```const [width, height] = useWindowSize();``` 
 
 #### Answer:   (C) 
 
-- Hints: In class components, we always need to use this.setState() to modify state.
+## Question 3
+
+####  Custom hooks should be named with "use" at the start of the name.
+
+- True
+
+- False
+
+#### Answer:   (A) 
+
+## Question 4
+
+####  Calling a hook (custom or not) within a custom hook is an example of what?
+
+- creating a custom hook 
+- calling hooks 
+- composing hooks 
+- mounting
+
+#### Answer:   (C) 
+
+- Hints: Hooks often extend behavoirs of other hooks.
 
 
 
