@@ -1,198 +1,142 @@
-# Objective 2 - Apply Non-Visual Behavior (Stateful Logic) With Custom Hooks
+# Objective 2 - Use the React-Testing Library to Test User Interactions With fireEvent
 
 ## Overview
 
-Custom hooks are called this because you are building the hook yourself (customizing it) to apply non-visual behavior and stateful logic throughout your components. This way, you can reuse the same hook over and over again. In addition, custom hooks follow the same naming patterns that you've already learned (i.e., prefacing the function name with use, as in useState). Thus, you can build a reusable custom hook for anything from handling controlled inputs to managing event listeners or watching for key presses.
+For review, the React-testing library is designed to mimic how a human interacts with a website, and just like the React-testing library, these tests focus on UI specifically. This again is just another way to consider the user in design.
+
+We test interface pieces by capturing what we expect to see (or not see) in the DOM using queries. What should (or should not) be there is rendered to a virtual DOM by the library's renderer. This is the DOM node of interest (a certain button, a label containing a specific text, an input with some specific value). Then, we can run matchers against that piece of DOM to assert, for example, that the selection exists in the document or that it's visible.
+
+Let's consider the example of an increment counter that increases by one every time the ```Increment``` button is clicked. Set up like so:
 
 ```
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const DynamicTitle = () => {
-  const [title, setTitle] = useState("This is a class component");
-  const [inputText, setInputText] = useState("");
-
-  const handleChanges = e => {
-    setInputText(e.target.value);
-  };
-
-  const changeTitle = e => {
-    e.preventDefault();
-    setTitle(inputText);
-    setInputText("");
-  };
+const Counter = () => {
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="Wrapper">
-      <h1 className="Title">{title}</h1>
-      <form onSubmit={changeTitle}>
-        <div className="Input">
-          <input
-            className="Input-text"
-            id="input"
-            name="inputText"
-            onChange={handleChanges}
-            placeholder="Create new title"
-            type="text"
-            value={inputText}
-          />
-          <label htmlFor="input" className="Input-label">
-            New title
-          </label>
-        </div>
-      </form>
+    <div>
+      <h2>{count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
     </div>
   );
 };
 
-export default DynamicTitle;
+export default Counter;
 ```
 
-See how we have a ```useState``` hook, a ```handleChange``` function to update based on any changes, and a ```changeTitle``` function to change the actual title of the component when we submit the form?
-
-Now, what happens if we need to issue state for multiple ```input``` tags? If we were to follow the lead of the patterns shown above, we would end up having to rewrite large amounts of our code for each ```useState``` call that we've invoked in order to create state for our second, third, and fourth ```input```s.
-
-Instead, let's build out our custom hook to reuse stateful logic. In this way, we avoid repeating code unnecessarily. Read the following function and try to guess what each piece of code is doing:
+Our test would look something like the following. This should look similar to the example we walked through in the last objective, with just a few more steps added on. Importantly, we simulate a user click with ```userEvent.click(button)``` and include multiple assertions at the end.
 
 ```
-export const useInput = initialValue => {
-  const [value, setValue] = useState(initialValue);
-  const handleChanges = updatedValue => {
-    setValue(updatedValue);
-  };
-  return [value, setValue, handleChanges];
-};
+import React from "react";
+
+import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
+import Counter from "./Counter";
+
+test("increments count when increment button is clicked", async () => {
+  // Arrange
+  render(<Counter />);
+  // Act
+  const count = screen.getByText(/0/i);
+  // get the button node
+  const button = screen.getByText(/increment/i);
+  // simulate a user click
+  userEvent.click(button);
+  // Assert
+  expect(count).toHaveTextContent("1"); //passes with 1 because we expect it to be 1 after a button click
+  expect(count).not.toHaveTextContent("0");
+});
 ```
 
-In this ```useInput``` custom hook function, we're taking in an ```initialValue``` and returning three new values. We pass ```initialValue``` as a parameter on the function. ```initialValue``` is then passed into the ```useState``` hook, which returns an array with our ```value``` variable and ```setValue``` function (just the same as what you've used up to this point).
+### Break the Test
 
-Next, we have a ```handleChanges``` function that uses the ```setValue``` function to update state to a new value. Finally, we return an array from our ```useInput``` custom hook containing the ```value``` variable, the ```setValue``` function, and the ```handleChanges``` function.
-
-Let's take a look at this custom hook when it's imported and used in a component.
-
-```
-import React, { useState } from "react";
-import { useInput } from "./useInput.js";
-
-const CustomForm = () => {
-  const [username, setUsername, handleUsername] = useInput("");
-  const [password, setPassword, handlePassword] = useInput("");
-  const [email, setEmail, handleEmail] = useInput("");
-
-  const resetValues = e => {
-    e.preventDefault();
-    setUsername("");
-    setPassword("");
-    setEmail("");
-  };
-
-  return (
-    <form onSubmit={resetValues}>
-      <input
-        className="username-text"
-        id="username"
-        name="username"
-        onChange={e => handleUsername(e.target.value)}
-        placeholder="Username"
-        type="text"
-        value={username}
-      />
-      <input
-        className="password-test"
-        id="password"
-        name="password"
-        onChange={e => handlePassword(e.target.value)}
-        placeholder="Password"
-        type="password"
-        value={password}
-      />
-      <input
-        className="email-text"
-        id="email"
-        name="email"
-        onChange={e => handleEmail(e.target.value)}
-        placeholder="Email"
-        type="text"
-        value={email}
-      />
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
-
-export default CustomForm;
-
-```
-
-Whoa. That looks crazy, right? Don't worry. We're going to dissect this whole script to figure out exactly what each part is doing.
-
-First off, notice that we're invoking the ```useInput``` custom hook three times at the top of the component and passing in an empty string as each one's initial value:
-
-```
-const [username, setUsername, handleUsername] = useInput("");
-const [password, setPassword, handlePassword] = useInput("");
-const [email, setEmail, handleEmail] = useInput("");
-```
-
-Our useInput hook returns a new copy of our custom hook and state each time. Also, because array destructuring is based on positioning and not the name, we are allowed by JavaScript to name each of the three items returned from useInput in different ways. This is why we can set the first item to username, the second to setUsername, and the third to handleUsername while the next two useInput calls return differently-named variables and functions.
-
-From these invocations, it now becomes easy to rig up each of our input tags in our JSX just the same as we did before. Here they are again for your reference:
-
-```
-<form onSubmit={resetValues}>
-  <input
-    className="username-text"
-    id = "username";
-    name = "username";
-    onChange={e => handleUsername(e.target.value)}
-    placeholder = "Username";
-    type = "text";
-    value={username}
-  />
-  <input
-    className="password-test"
-    id = "password";
-    name = "password";
-    onChange={e => handlePassword(e.target.value)}
-    placeholder = "Password";
-    type = "password";
-    value={password}
-  />
-  <input
-    className="email-text"
-    id = "email";
-    name = "email";
-    onChange={e => handleEmail(e.target.value)}
-    placeholder = "Email";
-    type = "text";
-    value={email}
-  />
-  <button type="submit">Submit</button>
-</form>
-```
-
-Notice how we are setting our ```handleUsername```, ```handlePassword```, and ```handleEmail``` functions to process changes to the input. Remember how we returned a ```handleChanges``` function from our custom hook? Well, we've renamed them here (again, thanks to array destructuring) and are using them just the same as before. However, now, we have less code for them in our component.
-
-The final thing you should notice is the ```resetValue``` function. When we invoke it, we use the ```setValues``` returned from each ```useInput``` (again, each one is named differently) and pass it in our reset value (in this case, an empty string). Isn't this an easy way to change your state?
-
-Here they are again for your reference:
-
-```
-const resetValues = e => {
-  e.preventDefault();
-  setUsername("");
-  setPassword("");
-  setEmail("");
-};
-```
-
-By building a custom hook, we can skip writing out all of the stateful logic for our non-visual behavior. Custom hooks produce beautiful, DRY code that is easy to read and use. You have built a reusable piece of code that makes it easy for you to import anywhere in your application and build out stateful logic in any of your components.
+We'll tell you to break your tests often. In the example above, there are multiple expect statements as an attempt to 'break the test'; this is important and intentional. When testing, we want to "break the test" as much as we possibly can; this is the best (and the only) way to ensure that your website won't break when a user goes to try and use it.
 
 ## Follow Along
 
-Now that you can identify custom hook logic and how you might create and use it in your components, go back to several components you've built over the last week. Then, refactor the state of those components in some forms you made to use the useInput custom hook from the component in the examples above.
+1. ***Change*** ```App.js``` to output different jsx: 
+
+```
+  const App = () => {
+      return (
+        <section aria-labelledby="KittensHeader">
+          <h2 id="KittensHeader">All About Kittens</h2>
+          <p className='content'>Lorem ipsum dolor sit amet</p>
+        </section>
+  }
+```
+2. ***Import*** the App component into our test file ```App.test.js``` and render it. You may pass any props you want! Renders the app component. 
+
+```
+  import React from 'react';
+    import { render, screen } as rtl from '@testing-library/react';
+    import userEvent from '@testing-library/user-event';
+    import App from './App';
+
+    it('renders "all about kittens" text', () => {
+      render(<App foo="you may inject props!" />);
+  });
+```
+
+3.  ***Capture*** a piece of the output! We expect some text containing "All About Kittens" to be rendered so we'll use ```queryByText```. This is an example of the ```act``` phase.
+
+```
+it('renders "all about kittens" text', () => {
+    render(<App />);
+    const hasKittensText = screen.queryByText(/all about kittens/i);
+  });
+```
+
+4. ***Assert*** that the ```hasKittensText``` is actually in the document. If it's not, the value of ```hasKittensText``` will be null. 
+
+```
+  it('renders "all about kittens" text', () => {
+    render(<App />);
+    // IMPORTANT
+    // queryByText() returns either the node, or null:
+    const hasKittensText = screen.queryByText(/all about kittens/i);
+    expect(hasKittensText).toBeInTheDocument();
+  });
+```
+
+5. ***Try out*** ```getByText()``` as an alternative to ```queryByText()```.
+
+ ```
+  it('renders "all about kittens" text', () => {
+    render(<App />);
+    // IMPORTANT
+    // getByText() returns either the node, or **FAILS THE TEST** outright:
+    expect(screen.getByText(/all about kittens/i));
+  });
+ ```
+
+6.  ***Break the test!***. Remember that ```getByText```, as well as the rest of the queries that have ```get``` prefix in their names, will cause a test fail, instead of returning a null value. Queries that have the ```query``` prefix return ```null``` if the element is not found.
+
+```
+  it('renders "all about kittens" text', () => {
+    render(<App />);
+    // no matcher needed, although it may be added to improve readability
+    expect(screen.getByText(/THIS WILL MAKE THE TEST CRASH AND BURN/i));
+  });
+```
+
+![renders](./renders.png)
+
+7.  ***Capture using different criteria***. We have many other queries available to us. In our component, we have an ```aria-labeledby``` attribute on the ```section``` to inform screen readers that the element ```<h2 id="KittensHeader">All About Kittens</h2>``` is actually a label for the ```section``` element. Let's capture the ```h2``` by label text! The point is to test like a user would. We expect a particular label to be there for our users!
+
+```
+it('renders "all about kittens" text', () => {
+    render(<App />);
+    expect(screen.getByLabelText(/All About Kittens/i));
+  });
+```
+
+##  Challenge
+
+Use the starter code above to create a test that works for the decrement button.
 
 
 
-
-
-[Previous](./Object_1.md) | [Next](./Object_3.md)
+[Previous](./Object_1.md) | [Next](./Understanding.md)
