@@ -3,22 +3,24 @@
 
 Here are some ideas to get you started:
 
-- 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/README.md)**
+- 🌱 I’m currently learning ... **[Web 3.1](./curriculum/web48/3.1-Advanced-React/README.md)**
 
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
 -   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
 -   **[https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)**
-
-
+-   **[https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)**
 
 -   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
 -   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)**
 -   **[https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)**
+-   **[https://github.com/beatlesm/web-module-project-testing-web-apps](https://github.com/beatlesm/web-module-project-testing-web-apps)**
 
 
 -   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
 -   **[https://github.com/LambdaSchool/web-guided-project-lifecycle](https://github.com/LambdaSchool/web-guided-project-lifecycle)**
 -   **[https://github.com/LambdaSchool/web-guided-project-custom-hook](https://github.com/LambdaSchool/web-guided-project-custom-hook)**
+-   **[https://github.com/LambdaSchool/web-guided-project-custom-hook](https://github.com/LambdaSchool/web-guided-project-custom-hook)**
+
 
 
 
