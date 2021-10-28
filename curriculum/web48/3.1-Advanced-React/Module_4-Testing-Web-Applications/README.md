@@ -4,7 +4,7 @@
 
 #### [Assignment 3.1.4](./Assign314/README.md):
 
--   **[https://github.com/LambdaSchool/React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)**
+-   **[https://github.com/beatlesm/web-module-project-testing-web-apps](https://github.com/beatlesm/web-module-project-testing-web-apps)**
    
 #### [Guided project 3.1.4](./Guided314):
 
