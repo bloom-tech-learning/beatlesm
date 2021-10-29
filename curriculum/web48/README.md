@@ -9,7 +9,7 @@ Here are some ideas to get you started:
 -   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
 -   **[https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)**
 -   **[https://github.com/beatlesm/web-guided-project-testing-web-apps](https://github.com/beatlesm/web-guided-project-testing-web-apps)**
--   **[https://github.com/beatlesm/web-sprint-challenge-advanced-react](https://github.com/beatlesm/web-guided-project-testing-web-apps)**
+-   **[https://github.com/beatlesm/web-sprint-challenge-advanced-react](https://github.com/beatlesm/web-sprint-challenge-advanced-react)**
 
 -   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
 -   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)**
