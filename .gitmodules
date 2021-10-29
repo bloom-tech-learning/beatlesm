@@ -175,3 +175,6 @@
 [submodule "curriculum/web48/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/web-guided-project-custom-hook"]
 	path = curriculum/web48/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/web-guided-project-custom-hook
 	url = https://github.com/beatlesm/web-guided-project-custom-hook.git
+[submodule "curriculum/web48/3.1-Advanced-React/Sprint/web-sprint-challenge-advanced-react"]
+	path = curriculum/web48/3.1-Advanced-React/Sprint/web-sprint-challenge-advanced-react
+	url = https://github.com/beatlesm/web-sprint-challenge-advanced-react.git
