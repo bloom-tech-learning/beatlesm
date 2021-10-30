@@ -3,7 +3,14 @@
 
 Here are some ideas to get you started:
 
-- 🌱 I’m currently learning ... **[Web 3.2](./3.2-Advanced-State-Management/README.md)**
+- 🌱 I’m currently learning ... **[Web 3.2](./curriculum/web48/3.2-Advanced-State-Management/README.md)**
+
+-   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
+
+-   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+
+
+-   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
 
 
 
