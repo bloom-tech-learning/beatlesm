@@ -3,6 +3,8 @@
 
 Here are some ideas to get you started:
 
+- 🌱 I’m currently learning ... **[Web 3.2](./3.2-Advanced-State-Management/README.md)**
+
 - 🌱 I’m currently learning ... **[Web 3.1](./curriculum/web48/3.1-Advanced-React/README.md)**
 
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**

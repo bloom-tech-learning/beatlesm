@@ -43,4 +43,10 @@
 -   [Userevent](https://testing-library.com/docs/ecosystem-user-event/)
 -   [Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
+### Today’s Office Hours:
 
+-	Today we covered async/await, the Promise Object, and general test debugging tips.
+
+	-	[Youtube - Today’s Office Hours](https://lambdaschool.zoom.us/rec/share/0UEa6Qpyzu4NJ-eGWTFhcUF7saGssOClX286afRQdd_Ou8KFolAOa5E1c8smbfA.IByD3zPpI-8s5xBp)
+	
+-	Code: [here](https://codesandbox.io/s/exciting-poitras-l60yt):
