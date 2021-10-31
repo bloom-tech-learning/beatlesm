@@ -49,4 +49,5 @@
 -   [47 - Render React on the Server with renderToString](47-render-react-on-the-server-with-rendertostring.md)
 
 
-- [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
+ [Home - front end](../../03-front-end-development-libraries/README.md)  | [Next page](01-create-a-simple-jsx-element.md)  
+ #### [Home - front end](../README.md) 
