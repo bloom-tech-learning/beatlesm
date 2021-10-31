@@ -1,140 +1,62 @@
-# Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
-
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
+# Objective 3 - consume data from a context object in nested components
 
 ##  Overview
 
-In our last objective, we explored how ```state``` can be displayed and changed by passing state value and state modifying functions respectively through ```props```. We explored this using the onChange ```eventlistener`. That is, of course, only one of many user event you can integrate into your applications!
-
-We have already seen how events are handled within React class components. We need an ```event handler``` function and we need to link it to an ```eventlistener``` method within our DOM.
+Consuming the data passed into the provider is the final step for using the Context API. We will use a context hook for this, though keep in mind that you can use render props as well.
 
 ```
-class Button extends React.Component {
-  handleButton = (e)=> {
-    console.log(e);  }
+import { useContext } from 'react'
+import { ContextObject } from '../contexts';
+...
 
-  render() {
-    return <button onClick={this.handleButton}>Click Me</button>;
-  }
-}
+// inside the component
+const myData = useContext(ContextObject);
+
+// or you can destructure the data like this:
+const { someData, moreData } = useContext(ContextObject);
 ```
 
-Notice once again the need for that ```this``` object when referencing our ```event handler```. Within class components, just like our props and state, our event handlers are bound to the instance of this class and are accessed through ```this```.
+Now you're ready to use the data in your component!
 
-We have also seen that "e" parameter before. This parameter is known is React as a ```synthetic event``` object. Inside this object, we will have access to various pieces of information regarding this event triggered, including the target DOM element, the type of event, and methods that control the propagation of that event like preventDefault. For more details on the ```synthetic event``` objects, check out the reference materials [here](https://reactjs.org/docs/events.html.).
+##  Follow Along
 
-Let's add in some functionality to our event handler.
+In the previous objective, we created our ```UserContext``` hook, and passed our data into the provider. Now it's time to consume it.
 
-```
-class Button extends React.Component {
-  clickHandler = event => {
-    console.log(event); // this is the react Synthetic Event
-  };
-
-  render() {
-    return <button onClick={this.clickHandler}>Click Me</button>;
-  }
-}
-```
-Now, when we click on our button, we can actually print out our ```synthetic event``` object. We can now do anything we want within ```event handler```, from triggering a change of state to starting an external api call.
-
-## Follow Along
-
-Now, let's build out a little Application that can handle some data that we pass through a few JSX elements. We're going to build out some ```event handler``` functions using the following ```event listeners```:
-
--   onClick
--   onDoubleClick
--   onMouseEnter
--   OnChange
-
-First, let's build out a singleClickHandler function.
+To do so import the ```useContext``` hook from the react library and our ```UserContext```.
 
 ```
-singleClickHandler = () => alert("Single Click!");
-```
-Now, we add it to a button within our app's render function.
-
-```
-render() {
-. . .
-<button onClick={this.singleClickHandler}>Click Handler Demo</button>
-. . .
+import React, { useContext } from 'react';
+import { UserContext } from '../../contexts/UserContext';
 ```
 
-Lets repeat the process for our doubleClick, mouseEnter and onChange events.
-
-
-```
-doubleClickHandler = () => alert("Double Clicked!");
-
-mouseEnterHandler = () => alert("Mouse Entered");
-
-changeHandler = () => alert("Item was changed");
-<div className="App">
-    <h1>Hello Handlers</h1>
-    <h2>Lets build out some handler functions.</h2>
-    <button onClick={this.singleClickHandler}>Click Handler Demo</button>
-    <button onDoubleClick={this.doubleClickHandler}>
-      Double Click Handler
-    </button>
-    <div onMouseEnter={this.mouseEnterHandler}>Mouse Enter</div>
-    <input onChange={this.changeHandler} placeholder="Change my input" />
-</div>
-```
-
-Try playing around with the events and see how are interacting one with another.
-
-Lets take a closer look at the input onChange event for a min. Let's pass in the synthetic event through the function body by adding it as a ```parameter``` to the ```event handler``` connected to it.
+After importing our UserContext, we will consume the data from it.
 
 ```
-changeHandler = (e) => alert(event.target.value);
+const user = useContext(UserContext);
 ```
 
-One of the most useful properties attached to ```synthetic events``` is target. This provides information on the text, value, style, attached attributes and other useful data within our DOM element. In this case we can print out our input's value.
-
-Lets add in some state to get realtime feedback of what we are typing. Once again, we do this within class components by within the class ```constructor``` and make our app display that change.
+Finally, we can render our user to the screen!
 
 ```
-class App extends React.Component {
- constructor() {
-    super();
-    this.state = {
-      displayText: '',
-    }
-  }
-…
- render() {
-    return(     …
-        <h1>{this.displayText}</h1>
-        …
-    );
- }
-}
-
+return (
+    <div className="profile">
+        <p>
+            {user.lastName}, {user.firstName}
+        </p>
+    </div>
+);
 ```
 
-Lets also update our change handler to update our state:
+Our app should look like this if everything is correct.
 
-```
-changeHandler = event => {
-  this.setState({displayText: event.target.value});
-};
-```
+![FinalProduct](FinalProduct.png)
 
-Excellent! Now, ```setState``` will update our display property on our state object by simply typing in the input field. Let's prove this by logging our state object inside the render function.
-
-You can see a working copy of this example [here](https://codesandbox.io/s/rmnj2r1o0p)
+The completed follow along code can be found here (Links to an external site.)
 
 ## Challenge
 
-Lets expand on our example!
+Continue working in the app you chose in the last objective. Now that you have rendered the context provider, and passed in your data, you need to consume that data where it's needed.
 
-Fork the code provided above and do the following.
-
--   Add another value to state that holds the secondDisplayValue.
--   Display that value in a h2 tag.
--   Create a button that will put the value of state.displayText within our secondDisplayValue property.
--   Add an event listener and event handler function that will cause our h2 to show displayText when we click our new button.
 
 
 
