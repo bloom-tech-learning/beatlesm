@@ -1,12 +1,9 @@
----
-id: 5a24c314108439a4d403614b
-title: Create a Redux Store
-challengeType: 6
-forumTopicId: 301439
-dashedName: create-a-redux-store
----
+# <center>01 - Create a Redux StorePassed</center>
 
-# --description--
+[Home - React](./README.md) | [Next page](02 - get-state-from-the-redux-store.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)  
+
 
 Redux is a state management framework that can be used with a number of different web technologies, including React.
 
@@ -22,33 +19,7 @@ Declare a `store` variable and assign it to the `createStore()` method, passing 
 
 **Note:** The code in the editor uses ES6 default argument syntax to initialize this state to hold a value of `5`. If you're not familiar with default arguments, you can refer to the [ES6 section in the Curriculum](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions) which covers this topic.
 
-# --hints--
 
-The Redux store should exist.
-
-```js
-assert(typeof store.getState === 'function');
-```
-
-The Redux store should have a value of 5 for the state.
-
-```js
-assert(store.getState() === 5);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-const reducer = (state = 5) => {
-  return state;
-}
-
-// Redux methods are available from a Redux object
-// For example: Redux.createStore()
-// Define the store here:
-```
 
 # --solutions--
 
@@ -59,3 +30,8 @@ const reducer = (state = 5) => {
 
 const store = Redux.createStore(reducer);
 ```
+
+
+[Home - React](./README.md) | [Next page](02 - get-state-from-the-redux-store.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)  

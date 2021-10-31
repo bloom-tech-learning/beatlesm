@@ -1,12 +1,10 @@
----
-id: 5a24c314108439a4d4036156
-title: Use Middleware to Handle Asynchronous Actions
-challengeType: 6
-forumTopicId: 301451
-dashedName: use-middleware-to-handle-asynchronous-actions
----
+<center>12 - Use Middleware to Handle Asynchronous Actions </center>
 
-# --description--
+[Previous page](11 - send-action-data-to-the-store.md) | [Next page](13 - write-a-counter-with-redux.md)
+
+#### [Home - React](./README.md)
+
+
 
 So far these challenges have avoided discussing asynchronous actions, but they are an unavoidable part of web development. At some point you'll need to call asynchronous endpoints in your Redux app, so how do you handle these types of requests? Redux provides middleware designed specifically for this purpose, called Redux Thunk middleware. Here's a brief description how to use this with Redux.
 
@@ -19,106 +17,6 @@ Remember that you're passing `dispatch` as a parameter to this special action cr
 # --instructions--
 
 Write both dispatches in the `handleAsync()` action creator. Dispatch `requestingData()` before the `setTimeout()` (the simulated API call). Then, after you receive the (pretend) data, dispatch the `receivedData()` action, passing in this data. Now you know how to handle asynchronous actions in Redux. Everything else continues to behave as before.
-
-# --hints--
-
-The `requestingData` action creator should return an object of type equal to the value of `REQUESTING_DATA`.
-
-```js
-assert(requestingData().type === REQUESTING_DATA);
-```
-
-The `receivedData` action creator should return an object of type equal to the value of `RECEIVED_DATA`.
-
-```js
-assert(receivedData('data').type === RECEIVED_DATA);
-```
-
-`asyncDataReducer` should be a function.
-
-```js
-assert(typeof asyncDataReducer === 'function');
-```
-
-Dispatching the `requestingData` action creator should update the store `state` property of fetching to `true`.
-
-```js
-assert(
-  (function () {
-    const initialState = store.getState();
-    store.dispatch(requestingData());
-    const reqState = store.getState();
-    return initialState.fetching === false && reqState.fetching === true;
-  })()
-);
-```
-
-Dispatching `handleAsync` should dispatch the data request action and then dispatch the received data action after a delay.
-
-```js
-assert(
-  (function () {
-    const noWhiteSpace = __helpers.removeWhiteSpace(handleAsync.toString());
-    return (
-      noWhiteSpace.includes('dispatch(requestingData())') === true &&
-      noWhiteSpace.includes('dispatch(receivedData(data))') === true
-    );
-  })()
-);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-const REQUESTING_DATA = 'REQUESTING_DATA'
-const RECEIVED_DATA = 'RECEIVED_DATA'
-
-const requestingData = () => { return {type: REQUESTING_DATA} }
-const receivedData = (data) => { return {type: RECEIVED_DATA, users: data.users} }
-
-const handleAsync = () => {
-  return function(dispatch) {
-    // Dispatch request action here
-
-    setTimeout(function() {
-      let data = {
-        users: ['Jeff', 'William', 'Alice']
-      }
-      // Dispatch received data action here
-
-    }, 2500);
-  }
-};
-
-const defaultState = {
-  fetching: false,
-  users: []
-};
-
-const asyncDataReducer = (state = defaultState, action) => {
-  switch(action.type) {
-    case REQUESTING_DATA:
-      return {
-        fetching: true,
-        users: []
-      }
-    case RECEIVED_DATA:
-      return {
-        fetching: false,
-        users: action.users
-      }
-    default:
-      return state;
-  }
-};
-
-const store = Redux.createStore(
-  asyncDataReducer,
-  Redux.applyMiddleware(ReduxThunk.default)
-);
-```
 
 # --solutions--
 
@@ -168,3 +66,9 @@ const store = Redux.createStore(
   Redux.applyMiddleware(ReduxThunk.default)
 );
 ```
+
+
+
+[Previous page](11 - send-action-data-to-the-store.md) | [Next page](13 - write-a-counter-with-redux.md)
+
+#### [Home - React](./README.md)
