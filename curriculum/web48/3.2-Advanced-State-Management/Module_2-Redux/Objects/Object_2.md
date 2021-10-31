@@ -1,186 +1,174 @@
-# Objective 2 - Share Data Between Components Using State and Props
-
-[Click here](https://codesandbox.io/s/yk37ykmyrz) to access the code within this video's follow-along exercise.
+# Objective 2 - Create a Redux Store and Connect it to a React Application
 
 ## Overview
 
-Up until this point, our applications have been fairly simple. One or two components with a bit of state to allow for interaction. As our applications grow, so to do the complexity way components relate to each other. To do this, it helps to see our components as being structure in a ```parent / child``` relationship.
+In this section, we will learn how to create the Redux store and use a library called React-Redux to connect our React application to the store. Because Redux is a standalone library, meaning it can be used on its own or with another library or framework for state management and data flow. We have to use a second helper package that will enable us to string together Redux within a React application. That package is called [React-Redux](https://github.com/reduxjs/react-redux) Some more documentation and information lives [here](https://redux.js.org/tutorials/fundamentals/part-5-ui-react) The packages React and Redux are entirely separate, as quoted in the Redux documentation.
 
-Here is an example of a more complicated application hierarchy.
-
-![hierarchy](./app_hierarchy.png)
-
-Simple or complex, every application needs shared, persistent data to run.
-
-Currently, we have been using ```state``` to hold that data. Unlike statically defined data within our component, state is persistent, changeable and can flow into other components through use of ```prop drilling```. Changes to state immediately rerender the parts of our components effected by that change of state in a process called ```reactivity```. When working with more complex component trees, state always runs from a ```parent``` component down to a ```child```.
-
-![app_hierarchy_2](./app_hierarchy_2.png)
-
-What if we want to modify that data? Just as we can pass parent state down through props, we can also pass functions that modify child state! Executing these functions in our child components will cause state to change at our parent level components, resulting in reactive rendering throughout our application!
-
-![app_hierarchy_3](app_hierarchy_3.png)
-
-We have already seen how to pass state through props using functional components. Now, let's take a look at how we work with state-in-class-based components.
+> From the very beginning, we need to stress that Redux has no relation to React. You can write Redux apps with React, Angular, Ember, jQuery, or vanilla JavaScript.
 
 ## Follow Along
 
-Consider the following component:
-```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
+The first step we will take to enable Redux within a React application is to install it. This process assumes you've used Create React App to boilerplate out a React application.
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, {this.state.welcomeMessage}!</h1>
-      </div>
-    );
+```
+npm install react-redux redux
+```
+
+Now that we have ```redux``` and ```react-redux``` installed, let's learn how to set it up within our application. We will use the ```createStore``` function from ```redux```, so let's import that first.
+
+```
+import { createStore } from 'redux';
+```
+
+```createStore``` will take in a single reducer that represents the state (data) of our application globally. We need to create a ```store``` variable, and use ```createStore``` to create the Redux store.
+
+```
+const store = createStore(reducer);
+```
+
+You'll notice that we passed a reducer into ```createStore```, but we don't have a reducer yet. We'll learn a lot more about reducers soon. For now, let's create a function called ```reducer``` that returns an object representing our state.
+
+```
+function reducer() {
+  return {
+    title: 'Hello world! I\'m in the Redux store!',
   }
 }
+
+const store = createStore(reducer);
 ```
-Let's create a sub component using functional components to hold our welcome message.
+
+Now that we have a store, we want to make our application aware of it. The way this works is that react-redux gives us a ```<Provider></Provider>``` component that wraps around our entire application. We will pass our newly created store to that component as a prop.
+
+Within our Root Component (usually ```Index.js```), go ahead and import ```Provider ``` from ```react-redux```.
+
 ```
-const WelcomeBanner = (props) =>
+import { Provider } from 'react-redux';
+```
+
+Then, all we need to do is wrap our ```<App/>``` with the ```<Provider>``` component and pass a ```store``` we created. Then, finally, use the connect function to connect React components to the Redux store.
+
+```
+<Provider store={store}>
+  <App/>
+</Provider>
+```
+
+## Overview
+
+Now that we have built a store to manage our state, we need to connect our components to that store. We can do so using the connect function within the components themselves. We can also build a helper function within the component files to tell the connect function what pieces of state we want to access. This function is usually named mapStateToProps, and it will map pieces of our Redux state to the props of our component. Let's try it out.
+
+## Follow Along
+
+Using the app you created earlier that has the Redux store wired up, change the object you initially returned out of the reducer function to look like this:
+
+```
 {
-  return(<h1>Hello, {props.message}!</h1>);
+
+  user: {
+
+    name: 'Dustin'
+
+  },
+
+  movies: [
+
+    'Star Wars',
+
+    'Lord of the Rings',
+
+    'Harry Potter'
+
+  ],
+
+  todoList: [
+
+    { task: 'Learn Redux', id: 0, completed: false }
+
+  ],
+
+  moviesToWatch: 13
+
 }
 ```
-Now, lets refactor our component using React classes.
+
+Now create a component called MovieList. Next, we'll look at the syntax we use to connect our React component to Redux, then we'll talk about it. To start, import the connect function into your component:
+
 ```
-class WelcomeBanner extends React.Component {
-    render(){
-        return(
-        <div>
-            <h1>Hello, {this.props.message}</h1>
-        </div>
-    }
+import { connect } from 'react-redux';
+```
+
+Next, we use the connect function to export the component at the bottom of the file. We invoke connect twice (function currying). 
+- First, with two arguments - a function and an object. 
+- Second, with just the component we are trying to connect. 
+For now, we'll pass null and {} into the first invocation.
+
+```
+// export default MovieList; 
+```
+
+Not this way if we are connecting this component!
+
+```
+export default connect(null, {})(MovieList)
+```
+
+Now MovieList is connected to the store. Let's write our mapStateToProps function now to connect which pieces of our state we want to bring to this component. This function takes in state as a parameter, then returns an object where the properties can be passed to props, and the values are retrieved from the store for our component.
+
+For a MovieList component, we probably only want to know about the movies array and the moviesToWatch number, maybe the user object. We'll not worry about the todoList, since our component doesn't need to know about that part of our state. Let's bring those three pieces of our state into the component.
+
+```
+const mapStateToProps = state => {
+
+  return {
+
+    movies: state.movies,
+
+    moviesToWatch: state.moviesToWatch,
+
+    user: state.user
+
+  }
+
 }
 ```
 
-Notice that props are not passed in as they were in functional components. Instead, props are attached to the this object, just like state.
-
-Great! We are sharing data between a component's state and a component's props. This means that when the state object changes, so too will the props.
-
-Now let's add in the ability to modify that state. To do this, we will need to:
-
--   Connect a state change method to an event listener in our child component.
--   Create the substance of that method in our parent.
--   Pass that method to the child through props.
-
-Let's start at the bottom, our child component. Let's say that we want to use a form to dynamically update our message statement. This small component should do nicely:
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-};
-```
-The only problem is, we don't have access to state all the way down here! Let's build out our state changing method where it belongs, in App.js our ```parent```. While we are at it, let's add our form component to our rendering so we can see it in the first place.
+Let's pass this in as the first argument to the first connect invocation. Notice that state is being passed into this function. Under the hood, connect passes our entire state tree to mapStateToProps. That means that within that function, we have access to all our state via the state argument. But, the component only receives the pieces of state that we turn out of mapStateToProps.
 
 ```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
-
-  updateStateMessage = (e)=> {
-    this.setState({welcomeMessage:e.target.value});
-  }
-
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-        <FormComponent updateStateMessage={this.updateStateMessage}/>
-      </div>
-    );
-  }
-};
+export default connect(mapStateToProps, {})(MovieList)
 ```
-And there we go! We successfully passed our ```state data``` downstream through ```props``` in WelcomeBanner. At the same time, we can also successful pass data back upstream by executing ```state modifying functions``` passed through props in FormComponent.
+
+If you look at the props in the React tools, you will see that all three pieces of our state have been passed to our component through the connect function! As a side note, other props we've passed to this component the traditional way will still be available.
+
+By the way, did you notice that we are using a function that takes in a component, extends its functionality, and returns a component? Connect is a HOC!!!`
 
 ## Challenge
 
-Using the components we just created (App, FormComponent, and MessageComponent), try building out a form to allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
+Create a new application. Add the Redux and React-Redux packages. Create a Redux store with some test data (have fun with this part!). Build a component and connect that component to the store using connect and a mapStateToProps function. Render the connected data from your connected component.
 
-When a user clicks submit, show the data that's on state in an ```alert``` statement.
-
-### Stretch 
-
-Loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item and watch the magic happen.
-
--   We're going to be updating some state on a parent component.
--   That state will be wired up to a few other components as we pass the props around.
--   We will also be passing around a few handler functions that help us update/delete our state.
-
-Lets set up a form component that we can use to update our message component from above.
+will look like this:
 
 ```
-const WelcomeBanner = props => <h1>Hello, {props.message}!</h1>;
+Create a new application. Add the Redux and React-Redux packages. Create a Redux store with some test data (have fun with this part!). Build a component and connect that component to the store using connect and a mapStateToProps function. Render the connected data from your connected component.
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
+will look like this:
 
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-      </div>
-    );
-  }
-}
-```
-Now let's build a form component that can handle some data defined on state, below on the child components.
+<Provider store={store}>
 
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-  );
-};
-```
-We will need to build out a change handler function on our App component that we can pass down to the form. In addition, we'll have to define the prop as updateStateMessage in order to make our onChange event handler work out properly.
-```
-messageChangeHandler = event => {
-  this.setState({welcomeMessage: event.target.value});
-};
+  <App/>
 
-render() {
-  return (
-    <div>
-      <WelcomeBanner message={this.state.welcomeMessage} updateStateMessage={this.updateStateMessage}/>
-    </div>
-  );
-}
+</Provider>
 ```
 ## Challenge
 
-Using the following tools:
+Let's go ahead and take a peek at our application using the React DevTools now that we've wrapped it up in a provider component.
 
--   Class component
--   functional FormComponent, MessageComponent
--   click, and change handlers
--   ```setState```
-Build out a form that will allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
+Now, take the time to think about where and when you've done this before? Is there a package that we've used this same way? If so, which package is it? It is important to note that many packages that we use in React are implemented this way.
 
-When a user clicks submit, show the data that's on state in an alert statement.
+Write down a few thoughts on what you see, where you've seen similar patterns, etc., and send that to your PM.
 
-Stretch loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
+
+
 
 [Previous](./Object_1.md) | [Next](./Object_3.md)

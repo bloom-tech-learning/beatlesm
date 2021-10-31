@@ -1,38 +1,34 @@
-#   Objective 1 - Explain What Redux is and the Problem it Solves
+# Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
 
-##  Overview
+## Overview
 
-Redux is a predictable state management library for JavaScript applications and is the most popular state container for React applications. By now, we have discovered that building out applications using React requires a lot of forethought to give application scalability. Specifically, we have noticed some complications around the area of state management. You may have asked yourself a question like, "Which of my components should have state vs. which of my components should just be a way to present some DOM elements?"
+Mutable objects are objects whose state is allowed to change over time. An immutable value is an exact opposite – after it has been created, it can never change. There are some real benefits from making your state immutable. We won't go over all the benefits here, but we will talk about predictability and mutation tracking.
 
-Luckily you're not alone in this dilemma. The Facebook team who built React first noticed that managing state could become a nightmare at scale if they only used component state. So, they built a pattern and said, "everyone here at Facebook is going to write code after this pattern." This way, they could eliminate many of the problems that unwieldy state-full components could surface. That pattern was called Flux [link to docs](https://facebook.github.io/flux/docs/overview). Its primary use case was to add some stringency to the React ecosystem because React is very opinionated in how one should be designing their application and managing state.
+### Predictability
 
-Flux was great, but developers had a complicated implementation because the pattern presented a few other problems. Because of this (and around the same time that React was becoming so popular), [Dan Abramov](https://github.com/gaearon) built out a 'time-traveling' approach to debug an application. This method eventually became known as Redux. Dan wanted to go back in time to see when and where the state had changed in his application, and to do that, he ended up creating one of the most popular state-management libraries known to React developers today.
+Mutation hides change, which can create (unexpected) side effects. This can lead to some nasty bugs in our code. When we enforce immutability, we can keep our application architecture and mental model simple, making it easier to reason about the application. Simply put, it is very easy to predict how the state object will change based on certain actions/events. Without immutability, our state object can be changed or updated in unpredictable ways, causing weird behavior or bugs.
 
-Redux is a small, lightweight state container for use when building JavaScript applications. Remember, Redux has nothing to do with React other than that many developers use them together. The core concepts and principles of Redux are three fold:
+### Mutation Tracking
 
-### The Store
+Immutability makes it really easy to see if anything has changed. For example when we change the state in Redux, our components props will update. We can check our previous props against our new props to know what change occurred, and know how to handle those changes. If a user adds a task to the todo list, the ```TodoList``` component will update since it is receiving new props. But what if we want to run an animation on the new todo? We can't just run it on every render because it would run when the user toggles a task to complete, or deletes a task. Since Redux state management is immutable, we can track the changes that happen on the state, and only run our animation when a new task is added.
 
-> Everything that changes within your application is represented
-> by a single JavaScript Object known as the store. The store
-> contains our state for our application.
+### Redux and Immutability
 
-### Application state is Immutable
+Redux has a single immutable state tree (referred to as the store) where all state changes are explicitly handled by dispatching actions. Dispatched actions are processed by a reducer that accepts the previous state and the action and returns the next state of your application. Thus, it is easy to predict how the state tree will change based on actions that are dispatched. Likewise, it is easy to predict which action will be dispatched based on some event or interaction. This all leads to very predictable state management.
 
-> When the application state changes, we clone the state object, modify the clone, and replace the original state with the new copy. We never mutate the original object, and we never write to our store object.
+Writing immutable code can be challenging - your JavaScript skills will really be tested here - and it may seem pretty tedious, especially since we will be building very small apps with small state trees during this sprint. Because of that, it may be pretty hard to see the real benefits of immutable code in class. However, when you start working with a large application with a huge state tree, you will quickly grow to appreciate the benefits of writing immutable code, and the extra effort it takes will seem much more worth it.
 
-### Pure functions change our state
+##  Follow Along
 
-> Given the same input, a pure function returns the same output every time. All functions (reducers) in Redux must be pure functions. Meaning they take in some state and a description of what changes took place and return a copy of our state.
+Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.
 
-Redux is pretty simple at its core, the complications with Redux arise when we try and implement it within a React application. Usually, these issues are because there is some new syntax, and it's just a matter of time spent learning to sort them out.
+Follow along with the exercises here (Links to an external site.) (Links to an external site.)
 
-## Follow Along
-
-Watch the first four videos in [this series](https://egghead.io/lessons/react-redux-the-single-immutable-state-tree)  and try to wrap your head around how this would be useful in a React application. Then, think of your projects that you've built in React up until this point. What types of problems would Redux have solved in those projects, if any?
 ## Challenge
 
-Write your thoughts on why Redux exists and at least one reason to use it and one reason not to use it.
+Read this [article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0) 
 
+Write a paragraph or two explaining what you learned. Then, send that paragraph to your PM.
 
 
 
