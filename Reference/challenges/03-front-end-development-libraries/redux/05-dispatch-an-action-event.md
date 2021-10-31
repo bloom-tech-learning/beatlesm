@@ -37,6 +37,6 @@ store.dispatch(loginAction());
 
 
 
-[Previous page](05 - dispatch-an-action-event.md) | [Next page](06 - handle-an-action-in-the-store.md)
+[Previous page](04-define-an-action-creator.md) | [Next page](06-handle-an-action-in-the-store.md)
 
 #### [Home - React](./README.md)
