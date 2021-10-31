@@ -14,3 +14,5 @@
 ### [Objective 2 - Describe Reducer Functions](./Objects/Object_2.md)
 
 ### [Objective 3 - employ the useReducer hook to manage state in a component](./Objects/Object_3.md)
+
+### [Check For Understanding](./Objects/Understanding.md)
