@@ -45,6 +45,6 @@ const store = Redux.createStore(counterReducer);
 
 
 
-[Previous page](12 - use-middleware-to-handle-asynchronous-actions.md) | [Next page](14 - never-mutate-state.md)
+[Previous page](12-use-middleware-to-handle-asynchronous-actions.md) | [Next page](14-never-mutate-state.md)
 
 #### [Home - React](./README.md)

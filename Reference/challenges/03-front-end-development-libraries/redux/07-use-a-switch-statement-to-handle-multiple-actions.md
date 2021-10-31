@@ -59,6 +59,6 @@ const logoutUser = () => {
 
 
 
-[Previous page](06 - handle-an-action-in-the-store.md) | [Next page](08 - use-const-for-action-types.md)
+[Previous page](06-handle-an-action-in-the-store.md) | [Next page](08-use-const-for-action-types.md)
 
 #### [Home - React](./README.md)

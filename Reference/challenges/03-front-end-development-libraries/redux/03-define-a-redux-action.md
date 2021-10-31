@@ -1,6 +1,6 @@
 # <center>03 - Define a Redux Action</center>
 
-[Previous page](03-define-a-redux-action.md) | [Next page](04-define-an-action-creator.md)
+[Previous page](02-get-state-from-the-redux-store.md) | [Next page](04-define-an-action-creator.md)
 
 #### [Home - React](./README.md)
 

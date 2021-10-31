@@ -1,6 +1,6 @@
 # <center>04 - Define an Action Creator</center>
 
-[Previous page](02 - get-state-from-the-redux-store.md) | [Next page](05 - dispatch-an-action-event.md)
+[Previous page](03-define-a-redux-action.md) | [Next page](05-dispatch-an-action-event.md)
 
 #### [Home - React](./README.md)
 
@@ -25,6 +25,6 @@ const actionCreator = () => {
 ```
 
 
-[Previous page](02 - get-state-from-the-redux-store.md) | [Next page](05 - dispatch-an-action-event.md)
+[Previous page](03-define-a-redux-action.md) | [Next page](05-dispatch-an-action-event.md)
 
 #### [Home - React](./README.md)

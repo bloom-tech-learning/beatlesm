@@ -69,6 +69,6 @@ const store = Redux.createStore(
 
 
 
-[Previous page](11 - send-action-data-to-the-store.md) | [Next page](13 - write-a-counter-with-redux.md)
+[Previous page](11-send-action-data-to-the-store.md) | [Next page](13-write-a-counter-with-redux.md)
 
 #### [Home - React](./README.md)
