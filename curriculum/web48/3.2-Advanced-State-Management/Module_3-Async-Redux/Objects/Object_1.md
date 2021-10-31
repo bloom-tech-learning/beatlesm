@@ -20,7 +20,7 @@ Redux is NOT a finite state machine, but the thinking in states helps our unders
 
 A simple example would be an application with two main parts: 1) a control dashboard and 2) a display. The application can be expressed in states and actions like so:
 
-| current state    | ction (input) | new state        |
+| current state    | action (input) | new state        |
 | -----------      | -----------   | -------------    |
 | locked closed    | unlock        |  unlocked closed |
 | unlocked closed  | lock          |  locked closed   |
