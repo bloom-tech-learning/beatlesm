@@ -1,12 +1,10 @@
----
-id: 5a24c314108439a4d4036158
-title: Never Mutate State
-challengeType: 6
-forumTopicId: 301445
-dashedName: never-mutate-state
----
+<center>14 - Never Mutate State </center>
 
-# --description--
+[Previous page](13 - write-a-counter-with-redux.md) | [Next page](15 - use-the-spread-operator-on-arrays.md)
+
+#### [Home - React](./README.md)
+
+
 
 These final challenges describe several methods of enforcing the key principle of state immutability in Redux. Immutable state means that you never modify state directly, instead, you return a new copy of state.
 
@@ -17,89 +15,6 @@ Redux does not actively enforce state immutability in its store or reducers, tha
 # --instructions--
 
 There is a `store` and `reducer` in the code editor for managing to-do items. Finish writing the `ADD_TO_DO` case in the reducer to append a new to-do to the state. There are a few ways to accomplish this with standard JavaScript or ES6. See if you can find a way to return a new array with the item from `action.todo` appended to the end.
-
-# --hints--
-
-The Redux store should exist and initialize with a state equal to the `todos` array in the code editor.
-
-```js
-assert(
-  (function () {
-    const todos = [
-      'Go to the store',
-      'Clean the house',
-      'Cook dinner',
-      'Learn to code'
-    ];
-    const initialState = store.getState();
-    return (
-      Array.isArray(initialState) && initialState.join(',') === todos.join(',')
-    );
-  })()
-);
-```
-
-`addToDo` and `immutableReducer` both should be functions.
-
-```js
-assert(typeof addToDo === 'function' && typeof immutableReducer === 'function');
-```
-
-Dispatching an action of type `ADD_TO_DO` on the Redux store should add a `todo` item and should NOT mutate state.
-
-```js
-assert(
-  (function () {
-    const initialState = store.getState();
-    const isFrozen = DeepFreeze(initialState);
-    store.dispatch(addToDo('__TEST__TO__DO__'));
-    const finalState = store.getState();
-    const expectedState = [
-      'Go to the store',
-      'Clean the house',
-      'Cook dinner',
-      'Learn to code',
-      '__TEST__TO__DO__'
-    ];
-    return isFrozen && DeepEqual(finalState, expectedState);
-  })()
-);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-const ADD_TO_DO = 'ADD_TO_DO';
-
-// A list of strings representing tasks to do:
-const todos = [
-  'Go to the store',
-  'Clean the house',
-  'Cook dinner',
-  'Learn to code',
-];
-
-const immutableReducer = (state = todos, action) => {
-  switch(action.type) {
-    case ADD_TO_DO:
-      // Don't mutate state here or the tests will fail
-      return
-    default:
-      return state;
-  }
-};
-
-const addToDo = (todo) => {
-  return {
-    type: ADD_TO_DO,
-    todo
-  }
-}
-
-const store = Redux.createStore(immutableReducer);
-```
 
 # --solutions--
 
@@ -131,3 +46,9 @@ const addToDo = (todo) => {
 
 const store = Redux.createStore(immutableReducer);
 ```
+
+
+
+[Previous page](13 - write-a-counter-with-redux.md) | [Next page](15 - use-the-spread-operator-on-arrays.md)
+
+#### [Home - React](./README.md)

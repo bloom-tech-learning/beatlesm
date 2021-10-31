@@ -1,12 +1,10 @@
----
-id: 5a24c314108439a4d4036155
-title: Send Action Data to the Store
-challengeType: 6
-forumTopicId: 301448
-dashedName: send-action-data-to-the-store
----
+# <center>11 - Send Action Data to the Store </center>
 
-# --description--
+[Previous page](09 - register-a-store-listener.md) | [Next page](12 - use-middleware-to-handle-asynchronous-actions.md)
+
+#### [Home - React](./README.md)
+
+
 
 By now you've learned how to dispatch actions to the Redux store, but so far these actions have not contained any information other than a `type`. You can also send specific data along with your actions. In fact, this is very common because actions usually originate from some user interaction and tend to carry some data with them. The Redux store often needs to know about this data.
 
