@@ -61,5 +61,3 @@ Continue working in the app you chose in the last objective. Now that you have r
 
 
 [Previous](./Object_2.md) | [Next](./Understanding.md)
-
-
