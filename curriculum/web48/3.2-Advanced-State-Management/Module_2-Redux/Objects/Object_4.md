@@ -144,6 +144,6 @@ In the application you created earlier, look at the state you are displaying. Fi
 
 
 
-Previous](./Object_3.md) | [Next](./Object_5.md)
+[Previous](./Object_3.md) | [Next](./Object_5.md)
 
 
