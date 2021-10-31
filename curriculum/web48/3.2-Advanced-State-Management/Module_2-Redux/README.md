@@ -4,7 +4,7 @@
 
 #### [Assignment 3.2.2](https://github.com/beatlesm/web/tree/main/3.2/Module322/Assignment322):
 
--   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+-   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
    
 #### [Guided project 3.2.2](https://github.com/beatlesm/web/tree/main/3.2/Module322/guided322):
 
