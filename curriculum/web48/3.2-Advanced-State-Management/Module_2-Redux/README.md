@@ -9,12 +9,12 @@
 #### [Guided project 3.2.2](https://github.com/beatlesm/web/tree/main/3.2/Module322/guided322):
 
 
-### Objective 1 - Explain What Redux is and the Problem it Solves
+### [Objective 1 - Explain What Redux is and the Problem it Solves](./Objects/Object_1.md)
 
-### Objective 2 - Create a Redux Store and Connect it to a React Application
+### [Objective 2 - Create a Redux Store and Connect it to a React Application](./Objects/Object_2.md)
 
-### Objective 3 - use the connect function to connect React components to the Redux store
+### [Objective 3 - use the connect function to connect React components to the Redux store](./Objects/Object_3.md)
 
-### Objective 4 - Write Actions and Action Creators to Describe State Changes
+### [Objective 4 - Write Actions and Action Creators to Describe State Changes](./Objects/Object_4.md)
 
-### Objective 5 - Write Reducers to Respond to Actions and Update State
+### [Objective 5 - Write Reducers to Respond to Actions and Update State](./Objects/Object_5.md)
