@@ -9,7 +9,8 @@ Here are some ideas to get you started:
 
 -   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
 -   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
-
+-   **[https://github.com/beatlesm/web-module-project-async-redux](https://github.com/beatlesm/web-module-project-async-redux)**
+-   **[https://github.com/beatlesm/web-module-project-context](https://github.com/beatlesm/web-module-project-context)**
 
 
 -   **[https://github.com/LambdaSchool/web-guided-project-class-components](https://github.com/LambdaSchool/web-guided-project-class-components)**
