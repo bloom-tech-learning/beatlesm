@@ -2,7 +2,7 @@
 
 [Previous page](04-define-an-action-creator.md) | [Next page](06-handle-an-action-in-the-store.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -39,4 +39,4 @@ store.dispatch(loginAction());
 
 [Previous page](04-define-an-action-creator.md) | [Next page](06-handle-an-action-in-the-store.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

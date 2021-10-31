@@ -2,7 +2,7 @@
 
 [Previous page](13-write-a-counter-with-redux.md) | [Next page](15-use-the-spread-operator-on-arrays.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -51,4 +51,4 @@ const store = Redux.createStore(immutableReducer);
 
 [Previous page](13-write-a-counter-with-redux.md) | [Next page](15-use-the-spread-operator-on-arrays.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

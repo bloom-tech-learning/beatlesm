@@ -2,7 +2,7 @@
 
 [Previous page](15-use-the-spread-operator-on-arrays.md) | [Next page](17-copy-an-object-with-object.assign.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -41,4 +41,4 @@ const store = Redux.createStore(immutableReducer);
 
 [[Previous page](15-use-the-spread-operator-on-arrays.md) | [Next page](17-copy-an-object-with-object.assign.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

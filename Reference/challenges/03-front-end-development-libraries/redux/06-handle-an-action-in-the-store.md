@@ -2,7 +2,7 @@
 
 [Previous page](05-dispatch-an-action-event.md) | [Next page](07-use-a-switch-statement-to-handle-multiple-actions.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -47,4 +47,4 @@ const loginAction = () => {
 
 [Previous page](05-dispatch-an-action-event.md) | [Next page](07-use-a-switch-statement-to-handle-multiple-actions.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

@@ -2,7 +2,7 @@
 
 [Previous page](10-combine-multiple-reducers.md) | [Next page](12-use-middleware-to-handle-asynchronous-actions.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -51,4 +51,4 @@ console.log(store.getState());
 
 [Previous page](10-combine-multiple-reducers.md) | [Next page](12-use-middleware-to-handle-asynchronous-actions.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

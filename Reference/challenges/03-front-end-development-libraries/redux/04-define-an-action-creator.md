@@ -2,7 +2,7 @@
 
 [Previous page](03-define-a-redux-action.md) | [Next page](05-dispatch-an-action-event.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -27,4 +27,4 @@ const actionCreator = () => {
 
 [Previous page](03-define-a-redux-action.md) | [Next page](05-dispatch-an-action-event.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

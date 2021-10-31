@@ -2,7 +2,7 @@
 
 [Previous page](09-register-a-store-listener.md) | [Next page](11-send-action-data-to-the-store.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 When the state of your app begins to grow more complex, it may be tempting to divide state into multiple pieces. Instead, remember the first principle of Redux: all app state is held in a single state object in the store. Therefore, Redux provides reducer composition as a solution for a complex state model. You define multiple reducers to handle different pieces of your application's state, then compose these reducers together into one root reducer. The root reducer is then passed into the Redux `createStore()` method.
@@ -71,4 +71,4 @@ const store = Redux.createStore(rootReducer);
 
 [Previous page](09-register-a-store-listener.md) | [Next page](11-send-action-data-to-the-store.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
