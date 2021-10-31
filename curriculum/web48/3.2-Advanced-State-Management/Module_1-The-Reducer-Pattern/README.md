@@ -1,12 +1,12 @@
 [back to home](https://github.com/beatlesm/)
 
-## [Module 1 - The Reducer Pattern](https://github.com/beatlesm/web/tree/main/3.2/Module321)
+## Module 1 - The Reducer Pattern
 
-#### [Assignment 3.2.1](https://github.com/beatlesm/web/tree/main/3.2/Module321/Assignment321):
+#### [Assignment 3.2.1](./Assign321/README.md):
 
 -   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
    
-#### [Guided project 3.2.1](https://github.com/beatlesm/web/tree/main/3.2/Module321/guided321):
+#### [Guided project 3.2.1](./Guided321):
 
 
 ### [Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits](./Objects/Object_1.md)
