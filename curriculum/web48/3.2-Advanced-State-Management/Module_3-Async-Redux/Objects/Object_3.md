@@ -118,7 +118,8 @@ Now, back to the action creator to make our API call. To continue, we need to ad
 
 In the ```.then()``` and ```.catch()```, we need to dispatch more actions. Inside the ```.then()```, we will dispatch the ```FETCH_POKEMON_SUCCESS``` action, and pass with it the data we get back from the API. If there is an error, we need to dispatch the ```FETCH_POKEMON_FAIL``` action and pass with it the error. Make two new action types for both cases, then build out the ```.then()``` and ```.catch()```.
 
-``import axios from 'axios';
+```
+import axios from 'axios';
 
 export const FETCH_POKEMON_START = 'FETCH_POKEMON_START';
 export const FETCH_POKEMON_SUCCESS = 'FETCH_POKEMON_SUCCESS';
