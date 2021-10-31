@@ -1,4 +1,4 @@
-<center>15 - Use the Spread Operator on Arrays </center>
+# <center>15 - Use the Spread Operator on Arrays </center>
 
 [Previous page](14-never-mutate-state.md) | [Next page](16-remove-an-item-from-an-array.md)
 

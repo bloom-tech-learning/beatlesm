@@ -1,4 +1,4 @@
-<center>12 - Use Middleware to Handle Asynchronous Actions </center>
+# <center>12 - Use Middleware to Handle Asynchronous Actions </center>
 
 [Previous page](11-send-action-data-to-the-store.md) | [Next page](13-write-a-counter-with-redux.md)
 

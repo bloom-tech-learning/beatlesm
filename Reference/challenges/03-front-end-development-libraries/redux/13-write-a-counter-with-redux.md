@@ -1,4 +1,4 @@
-<center>13 - Write a Counter with Redux </center>
+# <center>13 - Write a Counter with Redux </center>
 
 [Previous page](12-use-middleware-to-handle-asynchronous-actions.md) | [Next page](14-never-mutate-state.md)
 
