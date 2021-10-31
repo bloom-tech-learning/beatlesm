@@ -1,143 +1,77 @@
-# Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
-
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
+# Objective 3 - use the connect function to connect React components to the Redux store
 
 ##  Overview
 
-In our last objective, we explored how ```state``` can be displayed and changed by passing state value and state modifying functions respectively through ```props```. We explored this using the onChange ```eventlistener`. That is, of course, only one of many user event you can integrate into your applications!
-
-We have already seen how events are handled within React class components. We need an ```event handler``` function and we need to link it to an ```eventlistener``` method within our DOM.
-
-```
-class Button extends React.Component {
-  handleButton = (e)=> {
-    console.log(e);  }
-
-  render() {
-    return <button onClick={this.handleButton}>Click Me</button>;
-  }
-}
-```
-
-Notice once again the need for that ```this``` object when referencing our ```event handler```. Within class components, just like our props and state, our event handlers are bound to the instance of this class and are accessed through ```this```.
-
-We have also seen that "e" parameter before. This parameter is known is React as a ```synthetic event``` object. Inside this object, we will have access to various pieces of information regarding this event triggered, including the target DOM element, the type of event, and methods that control the propagation of that event like preventDefault. For more details on the ```synthetic event``` objects, check out the reference materials [here](https://reactjs.org/docs/events.html.).
-
-Let's add in some functionality to our event handler.
-
-```
-class Button extends React.Component {
-  clickHandler = event => {
-    console.log(event); // this is the react Synthetic Event
-  };
-
-  render() {
-    return <button onClick={this.clickHandler}>Click Me</button>;
-  }
-}
-```
-Now, when we click on our button, we can actually print out our ```synthetic event``` object. We can now do anything we want within ```event handler```, from triggering a change of state to starting an external api call.
+Now that we have built a store to manage our state, we need to connect our components to that store. We can do so using the ```connect``` function, within the components themselves. We can also build a helper function within the component files to tell the ```connect``` function what pieces of state we want to access. This function is usually named ```mapStateToProps```, and it will map pieces of our Redux state to the props of our component. Let's try it out.
 
 ## Follow Along
 
-Now, let's build out a little Application that can handle some data that we pass through a few JSX elements. We're going to build out some ```event handler``` functions using the following ```event listeners```:
-
--   onClick
--   onDoubleClick
--   onMouseEnter
--   OnChange
-
-First, let's build out a singleClickHandler function.
+Using the app you created earlier that has the redux store wired up, change the object you initially returned out of the reducer function to look like this:
 
 ```
-singleClickHandler = () => alert("Single Click!");
-```
-Now, we add it to a button within our app's render function.
-
-```
-render() {
-. . .
-<button onClick={this.singleClickHandler}>Click Handler Demo</button>
-. . .
-```
-
-Lets repeat the process for our doubleClick, mouseEnter and onChange events.
-
-
-```
-doubleClickHandler = () => alert("Double Clicked!");
-
-mouseEnterHandler = () => alert("Mouse Entered");
-
-changeHandler = () => alert("Item was changed");
-<div className="App">
-    <h1>Hello Handlers</h1>
-    <h2>Lets build out some handler functions.</h2>
-    <button onClick={this.singleClickHandler}>Click Handler Demo</button>
-    <button onDoubleClick={this.doubleClickHandler}>
-      Double Click Handler
-    </button>
-    <div onMouseEnter={this.mouseEnterHandler}>Mouse Enter</div>
-    <input onChange={this.changeHandler} placeholder="Change my input" />
-</div>
-```
-
-Try playing around with the events and see how are interacting one with another.
-
-Lets take a closer look at the input onChange event for a min. Let's pass in the synthetic event through the function body by adding it as a ```parameter``` to the ```event handler``` connected to it.
-
-```
-changeHandler = (e) => alert(event.target.value);
-```
-
-One of the most useful properties attached to ```synthetic events``` is target. This provides information on the text, value, style, attached attributes and other useful data within our DOM element. In this case we can print out our input's value.
-
-Lets add in some state to get realtime feedback of what we are typing. Once again, we do this within class components by within the class ```constructor``` and make our app display that change.
-
-```
-class App extends React.Component {
- constructor() {
-    super();
-    this.state = {
-      displayText: '',
-    }
-  }
-…
- render() {
-    return(     …
-        <h1>{this.displayText}</h1>
-        …
-    );
- }
+{
+  user: {
+    name: 'Dustin'
+  },
+  movies: [
+    'Star Wars',
+    'Lord of the Rings',
+    'Harry Potter'
+  ],
+  todoList: [
+    { task: 'Learn Redux', id: 0, completed: false }
+  ],
+  moviesToWatch: 13
 }
 
 ```
 
-Lets also update our change handler to update our state:
+Now create a component called ```MovieList```. Next, we'll take a look at the syntax we use to ```connect``` our React component to Redux, then we'll talk about it. To start, import the ```connect``` function into your component:
 
 ```
-changeHandler = event => {
-  this.setState({displayText: event.target.value});
-};
+import { connect } from 'react-redux';
 ```
 
-Excellent! Now, ```setState``` will update our display property on our state object by simply typing in the input field. Let's prove this by logging our state object inside the render function.
+Next, we use the connect function, where we export the component at the bottom of the file. We invoke connect twice (function currying). First with two arguments - a function and an object. Second with just the component we are trying to connect. For now, we'll pass null and {} into the first invocation.
 
-You can see a working copy of this example [here](https://codesandbox.io/s/rmnj2r1o0p)
+```
+// export default MovieList; Not this way if we are connecting this component!
+export default connect(null, {})(MovieList)
+```
+
+Now ```MovieList``` is connected to the store. Let's write our ```mapStateToProps``` function now, to tell ```connect``` which pieces of our state we want to bring in to this component. This function takes in ```state``` as a parameter, then returns an object where the properties can be passed to props, and the values are retrieved from the store for our component.
+
+For a ```MovieList``` component, we probably only want to know about the ```movies``` array and the ```moviesToWatch``` number, maybe the ```user``` object. We'll not worry about the ```todoList```, since our component doesn't need to know about that part of our state. Let's bring those three pieces of our state into the component.
+
+```
+const mapStateToProps = state => {
+  return {
+    movies: state.movies,
+    moviesToWatch: state.moviesToWatch,
+    user: state.user
+  }
+}
+```
+
+Let's pass this in as the first argument to the first ```connect``` invocation. Notice that ```state``` is being passed into this function. Under the hood, connect passes our entire state tree to ```mapStateToProps```. That means that within that function, we have access to all our state via the ```state``` argument. But, the component only receives the pieces of state that we turn out of ```mapStateToProps```.
+
+```
+export default connect(mapStateToProps, {})(MovieList)
+```
+
+Now, if you look at the props in the React tools, you will see that all three pieces of our state have been passed to our component through the ```connect``` function! As a side note, other props we've passed to this component the traditional way are still going to be available.
+
+By the way, did you notice that we are using a function that takes in a component, extends its functionality, and returns a component? ```connect``` is a HOC!!!`
+
 
 ## Challenge
 
-Lets expand on our example!
-
-Fork the code provided above and do the following.
-
--   Add another value to state that holds the secondDisplayValue.
--   Display that value in a h2 tag.
--   Create a button that will put the value of state.displayText within our secondDisplayValue property.
--   Add an event listener and event handler function that will cause our h2 to show displayText when we click our new button.
+Create a new application. Add the ```redux``` and ```react-redux``` packages. Create a redux store with some test data (have fun with this part!). Build a component and connect that component to the store using ```connect``` and a ```mapStateToProps``` function. Render the connected data from your connected component.
 
 
 
-[Previous](./Object_2.md) | [Next](./Understanding.md)
+
+
+Previous](./Object_2.md) | [Next](./Object_4.md)
 
 

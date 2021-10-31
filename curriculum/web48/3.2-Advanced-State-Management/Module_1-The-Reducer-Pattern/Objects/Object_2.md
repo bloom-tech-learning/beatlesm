@@ -1,186 +1,166 @@
-# Objective 2 - Share Data Between Components Using State and Props
+#   Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
 
-[Click here](https://codesandbox.io/s/yk37ykmyrz) to access the code within this video's follow-along exercise.
+##  Overview
 
-## Overview
+Reducer functions take two arguments – the current state and action – and return a new, updated state object based on both arguments.
 
-Up until this point, our applications have been fairly simple. One or two components with a bit of state to allow for interaction. As our applications grow, so to do the complexity way components relate to each other. To do this, it helps to see our components as being structure in a ```parent / child``` relationship.
+In pseudocode, this idea looks like:
+```
+(state, action) => newState
+```
 
-Here is an example of a more complicated application hierarchy.
+More specifically, consider a function in JavaScript that, when passed to an integer, would return that value + 1, without mutating the original integer's value. Notice we could pass our initialState value - 0 - and then return a new value - 1 - without overriding the initialState.
 
-![hierarchy](./app_hierarchy.png)
+```
+const initialState = 0
+const reducer = (state) => {
+  const newState = state + 1
+  return newState;
+}
 
-Simple or complex, every application needs shared, persistent data to run.
+const newStateValue = reducer(initialState);
+console.log(initialState, newStateValue); // 0, 1
+```
 
-Currently, we have been using ```state``` to hold that data. Unlike statically defined data within our component, state is persistent, changeable and can flow into other components through use of ```prop drilling```. Changes to state immediately rerender the parts of our components effected by that change of state in a process called ```reactivity```. When working with more complex component trees, state always runs from a ```parent``` component down to a ```child```.
+Often, returning something such as an integer or a string is not the best choice, especially as data grows more complex than previous examples.
 
-![app_hierarchy_2](./app_hierarchy_2.png)
+Consider the previous example, where component's state utilizes an object as its data structure of choice:
 
-What if we want to modify that data? Just as we can pass parent state down through props, we can also pass functions that modify child state! Executing these functions in our child components will cause state to change at our parent level components, resulting in reactive rendering throughout our application!
+```
+const initialState = { count: 0 }
+const reducer = (state) => {
+  return { count: state.count + 1 }
+}
+```
 
-![app_hierarchy_3](app_hierarchy_3.png)
+Again, we are returning a new object and are not directly mutating or overriding the initialState object.
 
-We have already seen how to pass state through props using functional components. Now, let's take a look at how we work with state-in-class-based components.
+This reducer function is a pure function without any side effects. Therefore, reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.
+
+We've discussed the nature of the incoming state value, but what about the action?
+
+The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a ```type``` property, which will "inform" the reducer actions happening in the app. The type allows the reducer to know what part of the state needs to change.
+
+Let's look at how we can use this to manage state in our apps.
 
 ## Follow Along
 
-Consider the following component:
-```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
+Looking again at reducer above, let's show it that we want to increment our count state by passing in an ```action``` with ```'increment'``` as the type.
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, {this.state.welcomeMessage}!</h1>
-      </div>
-    );
+```
+const initialState = { count: 0 }
+const reducer = (state, action) => {
+  if (action.type === 'increment') {
+    return { count: state.count + 1 }
   }
 }
+
+reducer(initialState, { type: 'increment' })
 ```
-Let's create a sub component using functional components to hold our welcome message.
+
+This strategy is especially powerful when we want our reducer to be able to reduce the state. Take a look at our reducer now:
+
 ```
-const WelcomeBanner = (props) =>
-{
-  return(<h1>Hello, {props.message}!</h1>);
+const initialState = { count: 0 }
+const reducer = (state, action) => {
+  if (action.type === 'increment') {
+    return { count: state.count + 1 }
+  } else if (action.type === 'decrement') {
+    return { count: state.count - 1 }
+  }
 }
+
+reducer(initialState, { type: 'increment' });
+reducer(initialState, { type: 'decrement' });
 ```
-Now, lets refactor our component using React classes.
+
+Now our state management is very predictable. Our current state passes into the reducer, and action follows to tell how to update the state.
+
+We can also add a ```payload``` property to our action objects (sometimes called ```data```). Our reducer needs to have some data passed into it through the action to be able to update the state correctly, and this is where that data would live.
+
 ```
-class WelcomeBanner extends React.Component {
-    render(){
-        return(
-        <div>
-            <h1>Hello, {this.props.message}</h1>
-        </div>
-    }
+const initialState = { name: 'Donald Duck' }
+const reducer = (state, action) => {
+  if (action.type === 'changeName') {
+    // how do we know what to change the name to? The action payload!
+    return { name: action.payload }
+  }
 }
+
+reducer(initialState, { type: 'changeName', payload: 'Mickey Mouse' });
 ```
 
-Notice that props are not passed in as they were in functional components. Instead, props are attached to the this object, just like state.
+As you will see in the follow along, the action, and its associated property ```type```, allow us to use the reducer to perform conditional state transformations.
 
-Great! We are sharing data between a component's state and a component's props. This means that when the state object changes, so too will the props.
+There's one last edit we need to make to get to production quality. As you can imagine, or ```if```, ```if else```, ```if else``` … etc, statements are going to get very complex and long. We'll use JavaScript's ```switch``` statement to make that part of our reducer a lot more readable:
 
-Now let's add in the ability to modify that state. To do this, we will need to:
-
--   Connect a state change method to an event listener in our child component.
--   Create the substance of that method in our parent.
--   Pass that method to the child through props.
-
-Let's start at the bottom, our child component. Let's say that we want to use a form to dynamically update our message statement. This small component should do nicely:
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-};
-```
-The only problem is, we don't have access to state all the way down here! Let's build out our state changing method where it belongs, in App.js our ```parent```. While we are at it, let's add our form component to our rendering so we can see it in the first place.
+Back to the count example, look at the change here:
 
 ```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
+const initialState = { count: 0 }
+const reducer = (state, action) => {
+  // if (action.type === 'increment') {
+  //   return { count: state.count + 1 }
+  // } else if (action.type === 'decrement') {
+  //   return { count: state.count - 1 }
+  // }
+  // we pass in the value we want to look at (action.type):
+  switch(action.type) {
+    // then we make a "case" for each possible value we expect:
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 }
+    // finally, we give a "catch-all" which is just to return state untouched. Never leave this out. There should always be a default:
+    default:
+      return state;
   }
+}
 
-  updateStateMessage = (e)=> {
-    this.setState({welcomeMessage:e.target.value});
-  }
-
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-        <FormComponent updateStateMessage={this.updateStateMessage}/>
-      </div>
-    );
-  }
-};
+reducer(initialState, { type: 'increment' });
+reducer(initialState, { type: 'decrement' });
 ```
-And there we go! We successfully passed our ```state data``` downstream through ```props``` in WelcomeBanner. At the same time, we can also successful pass data back upstream by executing ```state modifying functions``` passed through props in FormComponent.
+
+Cleaned up, the reducer now looks like this:
+
+```
+const initialState = { count: 0 }
+const reducer = (state, action) => {
+  switch(action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 }
+    default:
+      return state;
+  }
+}
+
+reducer(initialState, { type: 'increment' });
+reducer(initialState, { type: 'decrement' });
+```
+
+(Read more about ```switch``` statements [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch))
 
 ## Challenge
 
-Using the components we just created (App, FormComponent, and MessageComponent), try building out a form to allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
+Create a reducer function that can do the following:
 
-When a user clicks submit, show the data that's on state in an ```alert``` statement.
+1.  Take in an ```initialState``` value of an array of objects. Each object should represent a to-do item, and should contain only one property, description, which should be a string, a short ```description``` of the to-do item.
 
-### Stretch 
+2.  Take in an action object with a ```type``` property and a ```payload``` property. The ```payload``` property should have a description key and a value equal to a new description entered by a user. (Don't worry about making inputs now, just write the reducer.)
 
-Loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item and watch the magic happen.
+3.  If the type is equal to 'ADD,' then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.
 
--   We're going to be updating some state on a parent component.
--   That state will be wired up to a few other components as we pass the props around.
--   We will also be passing around a few handler functions that help us update/delete our state.
+4.  Return the previous state as a default case.
 
-Lets set up a form component that we can use to update our message component from above.
+For additional practice and challenge, how might you implement logic that would contain a type of 'DELETE' or 'EDIT'?
 
-```
-const WelcomeBanner = props => <h1>Hello, {props.message}!</h1>;
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      welcomeMessage: 'world!'
-    };
-  }
 
-  render() {
-    return (
-      <div>
-        <WelcomeBanner message={this.state.welcomeMessage} />
-      </div>
-    );
-  }
-}
-```
-Now let's build a form component that can handle some data defined on state, below on the child components.
 
-```
-const FormComponent = props => {
-  return (
-    <form>
-      <input placeholder="change state" onChange={props.updateStateMessage} />
-    </form>
-  );
-};
-```
-We will need to build out a change handler function on our App component that we can pass down to the form. In addition, we'll have to define the prop as updateStateMessage in order to make our onChange event handler work out properly.
-```
-messageChangeHandler = event => {
-  this.setState({welcomeMessage: event.target.value});
-};
 
-render() {
-  return (
-    <div>
-      <WelcomeBanner message={this.state.welcomeMessage} updateStateMessage={this.updateStateMessage}/>
-    </div>
-  );
-}
-```
-## Challenge
 
-Using the following tools:
 
--   Class component
--   functional FormComponent, MessageComponent
--   click, and change handlers
--   ```setState```
-Build out a form that will allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
-
-When a user clicks submit, show the data that's on state in an alert statement.
-
-Stretch loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
 
 [Previous](./Object_1.md) | [Next](./Object_3.md)

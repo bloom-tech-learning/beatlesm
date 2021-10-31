@@ -1,95 +1,35 @@
-#   Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM
+# Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
 
-##  Overview
+## Overview
 
-React gave us the idea of components as independent pieces of UI. And thus far, you have learned how to build out ```functional components``` to make multiple DOM elements. Now, we're going to be learning about ```React.Component``` base class that allows us to use some of the React team's methods to tap into the ```Component Lifecycle```.These methods (known as life-cycle hooks, more on these to come) give us control over how our components work, and if we'd like to use them, we have to build out a class component that extends the React.Component parent class. Whenever you see a line of code that looks like the following, you're using ```React.Component``` parent class, and you can tap into these methods.
-```
-class FooComponent extends React.Component {}
-```
-By creating components as classes, you can set up a data object that your component is concerned with. This is done using ```state``` and setting up that object on our constructor method. Once we have some data that we can render out to the DOM, we need a vehicle that will allow us to render that data. This is achieved with the JSX method ```render()``` from within the life-cycle hook. We'll walk you through the steps below.
+Mutable objects are objects whose state is allowed to change over time. An immutable value is an exact opposite – after it has been created, it can never change. There are some real benefits from making your state immutable. We won't go over all the benefits here, but we will talk about predictability and mutation tracking.
 
-Declare your ```class component``` by extending the ```React.Component``` parent class. ```class FooComponent extends React.Component {}```.
-Use the ```constructor``` function to set up some state. because we're calling extends, we also need to call ```super()```; otherwise we won't have access the this
-We need to render some sort of UI to the DOM. We do this by calling the life-cycle method ```render```.
+### Predictability
 
-I like to remember these steps by referencing one of my favorite bands: Creedence Clearwater Revival (CCR), which stands for class, constructor, and render/return.
+Mutation hides change, which can create (unexpected) side effects. This can lead to some nasty bugs in our code. When we enforce immutability, we can keep our application architecture and mental model simple, making it easier to reason about the application. Simply put, it is very easy to predict how the state object will change based on certain actions/events. Without immutability, our state object can be changed or updated in unpredictable ways, causing weird behavior or bugs.
 
-1.  Declare your class, and extend the ```React.Component``` Base class.
-```
-class FooComponent extends React.Component {
-```
-1.  Now we'll set up our constructor and add state.
-```
-constructor() {
-  super();
-  this.state = {};
-}
-```
-1.  Render some UI and return some ```JSX```.
-```
-render() {
-  return <div>Hello, I am Foo Component</div>;
-}
-```
-Our final component should look like this.
-```
-class FooComponent extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-  render() {
-    return <div>Hello, I am Foo Component</div>;
-  }
-}
-```
-Now that we have constructed a skeleton for our class component, it can be more dynamic. The way we'll achieve this will be to use some data that we'll pre-define as some information we'd like our component to display. We'll then take that data and do this cool thing called ```interpolation``` in order to present it to the DOM within some Text.
+### Mutation Tracking
 
-Components built out extending the Base ```React.Component``` class come with a bunch of benefits directly from the React API. A list of the benefits to what we get out of the Component class can be found [here](https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate) (Links to an external site.), in theReact documentation about class components. We will be discussing the ```life-cycle``` methods at another place in time, so don't worry too much about those for now.
+Immutability makes it really easy to see if anything has changed. For example when we change the state in Redux, our components props will update. We can check our previous props against our new props to know what change occurred, and know how to handle those changes. If a user adds a task to the todo list, the ```TodoList``` component will update since it is receiving new props. But what if we want to run an animation on the new todo? We can't just run it on every render because it would run when the user toggles a task to complete, or deletes a task. Since Redux state management is immutable, we can track the changes that happen on the state, and only run our animation when a new task is added.
 
-For now, let's focus on a component caring about its own state (data) and managing that state in a reactive way. The ```state``` object that we set up on our ```constructor``` has a very React-specific way of doing things. It allows us to drive our UI using data. Again, think about Facebook here. You see a LOT of data and interact with it all of the time when you're using the Facebook app. Because of the way we work with social media today, we expect this data the UI to represent that data in close to real-time. This is one reason why React is really good and how reactivity can be achieved.
+### Redux and Immutability
 
-## Follow Along
+Redux has a single immutable state tree (referred to as the store) where all state changes are explicitly handled by dispatching actions. Dispatched actions are processed by a reducer that accepts the previous state and the action and returns the next state of your application. Thus, it is easy to predict how the state tree will change based on actions that are dispatched. Likewise, it is easy to predict which action will be dispatched based on some event or interaction. This all leads to very predictable state management.
 
-Let's work together to build out a class component that prints a message to the screen using a few DOM elements. First, we will hold a message on state and print it to the screen by selecting it and assigning it to a DOM element. Then we will take it a step further and pass that message down to another component using props.
+Writing immutable code can be challenging - your JavaScript skills will really be tested here - and it may seem pretty tedious, especially since we will be building very small apps with small state trees during this sprint. Because of that, it may be pretty hard to see the real benefits of immutable code in class. However, when you start working with a large application with a huge state tree, you will quickly grow to appreciate the benefits of writing immutable code, and the extra effort it takes will seem much more worth it.
 
-Go ahead and navigate over to [this Codesandbox](https://codesandbox.io/s/3xwzql38nm) (Links to an external site.), where we will write our React code. CodeSandbox is an online editor that can be used to write React code right away! I can't emphasize how cool this is. For now, you'll have to trust me.
+##  Follow Along
 
-You'll notice that we're getting an error on this page. As we begin to define our app class, elements will start to come to life for us. But, for now, let's start by simply adding the class through CCR.
+Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.
 
-When you're done, your browser window should re-render without any errors. Your app class should look like this:
-```
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-  render() {
-    return <div>Hello From App!</div>;
-  }
-}
-```
-Now, let's add a property to our state data. Define a ```message``` property on the state object.
-```
-this.state = {
-  message: "Hello from App State!!"
-};
-```
-Now that we have the message on our component's state, we can use it through interpolation. In our render method, let's change the message inside of div to reference the state object. Remember the ```this``` keyword when pointing to an object on the class constructor.
-```
-render() {
-  return <div>{this.state.message}</div>;
-}
-```
-Hooray! You've now built your first class component, and you're ready to rock n' roll.
+Follow along with the exercises here (Links to an external site.) (Links to an external site.)
 
 ## Challenge
 
-Let's take the functionality of this class component that we built earlier and extend it just a little bit. Declare a functional component called RenderMessage inside [this CodeSandbox] (https://codesandbox.io/s/103jkor46q)
+Read this [article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0) 
 
--   Make sure you declare your Props Object that will be passed into this component.
--   Return a ```div``` who's child is ```props.message```
--   Now inside of the ```App``` class pass in that ```RenderMessage``` component and pass down a message prop to ```RenderMessage```. This message prop should be set equal to the message property on the state object.
--   Once it's all wired up properly you've done it!
+Write a paragraph or two explaining what you learned. Then, send that paragraph to your PM.
+
+
 
 [Previous](../README.md) | [Next](./Object_2.md)
