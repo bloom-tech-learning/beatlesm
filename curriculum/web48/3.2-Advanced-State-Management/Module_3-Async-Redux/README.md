@@ -9,8 +9,8 @@
 #### [Guided project 3.3.1](https://github.com/beatlesm/web/tree/main/3.3/Module321/guided331):
 
 
-### Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications
+### [Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications](./Objects/Object_1.md)
 
-### Objective 2 - Implement Redux Middleware Libraries Into a Redux Store Using ApplyMiddleware
+### [Objective 2 - Implement Redux Middleware Libraries Into a Redux Store Using ApplyMiddleware](./Objects/Object_2.md)
 
-### Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's
+### [Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's](./Objects/Object_3.md)
