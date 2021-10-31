@@ -1,6 +1,6 @@
 # <center>07 - Use a Switch Statement to Handle Multiple Actions</center>
 
-[Previous page](06 - handle-an-action-in-the-store.md) | [Next page](08 - use-const-for-action-types.md)
+[Previous page](06-handle-an-action-in-the-store.md) | [Next page](08-use-const-for-action-types.md)
 
 #### [Home - React](./README.md)
 

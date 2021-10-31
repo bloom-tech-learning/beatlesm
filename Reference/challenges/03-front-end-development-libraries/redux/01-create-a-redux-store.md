@@ -1,6 +1,6 @@
 # <center>01 - Create a Redux StorePassed</center>
 
-[Home - React](./README.md) | [Next page](02 - get-state-from-the-redux-store.md)
+[Home - React](./README.md) | [Next page](02-get-state-from-the-redux-store.md)
 
 #### [Home - front end](../../03-front-end-development-libraries/README.md)  
 
@@ -32,6 +32,6 @@ const store = Redux.createStore(reducer);
 ```
 
 
-[Home - React](./README.md) | [Next page](02 - get-state-from-the-redux-store.md)
+[Home - React](./README.md) | [Next page](02-get-state-from-the-redux-store.md)
 
 #### [Home - front end](../../03-front-end-development-libraries/README.md)  

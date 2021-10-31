@@ -1,6 +1,6 @@
 # <center>08 - Use const for Action Types</center>
 
-[Previous page](07 - use-a-switch-statement-to-handle-multiple-actions.md) | [Next page](09 - register-a-store-listener.md)
+[Previous page](07-use-a-switch-statement-to-handle-multiple-actions.md) | [Next page](09-register-a-store-listener.md)
 
 #### [Home - React](./README.md)
 
@@ -63,6 +63,6 @@ const logoutUser = () => {
 
 
 
-[Previous page](07 - use-a-switch-statement-to-handle-multiple-actions.md) | [Next page](09 - register-a-store-listener.md)
+[Previous page](07-use-a-switch-statement-to-handle-multiple-actions.md) | [Next page](09-register-a-store-listener.md)
 
 #### [Home - React](./README.md)

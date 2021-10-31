@@ -1,6 +1,6 @@
 # <center>10 - Combine Multiple Reducers </center>
 
-[Previous page](10 - combine-multiple-reducers.md) | [Next page](11 - send-action-data-to-the-store.md)
+[Previous page](09-register-a-store-listener.md) | [Next page](11-send-action-data-to-the-store.md)
 
 #### [Home - React](./README.md)
 
@@ -69,6 +69,6 @@ const store = Redux.createStore(rootReducer);
 
 
 
-[Previous page](10 - combine-multiple-reducers.md) | [Next page](11 - send-action-data-to-the-store.md)
+[Previous page](09-register-a-store-listener.md) | [Next page](11-send-action-data-to-the-store.md)
 
 #### [Home - React](./README.md)

@@ -1,6 +1,6 @@
 # <center>09 - Register a Store Listener</center>
 
-[Previous page](08 - use-const-for-action-types.md) | [Next page](10 - combine-multiple-reducers.md)
+[Previous page](08-use-const-for-action-types.md) | [Next page](10-combine-multiple-reducers.md)
 
 #### [Home - React](./README.md)
 
