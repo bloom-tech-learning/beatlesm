@@ -2,11 +2,11 @@
 
 ## [Module 2 - Redux](https://github.com/beatlesm/web/tree/main/3.2/Module322)
 
-#### [Assignment 3.2.2](https://github.com/beatlesm/web/tree/main/3.2/Module322/Assignment322):
+#### [Assignment 3.2.2](./Assign322/README.md):
 
 -   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
    
-#### [Guided project 3.2.2](https://github.com/beatlesm/web/tree/main/3.2/Module322/guided322):
+#### [Guided project 3.2.2](./Guided322):
 
 
 ### [Objective 1 - Explain What Redux is and the Problem it Solves](./Objects/Object_1.md)
