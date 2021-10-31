@@ -1,6 +1,6 @@
 # <center>02 - Get State from the Redux Store</center>
 
-[Previous page](01 - create-a-redux-store.md) | [Next page](03 - define-a-redux-action.md)
+[Previous page](01-create-a-redux-store.md) | [Next page](03-define-a-redux-action.md)
 
 #### [Home - React](./README.md)
 
@@ -24,6 +24,6 @@ const currentState = store.getState();
 ```
 
 
-[Previous page](01 - create-a-redux-store.md) | [Next page](03 - define-a-redux-action.md)
+[Previous page](01-create-a-redux-store.md) | [Next page](03-define-a-redux-action.md)
 
 #### [Home - React](./README.md)

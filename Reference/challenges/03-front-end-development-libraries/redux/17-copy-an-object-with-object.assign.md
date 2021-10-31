@@ -1,6 +1,6 @@
 # <center>17 - Copy an Object with Object.assign</center>
 
-[Previous page](16 - remove-an-item-from-an-array.md) | [First page](01 - create-a-redux-store.md)
+[Previous page](16-remove-an-item-from-an-array.md) | [First page](01-create-a-redux-store.md)
 
 #### [Home - React](./README.md)
 
@@ -50,6 +50,6 @@ const store = Redux.createStore(immutableReducer);
 
 
 
-[Previous page](16 - remove-an-item-from-an-array.md) | [First page](01 - create-a-redux-store.md)
+[Previous page](16-remove-an-item-from-an-array.md) | [First page](01-create-a-redux-store.md)
 
 #### [Home - React](./README.md)
