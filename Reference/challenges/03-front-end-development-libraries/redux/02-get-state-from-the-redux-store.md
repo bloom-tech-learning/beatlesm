@@ -2,7 +2,7 @@
 
 [Previous page](01-create-a-redux-store.md) | [Next page](03-define-a-redux-action.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 The Redux store object provides several methods that allow you to interact with it. For example, you can retrieve the current `state` held in the Redux store object with the `getState()` method.
@@ -26,4 +26,4 @@ const currentState = store.getState();
 
 [Previous page](01-create-a-redux-store.md) | [Next page](03-define-a-redux-action.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

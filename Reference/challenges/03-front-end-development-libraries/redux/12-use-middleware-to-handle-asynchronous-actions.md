@@ -2,8 +2,7 @@
 
 [Previous page](11-send-action-data-to-the-store.md) | [Next page](13-write-a-counter-with-redux.md)
 
-#### [Home - React](./README.md)
-
+#### [Home - Redux](./README.md)
 
 
 So far these challenges have avoided discussing asynchronous actions, but they are an unavoidable part of web development. At some point you'll need to call asynchronous endpoints in your Redux app, so how do you handle these types of requests? Redux provides middleware designed specifically for this purpose, called Redux Thunk middleware. Here's a brief description how to use this with Redux.
@@ -71,4 +70,4 @@ const store = Redux.createStore(
 
 [Previous page](11-send-action-data-to-the-store.md) | [Next page](13-write-a-counter-with-redux.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

@@ -2,7 +2,7 @@
 
 [Previous page](16-remove-an-item-from-an-array.md) | [First page](01-create-a-redux-store.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -52,4 +52,4 @@ const store = Redux.createStore(immutableReducer);
 
 [Previous page](16-remove-an-item-from-an-array.md) | [First page](01-create-a-redux-store.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)

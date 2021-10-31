@@ -2,7 +2,7 @@
 
 [Previous page](14-never-mutate-state.md) | [Next page](16-remove-an-item-from-an-array.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
 
 
 
@@ -48,4 +48,4 @@ const store = Redux.createStore(immutableReducer);
 
 [Previous page](14-never-mutate-state.md) | [Next page](16-remove-an-item-from-an-array.md)
 
-#### [Home - React](./README.md)
+#### [Home - Redux](./README.md)
