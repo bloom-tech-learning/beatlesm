@@ -1,4 +1,4 @@
-<center>16 - Remove an Item from an Array </center>
+# <center>16 - Remove an Item from an Array </center>
 
 [Previous page](15-use-the-spread-operator-on-arrays.md) | [Next page](17-copy-an-object-with-object.assign.md)
 
