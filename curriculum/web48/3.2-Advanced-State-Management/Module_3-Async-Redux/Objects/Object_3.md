@@ -1,140 +1,189 @@
-# Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
-
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
+# Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's
 
 ##  Overview
 
-In our last objective, we explored how ```state``` can be displayed and changed by passing state value and state modifying functions respectively through ```props```. We explored this using the onChange ```eventlistener`. That is, of course, only one of many user event you can integrate into your applications!
+Redux Thunk is a separate node package called ```redux-thunk```. Since the Redux action -> reducer flow is synchronous, we will use Redux Thunk to make the flow asynchronous and make API calls from our action creators.
 
-We have already seen how events are handled within React class components. We need an ```event handler``` function and we need to link it to an ```eventlistener``` method within our DOM.
+Yep. You read that correctly. We are changing up the action creators to perform asynchronous API calls. We can do this because Redux Middleware intercepts the normal Redux flow and can make a call before actions make it to the reducer. To make this work, we need to understand ```thunks```.
 
-```
-class Button extends React.Component {
-  handleButton = (e)=> {
-    console.log(e);  }
-
-  render() {
-    return <button onClick={this.handleButton}>Click Me</button>;
-  }
-}
-```
-
-Notice once again the need for that ```this``` object when referencing our ```event handler```. Within class components, just like our props and state, our event handlers are bound to the instance of this class and are accessed through ```this```.
-
-We have also seen that "e" parameter before. This parameter is known is React as a ```synthetic event``` object. Inside this object, we will have access to various pieces of information regarding this event triggered, including the target DOM element, the type of event, and methods that control the propagation of that event like preventDefault. For more details on the ```synthetic event``` objects, check out the reference materials [here](https://reactjs.org/docs/events.html.).
-
-Let's add in some functionality to our event handler.
+```thunk``` is another word for a function. But it's not just any old function. It's a special (and uncommon) name for a function that's returned by another function. Like this:
 
 ```
-class Button extends React.Component {
-  clickHandler = event => {
-    console.log(event); // this is the react Synthetic Event
+function not_a_thunk() {
+  // this one is a "thunk" because it defers work for later:
+  return function() {
+    console.log('do stuff now');
   };
-
-  render() {
-    return <button onClick={this.clickHandler}>Click Me</button>;
-  }
 }
 ```
-Now, when we click on our button, we can actually print out our ```synthetic event``` object. We can now do anything we want within ```event handler```, from triggering a change of state to starting an external api call.
+
+So how does this apply to Redux? Well, when we start using the ```redux-thunk``` middleware, it does an interesting thing with our redux flow. When an action creator is called ```redux-thunk``` intercepts and acts on returned data. If the thing returned is an action, it forwards the action through to the reducer. But, if the thing returned is a function, aka a thunk (a function returned from a function), then it invokes the thunk and passes the ```dispatch``` function as an argument to it.
+
+This is where ```redux-thunk``` becomes very powerful. The action-creator returned thunk has access to the dispatch function. So we can run an async function, like an API call, and inside the .```then()``` we can dispatch an action!
+
+Let's look at a simple example of an action creator that does this when a user logs in:
+
+```
+function logInUser(creds) {
+  // this returned function is the thunk, and gets dispatch passed in
+  return function(dispatch) {
+    return axios.post('/login', creds).then(res => {
+      const loggedInAction = { type: USER_LOGGED_IN, payload: res.data.user }
+      dispatch(loggedInAction);
+    });
+  };
+}
+```
+Really cool, right? The thunk has access to dispatch, and can dispatch a new action based on the result of the API call! Let's clean this up a little with arrow function syntax. The following code snippet is essentially the exact same as the above snippet:
+
+```
+const logInUser = creds => dispatch => {
+  return axios.post('/login', creds).then(res => {
+    const loggedInAction = { type: USER_LOGGED_IN, payload: res.data.user }
+    dispatch(loggedInAction);
+  });
+}
+```
+
+Much better! Let's go try it out!
 
 ## Follow Along
 
-Now, let's build out a little Application that can handle some data that we pass through a few JSX elements. We're going to build out some ```event handler``` functions using the following ```event listeners```:
-
--   onClick
--   onDoubleClick
--   onMouseEnter
--   OnChange
-
-First, let's build out a singleClickHandler function.
+We have an app [here](https://codesandbox.io/s/xo8mkrk49w) ready to make an API call to the Pokemon API. The first step to accomplishing this is to add ```redux-thunk``` as a dependency, then go to the main ```index.js``` page and import it like this:
 
 ```
-singleClickHandler = () => alert("Single Click!");
-```
-Now, we add it to a button within our app's render function.
-
-```
-render() {
-. . .
-<button onClick={this.singleClickHandler}>Click Handler Demo</button>
-. . .
+import thunk from 'redux-thunk';
 ```
 
-Lets repeat the process for our doubleClick, mouseEnter and onChange events.
-
-
-```
-doubleClickHandler = () => alert("Double Clicked!");
-
-mouseEnterHandler = () => alert("Mouse Entered");
-
-changeHandler = () => alert("Item was changed");
-<div className="App">
-    <h1>Hello Handlers</h1>
-    <h2>Lets build out some handler functions.</h2>
-    <button onClick={this.singleClickHandler}>Click Handler Demo</button>
-    <button onDoubleClick={this.doubleClickHandler}>
-      Double Click Handler
-    </button>
-    <div onMouseEnter={this.mouseEnterHandler}>Mouse Enter</div>
-    <input onChange={this.changeHandler} placeholder="Change my input" />
-</div>
-```
-
-Try playing around with the events and see how are interacting one with another.
-
-Lets take a closer look at the input onChange event for a min. Let's pass in the synthetic event through the function body by adding it as a ```parameter``` to the ```event handler``` connected to it.
+Next, we need to tell the ```applyMiddleware``` function about this piece of middleware.
 
 ```
-changeHandler = (e) => alert(event.target.value);
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+);
 ```
 
-One of the most useful properties attached to ```synthetic events``` is target. This provides information on the text, value, style, attached attributes and other useful data within our DOM element. In this case we can print out our input's value.
+Now we're ready to make our action creators asynchronous!
 
-Lets add in some state to get realtime feedback of what we are typing. Once again, we do this within class components by within the class ```constructor``` and make our app display that change.
+Go into the ```action/index.js``` file. You should see an action creator that is returning an action. That action adds an error to state. If you push the "Fetch Pokémon" button, you will see the error rendered on the screen right after it is added to state.
 
-```
-class App extends React.Component {
- constructor() {
-    super();
-    this.state = {
-      displayText: '',
-    }
-  }
-…
- render() {
-    return(     …
-        <h1>{this.displayText}</h1>
-        …
-    );
- }
-}
+Now, go ahead and remove the entire return statement from the action creator. Then let's build the thunk function.
 
 ```
+export const getPokemon = () => dispatch => {
 
-Lets also update our change handler to update our state:
-
-```
-changeHandler = event => {
-  this.setState({displayText: event.target.value});
 };
 ```
 
-Excellent! Now, ```setState``` will update our display property on our state object by simply typing in the input field. Let's prove this by logging our state object inside the render function.
+Now, inside the action creator, we have access to dispatch. So, what is this action creator going to do? It is going to fetch Pokemon data from the API. So, before we fetch data, let's remember the finite state machine and dispatch an action that can tell the reducer that we are starting the fetch. (And let's change the action type to 'FETCH_POKEMON_START').
 
-You can see a working copy of this example [here](https://codesandbox.io/s/rmnj2r1o0p)
+```
+export const FETCH_POKEMON_START = 'FETCH_POKEMON_START';
+
+export const getPokemon = () => dispatch => {
+  dispatch({ type: FETCH_POKEMON_START });
+};
+```
+Now we'll go to the reducer and build a case for that action. Import the correct action type, and add an ```isFetching``` property to the ```initialState``` object. In this case, we will set ```isFetching``` to true, and reset the ```error``` back to an empty string, just in case it has an error in it.
+
+```
+import { FETCH_POKEMON_START } from '../actions';
+
+const initialState = {
+  pokemon: [],
+  error: '',
+  isFetching: false
+};
+
+function reducer(state = initialState, action) {
+  console.log('reducer', action);
+  switch (action.type) {
+    case FETCH_POKEMON_START:
+      return {
+        ...state,
+        isFetching: true,
+        error: ''
+      };
+
+    default:
+      return state;
+  }
+}
+
+export default reducer;
+```
+
+Now, back to the action creator to make our API call. To continue, we need to add ```axios``` as a dependency and import it into the action creator file. Then, make a ```GET``` request to ['https://pokeapi.co/api/v2/pokemon/'](https://pokeapi.co/api/v2/pokemon/).
+
+In the ```.then()``` and ```.catch()```, we need to dispatch more actions. Inside the ```.then()```, we will dispatch the ```FETCH_POKEMON_SUCCESS``` action, and pass with it the data we get back from the API. If there is an error, we need to dispatch the ```FETCH_POKEMON_FAIL``` action and pass with it the error. Make two new action types for both cases, then build out the ```.then()``` and ```.catch()```.
+
+``import axios from 'axios';
+
+export const FETCH_POKEMON_START = 'FETCH_POKEMON_START';
+export const FETCH_POKEMON_SUCCESS = 'FETCH_POKEMON_SUCCESS';
+export const FETCH_POKEMON_FAIL = 'FETCH_POKEMON_FAIL';
+
+export const getPokemon = () => dispatch => {
+  dispatch({ type: FETCH_POKEMON_START });
+  axios
+    .get('https://pokeapi.co/api/v2/pokemon/')
+    .then(res =>
+      dispatch({ type: FETCH_POKEMON_SUCCESS, payload: res.data.results })
+    )
+    .catch(err => dispatch({ type: FETCH_POKEMON_FAIL, payload: err }));
+};
+```
+
+Finally, we will build the cases for our two new actions. In the reducer file, import our new action types. Then build a case for each inside the reducer function. Before looking at the code below, think through what change each action represents on the state tree. Think about finite state machines. Now go ahead and build both cases, then compare how you did with the code below.
+
+```
+import {
+  FETCH_POKEMON_START,
+  FETCH_POKEMON_SUCCESS,
+  FETCH_POKEMON_FAIL
+} from '../actions';
+
+const initialState = {
+  pokemon: [],
+  error: '',
+  isFetching: false
+};
+
+function reducer(state = initialState, action) {
+  console.log('reducer', action);
+  switch (action.type) {
+    case FETCH_POKEMON_START:
+      return {
+        ...state,
+        isFetching: true,
+        error: ''
+      };
+    case FETCH_POKEMON_SUCCESS:
+      return {
+        ...state,
+        pokemon: action.payload,
+        isFetching: false,
+        error: ''
+      };
+    case FETCH_POKEMON_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      };
+    default:
+      return state;
+  }
+}
+
+export default reducer;
+```
+
+Now push the button again, and there are your Pokémon! Here is the final [CodeSandbox](https://codesandbox.io/s/vy6148rx97) for reference.
 
 ## Challenge
 
-Lets expand on our example!
-
-Fork the code provided above and do the following.
-
--   Add another value to state that holds the secondDisplayValue.
--   Display that value in a h2 tag.
--   Create a button that will put the value of state.displayText within our secondDisplayValue property.
--   Add an event listener and event handler function that will cause our h2 to show displayText when we click our new button.
+Build out a simple React/Redux app that displays dog images from the dogs API.
 
 
 
