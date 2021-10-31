@@ -72,6 +72,6 @@ Create a new application. Add the ```redux``` and ```react-redux``` packages. Cr
 
 
 
-Previous](./Object_2.md) | [Next](./Object_4.md)
+[Previous](./Object_2.md) | [Next](./Object_4.md)
 
 
