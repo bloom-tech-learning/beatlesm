@@ -1,4 +1,4 @@
-#   Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
+#   Objective 2 - Describe Reducer Functions
 
 ##  Overview
 
