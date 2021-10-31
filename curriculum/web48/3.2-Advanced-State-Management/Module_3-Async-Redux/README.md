@@ -14,3 +14,5 @@
 ### [Objective 2 - Implement Redux Middleware Libraries Into a Redux Store Using ApplyMiddleware](./Objects/Object_2.md)
 
 ### [Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's](./Objects/Object_3.md)
+
+### [Check For Understanding](./Objects/Understanding.md)

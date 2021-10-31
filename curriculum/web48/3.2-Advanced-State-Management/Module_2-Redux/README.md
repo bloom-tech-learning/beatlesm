@@ -18,3 +18,5 @@
 ### [Objective 4 - Write Actions and Action Creators to Describe State Changes](./Objects/Object_4.md)
 
 ### [Objective 5 - Write Reducers to Respond to Actions and Update State](./Objects/Object_5.md)
+
+### [Check For Understanding](./Objects/Understanding.md)
