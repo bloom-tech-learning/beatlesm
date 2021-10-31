@@ -178,3 +178,15 @@
 [submodule "curriculum/web48/3.1-Advanced-React/Sprint/web-sprint-challenge-advanced-react"]
 	path = curriculum/web48/3.1-Advanced-React/Sprint/web-sprint-challenge-advanced-react
 	url = https://github.com/beatlesm/web-sprint-challenge-advanced-react.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/web-module-project-reducer"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/web-module-project-reducer
+	url = https://github.com/beatlesm/web-module-project-reducer.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/web-module-project-redux"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/web-module-project-redux
+	url = https://github.com/beatlesm/web-module-project-redux.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_3-Async-Redux/web-module-project-async-redux"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_3-Async-Redux/web-module-project-async-redux
+	url = https://github.com/beatlesm/web-module-project-async-redux.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/web-module-project-context"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/web-module-project-context
+	url = https://github.com/beatlesm/web-module-project-context.git

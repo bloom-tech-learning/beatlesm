@@ -4,7 +4,7 @@
 
 #### [Assignment 3.2.1](https://github.com/beatlesm/web/tree/main/3.2/Module321/Assignment321):
 
--   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+-   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
    
 #### [Guided project 3.2.1](https://github.com/beatlesm/web/tree/main/3.2/Module321/guided321):
 
