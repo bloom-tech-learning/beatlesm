@@ -1,10 +1,10 @@
----
-id: bad87fee1348bd9aed508826
-title: Clone an Element Using jQuery
-challengeType: 6
-forumTopicId: 16780
-dashedName: clone-an-element-using-jquery
----
+# <center>13 - Clone an Element Using jQuery</center>
+
+[Previous page](12-use-appendto-to-move-elements-with-jquery.md) | [Next page](14-target-the-parent-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 
 # --description--
 
@@ -119,3 +119,9 @@ assert(!code.match(/class.*animated/g));
   </div>
 </div>
 ```
+
+
+
+[Previous page](12-use-appendto-to-move-elements-with-jquery.md) | [Next page](14-target-the-parent-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

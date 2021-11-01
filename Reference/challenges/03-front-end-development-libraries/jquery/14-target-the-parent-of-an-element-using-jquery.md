@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aed308826
-title: Target the Parent of an Element Using jQuery
-challengeType: 6
-forumTopicId: 18321
-dashedName: target-the-parent-of-an-element-using-jquery
----
+# <center>14 - Target the Parent of an Element Using jQuery</center>
 
-# --description--
+[Previous page](13-clone-an-element-using-jquery.md) | [Next page](15-target-the-children-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 
 Every HTML element has a `parent` element from which it `inherits` properties.
 
@@ -138,3 +136,8 @@ assert(code.match(/<div class="well" id="left-well">/g));
   </div>
 </body>
 ```
+
+
+[Previous page](13-clone-an-element-using-jquery.md) | [Next page](15-target-the-children-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

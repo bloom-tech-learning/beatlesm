@@ -1,10 +1,9 @@
----
-id: 564944c91be2204b269d51e3
-title: Change Text Inside an Element Using jQuery
-challengeType: 6
-forumTopicId: 16773
-dashedName: change-text-inside-an-element-using-jquery
----
+# <center>10 - Change Text Inside an Element Using jQuery</center>
+
+[Previous page](09-disable-an-element-using-jquery.md) | [Next page](11-remove-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
@@ -129,3 +128,9 @@ assert(code.match(/\$\(\s*?(\"|\')#target4(\"|\')\s*?\)\.html\(/));
   </div>
 </div>
 ```
+
+
+
+[Previous page](09-disable-an-element-using-jquery.md) | [Next page](11-remove-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

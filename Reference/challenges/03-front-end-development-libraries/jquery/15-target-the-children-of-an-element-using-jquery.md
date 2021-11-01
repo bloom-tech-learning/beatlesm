@@ -1,10 +1,10 @@
----
-id: bad87fee1348bd9aed208826
-title: Target the Children of an Element Using jQuery
-challengeType: 6
-forumTopicId: 18320
-dashedName: target-the-children-of-an-element-using-jquery
----
+# <center>15 - Target the Children of an Element Using jQuery</center>
+
+[Previous page](14-target-the-parent-of-an-element-using-jquery.md) | [Next page](16-target-a-specific-child-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 
 # --description--
 
@@ -123,3 +123,9 @@ assert(code.match(/<div class="well" id="right-well">/g));
   </div>
 </div>
 ```
+
+
+
+[Previous page](14-target-the-parent-of-an-element-using-jquery.md) | [Next page](16-target-a-specific-child-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

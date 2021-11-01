@@ -1,13 +1,3 @@
----
-id: bad87fee1348bd9aed908626
-title: Target the Same Element with Multiple jQuery Selectors
-challengeType: 6
-forumTopicId: 18322
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-the-same-element-with-multiple-jquery-selectors
----
-
 # <center>06 - Target the Same Element with Multiple jQuery Selectors</center>
 
 [Previous page](05-delete-your-jquery-functions.md) | [Next page](07-remove-classes-from-an-element-with-jquery.md)
@@ -15,7 +5,6 @@ dashedName: target-the-same-element-with-multiple-jquery-selectors
 #### [Home - React](./README.md)
 
 
-# --description--
 
 Now you know three ways of targeting elements: by type: `$("button")`, by class: `$(".btn")`, and by id `$("#target1")`.
 

@@ -1,10 +1,10 @@
----
-id: bad87fee1348bd9aed708826
-title: Remove an Element Using jQuery
-challengeType: 6
-forumTopicId: 18262
-dashedName: remove-an-element-using-jquery
----
+# <center>11 - Remove an Element Using jQuery</center>
+
+[Previous page](10-change-text-inside-an-element-using-jquery.md) | [Next page](12-use-appendto-to-move-elements-with-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 
 # --description--
 
@@ -107,3 +107,8 @@ assert(
   </div>
 </div>
 ```
+
+
+[Previous page](10-change-text-inside-an-element-using-jquery.md) | [Next page](12-use-appendto-to-move-elements-with-jquery.md)
+
+#### [Home - React](./README.md)
