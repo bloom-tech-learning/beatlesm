@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908846
-title: Create a Bootstrap Headline
-challengeType: 0
-forumTopicId: 16812
-dashedName: create-a-bootstrap-headline
----
+# <center>19 - Create a Bootstrap Headline</center>
 
-# --description--
+[Previous page](18-line-up-form-elements-responsively-with-bootstrap.md) | [Next page](20-house-our-page-within-a-bootstrap-container-fluid-div.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now let's build something from scratch to practice our HTML, CSS and Bootstrap skills.
 
@@ -65,3 +63,9 @@ assert.isTrue(/jquery(\s)+playground/gi.test($('h3').text()));
 ```html
 <h3 class="text-primary text-center">jQuery Playground</h3>
 ```
+
+
+
+[Previous page](18-line-up-form-elements-responsively-with-bootstrap.md) | [Next page](20-house-our-page-within-a-bootstrap-container-fluid-div.md)
+
+#### [Home - React](./README.md)

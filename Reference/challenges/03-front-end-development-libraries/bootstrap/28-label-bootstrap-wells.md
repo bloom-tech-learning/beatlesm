@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908854
-title: Label Bootstrap Wells
-challengeType: 0
-forumTopicId: 18223
-dashedName: label-bootstrap-wells
----
+# <center>28 - Label Bootstrap Wells</center>
 
-# --description--
+[Previous page](27-add-id-attributes-to-bootstrap-elements.md) | [Next page](29-give-each-element-a-unique-id.md)
+
+#### [Home - React](./README.md)
+
+
 
 For the sake of clarity, let's label both of our wells with their ids.
 
@@ -99,3 +97,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](27-add-id-attributes-to-bootstrap-elements.md) | [Next page](29-give-each-element-a-unique-id.md)
+
+#### [Home - React](./README.md)

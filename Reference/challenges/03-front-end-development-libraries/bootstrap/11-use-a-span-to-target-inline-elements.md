@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aedf08845
-title: Use a span to Target Inline Elements
-challengeType: 0
-forumTopicId: 18370
-dashedName: use-a-span-to-target-inline-elements
----
+# <center>11 - Use a span to Target Inline Elements</center>
 
-# --description--
+[Previous page](10-ditch-custom-css-for-bootstrap.md) | [Next page](12-create-a-custom-heading.md)
+
+#### [Home - React](./README.md)
+
+
 
 You can use spans to create inline elements. Remember when we used the `btn-block` class to make the button fill the entire row?
 
@@ -183,3 +181,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](10-ditch-custom-css-for-bootstrap.md) | [Next page](12-create-a-custom-heading.md)
+
+#### [Home - React](./README.md)

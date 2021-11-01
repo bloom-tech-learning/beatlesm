@@ -1,12 +1,9 @@
----
-id: bad87fee1348ce8acef08814
-title: Warn Your Users of a Dangerous Action with btn-danger
-challengeType: 0
-forumTopicId: 18375
-dashedName: warn-your-users-of-a-dangerous-action-with-btn-danger
----
+# <center>08 - Warn Your Users of a Dangerous Action with btn-danger</center>
 
-# --description--
+[Previous page](07-call-out-optional-actions-with-btn-info.md) | [Next page](09-use-the-bootstrap-grid-to-put-elements-side-by-side.md)
+
+#### [Home - React](./README.md)
+
 
 Bootstrap comes with several pre-defined colors for buttons. The `btn-danger` class is the button color you'll use to notify users that the button performs a destructive action, such as deleting a cat photo.
 
@@ -174,3 +171,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](07-call-out-optional-actions-with-btn-info.md) | [Next page](09-use-the-bootstrap-grid-to-put-elements-side-by-side.md)
+
+#### [Home - React](./README.md)

@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908856
-title: Label Bootstrap Buttons
-challengeType: 0
-forumTopicId: 18222
-dashedName: label-bootstrap-buttons
----
+# <center>30 - Label Bootstrap Buttons</center>
 
-# --description--
+[Previous page](29-give-each-element-a-unique-id.md) | [Next page](31-use-comments-to-clarify-code.md)
+
+#### [Home - React](./README.md)
+
+
 
 Just like we labeled our wells, we want to label our buttons.
 
@@ -103,3 +101,9 @@ assert(new RegExp('#target6', 'gi').test($('#target6').text()));
   </div>
 </div>
 ```
+
+
+
+[Previous page](29-give-each-element-a-unique-id.md) | [Next page](31-use-comments-to-clarify-code.md)
+
+#### [Home - React](./README.md)

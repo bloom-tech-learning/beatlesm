@@ -1,10 +1,9 @@
----
-id: bad87fee1348bd9acde08812
-title: Make Images Mobile Responsive
-challengeType: 0
-forumTopicId: 18232
-dashedName: make-images-mobile-responsive
----
+# <center>02 - Make Images Mobile Responsive</center>
+
+[Previous page](01-use-responsive-design-with-bootstrap-fluid-containers.md) | [Next page](03-center-text-with-bootstrap.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
@@ -174,3 +173,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](01-use-responsive-design-with-bootstrap-fluid-containers.md) | [Next page](03-center-text-with-bootstrap.md)
+
+#### [Home - React](./README.md)

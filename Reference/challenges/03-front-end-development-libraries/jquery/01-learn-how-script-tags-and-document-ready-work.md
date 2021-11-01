@@ -1,6 +1,6 @@
 # <center>01 - Learn How Script Tags and Document Ready Work</center>
 
-[Home - React](./README.md) | [Next page](02-target-html-elements-with-selectors-using-jquery.md)
+[Home - jQuery](./README.md) | [Next page](02-target-html-elements-with-selectors-using-jquery.md)
 
 #### [Home - front end](../../03-front-end-development-libraries/README.md)
 

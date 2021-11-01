@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9acde08712
-title: Use Responsive Design with Bootstrap Fluid Containers
-challengeType: 0
-forumTopicId: 18362
-dashedName: use-responsive-design-with-bootstrap-fluid-containers
----
+# <center>01 - Use Responsive Design with Bootstrap Fluid Containers</center>
 
-# --description--
+[Home - Bootstrap](./README.md) | [Next page](02-make-images-mobile-responsive.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)
+
+
 
 In the HTML5 and CSS section of freeCodeCamp we built a Cat Photo App. Now let's go back to it. This time, we'll style it using the popular Bootstrap responsive CSS framework.
 
@@ -168,3 +166,9 @@ assert($('.container-fluid').children().length >= 8 && !$('.container-fluid').ha
 </form>
 </div>
 ```
+
+
+
+[Home - Bootstrap](./README.md) | [Next page](02-make-images-mobile-responsive.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)

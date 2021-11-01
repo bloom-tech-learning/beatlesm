@@ -1,12 +1,9 @@
----
-id: bad87fee1348bd9aec908855
-title: Give Each Element a Unique id
-challengeType: 0
-forumTopicId: 18191
-dashedName: give-each-element-a-unique-id
----
+# <center>29 - Give Each Element a Unique id</center>
 
-# --description--
+[Previous page](28-label-bootstrap-wells.md) | [Next page](30-label-bootstrap-buttons.md)
+
+#### [Home - React](./README.md)
+
 
 We will also want to be able to use jQuery to target each button by its unique id.
 
@@ -123,3 +120,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](28-label-bootstrap-wells.md) | [Next page](30-label-bootstrap-buttons.md)
+
+#### [Home - React](./README.md)

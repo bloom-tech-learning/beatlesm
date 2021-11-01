@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908847
-title: Split Your Bootstrap Row
-challengeType: 0
-forumTopicId: 18306
-dashedName: split-your-bootstrap-row
----
+# <center>22 - Split Your Bootstrap Row</center>
 
-# --description--
+[Previous page](21-create-a-bootstrap-row.md) | [Next page](23-create-bootstrap-wells.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now that we have a Bootstrap Row, let's split it into two columns to house our elements.
 
@@ -55,3 +53,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](21-create-a-bootstrap-row.md) | [Next page](23-create-bootstrap-wells.md)
+
+#### [Home - React](./README.md)

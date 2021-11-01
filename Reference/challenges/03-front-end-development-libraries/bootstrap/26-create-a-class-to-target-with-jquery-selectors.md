@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908852
-title: Create a Class to Target with jQuery Selectors
-challengeType: 0
-forumTopicId: 16815
-dashedName: create-a-class-to-target-with-jquery-selectors
----
+# <center>26 - Create a Class to Target with jQuery Selectors</center>
 
-# --description--
+[Previous page](25-apply-the-default-bootstrap-button-style.md) | [Next page](27-add-id-attributes-to-bootstrap-elements.md)
+
+#### [Home - React](./README.md)
+
+
 
 Not every class needs to have corresponding CSS. Sometimes we create classes just for the purpose of selecting these elements more easily using jQuery.
 
@@ -69,3 +67,9 @@ assert($('.target').length > 5);
   </div>
 </div>
 ```
+
+
+
+[Previous page](25-apply-the-default-bootstrap-button-style.md) | [Next page](27-add-id-attributes-to-bootstrap-elements.md)
+
+#### [Home - React](./README.md)

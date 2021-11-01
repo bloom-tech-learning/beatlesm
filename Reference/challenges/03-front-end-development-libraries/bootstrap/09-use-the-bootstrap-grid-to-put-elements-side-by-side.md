@@ -1,12 +1,10 @@
----
-id: bad88fee1348ce8acef08815
-title: Use the Bootstrap Grid to Put Elements Side By Side
-challengeType: 0
-forumTopicId: 18371
-dashedName: use-the-bootstrap-grid-to-put-elements-side-by-side
----
+# <center>09 - Use the Bootstrap Grid to Put Elements Side By Side</center>
 
-# --description--
+[Previous page](07-call-out-optional-actions-with-btn-info.md) | [Next page](10-ditch-custom-css-for-bootstrap.md)
+
+#### [Home - React](./README.md)
+
+
 
 Bootstrap uses a responsive 12-column grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a `div` element.
 
@@ -194,3 +192,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](07-call-out-optional-actions-with-btn-info.md) | [Next page](10-ditch-custom-css-for-bootstrap.md)
+
+#### [Home - React](./README.md)

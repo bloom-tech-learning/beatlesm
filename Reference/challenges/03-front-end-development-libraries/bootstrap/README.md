@@ -23,7 +23,7 @@
 -   [21 - Create a Bootstrap Row](21-create-a-bootstrap-row.md)
 -   [22 - Split Your Bootstrap Row](22-split-your-bootstrap-row.md)
 -   [23 - Create Bootstrap Wells](23-create-bootstrap-wells.md)
--   [23 - Add Elements within Your Bootstrap Wells](24-add-elements-within-your-bootstrap-wells.md)
+-   [24 - Add Elements within Your Bootstrap Wells](24-add-elements-within-your-bootstrap-wells.md)
 -   [25 - Apply the Default Bootstrap Button Style](25-apply-the-default-bootstrap-button-style.md)
 -   [26 - Create a Class to Target with jQuery Selectors](26-create-a-class-to-target-with-jquery-selectors.md)
 -   [27 - Add id Attributes to Bootstrap Elements](27-add-id-attributes-to-bootstrap-elements.md)

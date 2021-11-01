@@ -1,16 +1,9 @@
----
-id: bad87fee1348bd9aeda08845
-title: Responsively Style Checkboxes
-challengeType: 0
-forumTopicId: 18269
-required:
-  - link: >-
-      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css
-    raw: true
-dashedName: responsively-style-checkboxes
----
+# <center>16 - Responsively Style Checkboxes</center>
 
-# --description--
+[Previous page](15-responsively-style-radio-buttons.md) | [Next page](17-style-text-inputs-as-form-controls.md)
+
+#### [Home - React](./README.md)
+
 
 Since Bootstrap's `col-xs-*` classes are applicable to all `form` elements, you can use them on your checkboxes too! This way, the checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.
 
@@ -189,3 +182,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](15-responsively-style-radio-buttons.md) | [Next page](17-style-text-inputs-as-form-controls.md)
+
+#### [Home - React](./README.md)

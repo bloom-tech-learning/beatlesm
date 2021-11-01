@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9bec908846
-title: Create a Bootstrap Row
-challengeType: 0
-forumTopicId: 16813
-dashedName: create-a-bootstrap-row
----
+# <center>21 - Create a Bootstrap Row</center>
 
-# --description--
+[Previous page](20-house-our-page-within-a-bootstrap-container-fluid-div.md) | [Next page](22-split-your-bootstrap-row.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now we'll create a Bootstrap row for our inline elements.
 
@@ -66,3 +64,9 @@ assert(
   <div class="row"></div>
 </div>
 ```
+
+
+
+[Previous page](20-house-our-page-within-a-bootstrap-container-fluid-div.md) | [Next page](22-split-your-bootstrap-row.md)
+
+#### [Home - React](./README.md)

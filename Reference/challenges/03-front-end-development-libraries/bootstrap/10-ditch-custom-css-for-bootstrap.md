@@ -1,12 +1,10 @@
----
-id: bad87fee1347bd9aedf08845
-title: Ditch Custom CSS for Bootstrap
-challengeType: 0
-forumTopicId: 17565
-dashedName: ditch-custom-css-for-bootstrap
----
+# <center>10 - Ditch Custom CSS for Bootstrap</center>
 
-# --description--
+[Previous page](09-use-the-bootstrap-grid-to-put-elements-side-by-side.md) | [Next page](11-use-a-span-to-target-inline-elements.md)
+
+#### [Home - React](./README.md)
+
+
 
 We can clean up our code and make our Cat Photo App look more conventional by using Bootstrap's built-in styles instead of the custom styles we created earlier.
 
@@ -186,3 +184,9 @@ assert($('.img-responsive').length > 1);
   </form>
 </div>
 ```
+
+
+
+[Previous page](09-use-the-bootstrap-grid-to-put-elements-side-by-side.md) | [Next page](11-use-a-span-to-target-inline-elements.md)
+
+#### [Home - React](./README.md)

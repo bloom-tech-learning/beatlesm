@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908857
-title: Use Comments to Clarify Code
-challengeType: 0
-forumTopicId: 18347
-dashedName: use-comments-to-clarify-code
----
+# <center>31 - Use Comments to Clarify Code</center>
 
-# --description--
+[Previous page](30-label-bootstrap-buttons.md) | [First page](01-use-responsive-design-with-bootstrap-fluid-containers.md)
+
+#### [Home - jQuery](./README.md)
+
+
 
 When we start using jQuery, we will modify HTML elements without needing to actually change them in HTML.
 
@@ -96,3 +94,9 @@ assert(code.match(/<!--/g).length === code.match(/-->/g).length);
   </div>
 </div>
 ```
+
+
+
+[Previous page](30-label-bootstrap-buttons.md) | [First page](01-use-responsive-design-with-bootstrap-fluid-containers.md)
+
+#### [Home - jQuery](./README.md)

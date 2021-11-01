@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908848
-title: Create Bootstrap Wells
-challengeType: 0
-forumTopicId: 16825
-dashedName: create-bootstrap-wells
----
+# <center>23 - Create Bootstrap Wells</center>
 
-# --description--
+[Previous page](22-split-your-bootstrap-row.md) | [Next page](24-add-elements-within-your-bootstrap-wells.md)
+
+#### [Home - React](./README.md)
+
+
 
 Bootstrap has a class called `well` that can create a visual sense of depth for your columns.
 
@@ -69,3 +67,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](22-split-your-bootstrap-row.md) | [Next page](24-add-elements-within-your-bootstrap-wells.md)
+
+#### [Home - React](./README.md)

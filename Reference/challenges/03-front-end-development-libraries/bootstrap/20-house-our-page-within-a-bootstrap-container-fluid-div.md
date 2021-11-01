@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908746
-title: House our page within a Bootstrap container-fluid div
-challengeType: 0
-forumTopicId: 18198
-dashedName: house-our-page-within-a-bootstrap-container-fluid-div
----
+# <center>20 - House our page within a Bootstrap container-fluid div</center>
 
-# --description--
+[Previous page](19-create-a-bootstrap-headline.md) | [Next page](21-create-a-bootstrap-row.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now let's make sure all the content on your page is mobile-responsive.
 
@@ -51,3 +49,9 @@ assert($('div').children('h3').length > 0);
     <h3 class="text-primary text-center">jQuery Playground</h3>
 </div>
 ```
+
+
+
+[Previous page](19-create-a-bootstrap-headline.md) | [Next page](21-create-a-bootstrap-row.md)
+
+#### [Home - React](./README.md)
