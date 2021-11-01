@@ -8,6 +8,8 @@
    
 #### [Guided project 3.2.1](./Guided321):
 
+-   [Youtube - Guided project 3.2.1](https://youtu.be/QJkTHWeKOJ8)
+
 
 ### [Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits](./Objects/Object_1.md)
 
