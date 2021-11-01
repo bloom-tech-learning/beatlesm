@@ -1,10 +1,3 @@
-# <center>07 - Remove Classes from an Element with jQuery</center>
-
-[Previous page](06-target-the-same-element-with-multiple-jquery-selectors.md) | [Next page](08-change-the-css-of-an-element-using-jquery.md)
-
-#### [Home - React](./README.md)
-
-
 ---
 id: bad87fee1348bd9aed918626
 title: Remove Classes from an Element with jQuery
@@ -15,7 +8,12 @@ required:
 dashedName: remove-classes-from-an-element-with-jquery
 ---
 
-# --description--
+# <center>07 - Remove Classes from an Element with jQuery</center>
+
+[Previous page](06-target-the-same-element-with-multiple-jquery-selectors.md) | [Next page](08-change-the-css-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
 
 In the same way you can add classes to an element with jQuery's `addClass()` function, you can remove them with jQuery's `removeClass()` function.
 

@@ -5,7 +5,6 @@
 #### [Home - React](./README.md)
 
 
-
 Now we have a `document ready` function.
 
 Now let's write our first jQuery statement. All jQuery functions start with a `$`, usually referred to as a dollar sign operator, or as bling.
