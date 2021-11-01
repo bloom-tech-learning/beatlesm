@@ -1,10 +1,3 @@
-# <center>04 - Target Elements by id Using jQuery</center>
-
-[Previous page](03-target-elements-by-class-using-jquery.md) | [Next page](05-delete-your-jquery-functions.md)
-
-#### [Home - React](./README.md)
-
-
 ---
 id: bad87fee1348bd9aeda08826
 title: Target Elements by id Using jQuery
@@ -14,6 +7,13 @@ required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-elements-by-id-using-jquery
 ---
+
+# <center>04 - Target Elements by id Using jQuery</center>
+
+[Previous page](03-target-elements-by-class-using-jquery.md) | [Next page](05-delete-your-jquery-functions.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
