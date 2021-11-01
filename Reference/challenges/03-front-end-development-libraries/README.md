@@ -44,7 +44,7 @@ While you can use Redux with any view library, we introduce Redux here before co
 
 In this course, you'll learn the fundamentals of Redux stores, actions, reducers and middleware to manage data throughout your application.
 
-### React and Redux
+### [React and Redux](./react-and-redux/README.md)
 
 React and Redux are often mentioned together, and with good reason. The developer who created Redux was a React developer who wanted to make it easier to share data across different components.
 
