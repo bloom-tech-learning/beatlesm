@@ -1,7 +1,6 @@
 # React and Redux
 
 -   [01 - Getting Started with React Redux](01-getting-started-with-react-redux.md)
-
 -   [02 - Manage State Locally First](02-manage-state-locally-first.md)
 -   [03 - Extract State Logic to Redux](03-extract-state-logic-to-redux.md)
 -   [04 - Use Provider to Connect Redux to React](04-use-provider-to-connect-redux-to-react.md)
