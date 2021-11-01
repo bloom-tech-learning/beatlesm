@@ -12,7 +12,7 @@ Here are some ideas to get you started:
 -   **[https://github.com/beatlesm/web-module-project-async-redux](https://github.com/beatlesm/web-module-project-async-redux)**
 -   **[https://github.com/beatlesm/web-module-project-context](https://github.com/beatlesm/web-module-project-context)**
 
--   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer {:target="_blank" rel="noopener"})**
+-   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer)**
 
 - 🌱 I’m currently learning ... **[Web 3.1](./curriculum/web48/3.1-Advanced-React/README.md)**
 
