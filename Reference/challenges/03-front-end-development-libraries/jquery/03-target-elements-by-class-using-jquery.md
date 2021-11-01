@@ -1,3 +1,10 @@
+# <center>03 - Target Elements by Class Using jQuery</center>
+
+[Previous page](02-target-html-elements-with-selectors-using-jquery.md) | [Next page](04-target-elements-by-id-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 ---
 id: bad87fee1348bd9aedc08826
 title: Target Elements by Class Using jQuery
@@ -110,3 +117,8 @@ assert(!code.match(/class\.\*animated/g));
   </div>
 </div>
 ```
+
+
+[Previous page](02-target-html-elements-with-selectors-using-jquery.md) | [Next page](04-target-elements-by-id-using-jquery.md)
+
+#### [Home - React](./README.md)

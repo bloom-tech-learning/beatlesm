@@ -1,3 +1,10 @@
+# <center>07 - Remove Classes from an Element with jQuery</center>
+
+[Previous page](06-target-the-same-element-with-multiple-jquery-selectors.md) | [Next page](08-change-the-css-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 ---
 id: bad87fee1348bd9aed918626
 title: Remove Classes from an Element with jQuery
@@ -119,3 +126,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](06-target-the-same-element-with-multiple-jquery-selectors.md) | [Next page](08-change-the-css-of-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

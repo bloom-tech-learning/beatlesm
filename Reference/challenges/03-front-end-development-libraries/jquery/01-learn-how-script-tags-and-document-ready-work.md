@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9acdd08826
-title: Learn How Script Tags and Document Ready Work
-challengeType: 6
-forumTopicId: 18224
-dashedName: learn-how-script-tags-and-document-ready-work
----
+# <center>01 - Learn How Script Tags and Document Ready Work</center>
 
-# --description--
+[Home - React](./README.md) | [Next page](02-target-html-elements-with-selectors-using-jquery.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)
+
+
 
 Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
 
@@ -116,3 +114,8 @@ assert(code.match(/\n*?\s*?\}\s*?\);/g));
   </div>
 </div>
 ```
+
+
+[Home - React](./README.md) | [Next page](02-target-html-elements-with-selectors-using-jquery.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)

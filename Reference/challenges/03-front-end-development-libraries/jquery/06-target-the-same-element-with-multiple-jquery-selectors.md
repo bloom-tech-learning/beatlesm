@@ -1,3 +1,10 @@
+# <center>06 - Target the Same Element with Multiple jQuery Selectors</center>
+
+[Previous page](05-delete-your-jquery-functions.md) | [Next page](07-remove-classes-from-an-element-with-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 ---
 id: bad87fee1348bd9aed908626
 title: Target the Same Element with Multiple jQuery Selectors
@@ -140,3 +147,9 @@ assert(!code.match(/class.*animated/g));
   </div>
 </div>
 ```
+
+
+
+[Previous page](05-delete-your-jquery-functions.md) | [Next page](07-remove-classes-from-an-element-with-jquery.md)
+
+#### [Home - React](./README.md)
