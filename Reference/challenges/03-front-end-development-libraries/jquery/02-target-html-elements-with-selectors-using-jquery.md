@@ -1,14 +1,10 @@
----
-id: bad87fee1348bd9bedc08826
-title: Target HTML Elements with Selectors Using jQuery
-challengeType: 6
-forumTopicId: 18319
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-html-elements-with-selectors-using-jquery
----
+# <center>02 - Target HTML Elements with Selectors Using jQuery</center>
 
-# --description--
+[Previous page](01-learn-how-script-tags-and-document-ready-work.md) | [Next page](03-target-elements-by-class-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now we have a `document ready` function.
 
@@ -115,3 +111,8 @@ assert(
   </div>
 </div>
 ```
+
+
+[Previous page](01-learn-how-script-tags-and-document-ready-work.md) | [Next page](03-target-elements-by-class-using-jquery.md)
+
+#### [Home - React](./README.md)

@@ -1,3 +1,9 @@
+# <center>05 - Delete Your jQuery Functions</center>
+
+[Previous page](04-target-elements-by-id-using-jquery.md) | [Next page](06-target-the-same-element-with-multiple-jquery-selectors.md)
+
+#### [Home - React](./README.md)
+
 ---
 id: bad87fee1348bd9aeda08726
 title: Delete Your jQuery Functions
@@ -122,3 +128,8 @@ assert(
   </div>
 </div>
 ```
+
+
+[Previous page](04-target-elements-by-id-using-jquery.md) | [Next page](06-target-the-same-element-with-multiple-jquery-selectors.md)
+
+#### [Home - React](./README.md)
