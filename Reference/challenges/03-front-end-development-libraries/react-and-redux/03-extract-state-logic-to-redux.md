@@ -43,6 +43,6 @@ const store = Redux.createStore(messageReducer);
 
 
 
-Previous page](02-manage-state-locally-first.md) | [Next page](04-use-provider-to-connect-redux-to-react.md)
+[Previous page](02-manage-state-locally-first.md) | [Next page](04-use-provider-to-connect-redux-to-react.md)
 
 #### [Home - Redux](./README.md)
