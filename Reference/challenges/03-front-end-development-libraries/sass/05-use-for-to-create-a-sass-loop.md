@@ -1,10 +1,9 @@
----
-id: 587d7dbe367417b2b2512bb9
-title: Use @for to Create a Sass Loop
-challengeType: 0
-forumTopicId: 301462
-dashedName: use-for-to-create-a-sass-loop
----
+# <center>05 - Use @for to Create a Sass Loop</center>
+
+[Previous page](04-use-if-and-else-to-add-logic-to-your-styles.md) | [Next page](06-use-each-to-map-over-items-in-a-list.md)
+
+#### [Home - Redux](./README.md)
+
 
 # --description--
 
@@ -137,3 +136,9 @@ assert($('.text-5').css('font-size') == '75px');
 <p class="text-4">Hello</p>
 <p class="text-5">Hello</p>
 ```
+
+
+
+[Previous page](04-use-if-and-else-to-add-logic-to-your-styles.md) | [Next page](06-use-each-to-map-over-items-in-a-list.md)
+
+#### [Home - Redux](./README.md)

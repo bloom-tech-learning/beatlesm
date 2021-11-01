@@ -1,12 +1,10 @@
----
-id: 587d7dbf367417b2b2512bba
-title: Use @each to Map Over Items in a List
-challengeType: 0
-forumTopicId: 301461
-dashedName: use-each-to-map-over-items-in-a-list
----
+# <center>06 - Use @each to Map Over Items in a List</center>
 
-# --description--
+[Previous page](05-use-for-to-create-a-sass-loop.md) | [Next page](07-apply-a-style-until-a-condition-is-met-with-while.md)
+
+#### [Home - Redux](./README.md)
+
+
 
 The last challenge showed how the `@for` directive uses a starting and ending value to loop a certain number of times. Sass also offers the `@each` directive which loops over each item in a list or map. On each iteration, the variable gets assigned to the current value from the list or map.
 
@@ -133,3 +131,8 @@ assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)');
 <div class="black-bg"></div>
 <div class="red-bg"></div>
 ```
+
+
+[Previous page](05-use-for-to-create-a-sass-loop.md) | [Next page](07-apply-a-style-until-a-condition-is-met-with-while.md)
+
+#### [Home - Redux](./README.md)

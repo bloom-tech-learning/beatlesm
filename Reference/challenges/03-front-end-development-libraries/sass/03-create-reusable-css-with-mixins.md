@@ -1,12 +1,10 @@
----
-id: 587d7dbd367417b2b2512bb6
-title: Create Reusable CSS with Mixins
-challengeType: 0
-forumTopicId: 301455
-dashedName: create-reusable-css-with-mixins
----
+# <center>03 - Create Reusable CSS with Mixins</center>
 
-# --description--
+[Previous page](02-nest-css-with-sass.md) | [Next page](04-use-if-and-else-to-add-logic-to-your-styles.md)
+
+#### [Home - Redux](./README.md)
+
+
 
 In Sass, a <dfn>mixin</dfn> is a group of CSS declarations that can be reused throughout the style sheet.
 
@@ -130,3 +128,8 @@ assert(code.match(/@include\s+?border-radius\(\s*?15px\s*?\)\s*;/gi));
 
 <div id="awesome"></div>
 ```
+
+
+[Previous page](02-nest-css-with-sass.md) | [Next page](04-use-if-and-else-to-add-logic-to-your-styles.md)
+
+#### [Home - Redux](./README.md)

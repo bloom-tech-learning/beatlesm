@@ -1,10 +1,10 @@
----
-id: 587d7dbf367417b2b2512bbb
-title: Apply a Style Until a Condition is Met with @while
-challengeType: 0
-forumTopicId: 301454
-dashedName: apply-a-style-until-a-condition-is-met-with-while
----
+# <center>07 - Apply a Style Until a Condition is Met with @while</center>
+
+[Previous page](06-use-each-to-map-over-items-in-a-list.md) | [Next page](08-split-your-styles-into-smaller-chunks-with-partials.md)
+
+#### [Home - Redux](./README.md)
+
+
 
 # --description--
 
@@ -115,3 +115,9 @@ assert($('.text-5').css('font-size') == '75px');
 <p class="text-4">Hello</p>
 <p class="text-5">Hello</p>
 ```
+
+
+
+[Previous page](06-use-each-to-map-over-items-in-a-list.md) | [Next page](08-split-your-styles-into-smaller-chunks-with-partials.md)
+
+#### [Home - Redux](./README.md)

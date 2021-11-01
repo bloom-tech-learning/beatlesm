@@ -1,12 +1,10 @@
----
-id: 587d7dbd367417b2b2512bb5
-title: Nest CSS with Sass
-challengeType: 0
-forumTopicId: 301457
-dashedName: nest-css-with-sass
----
+# <center>02 - Nest CSS with Sass</center>
 
-# --description--
+[Previous page](01-store-data-with-sass-variables.md) | [Next page](03-create-reusable-css-with-mixins.md)
+
+#### [Home - Redux](./README.md)
+
+
 
 Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet.
 
@@ -103,3 +101,8 @@ assert(
   <p>This is a paragraph</p>
 </div>
 ```
+
+
+[Previous page](01-store-data-with-sass-variables.md) | [Next page](03-create-reusable-css-with-mixins.md)
+
+#### [Home - Redux](./README.md)
