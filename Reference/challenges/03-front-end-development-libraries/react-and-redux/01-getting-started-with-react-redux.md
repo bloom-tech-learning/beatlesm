@@ -1,6 +1,6 @@
 # <center>01 - Getting Started with React Redux</center>
 
-[Home - React](./README.md) | [Next page](02-manage-state-locally-first.md)
+[Home - React-and-Redux](./README.md) | [Next page](02-manage-state-locally-first.md)
 
 #### [Home - front end](../../03-front-end-development-libraries/README.md)  
 

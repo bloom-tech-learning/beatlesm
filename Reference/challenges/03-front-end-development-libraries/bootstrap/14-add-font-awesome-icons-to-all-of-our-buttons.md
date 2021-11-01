@@ -1,15 +1,10 @@
----
-id: bad87fee1348bd9aedc08845
-title: Add Font Awesome Icons to all of our Buttons
-challengeType: 0
-forumTopicId: 16637
-required:
-  - link: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
-    raw: true
-dashedName: add-font-awesome-icons-to-all-of-our-buttons
----
+# <center>14 - Add Font Awesome Icons to all of our Buttons</center>
 
-# --description--
+[Previous page](13-add-font-awesome-icons-to-our-buttons.md) | [Next page](15-responsively-style-radio-buttons.md)
+
+#### [Home - React](./README.md)
+
+
 
 Font Awesome is a convenient library of icons. These icons can be web fonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
 
@@ -175,3 +170,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](13-add-font-awesome-icons-to-our-buttons.md) | [Next page](15-responsively-style-radio-buttons.md)
+
+#### [Home - React](./README.md)

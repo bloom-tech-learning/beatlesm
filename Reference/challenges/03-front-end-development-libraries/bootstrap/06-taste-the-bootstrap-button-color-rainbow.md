@@ -1,12 +1,10 @@
----
-id: bad87fee1348cd8acef08811
-title: Taste the Bootstrap Button Color Rainbow
-challengeType: 0
-forumTopicId: 18323
-dashedName: taste-the-bootstrap-button-color-rainbow
----
+# <center>06 - Taste the Bootstrap Button Color Rainbow</center>
 
-# --description--
+[Previous page](05-create-a-block-element-bootstrap-button.md) | [Next page](07-call-out-optional-actions-with-btn-info.md)
+
+#### [Home - React](./README.md)
+
+
 
 The `btn-primary` class is the main color you'll use in your app. It is useful for highlighting actions you want your user to take.
 
@@ -165,3 +163,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](05-create-a-block-element-bootstrap-button.md) | [Next page](07-call-out-optional-actions-with-btn-info.md)
+
+#### [Home - React](./README.md)

@@ -1,12 +1,10 @@
----
-id: bad87fee1348cd8acef08812
-title: Create a Block Element Bootstrap Button
-challengeType: 0
-forumTopicId: 16810
-dashedName: create-a-block-element-bootstrap-button
----
+# <center>05 - Create a Block Element Bootstrap Button</center>
 
-# --description--
+[Previous page](04-create-a-bootstrap-button.md) | [Next page](06-taste-the-bootstrap-button-color-rainbow.md)
+
+#### [Home - React](./README.md)
+
+
 
 Normally, your `button` elements with the `btn` and `btn-default` classes are only as wide as the text that they contain. For example:
 
@@ -183,3 +181,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](04-create-a-bootstrap-button.md) | [Next page](06-taste-the-bootstrap-button-color-rainbow.md)
+
+#### [Home - React](./README.md)

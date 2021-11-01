@@ -1,16 +1,10 @@
----
-id: bad87fee1348bd9aed908845
-title: Style Text Inputs as Form Controls
-challengeType: 0
-forumTopicId: 18312
-required:
-  - link: >-
-      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css
-    raw: true
-dashedName: style-text-inputs-as-form-controls
----
+# <center>17 - Style Text Inputs as Form Controls</center>
 
-# --description--
+[Previous page](16-responsively-style-checkboxes.md) | [Next page](18-line-up-form-elements-responsively-with-bootstrap.md)
+
+#### [Home - React](./README.md)
+
+
 
 You can add the `fa-paper-plane` Font Awesome icon by adding `<i class="fa fa-paper-plane"></i>` within your submit `button` element.
 
@@ -199,3 +193,9 @@ assert(code.match(/<\/i>/g) && code.match(/<\/i/g).length > 3);
   </form>
 </div>
 ```
+
+
+
+[Previous page](16-responsively-style-checkboxes.md) | [Next page](18-line-up-form-elements-responsively-with-bootstrap.md)
+
+#### [Home - React](./README.md)

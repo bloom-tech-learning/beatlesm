@@ -1,16 +1,9 @@
----
-id: bad87fee1348bd9aedb08845
-title: Responsively Style Radio Buttons
-challengeType: 0
-forumTopicId: 18270
-required:
-  - link: >-
-      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css
-    raw: true
-dashedName: responsively-style-radio-buttons
----
+# <center>15 - Responsively Style Radio Buttons</center>
 
-# --description--
+[Previous page](14-add-font-awesome-icons-to-all-of-our-buttons.md) | [Next page](16-responsively-style-checkboxes.md)
+
+#### [Home - React](./README.md)
+
 
 You can use Bootstrap's `col-xs-*` classes on `form` elements, too! This way, our radio buttons will be evenly spread out across the page, regardless of how wide the screen resolution is.
 
@@ -173,3 +166,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](14-add-font-awesome-icons-to-all-of-our-buttons.md) | [Next page](16-responsively-style-checkboxes.md)
+
+#### [Home - React](./README.md)

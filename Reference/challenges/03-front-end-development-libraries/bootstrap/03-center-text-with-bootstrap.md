@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd8acde08812
-title: Center Text with Bootstrap
-challengeType: 0
-forumTopicId: 16771
-dashedName: center-text-with-bootstrap
----
+# <center>03 - Center Text with Bootstrap</center>
 
-# --description--
+[Previous page](02-make-images-mobile-responsive.md) | [Next page](04-create-a-bootstrap-button.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now that we're using Bootstrap, we can center our heading element to make it look better. All we need to do is add the class `text-center` to our `h2` element.
 
@@ -155,3 +153,9 @@ assert($('h2').hasClass('red-text'));
   </form>
 </div>
 ```
+
+
+
+[Previous page](02-make-images-mobile-responsive.md) | [Next page](04-create-a-bootstrap-button.md)
+
+#### [Home - React](./README.md)

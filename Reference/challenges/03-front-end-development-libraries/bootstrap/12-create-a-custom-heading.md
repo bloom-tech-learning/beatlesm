@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aede08845
-title: Create a Custom Heading
-challengeType: 0
-forumTopicId: 16816
-dashedName: create-a-custom-heading
----
+# <center>12 - Create a Custom Heading</center>
 
-# --description--
+[Previous page](11-use-a-span-to-target-inline-elements.md) | [Next page](13-add-font-awesome-icons-to-our-buttons.md)
+
+#### [Home - React](./README.md)
+
+
 
 We will make a simple heading for our Cat Photo App by putting the title and relaxing cat image in the same row.
 
@@ -175,3 +173,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](11-use-a-span-to-target-inline-elements.md) | [Next page](13-add-font-awesome-icons-to-our-buttons.md)
+
+#### [Home - React](./README.md)

@@ -1,12 +1,10 @@
----
-id: bad87fee1348cd8acef08813
-title: Call out Optional Actions with btn-info
-challengeType: 0
-forumTopicId: 16770
-dashedName: call-out-optional-actions-with-btn-info
----
+# <center>07 - Call out Optional Actions with btn-info</center>
 
-# --description--
+[Previous page](06-taste-the-bootstrap-button-color-rainbow.md) | [Next page](08-warn-your-users-of-a-dangerous-action-with-btn-danger.md)
+
+#### [Home - React](./README.md)
+
+
 
 Bootstrap comes with several pre-defined colors for buttons. The `btn-info` class is used to call attention to optional actions that the user can take.
 
@@ -173,3 +171,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](06-taste-the-bootstrap-button-color-rainbow.md) | [Next page](08-warn-your-users-of-a-dangerous-action-with-btn-danger.md)
+
+#### [Home - React](./README.md)

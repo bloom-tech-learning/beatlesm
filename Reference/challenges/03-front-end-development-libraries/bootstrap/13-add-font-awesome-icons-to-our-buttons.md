@@ -1,15 +1,9 @@
----
-id: bad87fee1348bd9aedd08845
-title: Add Font Awesome Icons to our Buttons
-challengeType: 0
-forumTopicId: 16638
-required:
-  - link: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css'
-    raw: true
-dashedName: add-font-awesome-icons-to-our-buttons
----
+# <center>13 - Add Font Awesome Icons to our Buttons</center>
 
-# --description--
+[Previous page](12-create-a-custom-heading.md) | [Next page](14-add-font-awesome-icons-to-all-of-our-buttons.md)
+
+#### [Home - React](./README.md)
+
 
 Font Awesome is a convenient library of icons. These icons can be webfonts or vector graphics. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.
 
@@ -192,3 +186,9 @@ assert(code.match(/<\/i>|<\/span>/g));
   </form>
 </div>
 ```
+
+
+
+[Previous page](12-create-a-custom-heading.md) | [Next page](14-add-font-awesome-icons-to-all-of-our-buttons.md)
+
+#### [Home - React](./README.md)

@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908853
-title: Add id Attributes to Bootstrap Elements
-challengeType: 0
-forumTopicId: 16639
-dashedName: add-id-attributes-to-bootstrap-elements
----
+# <center>27 - Add id Attributes to Bootstrap Elements</center>
 
-# --description--
+[Previous page](26-create-a-class-to-target-with-jquery-selectors.md) | [Next page](28-label-bootstrap-wells.md)
+
+#### [Home - React](./README.md)
+
+
 
 Recall that in addition to class attributes, you can give each of your elements an `id` attribute.
 
@@ -91,3 +89,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](26-create-a-class-to-target-with-jquery-selectors.md) | [Next page](28-label-bootstrap-wells.md)
+
+#### [Home - React](./README.md)

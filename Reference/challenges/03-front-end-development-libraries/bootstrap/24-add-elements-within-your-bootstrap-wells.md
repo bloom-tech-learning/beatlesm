@@ -1,12 +1,9 @@
----
-id: bad87fee1348bd9aec908849
-title: Add Elements within Your Bootstrap Wells
-challengeType: 0
-forumTopicId: 16636
-dashedName: add-elements-within-your-bootstrap-wells
----
+# <center>24 - Add Elements within Your Bootstrap Wells</center>
 
-# --description--
+[Previous page](23-create-bootstrap-wells.md) | [Next page](25-apply-the-default-bootstrap-button-style.md)
+
+#### [Home - React](./README.md)
+
 
 Now we're several `div` elements deep on each column of our row. This is as deep as we'll need to go. Now we can add our `button` elements.
 
@@ -88,3 +85,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](23-create-bootstrap-wells.md) | [Next page](25-apply-the-default-bootstrap-button-style.md)
+
+#### [Home - React](./README.md)

@@ -1,12 +1,10 @@
----
-id: bad87fee1348cd8acdf08812
-title: Create a Bootstrap Button
-challengeType: 0
-forumTopicId: 16811
-dashedName: create-a-bootstrap-button
----
+# <center>04 - Create a Bootstrap Button</center>
 
-# --description--
+[Previous page](03-center-text-with-bootstrap.md) | [Next page](05-create-a-block-element-bootstrap-button.md)
+
+#### [Home - React](./README.md)
+
+
 
 Bootstrap has its own styles for `button` elements, which look much better than the plain HTML ones.
 
@@ -174,3 +172,9 @@ assert(
 </div>
 </html>
 ```
+
+
+
+[Previous page](03-center-text-with-bootstrap.md) | [Next page](05-create-a-block-element-bootstrap-button.md)
+
+#### [Home - React](./README.md)

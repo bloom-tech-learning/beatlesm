@@ -1,6 +1,6 @@
 # <center>01 - Store Data with Sass Variables</center>
 
-[Home - React](./README.md) | [Next page](02-nest-css-with-sass.md)
+[Home - SASS](./README.md) | [Next page](02-nest-css-with-sass.md)
 
 #### [Home - front end](../../03-front-end-development-libraries/README.md)  
 

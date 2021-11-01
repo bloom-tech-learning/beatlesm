@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aec908850
-title: Apply the Default Bootstrap Button Style
-challengeType: 0
-forumTopicId: 16657
-dashedName: apply-the-default-bootstrap-button-style
----
+# <center>25 - Apply the Default Bootstrap Button Style</center>
 
-# --description--
+[Previous page](24-add-elements-within-your-bootstrap-wells.md) | [Next page](26-create-a-class-to-target-with-jquery-selectors.md)
+
+#### [Home - React](./README.md)
+
+
 
 Bootstrap has another button class called `btn-default`.
 
@@ -75,3 +73,9 @@ assert($('.btn-default').length > 5);
   </div>
 </div>
 ```
+
+
+
+[Previous page](24-add-elements-within-your-bootstrap-wells.md) | [Next page](26-create-a-class-to-target-with-jquery-selectors.md)
+
+#### [Home - React](./README.md)

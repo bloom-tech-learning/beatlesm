@@ -1,16 +1,10 @@
----
-id: bad87fee1348bd9aec908845
-title: Line up Form Elements Responsively with Bootstrap
-challengeType: 0
-forumTopicId: 18225
-required:
-  - link: >-
-      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css
-    raw: true
-dashedName: line-up-form-elements-responsively-with-bootstrap
----
+# <center>18 - Line up Form Elements Responsively with Bootstrap</center>
 
-# --description--
+[Previous page](17-style-text-inputs-as-form-controls.md) | [Next page](19-create-a-bootstrap-headline.md)
+
+#### [Home - React](./README.md)
+
+
 
 Now let's get your form `input` and your submission `button` on the same line. We'll do this the same way we have previously: by using a `div` element with the class `row`, and other `div` elements within it using the `col-xs-*` class.
 
@@ -212,3 +206,9 @@ assert(
   </form>
 </div>
 ```
+
+
+
+[Previous page](17-style-text-inputs-as-form-controls.md) | [Next page](19-create-a-bootstrap-headline.md)
+
+#### [Home - React](./README.md)
