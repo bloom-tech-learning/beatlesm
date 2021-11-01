@@ -1,4 +1,4 @@
-# Redux
+# Bootstrap
 
 -   [01 - ](01-use-responsive-design-with-bootstrap-fluid-containers.md)
 -   [02 - ](02-make-images-mobile-responsive.md)
@@ -35,5 +35,5 @@
 
 
 
-[[Home - front end](../README.md)  | [Next page](01-create-a-redux-store.md)  
+[[Home - front end](../README.md)  | [Next page](01-use-responsive-design-with-bootstrap-fluid-containers.md)  
 #### [Home](../../README.md) 
