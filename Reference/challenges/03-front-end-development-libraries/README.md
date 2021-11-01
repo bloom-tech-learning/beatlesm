@@ -8,13 +8,13 @@ Later, you'll build a shopping cart and other applications to learn how to creat
 
 ## Courses
 
-### Bootstrap
+### [Bootstrap](./bootstrap/README.md)
 
 Bootstrap is a front end framework used to design responsive web pages and applications. It takes a mobile-first approach to web development, and includes pre-built CSS styles and classes, plus some JavaScript functionality.
 
 In this course, you'll learn how to build responsive websites with Bootstrap, and use its included classes to style buttons, images, forms, navigation, and other common elements.
 
-### jQuery
+### [jQuery](./jquery/README.md)
 
 jQuery is one of the most widely used JavaScript libraries in the world.
 
