@@ -1,14 +1,11 @@
----
-id: bad87fee1348bd9aed008826
-title: Target Even Elements Using jQuery
-challengeType: 6
-forumTopicId: 18318
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-even-elements-using-jquery
----
+# <center>17 - Target Even Elements Using jQuery</center>
 
-# --description--
+[Previous page](16-target-a-specific-child-of-an-element-using-jquery.md) | [Next page](18-use-jquery-to-modify-the-entire-page.md)
+
+#### [Home - React](./README.md)
+
+
+
 
 You can also target elements based on their positions using `:odd` or `:even` selectors.
 
@@ -136,3 +133,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](16-target-a-specific-child-of-an-element-using-jquery.md) | [Next page](18-use-jquery-to-modify-the-entire-page.md)
+
+#### [Home - React](./README.md)

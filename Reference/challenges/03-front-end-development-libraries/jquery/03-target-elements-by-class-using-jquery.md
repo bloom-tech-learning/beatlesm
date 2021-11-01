@@ -1,20 +1,10 @@
----
-id: bad87fee1348bd9aedc08826
-title: Target Elements by Class Using jQuery
-challengeType: 6
-forumTopicId: 18316
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-elements-by-class-using-jquery
----
-
 # <center>03 - Target Elements by Class Using jQuery</center>
 
 [Previous page](02-target-html-elements-with-selectors-using-jquery.md) | [Next page](04-target-elements-by-id-using-jquery.md)
 
 #### [Home - React](./README.md)
 
-# --description--
+
 
 You see how we made all of your `button` elements bounce? We selected them with `$("button")`, then we added some CSS classes to them with `.addClass("animated bounce");`.
 

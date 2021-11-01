@@ -1,10 +1,10 @@
----
-id: bad87fee1348bd9aed608826
-title: Use appendTo to Move Elements with jQuery
-challengeType: 6
-forumTopicId: 18340
-dashedName: use-appendto-to-move-elements-with-jquery
----
+# <center>12 - Use appendTo to Move Elements with jQuery</center>
+
+[Previous page](11-remove-an-element-using-jquery.md) | [Next page](13-clone-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
+
 
 # --description--
 
@@ -115,3 +115,9 @@ assert(!code.match(/class.*animated/g));
   </div>
 </div>
 ```
+
+
+
+[Previous page](11-remove-an-element-using-jquery.md) | [Next page](13-clone-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

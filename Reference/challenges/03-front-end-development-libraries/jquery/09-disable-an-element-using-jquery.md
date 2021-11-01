@@ -1,10 +1,9 @@
----
-id: bad87fee1348bd9aed808826
-title: Disable an Element Using jQuery
-challengeType: 6
-forumTopicId: 17563
-dashedName: disable-an-element-using-jquery
----
+# <center>09 - Disable an Element Using jQuery</center>
+
+[Previous page](08-change-the-css-of-an-element-using-jquery.md) | [Next page](10-change-text-inside-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
@@ -118,3 +117,9 @@ assert(!code.match(/disabled[^<]*>/g));
   </div>
 </div>
 ```
+
+
+
+[Previous page](08-change-the-css-of-an-element-using-jquery.md) | [Next page](10-change-text-inside-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

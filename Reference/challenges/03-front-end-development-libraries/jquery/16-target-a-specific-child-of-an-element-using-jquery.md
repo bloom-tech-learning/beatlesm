@@ -1,12 +1,9 @@
----
-id: bad87fee1348bd9aed108826
-title: Target a Specific Child of an Element Using jQuery
-challengeType: 6
-forumTopicId: 18315
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-a-specific-child-of-an-element-using-jquery
----
+# <center>16 - Target a Specific Child of an Element Using jQuery</center>
+
+[Previous page](15-target-the-children-of-an-element-using-jquery.md) | [Next page](17-target-even-elements-using-jquery.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
@@ -141,3 +138,9 @@ assert(
   </div>
 </div>
 ```
+
+
+
+[Previous page](15-target-the-children-of-an-element-using-jquery.md) | [Next page](17-target-even-elements-using-jquery.md)
+
+#### [Home - React](./README.md)

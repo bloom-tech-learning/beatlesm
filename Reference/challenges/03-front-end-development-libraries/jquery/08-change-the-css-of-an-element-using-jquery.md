@@ -1,12 +1,9 @@
----
-id: bad87fee1348bd9aed908826
-title: Change the CSS of an Element Using jQuery
-challengeType: 6
-forumTopicId: 16776
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: change-the-css-of-an-element-using-jquery
----
+# <center>08 - Change the CSS of an Element Using jQuery</center>
+
+[Previous page](07-remove-classes-from-an-element-with-jquery.md) | [Next page](09-disable-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
@@ -116,3 +113,8 @@ assert(!code.match(/class.*animated/g));
   </div>
 </div>
 ```
+
+
+[Previous page](07-remove-classes-from-an-element-with-jquery.md) | [Next page](09-disable-an-element-using-jquery.md)
+
+#### [Home - React](./README.md)

@@ -1,12 +1,10 @@
----
-id: bad87fee1348bd9aecb08826
-title: Use jQuery to Modify the Entire Page
-challengeType: 6
-forumTopicId: 18361
-required:
-  - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: use-jquery-to-modify-the-entire-page
----
+# <center>18 - Use jQuery to Modify the Entire Page</center>
+
+[Previous page](17-target-even-elements-using-jquery.md) | [First page](01-learn-how-script-tags-and-document-ready-work.md)
+
+#### [Home - jQuery](./README.md)
+
+
 
 # --description--
 
@@ -115,3 +113,9 @@ assert($('body').hasClass('animated') && $('body').hasClass('hinge'));
   </div>
 </div>
 ```
+
+
+
+[Previous page](17-target-even-elements-using-jquery.md) | [First page](01-learn-how-script-tags-and-document-ready-work.md)
+
+#### [Home - jQuery](./README.md)
