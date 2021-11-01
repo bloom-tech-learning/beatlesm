@@ -1,10 +1,3 @@
-# <center>03 - Target Elements by Class Using jQuery</center>
-
-[Previous page](02-target-html-elements-with-selectors-using-jquery.md) | [Next page](04-target-elements-by-id-using-jquery.md)
-
-#### [Home - React](./README.md)
-
-
 ---
 id: bad87fee1348bd9aedc08826
 title: Target Elements by Class Using jQuery
@@ -14,6 +7,12 @@ required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: target-elements-by-class-using-jquery
 ---
+
+# <center>03 - Target Elements by Class Using jQuery</center>
+
+[Previous page](02-target-html-elements-with-selectors-using-jquery.md) | [Next page](04-target-elements-by-id-using-jquery.md)
+
+#### [Home - React](./README.md)
 
 # --description--
 

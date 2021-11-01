@@ -1,9 +1,3 @@
-# <center>05 - Delete Your jQuery Functions</center>
-
-[Previous page](04-target-elements-by-id-using-jquery.md) | [Next page](06-target-the-same-element-with-multiple-jquery-selectors.md)
-
-#### [Home - React](./README.md)
-
 ---
 id: bad87fee1348bd9aeda08726
 title: Delete Your jQuery Functions
@@ -13,6 +7,13 @@ required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
 dashedName: delete-your-jquery-functions
 ---
+
+# <center>05 - Delete Your jQuery Functions</center>
+
+[Previous page](04-target-elements-by-id-using-jquery.md) | [Next page](06-target-the-same-element-with-multiple-jquery-selectors.md)
+
+#### [Home - React](./README.md)
+
 
 # --description--
 
