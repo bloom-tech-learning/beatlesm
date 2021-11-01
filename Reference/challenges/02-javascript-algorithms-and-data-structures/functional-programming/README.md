@@ -1,18 +1,30 @@
-#   functional-programming
+# Redux
+
+-   [01 - Learn About Functional Programming](01-learn-about-functional-programming.md)
+-   [02 - ](02-understand-functional-programming-terminology.md)
+-   [03 - ](03-understand-the-hazards-of-using-imperative-code.md)
+-   [04 - ](04-avoid-mutations-and-side-effects-using-functional-programming.md)
+-   [05 - ](05-pass-arguments-to-avoid-external-dependence-in-a-function.md)
+-   [06 - ](06-refactor-global-variables-out-of-functions.md)
+-   [07 - ](07-use-the-map-method-to-extract-data-from-an-array.md)
+-   [08 - ](08-implement-map-on-a-prototype.md)
+-   [09 - ](09-use-the-filter-method-to-extract-data-from-an-array.md)
+-   [10 - ](10-implement-the-filter-method-on-a-prototype.md)
+-   [11 - ](11-return-part-of-an-array-using-the-slice-method.md)
+-   [12 - ](12-remove-elements-from-an-array-using-slice-instead-of-splice.md)
+-   [13 - ](13-combine-two-arrays-using-the-concat-method.md)
+-   [14 - ](14-add-elements-to-the-end-of-an-array-using-concat-instead-of-push.md)
+-   [15 - ](15-use-the-reduce-method-to-analyze-data.md)
+-   [16 - ](16-use-higher-order-functions-map-filter-or-reduce-to-solve-a-complex-problem.md)
+-   [17 - ](17-sort-an-array-alphabetically-using-the-sort-method.md)
+-   [18 - ](18-return-a-sorted-array-without-changing-the-original-array.md)
+-   [19 - ](19-split-a-string-into-an-array-using-the-split-method.md)
+-   [20 - ](20-combine-an-array-into-a-string-using-the-join-method.md)
+-   [21 - ](21-apply-functional-programming-to-convert-strings-to-url-slugs.md)
+-   [22 - ](22-use-the-every-method-to-check-that-every-element-in-an-array-meets-a-criteria.md)
+-   [23 - ](23-use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-criteria.md)
+-   [24 - ](24-introduction-to-currying-and-partial-application.md)
 
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...  
-
-- 🌱 I’m currently learning ... 
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-[Reference](https://github.com/beatlesm/beatlesm/tree/main/Reference/web)
-
-- [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
+[[Home - JavaScript](../README.md)  | [Next page](01-learn-about-functional-programming.md)  
+#### [Home](../../README.md) 
