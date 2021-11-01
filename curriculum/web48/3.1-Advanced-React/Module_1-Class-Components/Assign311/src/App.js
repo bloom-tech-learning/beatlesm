@@ -1,97 +1,67 @@
-import React from 'react'
+import React from 'react';
 
-import './components/Todo.css'
-import TodoForm from './components/TodoForm'
-import TodoList from './components/TodoList'
+import './App.css';
 
-const todoTasks = [
-    {
-      task: 'Organize Garage',
-      id: 1528817077286,
-      completed: false
-    },
-    {
-      task: 'Bake Cookies',
-      id: 1528817084358,
-      completed: true
-    }
-  ];
- 
+import TotalDisplay from './components/TotalDisplay';
+import CalcButton from './components/CalcButton';
 
-class App extends React.Component {
+function App() {
 
-  constructor () {
-    // you will need a place to store your state in this component.
-    // design `App` to be the parent component of your application.
-    // this component is going to take care of state, and any change handlers you need to work with your state
-    super ();
-    this.state = {
-      todoTasks: todoTasks
-    }
-  }
+  return (
+    <div className="App">
+      <nav className="navbar navbar-dark bg-dark">
+        <a className="navbar-brand" href="#"><img width="40px" src="./Lambda-Logo-Red.png"/> Lambda Reducer Challenge</a>
+      </nav>
 
-  handleClear = ()=> {
-    //1. Clear Completed
-    // -  handle button click
-    // -  setState of tasklist
-    // -  take this.state.todotasks and return only task completed = true
-    this.setState({
-      ...this.state,
-      todoTasks: this.state.todoTasks.filter(task=> !task.completed)
-    });
-  }
+      <div className = "container row mt-5">
+        <div className="col-md-12 d-flex justify-content-center">
+          <form name="Cal">
+            
+            <TotalDisplay value={0}/>
+            <div className="row details">
+              <span id="operation"><b>Operation:</b> X</span>
+              <span id="memory"><b>Memory:</b> 0</span>
+            </div>
+            
+            <div className="row">
+              <CalcButton value={"M+"}/>
+              <CalcButton value={"MR"}/>
+              <CalcButton value={"MC"}/>
+            </div>
 
-  handleAddTask = (task) => {
-    //2. Add Task
-    // - create a newTask
-    // - setState and retain old state
-    // - save all current todoTasks and add on newTask to the end
-    const newTask = {
-      task: task,
-      id: Date.now(),
-      completed: false
-    };
+            <div className="row">
+              <CalcButton value={1}/>
+              <CalcButton value={2}/>
+              <CalcButton value={3}/>
+            </div>
 
-    this.setState({
-      ...this.state,
-      todoTasks: [...this.state.todoTasks, newTask]
-    });
-  }
+            <div className="row">
+              <CalcButton value={4}/>
+              <CalcButton value={5}/>
+              <CalcButton value={6}/>
+            </div>
 
-  handleToggleTask = (task) => {
-    //3. Toggle Task
-    // - setState and retain old state
-    // - find the item that matches our clicked item id
-    // - replace that item with same but completed flipped
-    // - leave all other items alone
+            <div className="row">
+              <CalcButton value={7}/>
+              <CalcButton value={8}/>
+              <CalcButton value={9}/>
+            </div>
 
-    this.setState({
-      ...this.state,
-      todoTasks: this.state.todoTasks.map(todoTask => {
-        if (todoTask.id === task.id) {
-          return {
-            ...todoTask,
-            completed: !todoTask.completed //(grocery.purchased)? false: true
-          }
-        }
-        return todoTask;
-      })
-    });
-  }
-  
-  
-  render() {
-    return (
-      <div className = "App">
-        <div className="header"> 
-          <h2>Welcome to your Todo App!</h2>
-          <TodoForm handleAddTask={this.handleAddTask}/>
+            <div className="row">
+              <CalcButton value={"+"}/>
+              <CalcButton value={"*"}/>
+              <CalcButton value={"-"}/>
+            </div>
+
+            <div className="row ce_button">
+              <CalcButton value={"CE"}/>
+            </div>
+
+          </form>
         </div>
-        <TodoList handleToggleTask={this.handleToggleTask} todoTasks={this.state.todoTasks}/>
-        <button onClick={this.handleClear} className="clear-btn">Clear Complete</button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
