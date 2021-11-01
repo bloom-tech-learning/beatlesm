@@ -1,12 +1,11 @@
----
-id: 587d7dbe367417b2b2512bb8
-title: Use @if and @else to Add Logic To Your Styles
-challengeType: 0
-forumTopicId: 301463
-dashedName: use-if-and-else-to-add-logic-to-your-styles
----
+# <center>04 - Use @if and @else to Add Logic To Your Styles</center>
 
-# --description--
+[Previous page](02-nest-css-with-sass.md) | [Next page](05-use-for-to-create-a-sass-loop.md)
+
+#### [Home - Redux](./README.md)
+
+
+
 
 The `@if` directive in Sass is useful to test for a specific case - it works just like the `if` statement in JavaScript.
 
@@ -143,3 +142,8 @@ assert(code.match(/@else\s*?{\s*?border\s*?:\s*?none\s*?;\s*?}/gi));
 
 <div id="box"></div>
 ```
+
+
+[Previous page](02-nest-css-with-sass.md) | [Next page](05-use-for-to-create-a-sass-loop.md)
+
+#### [Home - Redux](./README.md)

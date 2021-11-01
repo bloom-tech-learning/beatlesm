@@ -1,12 +1,10 @@
----
-id: 587d7dbd367417b2b2512bb4
-title: Store Data with Sass Variables
-challengeType: 0
-forumTopicId: 301460
-dashedName: store-data-with-sass-variables
----
+# <center>01 - Store Data with Sass Variables</center>
 
-# --description--
+[Home - React](./README.md) | [Next page](02-nest-css-with-sass.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)  
+
+
 
 One feature of Sass that's different than CSS is it uses variables. They are declared and set to store data, similar to JavaScript.
 
@@ -119,3 +117,8 @@ assert($('h2').css('color') == 'rgb(255, 0, 0)');
   <p>Even more random text within a paragraph</p>
 </div>
 ```
+
+
+[Home - React](./README.md) | [Next page](02-nest-css-with-sass.md)
+
+#### [Home - front end](../../03-front-end-development-libraries/README.md)  

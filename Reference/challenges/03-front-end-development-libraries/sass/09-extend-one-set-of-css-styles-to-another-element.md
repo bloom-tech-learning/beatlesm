@@ -1,12 +1,10 @@
----
-id: 587d7fa5367417b2b2512bbd
-title: Extend One Set of CSS Styles to Another Element
-challengeType: 0
-forumTopicId: 301456
-dashedName: extend-one-set-of-css-styles-to-another-element
----
+# <center>09 - Extend One Set of CSS Styles to Another Element</center>
 
-# --description--
+[Previous page](08-split-your-styles-into-smaller-chunks-with-partials.md) | [First page](01-store-data-with-sass-variables.md)
+
+#### [Home - SASS](./README.md)
+
+
 
 Sass has a feature called `extend` that makes it easy to borrow the CSS rules from one element and build upon them in another.
 
@@ -114,3 +112,8 @@ assert(
   <p>This is a simple post. It has basic styling and can be extended for other uses.</p>
 </div>
 ```
+
+
+[Previous page](08-split-your-styles-into-smaller-chunks-with-partials.md) | [First page](01-store-data-with-sass-variables.md)
+
+#### [Home - SASS](./README.md)

@@ -1,12 +1,10 @@
----
-id: 587d7dbf367417b2b2512bbc
-title: Split Your Styles into Smaller Chunks with Partials
-challengeType: 0
-forumTopicId: 301459
-dashedName: split-your-styles-into-smaller-chunks-with-partials
----
+# <center>08 - Split Your Styles into Smaller Chunks with Partials</center>
 
-# --description--
+[Previous page](07-apply-a-style-until-a-condition-is-met-with-while.md) | [Next page](09-extend-one-set-of-css-styles-to-another-element.md)
+
+#### [Home - Redux](./README.md)
+
+
 
 <dfn>Partials</dfn> in Sass are separate files that hold segments of CSS code. These are imported and used in other Sass files. This is a great way to group similar code into a module to keep it organized.
 
@@ -45,3 +43,9 @@ assert(code.match(/@import\s+?('|")variables\1/gi));
 ```html
 @import 'variables'
 ```
+
+
+
+[Previous page](07-apply-a-style-until-a-condition-is-met-with-while.md) | [Next page](09-extend-one-set-of-css-styles-to-another-element.md)
+
+#### [Home - Redux](./README.md)
