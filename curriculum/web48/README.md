@@ -10,7 +10,7 @@
 
 -   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer)**
 
-- 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/README.md)**
+- 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/)**
 
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
 -   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
@@ -24,6 +24,6 @@
 -   **[https://github.com/beatlesm/web-module-project-testing-web-apps](https://github.com/beatlesm/web-module-project-testing-web-apps)**
 
 
-[Reference](./3.2-Advanced-State-Management)
+[Dir](./)
 
 - [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/web)
