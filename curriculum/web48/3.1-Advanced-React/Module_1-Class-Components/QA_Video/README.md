@@ -1,32 +1,27 @@
-# Module 1 - The Reducer Pattern
+# Module 1 - Class Components
 
-- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
-
-## - Module Materials:
-
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-reducer)
--   [GP Slides:](https://docs.google.com/presentation/d/1XhCZWfyGUbxRAuhHvf38baQBcn4sl5jxZjSjKCSPFqw/edit?usp=sharing) 
--   [Thursday’s Module Project Review:](https://www.loom.com/share/94ff7b7e39c349d4875dfd607e10e0e3)
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/bMWoQfNzn-U) | [Josh Jacobson](https://youtu.be/1Jflvc3Dl_Q) | [Warren C. Longmire](https://youtu.be/E9M6-cRVDt4) | [Brian Kirkby](https://youtu.be/qfarRzchOE4)
-##  Key Terminology:
--   switch - [a javascript keyword used to streamline complex if else logic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
--   action - [a single piece of data manipulation in a reducer pattern](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   reducer - [a pure, predictible immutable function that executes action on state data](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   immutiblity - [an object or variable that can not be modified (and thus should only be copied)](https://www.youtube.com/watch?v=5qQQ3yzbKp8)
--   pure functions - [a pure, predictible immutable function that executes action on state data](https://www.youtube.com/watch?v=dZ41D6LDSBg)
-##  Key Concepts:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
--   Application State - [Data that is used across all of our application's components.](https://www.youtube.com/watch?v=7ilYJAG-_Ug)
--   Component State - [Data that is used within the context of a single component](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
--   The Reducer Pattern - [A design pattern for managing and modularizing out application state.](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   useReducer Hook - [A hook used to connect reducers and state to a React component](https://www.geeksforgeeks.org/reactjs-usereducer-hook/)
--   What does dispatch do? - [Awesome article by our own @Dustin Myers on the inner workings of dispatch](https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma)
-## Stretch Tutorial:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
+Module Materials:
+Module Project: https://github.com/LambdaSchool/web-module-project-class-components GP Slides: https://docs.google.com/presentation/d/1wPr1rd9aLPLoEh1k8fFJC1yghduKFqxemzQxQhGpanM/edit?usp=sharing Alternative GP Video: Dustin Myers | Josh Jacobson | Warren C. Longmire | Brian Kirkby
+Key Terminology:
+:memo: class component - A type of component that takes the form of a class extended from React.Component class.
+:memo: React.Component class - A react class that gives allows for the creation of class components and all their special features.
+:memo: class constructor - A class method that is called when an instance is first created of from a class.
+:memo: the render function - A pre-defined function that allows for a class component to render DOM objects.
+:memo: the this property - A reference to the current instance of a class. In class components, the place where props, state and internally defined event methods are accessed.
+:memo: filter - An array method that take a predicate function as an argument returns every item that where that function return true.
+:memo: super - A built in function that give a child class access to a parent class' methods and properties.
+Key Concepts:
+:memo: The History of React Components : React components have changed alot through the years.
+:memo: Prop Drilling - The process of taking a value and passing it into a nested component for use downstream.
+:memo: Passing State through Data Prop Drilling - The process of sharing application state to subcomponents using prop drilling.
+:memo: Updating State through Functional Prop Drilling - The process of sharing application state to subcomponents using prop drilling.
+:memo: Application State Vs Component State - Application state indicates the state shared by a number of components. Component State indicates state local only to a components internal parts.
+:memo: Form Component Setup - The process of setting up (component) state, controlled inputs, onChange and onSubmit events to allow component form submission.
+@channel
 
 ## QA Video:
-Today we walked through building a todo app using reducers and some general bug fixes.
+Hey all! Today we did a brief review of array methods, classes in (and out) of React, and some good old fashion debugging.
 
--   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
+-   [Youtube - Web 48 - Q&A Class Components With Warren C. Longmire](https://lambdaschool.zoom.us/rec/play/Y3WNsPH8zlLr7n3N0lJoU887F6dux2sZKMGcyz_WSYn6tWnmpFiG3qNv2gmNsNE7V5GfD1Nr7LfMgPbk.BnyCSeNumVJMOV8o?continueMode=true&_x_zm_rtaid=yuY0tWgKQVKBiXm-A_2H8A.1635258407149.7a4195056996b57140d3a7cd4cad2f76&_x_zm_rhtaid=266)
 
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+-   [Codesandbox - Web 48 - Q&A Class Components With Warren C. Longmire ](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js) 
