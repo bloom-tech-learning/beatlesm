@@ -1,5 +1,3 @@
-[back to home](https://github.com/beatlesm/)
-
 ## [Module 2 - Redux](https://github.com/beatlesm/web/tree/main/3.2/Module322)
 
 #### [Assignment 3.2.2](./Assign322/README.md):

@@ -1,6 +1,6 @@
 # Module 2 - Redux QA Video
 
-- [youtube - guided project 3.2 2]()
+- [youtube - guided project 3.2 2](https://youtu.be/HRkQjFVjNH4)
 
 Hope you all enjoyed today’s guided Lesson!
 A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
@@ -30,6 +30,3 @@ Here is a review of today’s material.
 
 -   [Redux Deep Dive](https://daveceddia.com/redux-tutorial/)
 
--   [Module 1 - The Reducer Pattern QA Video]()
-
--   [Code:]()
