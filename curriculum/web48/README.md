@@ -2,6 +2,7 @@
 - 🌱 I’m currently learning ... **[Web 3.2](./3.2-Advanced-State-Management/README.md)**
 
 -   **[https://github.com/beatlesm/web-guided-project-reducer](https://github.com/beatlesm/web-guided-project-reducer)**
+-   **[https://github.com/beatlesm/web-guided-project-redux](https://github.com/beatlesm/web-guided-project-redux)**
 
 -   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
 -   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
@@ -9,6 +10,7 @@
 -   **[https://github.com/beatlesm/web-module-project-context](https://github.com/beatlesm/web-module-project-context)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer)**
+-   **[https://github.com/LambdaSchool/web-guided-project-redux](https://github.com/LambdaSchool/web-guided-project-redux)**
 
 - 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/)**
 
