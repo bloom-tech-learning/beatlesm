@@ -10,6 +10,8 @@
 
 -   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
 
+#### [QA Video](./QA_Video/README.md)
+
 
 ### [Objective 1 - define stateful logic](./Objects/Object_1.md)
 
