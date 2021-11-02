@@ -1,32 +1,37 @@
-# Module 1 - The Reducer Pattern
+# Module 4 - Testing Web Applications
 
-- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
+- [youtube - guided project 3.1.4](https://lambdaschool.zoom.us/rec/share/0UEa6Qpyzu4NJ-eGWTFhcUF7saGssOClX286afRQdd_Ou8KFolAOa5E1c8smbfA.IByD3zPpI-8s5xBp)
 
-## - Module Materials:
+### Here is a review of today’s material.
 
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-reducer)
--   [GP Slides:](https://docs.google.com/presentation/d/1XhCZWfyGUbxRAuhHvf38baQBcn4sl5jxZjSjKCSPFqw/edit?usp=sharing) 
--   [Thursday’s Module Project Review:](https://www.loom.com/share/94ff7b7e39c349d4875dfd607e10e0e3)
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/bMWoQfNzn-U) | [Josh Jacobson](https://youtu.be/1Jflvc3Dl_Q) | [Warren C. Longmire](https://youtu.be/E9M6-cRVDt4) | [Brian Kirkby](https://youtu.be/qfarRzchOE4)
-##  Key Terminology:
--   switch - [a javascript keyword used to streamline complex if else logic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
--   action - [a single piece of data manipulation in a reducer pattern](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   reducer - [a pure, predictible immutable function that executes action on state data](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   immutiblity - [an object or variable that can not be modified (and thus should only be copied)](https://www.youtube.com/watch?v=5qQQ3yzbKp8)
--   pure functions - [a pure, predictible immutable function that executes action on state data](https://www.youtube.com/watch?v=dZ41D6LDSBg)
-##  Key Concepts:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
--   Application State - [Data that is used across all of our application's components.](https://www.youtube.com/watch?v=7ilYJAG-_Ug)
--   Component State - [Data that is used within the context of a single component](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
--   The Reducer Pattern - [A design pattern for managing and modularizing out application state.](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   useReducer Hook - [A hook used to connect reducers and state to a React component](https://www.geeksforgeeks.org/reactjs-usereducer-hook/)
--   What does dispatch do? - [Awesome article by our own @Dustin Myers on the inner workings of dispatch](https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma)
-## Stretch Tutorial:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
+##    Module Materials:
+-   [Module Project:](https://github.com/LambdaSchool/web-module-project-testing-web-apps) 
+-   [GP Slides:](https://docs.google.com/presentation/d/1AZxMHtFWWTOfANR9P-bFFe1TOxq5EH3LRtsAhixYwr4/edit?usp=sharing) 
+-   [Yesterday’s Module Project Review:](https://www.loom.com/share/47024d75655d46eb8736acd6089bd8f4) PW: p9E3mn Alternative Lecture Video: Dustin Myers | Josh Jacobson | Warren C. Longmire | Brian Kirkby
 
-## QA Video:
-Today we walked through building a todo app using reducers and some general bug fixes.
+##   Key Terminology:
+-   RTL querys - [React Testing Library queries allow uses to select elements from the DOM for testing.](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+-   ARIA roles - [DOM elements that have role attributes automatically assigned to them.](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
+-   expect - [expect is a jest method used to test the value of an element](https://jestjs.io/docs/en/expect.html)
+-   userEvent / fireEvent - [userEvent is a react testing library method used to simulate user input. userEvent is a more advanced and simplified version of fireevent.](https://testing-library.com/docs/ecosystem-user-event/)
+-   regular expressions - [A regular expression (shortened as regex or regexp) is a sequence of characters that define a search pattern](https://www.youtube.com/watch?v=sXQxhojSdZM)
+-   async / await - [A javascript idea that allows for a more streamline processing of promises.](https://javascript.info/async-await)
+##  Concepts:
+-   end-to-end tests - [a testing method that involves testing an application’s workflow from beginning to end. This method basically aims to replicate real user scenarios.](https://www.browserstack.com/guide/end-to-end-testing)
+-   integration tests - [A method of software testing where individual components or units of code are tested to validate user interactions.](https://www.testingxperts.com/blog/what-is-integration-testing#What%20is%20Integration%20Testing?)
+-   unit tests - [A level of software testing where individual units / components of a software are tested. The purpose is to validate that each unit of the software performs as designed.](https://softwaretestingfundamentals.com/unit-testing/)
+-   react testing library - [a light-weight solution for testing React components.](https://testing-library.com/docs/react-testing-library/intro/)
+-   test driven development - [A programming methodology that encourages early testing and later ui development](https://www.youtube.com/watch?v=y8TcPr73Bwo)
+## Reference Materials:
+-   [React Testing Library Query](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+-   [Jest Expects](https://jestjs.io/docs/expect)
+-   [Userevent](https://testing-library.com/docs/ecosystem-user-event/)
+-   [Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
--   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
+##  Today’s Office Hours:
 
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+-	Today we covered async/await, the Promise Object, and general test debugging tips.
+
+	-	[Youtube - Today’s Office Hours](https://lambdaschool.zoom.us/rec/share/0UEa6Qpyzu4NJ-eGWTFhcUF7saGssOClX286afRQdd_Ou8KFolAOa5E1c8smbfA.IByD3zPpI-8s5xBp)
+	
+-	Code: [here](https://codesandbox.io/s/exciting-poitras-l60yt):
