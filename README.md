@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🌱 I’m currently learning ... **[Web 3.2](./curriculum/web48/3.2-Advanced-State-Management/README.md)**
+- 🌱 I’m currently learning ... **[Web 3.2](./curriculum/web48/3.2-Advanced-State-Management/)**
 
 -   **[https://github.com/beatlesm/web-guided-project-reducer](https://github.com/beatlesm/web-guided-project-reducer)**
 -   **[https://github.com/beatlesm/web-guided-project-reducer](https://github.com/beatlesm/web-guided-project-reducer)**
