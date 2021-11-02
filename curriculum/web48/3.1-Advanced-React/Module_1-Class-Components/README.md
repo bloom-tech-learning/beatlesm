@@ -14,8 +14,9 @@
 
 -   [Codesandbox - Web 48 - Q&A Class Components With Warren C. Longmire ](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js) 
 
-### [Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM](./Objects/Object_1.md)
+#### [QA Video](./QA_Video/README.md)
 
+### [Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM](./Objects/Object_1.md)
 
 
 ### [Objective 2 - Share Data Between Components Using State and Props](./Objects/Object_2.md)
