@@ -35,7 +35,13 @@ import "./styles.css";
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  // let state = initialState;
+
   const handleAddClick = ()=> {
+    // console.log('click');
+    // state = reducer(state, addAction(2))
+    // console.log("current state: ", state);
+    // return state;
     dispatch(addAction(2));
   }
 
