@@ -1,6 +1,6 @@
-[back to home](https://github.com/beatlesm/)
+# Module 1 - The Reducer Pattern
 
-## Module 1 - The Reducer Pattern
+[back to home](../../README.md)
 
 #### [Assignment 3.2.1](./Assign321/README.md):
 
