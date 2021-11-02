@@ -190,3 +190,9 @@
 [submodule "curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/web-module-project-context"]
 	path = curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/web-module-project-context
 	url = https://github.com/beatlesm/web-module-project-context.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/web-guided-project-reducer"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/web-guided-project-reducer
+	url = https://github.com/beatlesm/web-guided-project-reducer.git
+[submodule "curriculum/web48/3.1-Advanced-React/Module_4-Testing-Web-Applications/web-guided-project-testing-web-apps"]
+	path = curriculum/web48/3.1-Advanced-React/Module_4-Testing-Web-Applications/web-guided-project-testing-web-apps
+	url = https://github.com/beatlesm/web-guided-project-testing-web-apps.git
