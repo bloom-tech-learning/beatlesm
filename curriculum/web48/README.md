@@ -1,7 +1,3 @@
-### Hi there 👋
-
-
-Here are some ideas to get you started:
 
 - 🌱 I’m currently learning ... **[Web 3.2](./curriculum/web48/3.2-Advanced-State-Management/README.md)**
 
