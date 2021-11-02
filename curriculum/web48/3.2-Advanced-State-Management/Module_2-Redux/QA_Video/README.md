@@ -1,32 +1,32 @@
-# Module 1 - The Reducer Pattern
+# Module 2 - Redux QA Video
 
-- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
+- [youtube - guided project 3.2 2](https://youtu.be/HRkQjFVjNH4)
 
-## - Module Materials:
+Hope you all enjoyed today’s guided Lesson!
+A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
+Don’t forget to complete the days Check for Understanding and Pulse Checks!
+Here is a review of today’s material.
 
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-reducer)
--   [GP Slides:](https://docs.google.com/presentation/d/1XhCZWfyGUbxRAuhHvf38baQBcn4sl5jxZjSjKCSPFqw/edit?usp=sharing) 
--   [Thursday’s Module Project Review:](https://www.loom.com/share/94ff7b7e39c349d4875dfd607e10e0e3)
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/bMWoQfNzn-U) | [Josh Jacobson](https://youtu.be/1Jflvc3Dl_Q) | [Warren C. Longmire](https://youtu.be/E9M6-cRVDt4) | [Brian Kirkby](https://youtu.be/qfarRzchOE4)
+##  Module Materials:
+
+-   [Module Project:](https://github.com/LambdaSchool/web-module-project-redux)
+-   [GP Slides:](https://docs.google.com/presentation/d/1d1obD6mw8ZmUuvs5zYOvZvlhS5Nlo_cvI9oLbyx0Mow/edit?usp=sharing)
+-   [Monday’s Module Project Review:](https://www.loom.com/share/d77ba3d65dc9456392a808c34bc323db) PW: FIlOro
+-   [Alternative GP Video:] [Dustin Myers](https://youtu.be/VhI_eHHLlDU) | [Josh Jacobson](https://youtu.be/KoqY3I2EO8k) | [Warren C. Longmire](https://youtu.be/cOimnorDca8) | [Brian Kirkby](https://youtu.be/x_KNjGf2TYk)
+
 ##  Key Terminology:
--   switch - [a javascript keyword used to streamline complex if else logic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
--   action - [a single piece of data manipulation in a reducer pattern](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   reducer - [a pure, predictible immutable function that executes action on state data](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   immutiblity - [an object or variable that can not be modified (and thus should only be copied)](https://www.youtube.com/watch?v=5qQQ3yzbKp8)
--   pure functions - [a pure, predictible immutable function that executes action on state data](https://www.youtube.com/watch?v=dZ41D6LDSBg)
+
+-   [default arguments] - [A means to set what value a javascript function argument should be when it is not defined.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+-   [function currying] - [Functions that return other functions](https://www.youtube.com/watch?v=oU3LzOO0OGA)
+-   [the connect function] - [A react-redux method that allows for components to be connect to state and dispatch through props.](https://react-redux.js.org/api/connect)
+-   [combine reducers] - [A redux method that allows several different reducers used in one application](https://redux.js.org/api/combinereducers/)
+-   [mapStateToProps] - [A programmer generated function that gets the application state and connects it to a components props](https://react-redux.js.org/7.1/using-react-redux/connect-mapstate#mapstatetoprops-will-not-run-if-the-store-state-is-the-same)
+
 ##  Key Concepts:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
--   Application State - [Data that is used across all of our application's components.](https://www.youtube.com/watch?v=7ilYJAG-_Ug)
--   Component State - [Data that is used within the context of a single component](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
--   The Reducer Pattern - [A design pattern for managing and modularizing out application state.](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   useReducer Hook - [A hook used to connect reducers and state to a React component](https://www.geeksforgeeks.org/reactjs-usereducer-hook/)
--   What does dispatch do? - [Awesome article by our own @Dustin Myers on the inner workings of dispatch](https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma)
-## Stretch Tutorial:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
 
-## QA Video:
-Today we walked through building a todo app using reducers and some general bug fixes.
+-   [Redux] - [A framework used to create and mantain a reducer pattern](https://react-redux.js.org/introduction/why-use-react-redux)
 
--   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
+##  Stretch Tutorial:
 
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+-   [Redux Deep Dive](https://daveceddia.com/redux-tutorial/)
+
