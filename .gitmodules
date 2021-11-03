@@ -199,3 +199,6 @@
 [submodule "curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/web-guided-project-redux"]
 	path = curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/web-guided-project-redux
 	url = https://github.com/beatlesm/web-guided-project-redux.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_3-Async-Redux/web-guided-project-async-redux"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_3-Async-Redux/web-guided-project-async-redux
+	url = https://github.com/beatlesm/web-guided-project-async-redux.git
