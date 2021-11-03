@@ -196,3 +196,6 @@
 [submodule "curriculum/web48/3.1-Advanced-React/Module_4-Testing-Web-Applications/web-guided-project-testing-web-apps"]
 	path = curriculum/web48/3.1-Advanced-React/Module_4-Testing-Web-Applications/web-guided-project-testing-web-apps
 	url = https://github.com/beatlesm/web-guided-project-testing-web-apps.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/web-guided-project-redux"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/web-guided-project-redux
+	url = https://github.com/beatlesm/web-guided-project-redux.git
