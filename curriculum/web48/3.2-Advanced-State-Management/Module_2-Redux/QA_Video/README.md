@@ -30,3 +30,8 @@ Here is a review of today’s material.
 
 -   [Redux Deep Dive](https://daveceddia.com/redux-tutorial/)
 
+## QA Video:
+Today we walked through building a todo app using reducers and some general bug fixes.
+
+-   [Module 1 - The Reducer Pattern QA Video](https://www.youtube.com/watch?v=shr7l58Weg0)
+
