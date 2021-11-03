@@ -8,6 +8,8 @@
    
 #### [Guided project 3.2.3](./Guided323):
 
+#### [QA Video](./QA_Video/README.md)
+
 
 ### [Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications](./Objects/Object_1.md)
 
@@ -15,4 +17,4 @@
 
 ### [Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's](./Objects/Object_3.md)
 
-### [Check For Understanding](./Objects/Understanding.md)
+#### [Check For Understanding](./Objects/Understanding.md)

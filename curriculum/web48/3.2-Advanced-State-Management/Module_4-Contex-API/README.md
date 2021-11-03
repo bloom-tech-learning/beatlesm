@@ -8,6 +8,7 @@
    
 #### [Guided project 3.2.4](./Guided324):
 
+#### [QA Video](./QA_Video/README.md)
 
 ### [Objective 1 - Describe What the Context API is and the Problem it Solves](./Objects/Object_1.md)
 
@@ -15,4 +16,4 @@
 
 ### [Objective 3 - consume data from a context object in nested components](./Objects/Object_3.md)
 
-### [Check For Understanding](./Objects/Understanding.md)
+#### [Check For Understanding](./Objects/Understanding.md)
