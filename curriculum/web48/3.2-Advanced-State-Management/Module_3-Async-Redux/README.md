@@ -1,5 +1,3 @@
-[back to home](https://github.com/beatlesm/)
-
 ## [Module 3 - Async Redux](https://github.com/beatlesm/web/tree/main/3.3/Module331)
 
 #### [Assignment 3.2.3](./Assign323/README.md):
@@ -9,7 +7,6 @@
 #### [Guided project 3.2.3](./Guided323):
 
 #### [QA Video](./QA_Video/README.md)
-
 
 ### [Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications](./Objects/Object_1.md)
 

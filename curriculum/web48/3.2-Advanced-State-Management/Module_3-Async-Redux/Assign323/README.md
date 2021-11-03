@@ -1,60 +1,50 @@
-# Class Based Components - React Todo
+# Module Project: Async Redux - React Redux App
 
-We're going to practice building a stateful class component with this project. Even though hooks are gaining popularity among react developers, class components are going to be around for a long time. It's imperative that you get use to class components, and feel comfortable working with class components since you'll most likely need to work with them if you are hired to work on a React app.
-
-
-## Objectives
-- Build class components from scratch
-- Defining application state
-- Defining component state
-- Connecting state changes to components
+This project allows you to practice the concepts and techniques learned in this module and apply them in a concrete project. This module explored asyncronous action creators in Redux. In your project you will demonstrate proficiency of these subjects and principles by building an app from scratch that consumes and API of your choosing, and displays data fetched from that API.
 
 ## Introduction
-In this project you will build an application that allows for todos to be added, toggle and checked off. Please use ALL CLASS BASED COMPONENTS when creating this application and use the Guided project as a model. This application should:
-- Use the following gif as base for building DOM:
 
-![Todo App MVP](./todo.gif)
+This is the chance to let your skills shine! You have learned _sooo_ much the last month, and now you get to put all of your hard-earned skills to work. Choose an open api ([this list](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/) has a lot of great ones). Protip - don't take too long choosing an API. Pick one that looks interesting, and get building.
 
-- Hold all todos in state within the App.js component. That todos state slice should look like the following:
-```js
-[
-  {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-  }
-];
-```
-- Allow for a todo to be toggled when clicking on an item.
-- Allow for a todo be be added when submitting the todo form component.
-- Allow for completed todos to be cleared when clicking the clear completed button.
+Once you have chosen an API to consume, build an app that makes sense for the data you will be retrieving. Have fun with this. You get to be the creative mind. You get to make all the decisions here. I'm excited to see what you build!
 
+**Read these instructions carefully. Understand exactly what is expected _before_ starting this project.**
 
-***Make sure to complete your tasks one at a time and complete test each task before proceding forward.***
+### Commits
+
+Commit your code regularly and meaningfully. This helps both you and your team lead in case you ever need to return to old code for any number of reasons.
+
+### Description
+
+In this project you'll choose an api to consume. You will build an application from scratch that uses your chosen API and displays the data you are getting from it.
 
 ## Instructions
-### Task 1: Project Set Up
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository in your terminal
-* [ ] cd into the project base directory `cd web-module-project-lifecycle`
-* [ ] Download project dependencies by running `npm install`
-* [ ] Start up the app using `npm start`
 
-### Task 2: Project Requirements
-- **Don't focus on styling yet**. We want you to worry about function over form today.
-- **Build all components as class components.**
-- Your todo list should display a list of todos, an input field, a submit button, and a clear all button.
-- Be sure to use the given files for building out these components.
-- `<App />` will hold all the data needed for this project. It will also be the container for your Todo Components.
-  - All of your application data will be stored here on `<App />`.
-  - All of your `handler` functions should live here on `<App />`.
-- `<TodoList />` receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array.
-- `<Todo />` is a component that takes in the `todo` data and displays the task to the screen.
-- `<TodoForm>` will hold your input field and your `Add Todo` and `Clear Completed` buttons.
-  - Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
-  - Once a todo is submitted, the Todo List should re-render and show the added todo.
+### Task 1: Project Set Up
+
+- [ ] Create a forked copy of this project.
+- [ ] Add your team lead as collaborator on Github.
+- [ ] Clone your OWN version of the repository in your terminal.
+- [ ] CD into the project base directory `cd React-Redux-App`.
+- [ ] Run `npx create-react-app app --use-npm` to make a CRA app.
+- [ ] CD into the react app `cd app`.
+- [ ] Start up the app using `npm start`.
+- [ ] Install `axios`, `redux-thunk` and `redux-logger`
+- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [ ] Push commits: git push origin `<firstName-lastName>`.
+
+### Task 2: Minimum Viable Product
+
+- [ ] Build a React Redux app
+- [ ] Fetch data inside an async action creator from an API of your choosing
+- [ ] Add the data from the API to the Redux store
+- [ ] Display the data from the store in a component
+- [ ] _Some_ styling must be applied. It can be basic, but the app must not only use browser default stylings
+
+### Task 3: Stretch Problems
+
+Take the app as far as you can go! Styling, redux hooks, another API, an input to fetch data dynamically, etc. Work on it, improve it until the end of the day. If you find yourself finishing with time left to spare, jump on with your TL or fellow student to ask them what feature they think you should build next. Good luck!
+
+## Submission Format
+* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
