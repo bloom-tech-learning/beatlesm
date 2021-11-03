@@ -6,6 +6,8 @@
    
 #### [Guided project 3.2.2](./Guided322):
 
+#### [QA Video](./QA_Video/README.md)
+
 
 ### [Objective 1 - Explain What Redux is and the Problem it Solves](./Objects/Object_1.md)
 
@@ -17,4 +19,4 @@
 
 ### [Objective 5 - Write Reducers to Respond to Actions and Update State](./Objects/Object_5.md)
 
-### [Check For Understanding](./Objects/Understanding.md)
+#### [Check For Understanding](./Objects/Understanding.md)
