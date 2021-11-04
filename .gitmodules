@@ -202,3 +202,6 @@
 [submodule "curriculum/web48/3.2-Advanced-State-Management/Module_3-Async-Redux/web-guided-project-async-redux"]
 	path = curriculum/web48/3.2-Advanced-State-Management/Module_3-Async-Redux/web-guided-project-async-redux
 	url = https://github.com/beatlesm/web-guided-project-async-redux.git
+[submodule "curriculum/web48/2.4-WEB-Unit-2-Build/Unit1Marketing"]
+	path = curriculum/web48/2.4-WEB-Unit-2-Build/Unit1Marketing
+	url = https://github.com/beatlesm/Unit1Marketing.git
