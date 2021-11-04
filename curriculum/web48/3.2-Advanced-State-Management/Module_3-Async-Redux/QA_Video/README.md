@@ -27,8 +27,6 @@ Here is a review of today’s material.
 
 ## QA Video:
 
-
-
--   [Module 3 - Async Redux QA Video](https://www.youtube.com/watch?v=shr7l58Weg0)
+-   [Module 3 - Async Redux QA Video](https://youtu.be/v_PHTVpZmCM)
 
 - [code]()
