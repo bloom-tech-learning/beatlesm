@@ -37,4 +37,4 @@ Choose Home Page
 
 ## Resources
  
- [Sprint Challenge Study Guide]()
+ [build Week Guide](./Unit2_build.md)
