@@ -12,7 +12,10 @@ import AddMovieForm from './components/AddMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
 
 const App = props => {
-  const displayFavorites = true;
+
+  // console.log('props in APP: ', props);
+
+  const {displayFavorites }= props;
 
   return (
     <div>
@@ -48,4 +51,12 @@ const App = props => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {  
+  return({
+    displayFavorites: state.favoritesReducer.displayFavorites
+    // movies: state.movies,
+    // appTitle: 'IMDB Movie Database'
+  });
+}
+
+export default connect(mapStateToProps)(App);
