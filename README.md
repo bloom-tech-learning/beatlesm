@@ -5,6 +5,7 @@
 -   **[https://github.com/beatlesm/web-guided-project-reducer](https://github.com/beatlesm/web-guided-project-reducer)**
 -   **[https://github.com/beatlesm/web-guided-project-redux](https://github.com/beatlesm/web-guided-project-redux)**
 -   **[https://github.com/beatlesm/web-guided-project-async-redux](https://github.com/beatlesm/web-guided-project-async-redux)**
+-   **[https://github.com/beatlesm/web-guided-project-async-redux](https://github.com/beatlesm/web-guided-project-async-redux)**
 
 -   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
 -   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
@@ -13,7 +14,8 @@
 
 -   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer)**
 -   **[https://github.com/LambdaSchool/web-guided-project-redux](https://github.com/LambdaSchool/web-guided-project-redux)**
--   **[https://github.com/LambdaSchool/web-guided-project-redux](https://github.com/LambdaSchool/web-guided-project-redux)**
+-   **[https://github.com/LambdaSchool/web-guided-project-async-redux](https://github.com/LambdaSchool/web-guided-project-async-redux)**
+-   **[https://github.com/LambdaSchool/web-guided-project-async-redux](https://github.com/LambdaSchool/web-guided-project-async-redux)**
 
 - ⚡ Fun fact: ...
 
