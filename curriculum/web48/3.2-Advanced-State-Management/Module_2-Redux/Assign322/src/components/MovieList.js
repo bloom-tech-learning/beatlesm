@@ -1,10 +1,16 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+
+import { addMovie } from './../actions/movieActions';
 import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 
 const MovieList = (props)=> {
-    const movies = [];
+
+    // console.log('props: ', props);
+
+    const {movies} = props;
 
     return (
         <div className="col">
@@ -31,4 +37,13 @@ const MovieList = (props)=> {
     );
 }
 
-export default MovieList;
+const mapStateToProps = (state) => {
+    console.log('state in MovieList: ', state);
+    return {
+        movies: state.movieReducer.movies,
+        // movies: state.movies,
+        appTitle: 'IMDB Movie Database'
+    }
+}
+
+export default connect(mapStateToProps)(MovieList);
