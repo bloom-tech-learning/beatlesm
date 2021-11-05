@@ -10,6 +10,7 @@
 -   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
 -   **[https://github.com/beatlesm/web-module-project-async-redux](https://github.com/beatlesm/web-module-project-async-redux)**
 -   **[https://github.com/beatlesm/web-module-project-context](https://github.com/beatlesm/web-module-project-context)**
+-   **[https://github.com/beatlesm/web-sprint-challenge-advanced-state-management](https://github.com/beatlesm/web-sprint-challenge-advanced-state-management)**
 
 -   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer)**
 -   **[https://github.com/LambdaSchool/web-guided-project-redux](https://github.com/LambdaSchool/web-guided-project-redux)**
