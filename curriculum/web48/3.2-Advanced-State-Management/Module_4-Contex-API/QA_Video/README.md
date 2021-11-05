@@ -1,6 +1,6 @@
-# Module 2 - Redux QA Video
+# Module 4 - Context API QA Video
 
-- [youtube - guided project 3.2 2](https://youtu.be/HRkQjFVjNH4)
+- [youtube - guided project 3.2 4]()
 
 Hope you all enjoyed today’s guided Lesson!
 A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
@@ -9,28 +9,26 @@ Here is a review of today’s material.
 
 ##  Module Materials:
 
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-redux)
--   [GP Slides:](https://docs.google.com/presentation/d/1d1obD6mw8ZmUuvs5zYOvZvlhS5Nlo_cvI9oLbyx0Mow/edit?usp=sharing)
--   [Monday’s Module Project Review:](https://www.loom.com/share/d77ba3d65dc9456392a808c34bc323db) PW: FIlOro
--   [Alternative GP Video:] [Dustin Myers](https://youtu.be/VhI_eHHLlDU) | [Josh Jacobson](https://youtu.be/KoqY3I2EO8k) | [Warren C. Longmire](https://youtu.be/cOimnorDca8) | [Brian Kirkby](https://youtu.be/x_KNjGf2TYk)
+-   [Module Project:](https://github.com/LambdaSchool/web-module-project-context)
+[GP Slides:](https://docs.google.com/presentation/d/1f72_l9lp0MPSr17oIO8II35zJULQwBzYtz42g6qRCws/edit?usp=sharing)
+[Yesterday’s Module Project Review:](https://www.loom.com/share/e27acd4a457b4f5199c7a56d73c3ac91)
+[Alternative GP Video:] [Dustin Myers](https://youtu.be/fZGKUeccbKI) | [Josh Jacobson](https://youtu.be/ExgSVmW3pnw) | [Warren C. Longmire](https://youtu.be/a00j4OrWcVo) | [Brian Kirkby](https://youtu.be/RAwdfpd5GNE)
 
 ##  Key Terminology:
 
--   [default arguments] - [A means to set what value a javascript function argument should be when it is not defined.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
--   [function currying] - [Functions that return other functions](https://www.youtube.com/watch?v=oU3LzOO0OGA)
--   [the connect function] - [A react-redux method that allows for components to be connect to state and dispatch through props.](https://react-redux.js.org/api/connect)
--   [combine reducers] - [A redux method that allows several different reducers used in one application](https://redux.js.org/api/combinereducers/)
--   [mapStateToProps] - [A programmer generated function that gets the application state and connects it to a components props](https://react-redux.js.org/7.1/using-react-redux/connect-mapstate#mapstatetoprops-will-not-run-if-the-store-state-is-the-same)
+-  [context api] - [A React Library that allows easy sharing of data across a component hierarchy](https://reactjs.org/docs/context.html)
+-  [the provider pattern] - [A design pattern where in all items contained within an element have access to an elements functionality.](https://blog.flexiple.com/provider-pattern-with-react-context-api/)
 
 ##  Key Concepts:
 
--   [Redux] - [A framework used to create and mantain a reducer pattern](https://react-redux.js.org/introduction/why-use-react-redux)
+-   [application state] - [The globally accessible data needed with a wide range of components.](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
 
 ##  Stretch Tutorial:
 
--   [Redux Deep Dive](https://daveceddia.com/redux-tutorial/)
+-   [Context Api In Classes and Hooks](https://www.taniarascia.com/using-context-api-in-react/)
 
 ## QA Video:
+
 Today we walked through building a todo app using reducers and some general bug fixes.
 
 -   [Module 2 - Redux QA Video](https://www.youtube.com/watch?v=shr7l58Weg0)
