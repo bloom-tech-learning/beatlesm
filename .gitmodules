@@ -205,3 +205,6 @@
 [submodule "curriculum/web48/2.4-WEB-Unit-2-Build/Unit1Marketing"]
 	path = curriculum/web48/2.4-WEB-Unit-2-Build/Unit1Marketing
 	url = https://github.com/beatlesm/Unit1Marketing.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Sprit/web-sprint-challenge-advanced-state-management"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Sprit/web-sprint-challenge-advanced-state-management
+	url = https://github.com/beatlesm/web-sprint-challenge-advanced-state-management.git
