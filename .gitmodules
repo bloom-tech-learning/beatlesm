@@ -208,3 +208,15 @@
 [submodule "curriculum/web48/3.2-Advanced-State-Management/Sprit/web-sprint-challenge-advanced-state-management"]
 	path = curriculum/web48/3.2-Advanced-State-Management/Sprit/web-sprint-challenge-advanced-state-management
 	url = https://github.com/beatlesm/web-sprint-challenge-advanced-state-management.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/web-module-project-testing-react"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/web-module-project-testing-react
+	url = git@github.com:beatlesm/web-module-project-testing-react.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_2-Client-Side-Auth/web-module-project-client-auth"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_2-Client-Side-Auth/web-module-project-client-auth
+	url = git@github.com:beatlesm/web-module-project-client-auth.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_3-HTTP:AJAX-II/web-module-project-HTTP"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_3-HTTP:AJAX-II/web-module-project-HTTP
+	url = git@github.com:beatlesm/web-module-project-HTTP.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_4-Deploying-Web-Apps/web-module-project-deploying-web-apps"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_4-Deploying-Web-Apps/web-module-project-deploying-web-apps
+	url = git@github.com:beatlesm/web-module-project-deploying-web-apps.git

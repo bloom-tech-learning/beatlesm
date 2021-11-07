@@ -1,60 +1,67 @@
-# Class Based Components - React Todo
+# Auth Friends
 
-We're going to practice building a stateful class component with this project. Even though hooks are gaining popularity among react developers, class components are going to be around for a long time. It's imperative that you get use to class components, and feel comfortable working with class components since you'll most likely need to work with them if you are hired to work on a React app.
+Topics:
 
-
-## Objectives
-- Build class components from scratch
-- Defining application state
-- Defining component state
-- Connecting state changes to components
-
-## Introduction
-In this project you will build an application that allows for todos to be added, toggle and checked off. Please use ALL CLASS BASED COMPONENTS when creating this application and use the Guided project as a model. This application should:
-- Use the following gif as base for building DOM:
-
-![Todo App MVP](./todo.gif)
-
-- Hold all todos in state within the App.js component. That todos state slice should look like the following:
-```js
-[
-  {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-  }
-];
-```
-- Allow for a todo to be toggled when clicking on an item.
-- Allow for a todo be be added when submitting the todo form component.
-- Allow for completed todos to be cleared when clicking the clear completed button.
-
-
-***Make sure to complete your tasks one at a time and complete test each task before proceding forward.***
+* React Router
+* Protected Routes
+* `axios` package
+* AJAX
+* Promises
+* Authentication tokens
 
 ## Instructions
-### Task 1: Project Set Up
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository in your terminal
-* [ ] cd into the project base directory `cd web-module-project-lifecycle`
-* [ ] Download project dependencies by running `npm install`
-* [ ] Start up the app using `npm start`
 
-### Task 2: Project Requirements
-- **Don't focus on styling yet**. We want you to worry about function over form today.
-- **Build all components as class components.**
-- Your todo list should display a list of todos, an input field, a submit button, and a clear all button.
-- Be sure to use the given files for building out these components.
-- `<App />` will hold all the data needed for this project. It will also be the container for your Todo Components.
-  - All of your application data will be stored here on `<App />`.
-  - All of your `handler` functions should live here on `<App />`.
-- `<TodoList />` receives your Todos array and iterates over the list generating a new `<Todo />` for each element in the array.
-- `<Todo />` is a component that takes in the `todo` data and displays the task to the screen.
-- `<TodoForm>` will hold your input field and your `Add Todo` and `Clear Completed` buttons.
-  - Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
-  - Once a todo is submitted, the Todo List should re-render and show the added todo.
+### Task 1: Set Up
+
+#### Initialize Project
+
+* Run `npm install` inside the root directory of this project to install dependencies for the API server.
+* Run `npm start` to start the API server.
+* Run `npx create-react-app friends --use-npm` in a separate terminal window in the root directory of the project to create your starter application.
+* If you experience issues with `npx`, you may create your starter application by running `create-react-app friends --use-npm`.
+* `cd` into the _friends_ folder and type `npm install axios react-router-dom` which will install the needed dependencies.
+
+### Task 2: MVP
+
+#### Project Description
+
+* There is an API built that has authentication built into it. The API holds a list of friends and lets you add, edit, or remove friends from that list. 
+* All of the API endpoints (except the login endpoint) are considered "protected", meaning you have to make the request with an authentication token in the header or the API will send back a `401` error. 
+* Take your examples from the guided project and use them to build a more sophisticated application. Have fun!
+* Once your server is up and running, the URL you'll be able to hit from within your app is `http://localhost:5000`. You will however need an authentication header on all the calls except the login call.
+* Take a look at the endpoints that our API has to offer in `server.js`.
+
+  * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'lambda', password: 'school' }`
+  * **[POST]** * to `/api/logout`: removes a token from active use. Returns the inactive token. 
+  * **[GET]** to `/api/friends`: returns the list of friends.
+  * **[GET]** to `/api/friends/123`: returns the friend with the id passed as part of the URL (123 in example).
+  * **[POST]** * to `/api/friends`: Adds in a new friend.
+
+#### Build the App!
+* Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like).
+* The login function should save the returned token to localStorage. You can setup `isLoading` state in your Login component, and show a spinner on your form or in your button while the login request is happening.
+* When the request returns, save the token to `localStorage`, then use the history object in your Login component to navigate your user to your FriendsList route
+* Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
+* Create a protected route for your friends list. Remember, if the user isn't logged in, navigating to this protected route will redirect them to the login page.
+* In your FriendsList component, rendered with `<PrivateRoute />`, you will create a list of your friends that you get from the API.
+
+**Adding New Friends**
+* Create a form to collects data for a new friend.
+* Make a POST request to add a friend to the database
+* Each `friend` item that is in the `friends` array should have the following format:
+
+```js
+{
+  id: 1
+  name: 'Joe',
+  age: 24,
+  email: 'joe@lambdaschool.com',
+}
+```
+
+* If you'd like, you can create multiple "view" components for your routes. You could have a component who's sole purpose is to render the login form; one for a form for updating a user; another component who's sole purpose is for creating users; and then another component who's sole purpose is to delete a user.
+* It really is up to you how you build this project. I suggest writing down the flow you want to follow, and then writing down each individual piece you need for each step in the flow so that this process doesn't feel as overwhelming.
+
+### Task 3: Stretch Problems
+* Style the friends list and the input field and make everything look nice.
+* Expand the number of properties that you put on each friend object. Feel free to remove the dummy data on the server or modify it in any way.
