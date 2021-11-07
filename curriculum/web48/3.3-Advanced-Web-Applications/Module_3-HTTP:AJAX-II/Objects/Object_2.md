@@ -1,160 +1,112 @@
-#   Objective 2 - Describe Reducer Functions
+#   Objective 2 - Make DELETE Requests to an External API Using Axios
 
 ##  Overview
 
-Reducer functions take two arguments – the current state and action – and return a new, updated state object based on both arguments.
+The ```DELETE``` ```HTTP request``` method is the "D" in CRUD. We use this to delete or destroy data that lives away from our webpage. When we call .delete, we're instructing the server to remove some information somewhere. Typically we initiate deletion by sending some identifying information on the URL parameter along with our requested URL string. The URL string will be a dynamic field that we'll need to ensure matches the resource we want to destroy.
 
-In pseudocode, this idea looks like:
-```
-(state, action) => newState
-```
-
-More specifically, consider a function in JavaScript that, when passed to an integer, would return that value + 1, without mutating the original integer's value. Notice we could pass our initialState value - 0 - and then return a new value - 1 - without overriding the initialState.
+REMEMBER body objects (or data) objects are to be used with PUT, POST, and PATCH (we don't need to go into patch here). Don't expect the ```axios.delete()``` method to be able to take in a data object
 
 ```
-const initialState = 0
-const reducer = (state) => {
-  const newState = state + 1
-  return newState;
-}
-
-const newStateValue = reducer(initialState);
-console.log(initialState, newStateValue); // 0, 1
+axios
+    .delete(`http://somecoolurl.com/${someDynamicId}`)
+       .then(response => {
+         response is the response we get back from the server
+         usually on a positive response, we either re-set the state in React OR we navigate to the next page etc.
+       })
+       .catch(err => {
+         if something goes wrong, we handle any errors here
+       });
 ```
-
-Often, returning something such as an integer or a string is not the best choice, especially as data grows more complex than previous examples.
-
-Consider the previous example, where component's state utilizes an object as its data structure of choice:
-
-```
-const initialState = { count: 0 }
-const reducer = (state) => {
-  return { count: state.count + 1 }
-}
-```
-
-Again, we are returning a new object and are not directly mutating or overriding the initialState object.
-
-This reducer function is a pure function without any side effects. Therefore, reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.
-
-We've discussed the nature of the incoming state value, but what about the action?
-
-The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a ```type``` property, which will "inform" the reducer actions happening in the app. The type allows the reducer to know what part of the state needs to change.
-
-Let's look at how we can use this to manage state in our apps.
 
 ## Follow Along
 
-Looking again at reducer above, let's show it that we want to increment our count state by passing in an ```action``` with ```'increment'``` as the type.
+The last part of our app will be the delete functionality. Here is the [CodeSandbox](https://codesandbox.io/s/n4kx9lqx40)
+
+We are going to work on deleting a quote. To set this up, we have a quote displayed in the delete tab. You would get to this page in real-world apps by clicking on a quote in some quotes list. There is a delete button on this page, and in that real-world app, there may also be a way to delete a quote straight from the quote list.
+
+There is one final thing to note. Deleting is dangerous. Oftentimes, delete buttons invoke some confirmation message, usually in a modal, that asks if you are sure you want to delete that thing. We won't worry about that here, but consider it when you are implementing deletes in the future.
+
+In ```index.js```, there is a ```deleteMessage``` function. Let's call ```axios.delete``` and pass in the URL. The endpoint will be ```/quote/:id```. Like the put function, ```:id``` here is a dynamic variable that will be the id of whatever item you are deleting. Just hardcode any number in there for this example. Also, add your ```.then()``` and ```.catch()``` and console.log the ```response``` and ```err``` inside those:
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  if (action.type === 'increment') {
-    return { count: state.count + 1 }
-  }
-}
-
-reducer(initialState, { type: 'increment' })
+deleteMessage = () => {
+  axios
+    .delete(`https://lambda-school-test-apis.herokuapp.com/quotes/42`)
+    .then(response => console.log(response))
+    .catch(err => console.log(err));
+};
 ```
+Pass ```deleteMessage``` down to the ```DeleteMovieQuoteForm``` component. Then we'll go to ```DeleteMovieQuoteForm.js``` and invoke ```this.props.deleteMessage```.
 
-This strategy is especially powerful when we want our reducer to be able to reduce the state. Take a look at our reducer now:
-
-```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  if (action.type === 'increment') {
-    return { count: state.count + 1 }
-  } else if (action.type === 'decrement') {
-    return { count: state.count - 1 }
-  }
-}
-
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
-```
-
-Now our state management is very predictable. Our current state passes into the reducer, and action follows to tell how to update the state.
-
-We can also add a ```payload``` property to our action objects (sometimes called ```data```). Our reducer needs to have some data passed into it through the action to be able to update the state correctly, and this is where that data would live.
+index.js
 
 ```
-const initialState = { name: 'Donald Duck' }
-const reducer = (state, action) => {
-  if (action.type === 'changeName') {
-    // how do we know what to change the name to? The action payload!
-    return { name: action.payload }
-  }
-}
-
-reducer(initialState, { type: 'changeName', payload: 'Mickey Mouse' });
+<DeleteMovieQuoteForm deleteMessage={this.deleteMessage} />
 ```
 
-As you will see in the follow along, the action, and its associated property ```type```, allow us to use the reducer to perform conditional state transformations.
-
-There's one last edit we need to make to get to production quality. As you can imagine, or ```if```, ```if else```, ```if else``` … etc, statements are going to get very complex and long. We'll use JavaScript's ```switch``` statement to make that part of our reducer a lot more readable:
-
-Back to the count example, look at the change here:
+DeleteMovieQuote.js
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  // if (action.type === 'increment') {
-  //   return { count: state.count + 1 }
-  // } else if (action.type === 'decrement') {
-  //   return { count: state.count - 1 }
-  // }
-  // we pass in the value we want to look at (action.type):
-  switch(action.type) {
-    // then we make a "case" for each possible value we expect:
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 }
-    // finally, we give a "catch-all" which is just to return state untouched. Never leave this out. There should always be a default:
-    default:
-      return state;
-  }
-}
-
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
+deleteMessage = e => {
+  e.preventDefault();
+  this.props.deleteMessage(this.state.movieQuote);
+};
 ```
 
-Cleaned up, the reducer now looks like this:
+Now we can make some requests and check out the console logs. They are very similar to the logs we were getting in the POST and PUT sections above.
+
+We are going to handle this request like we did with ```POST``` and ```PUT```. On state we have ```deleteSuccessMessage``` and ```deleteError```. Let's set our successMessage to state in our ```.then()``` and the error message to state in the ```.catch()```. Just like before, we'll clear out the opposite state property in each case:
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  switch(action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 }
-    default:
-      return state;
-  }
-}
-
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
+deleteMessage = () => {
+  axios
+    .delete("https://lambda-school-test-apis.herokuapp.com/quotes/42")
+    .then(response => {
+      this.setState({
+        deleteSuccessMessage: response.data.successMessage,
+        deleteError: ""
+      });
+    })
+    .catch(err => {
+      this.setState({
+        deleteSuccessMessage: "",
+        deleteError: err.response.data.Error
+      });
+    });
+};
 ```
+Then pass down ```deleteSuccessMessage``` and ```deleteError``` to ```deleteMovieQuoteForm```, and make some requests!
 
-(Read more about ```switch``` statements [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch))
+```
+<DeleteMovieQuoteForm
+  deleteMessage={this.deleteMessage}
+  deleteSuccessMessage={this.state.deleteSuccessMessage}
+  deleteError={this.state.deleteError}
+/>
+```
 
 ## Challenge
 
-Create a reducer function that can do the following:
+With the app finished, you can open the dev tools one last time and watch the network requests going out to our server. Note the following:
 
-1.  Take in an ```initialState``` value of an array of objects. Each object should represent a to-do item, and should contain only one property, description, which should be a string, a short ```description``` of the to-do item.
+### Header tab
 
-2.  Take in an action object with a ```type``` property and a ```payload``` property. The ```payload``` property should have a description key and a value equal to a new description entered by a user. (Don't worry about making inputs now, just write the reducer.)
+- Request URL (notice the id there)
+- Request method
+- Status code
+- Request Payload (or lack thereof)
 
-3.  If the type is equal to 'ADD,' then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.
+### Preview tab
 
-4.  Return the previous state as a default case.
+- Server response
 
-For additional practice and challenge, how might you implement logic that would contain a type of 'DELETE' or 'EDIT'?
+### Reponse tab
+
+- Raw server response
+
+### Timing
+
+- Total request time in ms
 
 
 
@@ -162,5 +114,4 @@ For additional practice and challenge, how might you implement logic that would 
 
 
 
-
-[Previous](./Object_1.md) | [Next](./Object_3.md)
+[Previous](./Object_1.md) | [Next](./Understanding.md)
