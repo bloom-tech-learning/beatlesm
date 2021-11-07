@@ -1,161 +1,62 @@
-#   Objective 2 - Describe Reducer Functions
+#   Objective 2 - Use Mocks in Web Application Tests
 
 ##  Overview
 
-Reducer functions take two arguments – the current state and action – and return a new, updated state object based on both arguments.
+A function in testing may have inconvenient dependencies on other objects. To isolate the behavior of the function, it's often desirable to replace the other objects with mocks that simulate the behavior of the real objects. Replacing objects is especially useful if the actual objects are impractical to incorporate into the unit test.
 
-In pseudocode, this idea looks like:
-```
-(state, action) => newState
-```
-
-More specifically, consider a function in JavaScript that, when passed to an integer, would return that value + 1, without mutating the original integer's value. Notice we could pass our initialState value - 0 - and then return a new value - 1 - without overriding the initialState.
-
-```
-const initialState = 0
-const reducer = (state) => {
-  const newState = state + 1
-  return newState;
-}
-
-const newStateValue = reducer(initialState);
-console.log(initialState, newStateValue); // 0, 1
-```
-
-Often, returning something such as an integer or a string is not the best choice, especially as data grows more complex than previous examples.
-
-Consider the previous example, where component's state utilizes an object as its data structure of choice:
-
-```
-const initialState = { count: 0 }
-const reducer = (state) => {
-  return { count: state.count + 1 }
-}
-```
-
-Again, we are returning a new object and are not directly mutating or overriding the initialState object.
-
-This reducer function is a pure function without any side effects. Therefore, reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.
-
-We've discussed the nature of the incoming state value, but what about the action?
-
-The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a ```type``` property, which will "inform" the reducer actions happening in the app. The type allows the reducer to know what part of the state needs to change.
-
-Let's look at how we can use this to manage state in our apps.
+Another use of mocks is as "spies" because they let us spy on the behavior of a function that is called by some other code. Mock functions can keep track of calls to the function and the parameters passed in those calls. We can even define an implementation for the mock, but that's optional. Simpler mocks that implement only enough behavior to execute test code are sometimes called "stubs."
 
 ## Follow Along
 
-Looking again at reducer above, let's show it that we want to increment our count state by passing in an ```action``` with ```'increment'``` as the type.
+Let's implement a helper function with an uncomfortable dependency that makes the helper impure (reliant on something outside of its scope) and, therefore, harder to test:
+
+1.  Install the uuid npm library using ```npm i uuid```. Make use of it in the following simple component.
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  if (action.type === 'increment') {
-    return { count: state.count + 1 }
-  }
-}
+   import uuid from "uuid";
 
-reducer(initialState, { type: 'increment' })
-```
-
-This strategy is especially powerful when we want our reducer to be able to reduce the state. Take a look at our reducer now:
+   export const makeUser = (firstName, lastName) => {
+     return {
+       id: uuid(),
+       fullName: `${firstName} ${lastName}`
+     };
+   };
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  if (action.type === 'increment') {
-    return { count: state.count + 1 }
-  } else if (action.type === 'decrement') {
-    return { count: state.count - 1 }
-  }
-}
 
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
-```
-
-Now our state management is very predictable. Our current state passes into the reducer, and action follows to tell how to update the state.
-
-We can also add a ```payload``` property to our action objects (sometimes called ```data```). Our reducer needs to have some data passed into it through the action to be able to update the state correctly, and this is where that data would live.
+2.  Testing expected output against actual output would be complex because uuid() generates a new, random id each time. We can give it a try, though. Note the use of .toEqual() to make our assertion. It compares the nested properties of objects, which we need to check here.
 
 ```
-const initialState = { name: 'Donald Duck' }
-const reducer = (state, action) => {
-  if (action.type === 'changeName') {
-    // how do we know what to change the name to? The action payload!
-    return { name: action.payload }
-  }
-}
+import { makeUser } from "../utils/makeUser";
 
-reducer(initialState, { type: 'changeName', payload: 'Mickey Mouse' });
-```
+   test("generates a user with an id and a full name", () => {
+     // Arrange
+     const expected = { id: "abcde", fullName: "Peter Parker" }; // fishy...
 
-As you will see in the follow along, the action, and its associated property ```type```, allow us to use the reducer to perform conditional state transformations.
+     // Act
+     const actual = makeUser("Peter", "Parker");
 
-There's one last edit we need to make to get to production quality. As you can imagine, or ```if```, ```if else```, ```if else``` … etc, statements are going to get very complex and long. We'll use JavaScript's ```switch``` statement to make that part of our reducer a lot more readable:
-
-Back to the count example, look at the change here:
+     // Assert
+     expect(actual).toEqual(expected);
+   });
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  // if (action.type === 'increment') {
-  //   return { count: state.count + 1 }
-  // } else if (action.type === 'decrement') {
-  //   return { count: state.count - 1 }
-  // }
-  // we pass in the value we want to look at (action.type):
-  switch(action.type) {
-    // then we make a "case" for each possible value we expect:
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 }
-    // finally, we give a "catch-all" which is just to return state untouched. Never leave this out. There should always be a default:
-    default:
-      return state;
-  }
-}
 
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
-```
+![makeUser](./makeUser.png)
 
-Cleaned up, the reducer now looks like this:
+By the way, this kind of test is called a unit test - a test for a single unit of code, like an isolated function like makeUser. You'll learn more about unit testing in the backend unit, but we can see what is happening here with the AAA framework.
+
+3.  To get around this problem, we can stub out (create) a fake version of uuid that will replace the real one during the execution of the test. Outside of the test block, at the top level of the test file, place the following code:
 
 ```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  switch(action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 }
-    default:
-      return state;
-  }
-}
-
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
+jest.mock("uuid", () => () => "abcde");
 ```
 
-(Read more about ```switch``` statements [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch))
+Let's break it down. As the first argument to ```jest.mock()```, we pass the path to the module we want to replace. As the second argument, we pass a callback that returns whatever it is we want the faked thing to be. We wish for ```uuid``` to become a silly stub function that always returns the same string: ```uuid() // "abcde"```. Our tests should be passing now!
 
 ## Challenge
 
-Create a reducer function that can do the following:
-
-1.  Take in an ```initialState``` value of an array of objects. Each object should represent a to-do item, and should contain only one property, description, which should be a string, a short ```description``` of the to-do item.
-
-2.  Take in an action object with a ```type``` property and a ```payload``` property. The ```payload``` property should have a description key and a value equal to a new description entered by a user. (Don't worry about making inputs now, just write the reducer.)
-
-3.  If the type is equal to 'ADD,' then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.
-
-4.  Return the previous state as a default case.
-
-For additional practice and challenge, how might you implement logic that would contain a type of 'DELETE' or 'EDIT'?
-
+There is a way to centralize mocks that are often used (think  ```uuid```, or ```axios```) in external files to be used in test suites without even bothering with imports. Go to the Jest docs and see if you can find out how!
 
 
 
