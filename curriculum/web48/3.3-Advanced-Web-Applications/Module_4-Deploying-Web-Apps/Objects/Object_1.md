@@ -1,34 +1,46 @@
-# Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
+# Objective 1 - Explain How the World Wide Web Works
 
 ## Overview
 
-Mutable objects are objects whose state is allowed to change over time. An immutable value is an exact opposite – after it has been created, it can never change. There are some real benefits from making your state immutable. We won't go over all the benefits here, but we will talk about predictability and mutation tracking.
+The "world wide web" (which we'll refer to as "the web") is a part of the internet - which is itself a network of interconnected computers. The web is just one way to share data over the internet. It consists of a body of information stored on web servers, ready to be shared worldwide.
 
-### Predictability
+### Web Servers
 
-Mutation hides change, which can create (unexpected) side effects. This can lead to some nasty bugs in our code. When we enforce immutability, we can keep our application architecture and mental model simple, making it easier to reason about the application. Simply put, it is very easy to predict how the state object will change based on certain actions/events. Without immutability, our state object can be changed or updated in unpredictable ways, causing weird behavior or bugs.
+The term "web server" can mean 1) a computer that stores the code for a website or 2) a program that runs on such a computer.
 
-### Mutation Tracking
+The physical computer device that we call a web server (like the one shown below) is connected to the internet. A web server stores the code for different websites to be shared across the world at all times. When we load the code for our websites, or web apps, on a server like this, we say that the server is "hosting" our website/app.
 
-Immutability makes it really easy to see if anything has changed. For example when we change the state in Redux, our components props will update. We can check our previous props against our new props to know what change occurred, and know how to handle those changes. If a user adds a task to the todo list, the ```TodoList``` component will update since it is receiving new props. But what if we want to run an animation on the new todo? We can't just run it on every render because it would run when the user toggles a task to complete, or deletes a task. Since Redux state management is immutable, we can track the changes that happen on the state, and only run our animation when a new task is added.
+However, the server itself needs some code to tell it what to do. That software program is called - a web server! Its main purpose is to "serve" web pages it retrieves from your project code to users upon request.
 
-### Redux and Immutability
+![building](building.png)
 
-Redux has a single immutable state tree (referred to as the store) where all state changes are explicitly handled by dispatching actions. Dispatched actions are processed by a reducer that accepts the previous state and the action and returns the next state of your application. Thus, it is easy to predict how the state tree will change based on actions that are dispatched. Likewise, it is easy to predict which action will be dispatched based on some event or interaction. This all leads to very predictable state management.
+While hosting websites has traditionally been a fairly involved task, nowadays, it is quicker than it ever has been before. Gone are the days of setting up a server program through services like Apache or Windows IIS, renting the physical server space from a large company, or buying server hardware.
 
-Writing immutable code can be challenging - your JavaScript skills will really be tested here - and it may seem pretty tedious, especially since we will be building very small apps with small state trees during this sprint. Because of that, it may be pretty hard to see the real benefits of immutable code in class. However, when you start working with a large application with a huge state tree, you will quickly grow to appreciate the benefits of writing immutable code, and the extra effort it takes will seem much more worth it.
+### How Servers Share Info
+
+When you set up app hosting, what's the first thing you always do? You open a browser and navigate to the web address to see it live, of course! So how does that work? There are a couple of key components we want to look at that are part of this process.
+
+### Domain Names and URLs
+
+In 1984, a couple of decades after the first computers and networks were invented, the Domain Name Service (DNS) was introduced. This was a concept where computers could distinguish themselves from one another. As a result, six domains that you will probably recognize were introduced: edu (education), gov (government), mil (military), com (commercial), net (network resources), and org (organization).
+
+Just a few short years later, in 1991, the worldwide web network was opened to the world and incorporated the new HTML computer language. HTML uses specifications for Uniform Resource Locators (URLs). These URLs became (and remain) the universal standard for locating website addresses.
+
+By definition, a URL is a formatted text string referring to the location of a resource on a computer network (most commonly the web). Typically, these resources are web pages, but they can also be text documents, graphics, programs, or pretty much anything that can be stored digitally.
+
+### Bringing It All Together
+
+Combining this all together, we learn that computers can connect to the internet via the world wide web, locate a specific server computer through a URL and domain name, and retrieve information or resources from that server.›
+
+![remote.png](remote.png)
 
 ##  Follow Along
 
-Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.
-
-Follow along with the exercises here (Links to an external site.) (Links to an external site.)
+Now that you know how the web works, read [this article](https://www.doteasy.com/domain-email-and-website-hosting-articles/how-do-websites-work) and jot down 2-3 things you are learning.
 
 ## Challenge
 
-Read this [article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0) 
-
-Write a paragraph or two explaining what you learned. Then, send that paragraph to your PM.
+Research what it means to deploy apps to a server, and the difference between static and dynamic applications.
 
 
 

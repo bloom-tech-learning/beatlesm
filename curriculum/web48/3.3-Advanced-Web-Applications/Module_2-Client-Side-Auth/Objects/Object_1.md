@@ -1,4 +1,4 @@
-# Handle Authentication With Tokens in a React App
+# Objective 1 - Handle Authentication With Tokens in a React App
 
 ## Overview
 
