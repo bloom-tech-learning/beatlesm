@@ -1,160 +1,26 @@
-#   Objective 2 - Describe Reducer Functions
+#   Objective 2 - Explain What it Means to Deploy a Static Website
 
 ##  Overview
 
-Reducer functions take two arguments – the current state and action – and return a new, updated state object based on both arguments.
-
-In pseudocode, this idea looks like:
-```
-(state, action) => newState
-```
-
-More specifically, consider a function in JavaScript that, when passed to an integer, would return that value + 1, without mutating the original integer's value. Notice we could pass our initialState value - 0 - and then return a new value - 1 - without overriding the initialState.
-
-```
-const initialState = 0
-const reducer = (state) => {
-  const newState = state + 1
-  return newState;
-}
-
-const newStateValue = reducer(initialState);
-console.log(initialState, newStateValue); // 0, 1
-```
-
-Often, returning something such as an integer or a string is not the best choice, especially as data grows more complex than previous examples.
-
-Consider the previous example, where component's state utilizes an object as its data structure of choice:
-
-```
-const initialState = { count: 0 }
-const reducer = (state) => {
-  return { count: state.count + 1 }
-}
-```
-
-Again, we are returning a new object and are not directly mutating or overriding the initialState object.
-
-This reducer function is a pure function without any side effects. Therefore, reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.
-
-We've discussed the nature of the incoming state value, but what about the action?
-
-The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a ```type``` property, which will "inform" the reducer actions happening in the app. The type allows the reducer to know what part of the state needs to change.
-
-Let's look at how we can use this to manage state in our apps.
+The internet is a great tool, but it would be useless without data to share with users. Most data on the web is shared through websites and web applications. Let's talk about how these sites are made available on the web through ```deployment```.
 
 ## Follow Along
 
-Looking again at reducer above, let's show it that we want to increment our count state by passing in an ```action``` with ```'increment'``` as the type.
+### Web App Deployment
 
-```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  if (action.type === 'increment') {
-    return { count: state.count + 1 }
-  }
-}
+Web apps are made up of code - primarily JavaScript. When we want to deploy our web app to the world wide web, we need to host that project on a web server to serve up to people connected to the web. Many services allow you to "rent" server space for your web app. You can deploy web apps to ```Amazon AWS servers```, ```Google Servers```, ```Netlify, Heroku```, ```Gatsby```, ```Github Pages```, and ```Vercel``` (which we'll learn about in this module) among many, many others.
 
-reducer(initialState, { type: 'increment' })
-```
+Services like these are a huge step up in modern technology that allows us to deploy sites with the click of a button or right in your terminal. Today, we are lucky to do this with so much ease, at least compared to the "good ol' days."
 
-This strategy is especially powerful when we want our reducer to be able to reduce the state. Take a look at our reducer now:
+### Static vs Dynamic Apps
 
-```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  if (action.type === 'increment') {
-    return { count: state.count + 1 }
-  } else if (action.type === 'decrement') {
-    return { count: state.count - 1 }
-  }
-}
+Deploying a static web app is a little different than deploying a dynamic web app. Most of the apps that you have built up to this point are static apps. A basic definition of a static site has hardcoded data that doesn't change. A lot of our React apps use data from third-party libraries but still deploy like a static app.
 
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
-```
-
-Now our state management is very predictable. Our current state passes into the reducer, and action follows to tell how to update the state.
-
-We can also add a ```payload``` property to our action objects (sometimes called ```data```). Our reducer needs to have some data passed into it through the action to be able to update the state correctly, and this is where that data would live.
-
-```
-const initialState = { name: 'Donald Duck' }
-const reducer = (state, action) => {
-  if (action.type === 'changeName') {
-    // how do we know what to change the name to? The action payload!
-    return { name: action.payload }
-  }
-}
-
-reducer(initialState, { type: 'changeName', payload: 'Mickey Mouse' });
-```
-
-As you will see in the follow along, the action, and its associated property ```type```, allow us to use the reducer to perform conditional state transformations.
-
-There's one last edit we need to make to get to production quality. As you can imagine, or ```if```, ```if else```, ```if else``` … etc, statements are going to get very complex and long. We'll use JavaScript's ```switch``` statement to make that part of our reducer a lot more readable:
-
-Back to the count example, look at the change here:
-
-```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  // if (action.type === 'increment') {
-  //   return { count: state.count + 1 }
-  // } else if (action.type === 'decrement') {
-  //   return { count: state.count - 1 }
-  // }
-  // we pass in the value we want to look at (action.type):
-  switch(action.type) {
-    // then we make a "case" for each possible value we expect:
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 }
-    // finally, we give a "catch-all" which is just to return state untouched. Never leave this out. There should always be a default:
-    default:
-      return state;
-  }
-}
-
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
-```
-
-Cleaned up, the reducer now looks like this:
-
-```
-const initialState = { count: 0 }
-const reducer = (state, action) => {
-  switch(action.type) {
-    case 'increment':
-      return { count: state.count + 1 };
-    case 'decrement':
-      return { count: state.count - 1 }
-    default:
-      return state;
-  }
-}
-
-reducer(initialState, { type: 'increment' });
-reducer(initialState, { type: 'decrement' });
-```
-
-(Read more about ```switch``` statements [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch))
+Deploying a site with an accompanying server and database will be more complicated than just an almost static site that consumes a third-party API. We'll learn more about that kind of deployment in the backend unit.
 
 ## Challenge
 
-Create a reducer function that can do the following:
-
-1.  Take in an ```initialState``` value of an array of objects. Each object should represent a to-do item, and should contain only one property, description, which should be a string, a short ```description``` of the to-do item.
-
-2.  Take in an action object with a ```type``` property and a ```payload``` property. The ```payload``` property should have a description key and a value equal to a new description entered by a user. (Don't worry about making inputs now, just write the reducer.)
-
-3.  If the type is equal to 'ADD,' then return a new array with a shallow copy of the previous state, and spread in a new object that contains the new description key and its corresponding value.
-
-4.  Return the previous state as a default case.
-
-For additional practice and challenge, how might you implement logic that would contain a type of 'DELETE' or 'EDIT'?
+Now that you've learned what it means to deploy a static web app, do a search online for potential problems that you may face during or after your project is deployed.
 
 
 

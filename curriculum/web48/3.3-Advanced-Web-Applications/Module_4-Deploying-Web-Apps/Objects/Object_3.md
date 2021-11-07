@@ -1,66 +1,58 @@
-# Objective 3 - employ the useReducer hook to manage state in a component
+# Objective 3 - Demonstrate the Ability to Deploy and Maintain a React App Using Vercel
 
 ##  Overview
 
-The ```useReducer``` hook is an alternative to ```useState``` (```useState``` actually uses ```useReducer``` hook under the hood). It is preferable when you have complex logic that you have to deal with in a component, or when you find yourself with a lot of state properties (more than 3) in a single component. ```useReducer```, takes in a ```reducer``` function (that we build), as well as a value for the ```initialState```. Then it returns both the current state and a dispatch method in an array, just like ```useState``` does.
-
-```
-const [state, dispatch] = useReducer(reducer, initialState);
-```
-
-The dispatch method is a significant addition to our arsenal here. It will "dispatch" an action to our reducer when specific events occur in our application. The dispatch allows us to powerfully combine the reducer function from our previous section to maintain our state at the level of the component.
-
-The ```useReducer``` hook has all the functionality we love from the ```useState``` hook and combines it with the power of the reducers we are building ourselves. In doing so, it provides access to both the state and a function that dispatch actions to our reducer.
+To start, please go to [Vercel](https://vercel.com/) and sign up for an account with your Github profile. Once you do that, move on to the follow-along section to deploy a React app using Vercel.
 
 ## Follow Along
 
-Let's build out a component to go along with our counter reducer. Please pay attention to the comments in the code that will walk us through this process.
+Getting started with Vercel takes just a few steps. After that, you can get up and running with a new project in less than a minute.
 
-```
-import React, { useReducer } from 'react'
+### Account Creation & Onboarding
 
-const initialState = { count: 0 }
-// Initial count is established
+Let's start by creating a new [Vercel account](https://vercel.com/signup) You can make a new account by logging in with GitHub. You'll immediately be taken through an onboarding flow, as shown below.
 
-// We will use the same reducer we created in the previous section
-function reducer(state, action) {
-  switch (action.type) {
-    case 'INCREASE':
-      return { count: state.count + 1 }
-    case 'DECREASE':
-      return { count: state.count - 1 }
-    default:
-      return state
-  }
-}
+Sign up with GitHub and authorize Vercel with your GitHub account
 
-// Create a functional component
-function Counter() {
-  // Use the useReducer hook by destructuring its two properties: state, and dispatch and pass in the reducer and the initialState to the useReducer function
-  const [state, dispatch] = useReducer(reducer, initialState)
+![login](login.png)
 
-  // Return JSX that displays the count for the user
-  // Note the two button elements which allow the user to increase and decrease the count.  Each of them contains an onClick event that dispatches the desired action object, with its given type.  Each action, when fired, is dispatched to the reducer and the appropriate logic is applied.
-  return (
-    <>
-      {/* Note, we have access to the current state and the dispatch method from the useReducer hook, so we can utilize them to display the count as well as couple the dispatching of the actions from the appropriate buttons.*/}
-      <div className="count">Count: {state.count}</div>
-      <button onClick={() => dispatch({ type: 'INCREASE' })}>+1</button>
-      <button onClick={() => dispatch({ type: 'DECREASE' })}>-1</button>
-    </>
-  )
-}
-```
+Here is a list of all the templates you can create straight from Vercel. Scroll down until you see the "create-react-app" template. Choose that template.
+
+![vercel](vercel.png)
+
+You will click on browse all templates from this screen, then scroll down until you see the "create-react-app" template. Choose that template.
+
+![vercel_1](vercel_1.png)
+
+Choose your account to manage projects for free. If you create a team account, you will be charged after a free trial period.
+
+![vercel_f](vercel_f.png)
+
+Choose GitHub for your git platform. This will allow Vercel to create a new React app and push the code for that project to your GitHub account.
+
+![vercel_ff](vercel_ff.png)
+
+Give your Vercel project a name. Remember the name so you can name the git repo the same thing in the coming steps.
+
+Then click on the git scope dropdown and choose Add GitHub Org or Account. A new window will open to allow you to "install" Vercel in your GitHub account. Click on Install.
+
+![vercel_fff](vercel_fff.png)
+
+Choose a name for your git repository. Then, use the same name you chose for your Vercel project.
+
+![vercel_ffff](vercel_ffff.png)
+
+Click on continue to create a new React app, deploy it, and push it to your GitHub!
+
+![vercel_fffff](vercel_fffff.png)
+
+Celebrate when it is finished! Now you can visit the deployed site or go to the project dashboard in Vercel.
+
+![vercel_star](vercel_star.png)
+
 ## Challenge
 
-Create a component that demonstrates the following MVP expectations and uses a reducer function and the useReducer hook to implement the required logic and maintain the state of the component:
-
-1.  The user should be able to input a string of text that represents a 'to-do item.'
-2.  The user should be able to press a button to submit that 'to-do item.'
-3.  The user should be able to submit a 'to-do item' and view it on the screen.
-
-For fun, you could go as far as you would like for stretch, but the main goal of MVP here in this mini-exercise is to be able to locally maintain a list of strings entered by a user by using a reducer function.
-
+Do you have a domain name? Maybe for your portfolio site? Follow the instructions [here](https://vercel.com/docs/more/domains/transferring-a-domain?query=domain_) to transfer your domain to Vercel and deploy and maintain your project with Vercel. If you don't have a domain name yet, look through the Vercel documentation and find an interesting guide [here](https://vercel.com/guides)
 
 
 
