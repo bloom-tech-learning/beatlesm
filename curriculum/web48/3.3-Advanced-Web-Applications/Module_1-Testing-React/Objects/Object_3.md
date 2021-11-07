@@ -1,65 +1,174 @@
-# Objective 3 - employ the useReducer hook to manage state in a component
+# Objective 3 - Test Asynchronous API Calls That Are Made in a Component
 
 ##  Overview
 
-The ```useReducer``` hook is an alternative to ```useState``` (```useState``` actually uses ```useReducer``` hook under the hood). It is preferable when you have complex logic that you have to deal with in a component, or when you find yourself with a lot of state properties (more than 3) in a single component. ```useReducer```, takes in a ```reducer``` function (that we build), as well as a value for the ```initialState```. Then it returns both the current state and a dispatch method in an array, just like ```useState``` does.
+An asynchronous test is a special kind of test that does not complete right away, as it needs to wait for the results of one or more asynchronous operations. When writing asynchronous code, like when dealing with APIs, it's important to write asynchronous tests because other tests won't work as expected.
 
-```
-const [state, dispatch] = useReducer(reducer, initialState);
-```
+React testing library has a couple of helper functions for us to write these tests. The ```waitFor``` function from React testing library lets us tell the test that we need to wait for the async call to finish before continuing our assertions.
 
-The dispatch method is a significant addition to our arsenal here. It will "dispatch" an action to our reducer when specific events occur in our application. The dispatch allows us to powerfully combine the reducer function from our previous section to maintain our state at the level of the component.
+As mentioned before, we will also use the ```jest.mock``` function to make mocks of the asynchronous functions so we won't have to wait for the actual call to be made.
 
-The ```useReducer``` hook has all the functionality we love from the ```useState``` hook and combines it with the power of the reducers we are building ourselves. In doing so, it provides access to both the state and a function that dispatch actions to our reducer.
+In the following tutorial, we'll walk through an example using API data. Like we did with non-asynchronous tests, we need to import components, render components, simulate an event, and run the test - the difference here is simply a few added functions to make calls asynchronous.
 
 ## Follow Along
 
-Let's build out a component to go along with our counter reducer. Please pay attention to the comments in the code that will walk us through this process.
+Let's say we have a component that fetches data from the dog.ceo API when the user pushes a "Fetch Doggos" button. The component uses a function called ```fetchDoggos``` to make the API call. We have pulled this function out of the component and into an ```/api``` directory in our file structure to make it easier to test. We would write a test for this component following these steps:
+
+### Imports
+
+As usual, we need to import the required libraries for testing. In addition to our normal libraries, we'll import 'waitFor' to make our function run asynchronously, and we'll import our component ```fetchDoggos``` as ```mockFetchDoggos``` so that we don't have to wait for the actual call to be made.
+
+- Import the regular ```react``` and ```@testing-library/react``` dependencies
+- Also import ```waitFor``` from rtl
+- Import ```fetchDoggos``` from the ```/api``` directory, and rename it to ```mockFetchDoggos``` so we know that it will be mocked - remember that a mock allows us to isolate a function from its dependencies.
 
 ```
-import React, { useReducer } from 'react'
+// import libraries
 
-const initialState = { count: 0 }
-// Initial count is established
+import React from "react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
+import { fetchDoggos as mockFetchDoggos } from "../api/fetchDoggos";
+import Doggos from "./Doggos";
 
-// We will use the same reducer we created in the previous section
-function reducer(state, action) {
-  switch (action.type) {
-    case 'INCREASE':
-      return { count: state.count + 1 }
-    case 'DECREASE':
-      return { count: state.count - 1 }
-    default:
-      return state
-  }
-}
+// set up test
+test("renders dog images from API", async () => {});
 
-// Create a functional component
-function Counter() {
-  // Use the useReducer hook by destructuring its two properties: state, and dispatch and pass in the reducer and the initialState to the useReducer function
-  const [state, dispatch] = useReducer(reducer, initialState)
-
-  // Return JSX that displays the count for the user
-  // Note the two button elements which allow the user to increase and decrease the count.  Each of them contains an onClick event that dispatches the desired action object, with its given type.  Each action, when fired, is dispatched to the reducer and the appropriate logic is applied.
-  return (
-    <>
-      {/* Note, we have access to the current state and the dispatch method from the useReducer hook, so we can utilize them to display the count as well as couple the dispatching of the actions from the appropriate buttons.*/}
-      <div className="count">Count: {state.count}</div>
-      <button onClick={() => dispatch({ type: 'INCREASE' })}>+1</button>
-      <button onClick={() => dispatch({ type: 'DECREASE' })}>-1</button>
-    </>
-  )
-}
 ```
+### Mocking the Async Function
+
+Next we need to set up the mock. Like before, we will create the mock outside of the ```test``` block to mock the fetchDoggos async function. Then, inside the ```test``` block we will tell the mock function with what data it should resolve. When the component makes the async request using our mocked function, it will resolve quickly with that data.
+
+```
+// import libraries
+import React from "react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
+import { fetchDoggos as mockFetchDoggos } from "../api/fetchDoggos";
+import Doggos from "./Doggos";
+
+//create mock *before* setting up test
+jest.mock("../ap/fetchDoggosi");
+
+// set up test
+test("renders dog images from API", () => {
+  //mock resolved results
+  mockFetchDoggos.mockResolvedValueOnce({
+    message: [
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
+    ]
+  });
+});
+```
+### Render, Query, and Fire Events
+
+Render the component, query for the necessary elements, and fire the onClick event with ```userEvent```. This step should look familiar from our first lessons on react testing library as we haven't added any of the async functionality yet (other than importing ```waitFor```).
+
+```
+//import libraries
+import React from "react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
+import { fetchDoggos as mockFetchDoggos } from "../api/fetchDoggos";
+import Doggos from "./Doggos";
+
+//set up test
+jest.mock("../api/fetchDoggos");
+
+test("renders dog images from API", () => {
+  mockFetchDoggos.mockResolvedValueOnce({
+    message: [
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
+    ]
+  });
+
+  const { getByText } = render(<Doggos />);
+
+  const fetchDoggosButton = getByText(/fetch doggos/i);
+  fireEvent.click(fetchDoggosButton);
+});
+
+```
+### Async/Await
+
+At this point, the async call has been made. We need to tell our test that it is going to handle an async function by adding ```async``` right after the test name string, and before the callback function. This is using JavaScript's ```async/await``` syntax! Basically this will tell the function that it's going to do an async operation.
+
+```
+// add async function
+test("renders dog images from API", async () => {
+  //mock resolved results
+  mockFetchDoggos.mockResolvedValueOnce({
+    message: [
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
+    ]
+  });
+
+  const { getByText } = render(<Doggos />);
+
+  const fetchDoggosButton = getByText(/fetch doggos/i);
+  fireEvent.click(fetchDoggosButton);
+});
+```
+
+### await and the waitFor Function
+
+Tell the function which async operation it needs to wait for. There are two related parts we need to set up here, then we'll be able to make our assertion.
+
+- Use the await keyword to tell the function we're awaiting for the async operation to finish
+- Use the waitFor&nbsp;function from RTL to wait for RTL to update the DOM so we can query for the dog images.
+- Write an assertion in the waitFor functions callback function. Note that wait is usually required but certain assertions can work without it, you'll need to do research on a case by case basis to determine wither or not wait is required.
+
+```
+test("renders dog images from API", async () => {
+  mockFetchDoggos.mockResolvedValueOnce({
+    message: [
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
+    ]
+  });
+
+  const { getByText, getAllByTestId } = render(<Doggos />);
+
+  const fetchDoggosButton = getByText(/fetch doggos/i);
+  fireEvent.click(fetchDoggosButton);
+  // add await
+  await waitFor(() => expect(getAllByTestId(/doggo-images/i)).toHaveLength(3));
+});
+
+```
+### One Last Assertion
+
+Finally, we will make sure that the correct function was called by adding an extra assertion, ```expect(mockFetchDoggos).toHaveBeenCalledTimes(1);```.
+
+```
+test("renders dog images from API", async () => {
+  mockFetchDoggos.mockResolvedValueOnce({
+    message: [
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg"
+    ]
+  });
+
+  const { getByText, getAllByTestId } = render(<Doggos />);
+
+  const fetchDoggosButton = getByText(/fetch doggos/i);
+  fireEvent.click(fetchDoggosButton);
+
+  // add new assertion
+  expect(mockFetchDoggos).toHaveBeenCalledTimes(1);
+
+  await waitFor(() => expect(getAllByTestId(/doggo-images/i)).toHaveLength(3));
+});
+```
+
 ## Challenge
 
-Create a component that demonstrates the following MVP expectations and uses a reducer function and the useReducer hook to implement the required logic and maintain the state of the component:
-
-1.  The user should be able to input a string of text that represents a 'to-do item.'
-2.  The user should be able to press a button to submit that 'to-do item.'
-3.  The user should be able to submit a 'to-do item' and view it on the screen.
-
-For fun, you could go as far as you would like for stretch, but the main goal of MVP here in this mini-exercise is to be able to locally maintain a list of strings entered by a user by using a reducer function.
+Research on your own how to test async code using ```jest-axe``` and ```toHaveNoViolations``` for accessibility.
 
 
 

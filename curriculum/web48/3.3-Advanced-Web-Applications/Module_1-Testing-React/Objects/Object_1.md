@@ -1,34 +1,111 @@
-# Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
+# Objective 1 - Test React Components as the Props Change
 
 ## Overview
 
-Mutable objects are objects whose state is allowed to change over time. An immutable value is an exact opposite – after it has been created, it can never change. There are some real benefits from making your state immutable. We won't go over all the benefits here, but we will talk about predictability and mutation tracking.
+Today we're going to continue working with React testing library to test rendered DOM elements. This objective will focus on testing data being passed as props and testing props changes that may happen in a component.
 
-### Predictability
+In some cases, when props are updated, you'll want to run a second test on the same component. With our previous knowledge of React testing library, this would have been not easy. Still, thankfully there is a built-in method called ```rerender()``` that allows us to look at a component with new props pretty easily.
 
-Mutation hides change, which can create (unexpected) side effects. This can lead to some nasty bugs in our code. When we enforce immutability, we can keep our application architecture and mental model simple, making it easier to reason about the application. Simply put, it is very easy to predict how the state object will change based on certain actions/events. Without immutability, our state object can be changed or updated in unpredictable ways, causing weird behavior or bugs.
+To do this, we need to add the ```rerender``` function when setting up our test for use in testing the component after the prop has been updated.
 
-### Mutation Tracking
+Let's look at an example where we have some component called PhoneNumber that the user will update with their phone number. We want to show an error message when the component is empty but pass the test after the user puts in a number between 0 and 10.
 
-Immutability makes it really easy to see if anything has changed. For example when we change the state in Redux, our components props will update. We can check our previous props against our new props to know what change occurred, and know how to handle those changes. If a user adds a task to the todo list, the ```TodoList``` component will update since it is receiving new props. But what if we want to run an animation on the new todo? We can't just run it on every render because it would run when the user toggles a task to complete, or deletes a task. Since Redux state management is immutable, we can track the changes that happen on the state, and only run our animation when a new task is added.
+```
+// name test
+test("entering an invalid value shows an error message", () => {
+  // pull in testing properties - add rerender and debug
+  const { getByLabelText, getByRole, rerender } = render(
+    <PhoneNumber />
+  );
+  const input = getByLabelText(/favorite number/i);
+  // update prop
+  fireEvent.change(input, { target: { value: "2025550113" } });
+  // test component
+  expect(getByRole("alert")).toHaveTextContent(/the number is invalid/i);
+  // test prop updates
+  rerender(<PhoneNumber phoneNumber={"2025550113"} />);
+});
 
-### Redux and Immutability
+```
 
-Redux has a single immutable state tree (referred to as the store) where all state changes are explicitly handled by dispatching actions. Dispatched actions are processed by a reducer that accepts the previous state and the action and returns the next state of your application. Thus, it is easy to predict how the state tree will change based on actions that are dispatched. Likewise, it is easy to predict which action will be dispatched based on some event or interaction. This all leads to very predictable state management.
+How does this work in practice? In the example above, we are interested in a component called ```PhoneNumber```. Since the first test tests the component before the prop updates, the test will fail and show an error message. However, once the user inputs their number, the second test (the rendering) should pass if you were to run this code in your console; that's what you'd see.
 
-Writing immutable code can be challenging - your JavaScript skills will really be tested here - and it may seem pretty tedious, especially since we will be building very small apps with small state trees during this sprint. Because of that, it may be pretty hard to see the real benefits of immutable code in class. However, when you start working with a large application with a huge state tree, you will quickly grow to appreciate the benefits of writing immutable code, and the extra effort it takes will seem much more worth it.
+### Assert Content is not Rendered
+
+In some cases, we want to make sure that content is not rendering on the DOM. For example, if a component should show up on click or, really any time after pageload. React testing library isn't exactly built for this as all ```getBy``` assertions return an error if they can't find the thing they're searching for (if a return is ```null```). Luckily there is a workaround here - the assertion called ```queryByRoll``` (or any ```queryBy``` assertion), will return ```null``` instead of an error. This let's us query for something this isn't supposed to be on the DOM. It also allows us to use an assertion like ```.toBeNull()``` or ```toBeFalsy()```, and then tests will start passing even when no content is rendered.
+
+```
+test("entering an invalid value shows an error message", () => {
+  // pull in testing properties - add rerender
+  // render the component without a prop
+  const { getByLabelText, getByRole, queryByRole, rerender } = render(
+    <PhoneNumber />
+  );
+  const input = getByLabelText(/favorite number/i);
+  // test component
+  expect(getByRole("alert")).toHaveTextContent(/the number is invalid/i);
+  // test prop updates by rerendering component with different props
+  rerender(<PhoneNumber phoneNumber={"2025550113"} />);
+  // assert that the error message is NOT being rendered (optional)
+  expect(queryByRoll("alert")).toBeNull();
+});
+```
 
 ##  Follow Along
 
-Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.
+In this section, we will continue building tests for the dog images app from the previous module. In this example, a parent component is in charge of fetching the data from dog.ceo, and a child component receives that data as a prop and displays the dog images on the page. For this example, we will render the dog images into a new component after the initial rendering of the page. Next, we need to test if the dog images appear on rerendering.
 
-Follow along with the exercises here (Links to an external site.) (Links to an external site.)
+This means we want to test the child component. First, we will test that it renders a "getting data" message when passed an empty array as a prop. Then we will rerender the component and pass down our actual data to simulate the parent component receiving data from the API and passing that data down to this child component.
+
+Note that this means we don't have to test the async function or even the event that kicked off the API call. Instead, we render what this component looks like when it first mounts with no data and what it looks like when it receives new props and rerenders.
+
+1.  Create test and pull in relevant matchers from react testing library.
+
+```
+//import libraries
+import React from "react";
+import { render } from "@testing-library/react";
+import DoggoImages from "./DoggoImages";
+
+test("renders dog images from API", () => {
+  // Render the component with an empty array
+  const { getAllByTestId, rerender } = render(<Doggos images={[]} />);
+
+  // Assert that there are no dog images rendered yet
+  expect(getAllByTestId(/doggo images/i)).toHaveLength(0);
+});
+
+```
+
+2.  Update prop by passing a user input. Test updated prop using ```rerender```.
+
+```
+//import libraries
+import React from "react";
+import { render } from "@testing-library/react";
+import DoggoImages from "./DoggoImages";
+
+test("renders dog images from API", () => {
+  const doggoUrls = [
+    'url-one.jpg', 'url-two.jpeg', 'url-three.jpg'
+  ]
+  const { getAllByTestId, rerender } = render(<DoggoImages images={[]} />);
+
+  expect(getAllByTestId(/doggo images/i)).toHaveLength(0);
+
+  // We will rerender the component with our dummy data passed in as the new props
+  rerender(<DoggoImages images={doggoUrls} />);
+
+  // Assert that we now have dog images rendering!
+  expect(getAllByTestId(/doggo images/i)).toHaveLength(3);
+});
+
+```
 
 ## Challenge
 
-Read this [article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0) 
+Find an example of updating props in a previous project. Then, design a ```rerender``` test that will assert one state after the component first renders and assert a different state after the component renders again with new props.
 
-Write a paragraph or two explaining what you learned. Then, send that paragraph to your PM.
 
 
 
