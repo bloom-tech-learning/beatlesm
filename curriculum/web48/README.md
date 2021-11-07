@@ -4,7 +4,9 @@
 -   **[https://github.com/beatlesm/web-guided-project-reducer](https://github.com/beatlesm/web-guided-project-reducer)**
 
 
--   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
+-   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
+-   **[https://github.com/beatlesm/web-module-project-client-auth](https://github.com/beatlesm/web-module-project-client-auth)**
+-   **[https://github.com/beatlesm/web-module-project-client-auth](https://github.com/beatlesm/web-module-project-client-auth)**
 
 
 -   **[https://github.com/LambdaSchool/web-guided-project-reducer](https://github.com/LambdaSchool/web-guided-project-reducer)**

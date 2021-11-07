@@ -1,34 +1,118 @@
-# Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits
+# Objective 1 - Make PUT Requests to an External API Using Axios
 
 ## Overview
 
-Mutable objects are objects whose state is allowed to change over time. An immutable value is an exact opposite – after it has been created, it can never change. There are some real benefits from making your state immutable. We won't go over all the benefits here, but we will talk about predictability and mutation tracking.
+```PUT``` is the "U" in CRUD, and it stands for ```UPDATE```. We use the ```PUT``` method to change a resource's information. ```PUT``` takes in a body object like ```POST``` and identifies data that needs to be updated somewhere.
 
-### Predictability
-
-Mutation hides change, which can create (unexpected) side effects. This can lead to some nasty bugs in our code. When we enforce immutability, we can keep our application architecture and mental model simple, making it easier to reason about the application. Simply put, it is very easy to predict how the state object will change based on certain actions/events. Without immutability, our state object can be changed or updated in unpredictable ways, causing weird behavior or bugs.
-
-### Mutation Tracking
-
-Immutability makes it really easy to see if anything has changed. For example when we change the state in Redux, our components props will update. We can check our previous props against our new props to know what change occurred, and know how to handle those changes. If a user adds a task to the todo list, the ```TodoList``` component will update since it is receiving new props. But what if we want to run an animation on the new todo? We can't just run it on every render because it would run when the user toggles a task to complete, or deletes a task. Since Redux state management is immutable, we can track the changes that happen on the state, and only run our animation when a new task is added.
-
-### Redux and Immutability
-
-Redux has a single immutable state tree (referred to as the store) where all state changes are explicitly handled by dispatching actions. Dispatched actions are processed by a reducer that accepts the previous state and the action and returns the next state of your application. Thus, it is easy to predict how the state tree will change based on actions that are dispatched. Likewise, it is easy to predict which action will be dispatched based on some event or interaction. This all leads to very predictable state management.
-
-Writing immutable code can be challenging - your JavaScript skills will really be tested here - and it may seem pretty tedious, especially since we will be building very small apps with small state trees during this sprint. Because of that, it may be pretty hard to see the real benefits of immutable code in class. However, when you start working with a large application with a huge state tree, you will quickly grow to appreciate the benefits of writing immutable code, and the extra effort it takes will seem much more worth it.
+```
+axios
+    .put(`http://somecoolurl.com/${couldHaveDynamicId}`, updatedData)
+       .then(response => {
+         response is the response we get back from the server
+         Whatever resource was changed should be reflected in our client
+       })
+       .catch(err => {
+         if something goes wrong, we handle any errors here
+       });
+```
 
 ##  Follow Along
 
-Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.
+Let's build in the AJAX call for the same app. You can start with [this CodeSandbox](https://codesandbox.io/s/k353v1z79r) tutorial and follow along with the video.
 
-Follow along with the exercises here (Links to an external site.) (Links to an external site.)
+We are going to work on updating a quote. To set this up, we built a form for the PUT request. Usually, you would be in charge of populating the form fields with whichever item you are updating, but we hardcoded a quote into state for this example. Keep in mind that populating the form fields in apps you build from scratch may take a bit of work.
+
+Now, in ```index.js```, there is a ```putMessage``` function. Let's call ```axios.put``` and pass in the URL. This time the endpoint will be ```/quote/:id```. :id here is a lot like dynamic parameters in React Router. It is a dynamic variable that will be the id of whatever item you are updating. Just hardcode any number in there for this example. Also, add your ```.then()``` and ```.catch()``` and console.log the ```resonse``` and ```err``` inside those:
+
+```
+axios
+  .put(`https://lambda-school-test-apis.herokuapp.com/quotes/76`)
+  .then(response => console.log(response))
+  .catch(err => console.log(err));
+```
+
+Also, pass in ```quote``` as a parameter to ```putMessage``` so we have the data we need to send to the server.
+
+```
+putMessage = quote => {
+  axios
+    .put(`https://lambda-school-test-apis.herokuapp.com/quotes/76`)
+    .then(response => console.log(response))
+    .catch(err => console.log(err));
+};
+```
+Pass ```putMessage``` down to the ```PutMovieQuoteForm``` component. Then go to ```PutMovieQuoteForm```.js and invoke ```this.props.putMessage``` with the movie quote that is one state.
+
+index.js
+
+```
+<PutMovieQuoteForm putMessage={this.putMessage} />
+```
+
+PutMovieQuote.js
+
+```
+putMessage = e => {
+  e.preventDefault();
+  this.props.putMessage(this.state.movieQuote);
+};
+```
+
+Now we can make some requests and check out the console logs. They are very similar to the logs we were getting in the POST section above. So we are going to handle this request like we did the POST request. On state we have putSuccessMessage and putError. Let's set our successMessage to state in our .then() and the error message to state in the .catch(). And like before, we'll clear out the opposite state property in each case:
+
+```
+putMessage = quote => {
+  axios
+    .put("https://lambda-school-test-apis.herokuapp.com/quotes/76", quote)
+    .then(response => {
+      this.setState({
+        putSuccessMessage: response.data.successMessage,
+        putError: ""
+      });
+    })
+    .catch(err => {
+      this.setState({
+        putSuccessMessage: "",
+        putError: err.response.data.Error
+      });
+    });
+};
+
+```
+
+Then pass down ```putSuccessMessage``` and ```putError``` to ```PutMovieQuoteForm```, and make some requests!
+
+```
+<PutMovieQuoteForm
+  putMessage={this.putMessage}
+  putSuccessMessage={this.state.putSuccessMessage}
+  putError={this.state.putError}
+/>
+```
 
 ## Challenge
 
-Read this [article](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0) 
+Open the project in the browser, click on the network tab. Make a successful request and a bad request. Then, click on the requests and explore the tabs that show up to the right again. Note the following:
 
-Write a paragraph or two explaining what you learned. Then, send that paragraph to your PM.
+### Header tab
+
+- Request URL (notice the id there)
+- Request method
+- Status code
+- Request Payload
+
+###  Preview tab
+
+- Server response
+
+###  Reponse tab
+
+- Raw server response
+
+### Timing
+
+- Total request time in ms
+
 
 
 
