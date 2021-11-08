@@ -31,4 +31,4 @@ Today we walked through building a todo app using reducers and some general bug 
 
 -   [CodeSandbox](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
 
--   **[https://github.com/beatlesm/redux-qa-321](https://github.com/beatlesm/redux-qa-321)**
+-   **[https://github.com/beatlesm/reducer-qa-321](https://github.com/beatlesm/reducer-qa-321)**
