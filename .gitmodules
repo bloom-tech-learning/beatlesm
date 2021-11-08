@@ -226,3 +226,6 @@
 [submodule "curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/web-guided-project-async-redux"]
 	path = curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/web-guided-project-async-redux
 	url = git@github.com:beatlesm/web-guided-project-async-redux.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/reducer-qa-321"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/reducer-qa-321
+	url = git@github.com:beatlesm/reducer-qa-321.git
