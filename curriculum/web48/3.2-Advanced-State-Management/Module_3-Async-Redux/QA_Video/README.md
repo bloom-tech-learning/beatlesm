@@ -1,6 +1,6 @@
 # Module 3 - Async Redux - QA 
 
-- [youtube - guided project 3.2 3]()
+- [youtube - guided project 3.2 3](https://youtu.be/HQo-qedtgBU)
 
 Hope you all enjoyed today’s guided Lesson! 
 A reminder if that office hours are from 1:30 - 2:30 Lambda Time. 
@@ -27,6 +27,4 @@ Here is a review of today’s material.
 
 ## QA Video:
 
--   [Module 3 - Async Redux QA Video](https://youtu.be/v_PHTVpZmCM)
-
-- [code]()
+Not found
