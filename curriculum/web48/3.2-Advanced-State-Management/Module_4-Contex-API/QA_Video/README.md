@@ -10,9 +10,9 @@ Here is a review of today’s material.
 ##  Module Materials:
 
 -   [Module Project:](https://github.com/LambdaSchool/web-module-project-context)
-[GP Slides:](https://docs.google.com/presentation/d/1f72_l9lp0MPSr17oIO8II35zJULQwBzYtz42g6qRCws/edit?usp=sharing)
-[Yesterday’s Module Project Review:](https://www.loom.com/share/e27acd4a457b4f5199c7a56d73c3ac91)
-[Alternative GP Video:] [Dustin Myers](https://youtu.be/fZGKUeccbKI) | [Josh Jacobson](https://youtu.be/ExgSVmW3pnw) | [Warren C. Longmire](https://youtu.be/a00j4OrWcVo) | [Brian Kirkby](https://youtu.be/RAwdfpd5GNE)
+-   [GP Slides:](https://docs.google.com/presentation/d/1f72_l9lp0MPSr17oIO8II35zJULQwBzYtz42g6qRCws/edit?usp=sharing)
+-   [Yesterday’s Module Project Review:](https://www.loom.com/share/e27acd4a457b4f5199c7a56d73c3ac91)
+-   [Alternative GP Video:] [Dustin Myers](https://youtu.be/fZGKUeccbKI) | [Josh Jacobson](https://youtu.be/ExgSVmW3pnw) | [Warren C. Longmire](https://youtu.be/a00j4OrWcVo) | [Brian Kirkby](https://youtu.be/RAwdfpd5GNE)
 
 ##  Key Terminology:
 
@@ -29,7 +29,10 @@ Here is a review of today’s material.
 
 ## QA Video:
 
-Today we walked through building a todo app using reducers and some general bug fixes.
+### Today’s Office Hours:
 
--   [Module 2 - Redux QA Video](https://www.youtube.com/watch?v=shr7l58Weg0)
+Today we covered some basic debugging and a through review of a redux project from start to finish.
 
+-   [Module 4 - Context API QA Video](https://lambdaschool.zoom.us/rec/share/qNyMddmuSLKiOeNURi4v8N9FBHdeYkz2vEp67z2KIJwF3cRn5CkuOEj4ZU2vtC1_.x1mux5Ydqnwx-0YD)
+
+-   [Code](https://codesandbox.io/s/admiring-cdn-vkjj1?file=/src/actions/index.js)
