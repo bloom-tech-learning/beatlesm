@@ -117,9 +117,9 @@ test("renders dog images from API", async () => {
 
 Tell the function which async operation it needs to wait for. There are two related parts we need to set up here, then we'll be able to make our assertion.
 
-- Use the await keyword to tell the function we're awaiting for the async operation to finish
-- Use the waitFor&nbsp;function from RTL to wait for RTL to update the DOM so we can query for the dog images.
-- Write an assertion in the waitFor functions callback function. Note that wait is usually required but certain assertions can work without it, you'll need to do research on a case by case basis to determine wither or not wait is required.
+- Use the ```await``` keyword to tell the function we're awaiting for the async operation to finish
+- Use the ```waitFor&nbsp;function``` from RTL to wait for RTL to update the DOM so we can query for the dog images.
+- Write an assertion in the ```waitFor``` functions callback function. Note that wait is usually required but certain assertions can work without it, you'll need to do research on a case by case basis to determine wither or not wait is required.
 
 ```
 test("renders dog images from API", async () => {
