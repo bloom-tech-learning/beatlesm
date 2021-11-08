@@ -220,3 +220,6 @@
 [submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_4-Deploying-Web-Apps/web-module-project-deploying-web-apps"]
 	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_4-Deploying-Web-Apps/web-module-project-deploying-web-apps
 	url = git@github.com:beatlesm/web-module-project-deploying-web-apps.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/redux-qa-324"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_4-Contex-API/redux-qa-324
+	url = git@github.com:beatlesm/redux-qa-324.git
