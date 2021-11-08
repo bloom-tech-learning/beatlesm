@@ -229,3 +229,6 @@
 [submodule "curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/reducer-qa-321"]
 	path = curriculum/web48/3.2-Advanced-State-Management/Module_1-The-Reducer-Pattern/reducer-qa-321
 	url = git@github.com:beatlesm/reducer-qa-321.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/web-guided-project-testing-react"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/web-guided-project-testing-react
+	url = git@github.com:beatlesm/web-guided-project-testing-react.git
