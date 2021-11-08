@@ -16,4 +16,3 @@
 
 ### [Objective 3 - consume data from a context object in nested components](./Objects/Object_3.md)
 
-#### [Check For Understanding](./Objects/Understanding.md)
