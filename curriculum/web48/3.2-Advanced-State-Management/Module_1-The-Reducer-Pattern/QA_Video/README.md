@@ -29,4 +29,4 @@ Today we walked through building a todo app using reducers and some general bug 
 
 -   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
 
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+-   [Codesandbox](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
