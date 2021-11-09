@@ -2,6 +2,7 @@
 - 🌱 I’m currently learning ... **[Web 3.3](./3.3-Advanced-Web-Applications/)**
 
 -   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
+-   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
 
 
 -   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
@@ -10,6 +11,7 @@
 -   **[https://github.com/beatlesm/web-module-project-deploying-web-apps](https://github.com/beatlesm/web-module-project-deploying-web-apps)**
 
 
+-   **[https://github.com/LambdaSchool/web-guided-project-testing-react](https://github.com/LambdaSchool/web-guided-project-testing-react)**
 -   **[https://github.com/LambdaSchool/web-guided-project-testing-react](https://github.com/LambdaSchool/web-guided-project-testing-react)**
 
 
