@@ -26,7 +26,7 @@ export const axiosWithAuth =() => {
 };
 
 ```
-Note: Some APIs require you to use a slightly different syntax. Make sure you understand the API you are working with:
+**Note:** Some APIs require you to use a slightly different syntax. Make sure you understand the API you are working with:
 
 ```
 Authorization: `Bearer ${token}`,
