@@ -1,32 +1,36 @@
-# Module 1 - The Reducer Pattern
+# Module 2 - Client-Side Auth
 
-- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
+- [youtube - guided project 3.3.2](https://youtu.be/s6v2X9aa-cU)
 
-## - Module Materials:
+Hope you all enjoyed today’s guided Lesson!
+A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
+Don’t forget to complete the days Check for Understanding and Pulse Checks!
+Here is a review of today’s material.
 
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-reducer)
--   [GP Slides:](https://docs.google.com/presentation/d/1XhCZWfyGUbxRAuhHvf38baQBcn4sl5jxZjSjKCSPFqw/edit?usp=sharing) 
--   [Thursday’s Module Project Review:](https://www.loom.com/share/94ff7b7e39c349d4875dfd607e10e0e3)
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/bMWoQfNzn-U) | [Josh Jacobson](https://youtu.be/1Jflvc3Dl_Q) | [Warren C. Longmire](https://youtu.be/E9M6-cRVDt4) | [Brian Kirkby](https://youtu.be/qfarRzchOE4)
+##  Module Materials:
+
+[Module Project:](https://github.com/LambdaSchool/web-module-project-client-auth)
+[GP Slides:](https://docs.google.com/presentation/d/1pWlfJhuZpeX054EgZGjElnWuzNPX2YQ1UXkUSw9QXBk/edit?usp=sharing)
+[Monday’s Module Project Review:](https://www.loom.com/share/e01d193711004a64ba265329f5337329 PW: lSwXpF)
+Alternative GP Video: [Dustin Myers](https://youtu.be/ATr7QQP7lw4) | [Josh Jacobson](https://youtu.be/0AvJFNiqhD4) | [Warren C. Longmire](https://youtu.be/zVSH2n1wZCY) | [Brian Kirkby](https://youtu.be/hGICwuTH6Ag)
+
 ##  Key Terminology:
--   switch - [a javascript keyword used to streamline complex if else logic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
--   action - [a single piece of data manipulation in a reducer pattern](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   reducer - [a pure, predictible immutable function that executes action on state data](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   immutiblity - [an object or variable that can not be modified (and thus should only be copied)](https://www.youtube.com/watch?v=5qQQ3yzbKp8)
--   pure functions - [a pure, predictible immutable function that executes action on state data](https://www.youtube.com/watch?v=dZ41D6LDSBg)
+
+-   [...rest] - [A means to get capture the remaining values within a javascript array or object easily.](https://medium.com/wesionary-team/spread-and-rest-operator-in-javascript-db3f15cec185)
+-   [Redirect Route] - [A redirect method used through react-router.](https://medium.com/@alexfarmer/redirects-in-react-router-dom-46198938eedc)
+-   [this.history redirect] - [A redirect method used through Route props.](https://www.codesd.com/item/react-this-props-history-push-does-not-redirect.html)
+-   [window.location redirect] - [A redirect method used through the windows location object.](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)
+-   [Route] - [A react router component that allows programmers to connect a component to a url path](https://reactrouter.com/web/api/Route)
+-   [axios.create] - [A means to create a stub of an axios call with preset values attached](https://masteringjs.io/tutorials/axios/create)
+-   [jwt tokens] - [The current web standard for encrypted authentication tokens](https://dzone.com/articles/what-is-jwt-token)
+
 ##  Key Concepts:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
--   Application State - [Data that is used across all of our application's components.](https://www.youtube.com/watch?v=7ilYJAG-_Ug)
--   Component State - [Data that is used within the context of a single component](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
--   The Reducer Pattern - [A design pattern for managing and modularizing out application state.](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   useReducer Hook - [A hook used to connect reducers and state to a React component](https://www.geeksforgeeks.org/reactjs-usereducer-hook/)
--   What does dispatch do? - [Awesome article by our own @Dustin Myers on the inner workings of dispatch](https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma)
-## Stretch Tutorial:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
 
-## QA Video:
-Today we walked through building a todo app using reducers and some general bug fixes.
+[Token Saving] - [A great writeup on techniques in saving authentication tokens.](https://medium.com/@ryanchenkie_40935/react-authentication-how-to-store-jwt-in-a-cookie-346519310e81)
+[Authentication] - [The process for identifying user identity.](https://www.youtube.com/watch?v=woNZJMSNbuo)
+[Authorization] - [The process for identifying user permissions.](https://www.youtube.com/watch?v=I0poT4UxFxE)
+[http headers] - [Additional data added to http requests for interperation within your backend code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
--   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
+##  Stretch Tutorial:
 
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+[Auth Tokens and Simple Auth Server Setup](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
