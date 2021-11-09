@@ -232,3 +232,6 @@
 [submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/web-guided-project-testing-react"]
 	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/web-guided-project-testing-react
 	url = git@github.com:beatlesm/web-guided-project-testing-react.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/testing-react-qa-331"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_1-Testing-React/testing-react-qa-331
+	url = git@github.com:beatlesm/testing-react-qa-331.git
