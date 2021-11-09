@@ -39,3 +39,6 @@ Hey all! Today we did a brief review of array methods, classes in (and out) of R
 -   [Youtube - 3.3.1 - Q&A Testing React](https://youtu.be/Z7S8k4lU6IU)
 
 -   [CodeSandbox](https://codesandbox.io/s/frosty-shadow-gpcov) 
+
+-   **[https://github.com/beatlesm/testing-react-qa-331](https://github.com/beatlesm/testing-react-qa-331)**
+
