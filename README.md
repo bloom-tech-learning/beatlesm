@@ -4,7 +4,7 @@
 
 -   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
 -   **[https://github.com/beatlesm/web-guided-project-client-auth](https://github.com/beatlesm/web-guided-project-client-auth)**
--   **[https://github.com/beatlesm/web-guided-project-client-auth](https://github.com/beatlesm/web-guided-project-client-auth)**
+-   **[https://github.com/beatlesm/web-guided-project-HTTP](https://github.com/beatlesm/web-guided-project-HTTP)**
 
 
 -   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
@@ -15,7 +15,7 @@
 
 -   **[https://github.com/LambdaSchool/web-guided-project-testing-react](https://github.com/LambdaSchool/web-guided-project-testing-react)**
 -   **[https://github.com/LambdaSchool/web-guided-project-client-auth](https://github.com/LambdaSchool/web-guided-project-client-auth)**
--   **[https://github.com/LambdaSchool/web-guided-project-client-auth](https://github.com/LambdaSchool/web-guided-project-client-auth)**
+-   **[https://github.com/LambdaSchool/web-guided-project-HTTP](https://github.com/LambdaSchool/web-guided-project-HTTP)**
 
 - ⚡ Fun fact: ...
 
