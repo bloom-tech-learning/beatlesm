@@ -5,11 +5,13 @@
 -   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
 -   **[https://github.com/beatlesm/web-guided-project-client-auth](https://github.com/beatlesm/web-guided-project-client-auth)**
 -   **[https://github.com/beatlesm/web-guided-project-HTTP](https://github.com/beatlesm/web-guided-project-HTTP)**
+-   **[https://github.com/beatlesm/web-guided-project-HTTP](https://github.com/beatlesm/web-guided-project-HTTP)**
 
 
 -   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
 -   **[https://github.com/beatlesm/web-module-project-client-auth](https://github.com/beatlesm/web-module-project-client-auth)**
 -   **[https://github.com/beatlesm/web-module-project-HTTP](https://github.com/beatlesm/web-module-project-HTTP)**
+-   **[https://github.com/beatlesm/web-module-project-deploying-web-apps](https://github.com/beatlesm/web-module-project-deploying-web-apps)**
 -   **[https://github.com/beatlesm/web-module-project-deploying-web-apps](https://github.com/beatlesm/web-module-project-deploying-web-apps)**
 
 
