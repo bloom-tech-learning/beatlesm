@@ -1,13 +1,15 @@
 [back to home](https://github.com/beatlesm/)
 
-## [Module 1 - Testing React](https://github.com/beatlesm/web/tree/main/3.3/Module331)
+## Module 1 - Testing React
 
 #### [Assignment 3.3.1](https://github.com/beatlesm/web/tree/main/3.3/Module331/Assignment331):
 
 -   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
-   
+-   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
+
 #### [Guided project 3.3.1](https://github.com/beatlesm/web/tree/main/3.3/Module331/guided331):
 
+- [youtube - guided project 3.2 1](https://youtu.be/LeZoDNR_q-Y)
 
 ### [Objective 1 - Test React Components as the Props Change](./Objects/Object_1.md)
 
