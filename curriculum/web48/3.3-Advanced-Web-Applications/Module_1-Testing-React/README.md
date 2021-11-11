@@ -4,7 +4,7 @@
 
 #### [Assignment 3.3.1](https://github.com/beatlesm/web/tree/main/3.3/Module331/Assignment331):
 
--   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+-   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
    
 #### [Guided project 3.3.1](https://github.com/beatlesm/web/tree/main/3.3/Module331/guided331):
 

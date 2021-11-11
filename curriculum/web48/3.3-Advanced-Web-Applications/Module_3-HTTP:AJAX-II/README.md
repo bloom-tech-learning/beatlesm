@@ -4,7 +4,7 @@
 
 #### [Assignment 3.3.3](https://github.com/beatlesm/web/tree/main/3.3/Module333/Assignment333):
 
--   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+-   **[https://github.com/beatlesm/web-module-project-HTTP](https://github.com/beatlesm/web-module-project-HTTP)**
    
 #### [Guided project 3.3.3](https://github.com/beatlesm/web/tree/main/3.3/Module333/guided333):
 
