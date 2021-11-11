@@ -11,6 +11,8 @@
 
 - [youtube - guided project 3.2 1](https://youtu.be/LeZoDNR_q-Y)
 
+-   [QA](./QA_Video/README.md)
+
 ### [Objective 1 - Test React Components as the Props Change](./Objects/Object_1.md)
 
 ### [Objective 2 - Use Mocks in Web Application Tests](./Objects/Object_2.md)
