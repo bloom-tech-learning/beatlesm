@@ -8,6 +8,9 @@
    
 #### [Guided project 3.3.2](https://github.com/beatlesm/web/tree/main/3.3/Module332/guided332):
 
+- [youtube - guided project 3.3.2](https://youtu.be/s6v2X9aa-cU)
+
+-   [QA README.md](./QA_Video/README.md)
 
 ### [Objective 1 - Handle Authentication With Tokens in a React App](./Objects/Object_1.md)
 

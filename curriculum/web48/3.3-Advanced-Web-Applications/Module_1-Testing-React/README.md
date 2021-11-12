@@ -11,7 +11,7 @@
 
 - [youtube - guided project 3.2 1](https://youtu.be/LeZoDNR_q-Y)
 
--   [QA](./QA_Video/README.md)
+-   [QA README.md](./QA_Video/README.md)
 
 ### [Objective 1 - Test React Components as the Props Change](./Objects/Object_1.md)
 
