@@ -241,3 +241,6 @@
 [submodule "curriculum/web48/3.3-Advanced-Web-Applications/Module_3-HTTP:AJAX-II/http-ajax-ii-332-video"]
 	path = curriculum/web48/3.3-Advanced-Web-Applications/Module_3-HTTP:AJAX-II/http-ajax-ii-332-video
 	url = git@github.com:beatlesm/http-ajax-ii-332-video.git
+[submodule "curriculum/web48/3.3-Advanced-Web-Applications/Sprint/web-sprint-challenge-advanced-web-applications"]
+	path = curriculum/web48/3.3-Advanced-Web-Applications/Sprint/web-sprint-challenge-advanced-web-applications
+	url = git@github.com:beatlesm/web-sprint-challenge-advanced-web-applications.git
