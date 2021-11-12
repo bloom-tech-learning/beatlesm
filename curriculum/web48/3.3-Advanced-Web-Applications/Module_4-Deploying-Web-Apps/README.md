@@ -8,6 +8,9 @@
    
 #### [Guided project 3.3.4](https://github.com/beatlesm/web/tree/main/3.3/Module334/guided334):
 
+- [youtube - guided project 3.3.3](https://youtu.be/HyUoD6NwQgA)
+
+-   [QA README.md](./QA_Video/README.md)
 
 ### [Objective 1 - Explain How the World Wide Web Works](./Objects/Object_1.md)
 
