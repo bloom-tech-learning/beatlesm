@@ -46,6 +46,9 @@
 -   **[https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)**
 -   **[https://github.com/LambdaSchool/web-guided-project-async-redux](https://github.com/LambdaSchool/web-guided-project-async-redux)**
 
+Push your first commit: git commit --allow-empty -m "first commit" && git push. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
+
+
 
 [Dir](./)
 
