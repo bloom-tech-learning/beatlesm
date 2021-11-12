@@ -244,3 +244,9 @@
 [submodule "curriculum/web48/3.3-Advanced-Web-Applications/Sprint/web-sprint-challenge-advanced-web-applications"]
 	path = curriculum/web48/3.3-Advanced-Web-Applications/Sprint/web-sprint-challenge-advanced-web-applications
 	url = git@github.com:beatlesm/web-sprint-challenge-advanced-web-applications.git
+[submodule "curriculum/web48/2.4-WEB-Unit-2-Build/FT-African-Marketplace-2-Group/front-end"]
+	path = curriculum/web48/2.4-WEB-Unit-2-Build/FT-African-Marketplace-2-Group/front-end
+	url = git@github.com:FT-African-Marketplace-2-Group/front-end.git
+[submodule "curriculum/web48/2.4-WEB-Unit-2-Build/FT-African-Marketplace-2-Group/back-end"]
+	path = curriculum/web48/2.4-WEB-Unit-2-Build/FT-African-Marketplace-2-Group/back-end
+	url = git@github.com:FT-African-Marketplace-2-Group/back-end.git
