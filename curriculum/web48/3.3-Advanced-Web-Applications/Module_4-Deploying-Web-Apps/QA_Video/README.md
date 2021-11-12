@@ -1,32 +1,27 @@
-# Module 1 - The Reducer Pattern
+# Module 4 - Deploying Web Apps
 
-- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
+- [youtube - guided project 3.3.4](https://youtu.be/QJkTHWeKOJ8)
 
-## - Module Materials:
+Congratulations on making it through!
+It was a pleasure to work with all of you and, to those that flex, I look forward to working with you once again!
+[Feel free to connect with me at](https://www.linkedin.com/in/warrenlongmire)
+A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
+Don’t forget to complete the days Check for Understanding and Pulse Checks!
+Here is a review of today’s material.
 
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-reducer)
--   [GP Slides:](https://docs.google.com/presentation/d/1XhCZWfyGUbxRAuhHvf38baQBcn4sl5jxZjSjKCSPFqw/edit?usp=sharing) 
--   [Thursday’s Module Project Review:](https://www.loom.com/share/94ff7b7e39c349d4875dfd607e10e0e3)
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/bMWoQfNzn-U) | [Josh Jacobson](https://youtu.be/1Jflvc3Dl_Q) | [Warren C. Longmire](https://youtu.be/E9M6-cRVDt4) | [Brian Kirkby](https://youtu.be/qfarRzchOE4)
+##  Module Materials:
+
+-   [Module Project:] https://github.com/LambdaSchool/web-module-project-deploying-web-apps GP Slides: https://docs.google.com/presentation/d/1Ac9M6BnB6nNLfKjQTdSo7Be1MetbkTrBaWyDJtwTIsM/edit?usp=sharing 
+-   [Wednesday’s Module Project Review:](https://www.loom.com/share/f1424033705b4913a5f2f6dedea44d3c) PW: NZcIRk
+-   [Alternative GP Video:] [Dustin Myers](https://youtu.be/T2wyfG8VDTo) | [Josh Jacobson](https://youtu.be/F1Ybjf6mndI) | [Warren C. Longmire](https://youtu.be/vImrQaq3yL4) | [Brian Kirkby](https://youtu.be/hKBZmtl-36o)
+
 ##  Key Terminology:
--   switch - [a javascript keyword used to streamline complex if else logic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
--   action - [a single piece of data manipulation in a reducer pattern](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   reducer - [a pure, predictible immutable function that executes action on state data](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   immutiblity - [an object or variable that can not be modified (and thus should only be copied)](https://www.youtube.com/watch?v=5qQQ3yzbKp8)
--   pure functions - [a pure, predictible immutable function that executes action on state data](https://www.youtube.com/watch?v=dZ41D6LDSBg)
-##  Key Concepts:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
--   Application State - [Data that is used across all of our application's components.](https://www.youtube.com/watch?v=7ilYJAG-_Ug)
--   Component State - [Data that is used within the context of a single component](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
--   The Reducer Pattern - [A design pattern for managing and modularizing out application state.](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   useReducer Hook - [A hook used to connect reducers and state to a React component](https://www.geeksforgeeks.org/reactjs-usereducer-hook/)
--   What does dispatch do? - [Awesome article by our own @Dustin Myers on the inner workings of dispatch](https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma)
-## Stretch Tutorial:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
 
-## QA Video:
-Today we walked through building a todo app using reducers and some general bug fixes.
-
--   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
-
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+-   TCP / IP - [Transmission Control Protocol / Internet Protocol - the web standard that defines the routing of data between client and server.](https://www.youtube.com/watch?v=PpsEaqJV_A0)
+-   DNS - [Domain Name System - the system that governs how URL address map to IP addresses.](https://www.youtube.com/watch?v=Rck3BALhI5c)
+-   HTTP - [Hypertext Transfer Protocol - the web standard that defines the structure of server requests and responses.](https://www.youtube.com/watch?v=iYM2zFP3Zn0)
+-   Client Side Rendering - [An approach to web application development where most data interactions are handled through client code.](https://www.youtube.com/watch?v=38Fv4FTXuDg)
+-   Server Side Rendering - [An approach to web application development where most data is constructed within server and transfer to the client in it's entirety.](https://www.youtube.com/watch?v=RAhYnK0v3rk)
+-   DevOps - [Developer Operations - a role in software development concerned with the testing, deployment, maintenance and project management of an application.](https://www.youtube.com/watch?v=_I94-tJlovg)
+-   CI / CD - [Continuous Integration / Continuous Development - the process used within an organization for testing, deployment, maintenance and project management.](https://www.youtube.com/watch?v=scEDHsr3APg)
+-   Cloud Computing - [A service that manages the entire technical infrastructure of an application (databases, hosting, domain services, remote code execution) remotely.](https://www.youtube.com/watch?v=dH0yz-Osy54)
