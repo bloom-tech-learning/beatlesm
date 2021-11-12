@@ -8,6 +8,7 @@ import MovieHeader from './components/MovieHeader';
 
 import EditMovieForm from './components/EditMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
+import AddMovieForm from "./components/AddMovieForm";
 
 import axios from 'axios';
 
@@ -26,6 +27,9 @@ const App = (props) => {
   }, []);
 
   const deleteMovie = (id)=> {
+    setMovies({
+      movies: movies.filter(movie => movie.id !== id)
+    })
   }
 
   const addToFavorites = (movie) => {
@@ -44,16 +48,34 @@ const App = (props) => {
           <FavoriteMovieList favoriteMovies={favoriteMovies}/>
         
           <Switch>
-            <Route path="/movies/edit/:id">
+            
+            <Route exact path="/movies/add">
+              <AddMovieForm  setMovies={setMovies} />
             </Route>
 
-            <Route path="/movies/:id">
-              <Movie/>
+            <Route path="/movies/edit/:id">
+              <EditMovieForm setMovies={setMovies} />
             </Route>
+
+            {/* <Route path="/movies/:id">
+              <Movie setMovies={setMovies}  />
+            </Route> */}
+
+            <Route
+              path="/movies/:id"
+              render={props => <Movie {...props} deleteMovie={deleteMovie} />}
+              // render={props => <Item match = {props.match} history = {props.history} setItems={setItems} />}
+            />
 
             <Route path="/movies">
-              <MovieList movies={movies}/>
+              <MovieList movies={movies} />
             </Route>
+
+            {/* <Route
+              exact
+              path="/movies"
+              render={props => <MovieList {...props} movies={movies} />}
+            /> */}
 
             <Route path="/">
               <Redirect to="/movies"/>

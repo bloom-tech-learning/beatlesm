@@ -1,14 +1,72 @@
+import React from 'react'
+import { render, screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
+import Display from './../Display'
 
+import mockFetchShow from './../../api/fetchShow'
+jest.mock('./../../api/fetchShow')
 
+const testShow = {
+    //add in approprate test data structure here.
+    name: "test show",
+    summary: "test summary",
+    seasons: [
+        {
+            id: 0,
+            name: "season 1",
+            episode: []
+        },
+        {
+            id: 1,
+            name: "season 2",
+            episodes: []
+        }
+    ]
+}
 
+test ("render without errors", () => {
+    render (<Display />);
+})
 
+test ("renders Show component when the button is click", async () => {
+    mockFetchShow.mockResolvedValueOnce(testShow);
 
+    render (<Display />);
+    const button = screen.queryByRole("button");
+    userEvent.click(button);
 
+    const show = await screen.findByTestId("show-container");
+    expect(show).toBeInTheDocument();
+})
 
+test ("render season options matching fetch return when button is clicked", async () => {
+    mockFetchShow.mockResolvedValueOnce(testShow);
+    
+    render (<Display />);
+    const button = screen.queryByRole("button");
+    userEvent.click(button);
 
+    await waitFor(() => {
+        const seasonOptions = screen.queryAllByTestId("season-option");
+        // console.log('seasonOptions: ', seasonOptions);
+        expect(seasonOptions).toHaveLength(2);
+    });
+})
 
+test ("displayFunc is called when the button is pressed", async () => {
+    mockFetchShow.mockResolvedValueOnce(testShow);
+    const displayFunc = jest.fn();
 
+    render (<Display displayFunc = {displayFunc} />);
+    const button = screen.queryByRole("button");
+    userEvent.click(button);
+
+    await waitFor(() => {
+        expect(displayFunc).toHaveBeenCalled();
+    });
+
+})
 
 
 
