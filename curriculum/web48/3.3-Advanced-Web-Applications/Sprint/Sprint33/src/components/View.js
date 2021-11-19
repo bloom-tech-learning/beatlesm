@@ -1,23 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Article from './Article';
 import EditForm from './EditForm';
 
+import articleService from '../services/articleServices';
+import axiosWithAuth from '../utils/axiosWithAuth';
+
 const View = (props) => {
+    
+    // const {articles, editing, editId, setArticles, setEditing, setEditId} = props;
     const [articles, setArticles] = useState([]);
     const [editing, setEditing] = useState(false);
     const [editId, setEditId] = useState();
 
-    const handleDelete = (id) => {
-    }
+    const { id } = useParams();
+    const { push } = useHistory();
+     
+    useEffect(()=>{
+        articleService().then((articles) => {            
+            setArticles(articles);
+        });
+    }, []);
+
+    //To Delete:
+    //1. Capture a click.
+    //2. Send our axios call to delete current article (id)
+    //3. Redirect user to item list (view) page.
+    //4. Update local state    
+    const handleDelete = (id) => {       
+        axiosWithAuth().delete(`articles/${id}`)
+        .then (res => {           
+            setArticles(res.data);                
+        })
+        .catch(err => {
+            console.log('err');
+        })        
+    } 
 
     const handleEdit = (article) => {
+        setArticles(res.data); 
     }
 
     const handleEditSelect = (id)=> {
         setEditing(true);
         setEditId(id);
+        //1. Capture a click of the edit button.
+        //2. redirect the user to the edit form.
+        // push(`/view/${id}`);
     }
 
     const handleEditCancel = ()=>{

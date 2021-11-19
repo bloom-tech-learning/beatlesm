@@ -1,0 +1,44 @@
+.login-container {
+    padding: 11.5%;
+    width: 100%;
+    text-align: center;
+}
+.login-container h1{
+
+}
+.user-pass-form-element {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.signin {
+    padding: 5%;
+}
+.login-button-2{
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #a7c5cf;
+    border-radius: 6px;
+    outline: none;
+    padding: 1%;
+}
+.login-button-2:hover {
+    color: #000000;
+}
+.login-button-3{
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #a7c5cf;
+    border-radius: 6px;
+    outline: none;
+    padding: 1%;
+    margin: 2%;
+    margin-top: 2%;
+}
+.login-button-3:hover {
+    color: #000000;
+}
+.no-account {
+    margin-top: 2%;
+}

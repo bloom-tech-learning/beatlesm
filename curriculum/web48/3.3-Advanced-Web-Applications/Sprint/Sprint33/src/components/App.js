@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Redirect } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
 import styled from 'styled-components';
@@ -8,16 +8,33 @@ import LambdaHeader from './LambdaHeader';
 import View from './View';
 import Login from './Login';
 import Logout from './Logout';
+import EditForm from './EditForm';
 
 const App = () => {
+  // const [articles, setArticles] = useState([]);
+  // const [editing, setEditing] = useState(false);
+  // const [editId, setEditId] = useState();
+
   return (
     <AppContainer>
       <LambdaHeader/>
       <Header/>
       <RouteContainer>
-        <Route exact path="/">
+        <Route exact path="/login">
           <Login/>
-        </Route>          
+        </Route>    
+        <Route path="/">
+              <Redirect to="/login"/>
+        </Route>
+         
+        <Route path="/view">
+              {/* <View articles = {articles} editing = {editing} editId = { editId} setArticles = { setArticles } setEditing = { setEditing } setEditId = {setEditId}  /> */}
+              <View  />
+        </Route>  
+
+        <Route path="/logout">
+              <Logout />
+        </Route>  
       </RouteContainer>
     </AppContainer>
   )
