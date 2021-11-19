@@ -1,6 +1,9 @@
+import axiosWithAuth from "../utils/axiosWithAuth";
 
+const articleService = async ()=> {
 
-const articleService = ()=> {
+    const res = await axiosWithAuth().get("/articles")
+    return res.data;
 }
 
 export default articleService;

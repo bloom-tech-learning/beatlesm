@@ -1,12 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import styled from 'styled-components';
 
-const Login = () => {
+
+const Login = (props) => {
+    const [login, setLogin] = useState({
+        username: '',
+        password: ''
+    })
+
+    const [errorMessage, setErrorMessage] = useState ("");
+
+    const { push } = useHistory();
+
+    const handleChange = (e) => {
+        setLogin({
+            ...login,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();     
+        if (login.username === "" || login.password === "" ) {
+            //add in error action 
+            setErrorMessage("No empty of username, and password.");            
+            return;  
+        }   
+        axios.post('http://localhost:5000/api/login', login)  
+            .then(resp => {                
+                localStorage.setItem('token', resp.data.token);
+                push ('/view');
+            })
+            .catch(err => {
+                setErrorMessage(err.response.data.error);                
+                console.log('err: ', err);
+                return;
+            })
+    }
     
     return(<ComponentContainer>
         <ModalContainer>
             <h1>Welcome to Blogger Pro</h1>
             <h2>Please enter your account information.</h2>
+            { errorMessage && <p style={{ color: 'red' }} id="error">Error: {errorMessage} </p> }
+            <form 
+                onSubmit={handleSubmit}
+                >   
+                <UserInputs> 
+                <label> Username:
+                    <input 
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        value={login.username}
+                        onChange={handleChange}
+                    />
+                </label>
+                {/* <UserInputs> 
+                </UserInputs>  */}
+                <label> Password:
+                    <input 
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        value={login.password}
+                        onChange={handleChange}
+                    />
+                </label>
+                </UserInputs>
+                <button id="submit">Log in</button>
+            </form>
         </ModalContainer>
     </ComponentContainer>);
 }
@@ -32,6 +99,12 @@ const ModalContainer = styled.div`
     width: 500px;
     background: white;
     padding: 2rem;
+    text-align: center;
+`
+
+const UserInputs = styled.div`    
+    background: white;
+    padding: 1%;
     text-align: center;
 `
 

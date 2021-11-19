@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, useHistory } from "react-router-dom";
 import styled from 'styled-components';
+import axiosWithAuth from '../utils/axiosWithAuth';
 
 const initialArticle = {
     id:"",
@@ -10,8 +12,25 @@ const initialArticle = {
 };
 
 const EditForm = (props)=> {
+    console.log('props in EditForm: ', props);
     const [article, setArticle]  = useState(initialArticle);
     const {handleEdit, handleEditCancel, editId} = props;
+
+    console.log('useParams: ', useParams());
+    const { id } = useParams();
+    const { push } = useHistory();
+
+    useEffect (() => {
+        axiosWithAuth().get(`/articles/${editId}`)
+        .then (res => {
+            console.log('res in api Get: ', res);
+            setArticle(res.data);                
+        })
+        .catch(err => {
+            console.log('err');
+        })        
+
+      }, [])
 
     const handleChange = (e)=> {
         setArticle({
@@ -22,13 +41,23 @@ const EditForm = (props)=> {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleEdit(article);
+        // 
+      !editing && axiosWithAuth().put(`articles/${editId}`, article)
+        .then (res => {           
+            handleEdit(article); 
+            setEditing(false); 
+            push(`/view`);             
+        })
+        .catch(err => {
+            console.log(err);
+        })         
     }
 
 
     const handleCancel = (e) => {
         e.preventDefault();
-        handleEditCancel();
+        // handleEditCancel();
+        setEditing(true); 
     }
 
     return(<FormContainer onSubmit={handleSubmit}>
