@@ -1,43 +1,63 @@
-import { useEffect, useState } from 'react';
-import axiosWithAuth from '../utils/axiosWithAuth';
+import React, { useEffect, useState } from 'react';
 import ClassListSession from './ClassListSession';
 import { Link } from 'react-router-dom';
+import axiosWithAuth from '../utils/axiosWithAuth';
+import ClassHeader from './ClassHeader';
+import FavoriteClassList from './FavoriteClassList';
 
-export default function ClassList (props) {
-    // const { classes, setClasses } = props;
-    const [classes, setClasses] = useState([])   
-    useEffect(() => {
 
+const ClassList = (props)=> {
+    const { classes, setClasses, favoriteClasses } = props;
+
+    useEffect(()=>{
         axiosWithAuth()
             .get('/classes/')          
-            .then (resp => {
-                // debugger
-                console.log('resp in UserList.js: ', resp);
+            .then (resp => {                
+                console.log('resp in ClassList.js: ', resp);
                 setClasses(resp.data);
             })
             .catch(err => {
                 console.log(err);
             })
+      }, []);
 
-    }, []);
+    return (<>
+        
+        <nav className="nav-bar">
+            <div className="left-links"> <Link className="link" to='/'>Anywhere Fitness </Link> </div>
+            <div className="right-links"> {props.isLoggedIn && <Link className="link" to='/logout'>Logout</Link>} </div>
+        </nav>            
 
-    return(
-        <div>
-            <nav className="nav-bar">
-            <div className="left-links">
-            <Link className="link" to='/'>Anywhere Fitness &nbsp; {props.message}  </Link>                                                 
+        <div className="container">            
+            <ClassHeader/>
+            <div className="row ">
+                <FavoriteClassList favoriteClasses={favoriteClasses}/>
+
+                <div className="col">
+                    <table className="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                        <th>Name</th>
+                                <th>Intensity</th>
+                                <th>Instructor</th>
+                                <th>Location</th>
+                                <th></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            {
+                                classes.map(session=><ClassListSession key={session.id} session={session}/>)
+                            }
+                        </tbody>
+                    </table>
+                    {/* <MovieFooter totalMovies={movies.length}/> */}
+                </div>
+
             </div>
-            <div className="right-links">                                                         
-                {(props.role === 'instructor' && props.isLoggedIn) && <Link className="link"  to='/create'>Create a Class</Link>  }                 
-                {(props.role === 'client' && props.isLoggedIn) && <Link className="link"  to='/create'>Jion a Class</Link> }             
-                {props.isLoggedIn && <Link className="link" to='/logout'>Logout</Link>}                       
-            </div>
-            </nav>
-            {
-                classes.map(session=><ClassListSession key={session.id} session={session}/>)
-            }
         </div>
 
-        
-    );
+    </>);
 }
+
+export default ClassList;
