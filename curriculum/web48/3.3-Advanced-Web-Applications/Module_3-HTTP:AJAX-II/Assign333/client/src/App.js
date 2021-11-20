@@ -42,10 +42,10 @@ const App = (props) => {
         <span className="navbar-brand" ><img width="40px" alt="" src="./Lambda-Logo-Red.png"/> HTTP / CRUD Module Project</span>
       </nav>
 
-      <div className="container">
+      {/* <div className="container">
         <MovieHeader/>
         <div className="row ">
-          <FavoriteMovieList favoriteMovies={favoriteMovies}/>
+          <FavoriteMovieList favoriteMovies={favoriteMovies}/> */}
         
           <Switch>
             
@@ -81,8 +81,8 @@ const App = (props) => {
               <Redirect to="/movies"/>
             </Route>
           </Switch>
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
     </div>
   );
 };

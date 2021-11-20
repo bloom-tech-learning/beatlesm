@@ -51,12 +51,12 @@ export default function Login (props){
                     { !props.isLoggedIn  && <div className="link"  > <Link className="link"  to='/register' >Register</Link></div>} </div>
             </nav>   
                     
-                <div className="container" >
+                <div  >
                      
                     <div >                             
                         <form onSubmit={handleSubmit} >
-                            <h1 className= "mb-3">Please sign in</h1>
-                            <label htmlFor="username" className="sr-only mb-4"> 
+                            <h1 >Please sign in</h1>
+                            <label htmlFor="username" > 
                                 <input 
                                     type="text"
                                     name="username"
@@ -74,10 +74,10 @@ export default function Login (props){
                                     onChange={handleChange}
                                 />
                             </label>
-                            <button className="btn btn-lg btn-primary btn block">Login</button>
+                            <button >Login</button>
                         </form> 
                             <div>Don't have an account?
-                            <button className="btn btn-lg btn-primary btn block"><Link className="link-1" to='/register'>Register</Link></button> 
+                            <button ><Link className="link-1" to='/register'>Register</Link></button> 
                             
                             </div>                    
                     </div > 
