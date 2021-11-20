@@ -250,3 +250,6 @@
 [submodule "curriculum/web48/2.4-WEB-Unit-2-Build/FT-African-Marketplace-2-Group/back-end"]
 	path = curriculum/web48/2.4-WEB-Unit-2-Build/FT-African-Marketplace-2-Group/back-end
 	url = git@github.com:FT-African-Marketplace-2-Group/back-end.git
+[submodule "curriculum/web48/3.4-WEB-Unit-3-Build/ft-anywhere-fitness-7"]
+	path = curriculum/web48/3.4-WEB-Unit-3-Build/ft-anywhere-fitness-7
+	url = git@github.com:beatlesm/ft-anywhere-fitness-7.git
