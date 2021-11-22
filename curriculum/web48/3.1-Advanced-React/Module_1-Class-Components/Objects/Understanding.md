@@ -11,7 +11,8 @@
 
 #### Answer:   (C) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: (D)  All react components can render jsw to the browser
+- Hints: (C)  Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
 
 ## Question 2
 
@@ -24,7 +25,8 @@
 
 #### Answer:   (C) 
 
-- Hints: In class components, we always need to use this.setState() to modify state.
+- Hints: (D)  Not quite. In this case, ```doggos``` is the key for our slice of state, while ```doggoData``` is the value itself.
+- Hints: (C)  In class components, we always need to use this.setState() to modify state.
 
 ## Question 3
 
@@ -37,7 +39,7 @@
 
 #### Answer:   (B) 
 
-- Hints: To access a class component's state, always use this.state followed by the slice of state required.
+- Hints: (B)  To access a class component's state, always use this.state followed by the slice of state required.
 
 ## Question 4
 
@@ -50,7 +52,7 @@
 
 #### Answer:   (B) 
 
-- Hints: In a class component, props is held within the this property, the class' instance reference.
+- Hints: (B)  In a class component, props is held within the this property, the class' instance reference.
 
 ## Question 5
 
@@ -63,6 +65,9 @@
 
 #### Answer:   (B) 
 
+- Hints: (A)  Remember that we are using class based components in this case, so we need to use this.setState to modify state.
+- Hints: (B)  When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
+
 ## Question 6
 
 ####  We use **_ when saving data that will change within a component. We use _** when passing data into a component.
@@ -74,7 +79,7 @@
 
 #### Answer:   (A) 
 
-- Hints: The state object is where you store property values that belongs to the component. Props are values that are passed into a component from a parent.
+- Hints: (A)  The state object is where you store property values that belongs to the component. Props are values that are passed into a component from a parent.
 
 ## Question 7
 
@@ -92,7 +97,7 @@
 
 #### Answer:   (C) 
 
-- Hints: This is an example of setting an eventlistener for a DOM element.
+- Hints: (C)  This is an example of setting an eventlistener for a DOM element.
 
 
 
