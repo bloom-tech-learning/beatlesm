@@ -11,7 +11,7 @@
 
 #### Answer:   (B) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: (B)    Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
 
 ## Question 2
 
@@ -24,7 +24,7 @@
 
 #### Answer:   (C) 
 
-- Hints: You need a store to connect your components to for Redux to function.
+- Hints: (C)    You need a store to connect your components to for Redux to function.
 
 ## Question 3
 
@@ -37,8 +37,8 @@
 
 #### Answer:   (C) 
 
-- Hints: MapStateToProps does not modify state. That is the job of the reducer function.
-- Hints: MapStateToProps should return an option to be added to props
+- Hints: (A)    MapStateToProps does not modify state. That is the job of the reducer function.
+- Hints: (C)    MapStateToProps should return an option to be added to props
 
 ## Question 4
 
@@ -51,7 +51,7 @@
 
 #### Answer:   (A) 
 
-- Hints: Action creators are just clean ways of creating action objects and passing them into the reducer.
+- Hints: (A)    Action creators are just clean ways of creating action objects and passing them into the reducer.
 
 ## Question 5
 
@@ -64,7 +64,7 @@
 
 #### Answer:   (C) 
 
-- Hints: For this any other default parameter, we set the name of the perameter we are assigning a value to to the variable that holds it's default value.
+- Hints: (C)    For this any other default parameter, we set the name of the perameter we are assigning a value to to the variable that holds it's default value.
 
 
 
