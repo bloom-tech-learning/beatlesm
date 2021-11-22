@@ -1,3 +1,3 @@
-#   [Sprint 3.1](./README.md)
+#   [Sprint 3.1 - Sprint Assessment](./README.md)
 
-#### [Check For Understanding](./Objects/Understanding.md)
+#### [Sprint Assessment](./Assessment.md)
