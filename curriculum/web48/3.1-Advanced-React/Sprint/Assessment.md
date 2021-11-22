@@ -1,21 +1,21 @@
-# Web48 - Module 3.1.4 Testing Web Applications Check For Understanding 
+# Web48 - 3.1 Sprint Assessment
 
 ## Question 1
 
-####  Which of the following is an assertion function?
+####  constructor methods are executed in which phase of Module 2 - The React Lifecycle?
 
-- ```expect(value).toBeTruthy()``` 
-- ```screen.getByLabelText('label test");``` 
-- ```userEvent.type("new value");``` 
-- ```test("new test", ()=>{});``` 
+- ```Updating``` 
+- ```Rendering``` 
+- ```Mouting``` 
+- ```Unmounting``` 
 
-#### Answer:   (A) 
-
-- Hints: `toBeTruthy` tests the truthiness (or falsiness) of a value!
+#### Answer:   (C) 
 
 ## Question 2
 
-####  What RTL library allows you to mimic browser events in your tests?
+####  Fill in the blank for the method that belongs in the empty box.
+
+![React_life_Cycle](./b0HTXNp.png)
 
 - ```user``` 
 - ```onClick``` 
@@ -38,6 +38,19 @@
 - Hints: Again, we'd reccomend you check out the [RTL docs](https://testing-library.com/docs/ecosystem-user-event/) to learn more about user events.
 
 ## Question 4
+
+####  Which query functions allow you to "wait" for state to be updated after an event has been fired off?
+
+- ```screen.queryByTestId()``` 
+- ```All of the Above``` 
+- ```screen.findByText()``` 
+- ```screen.getAllByRole()``` 
+
+#### Answer:   (C) 
+
+- Hints: By now you get it... check out the documentation!
+
+## Question 5
 
 ####  Which query functions allow you to "wait" for state to be updated after an event has been fired off?
 
