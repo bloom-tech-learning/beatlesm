@@ -50,8 +50,6 @@ putMessage = quote => {
 
 #### Answer:   (D) 
 
-- Hints: Again, we'd reccomend you check out the [RTL docs](https://testing-library.com/docs/ecosystem-user-event/) to learn more about user events.
-
 ## Question 4
 
 ####  What type of data does the following code initially return?
