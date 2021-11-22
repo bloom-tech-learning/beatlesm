@@ -17,51 +17,71 @@
 
 ![React_life_Cycle](./b0HTXNp.png)
 
-- ```user``` 
-- ```onClick``` 
-- ```eventUser``` 
-- ```userEvent``` 
+- ```componentWillChange``` 
+- ```componentDidUpdate``` 
+- ```componentDidChange``` 
+- ```componentWillUpdate``` 
 
-#### Answer:   (D) 
+#### Answer:   (B) 
 
 ## Question 3
 
-####  Which of the following would allow you to mimic a user typing into a text input?
+####  componentDidMount will be invoked _ render.
 
-- ```userEvent.type(firstNameInput, 'Tony')``` 
-- ```userEvent.type('Tony')``` 
-- ```userEvent.click(inputButton)``` 
-- ```userEvent.change(firstNameInput, 'Tony')``` 
+- alongside 
+- before  
+- with no regard to 
+- after 
 
-#### Answer:   (A) 
+#### Answer:   (D) 
 
 - Hints: Again, we'd reccomend you check out the [RTL docs](https://testing-library.com/docs/ecosystem-user-event/) to learn more about user events.
 
 ## Question 4
 
-####  Which query functions allow you to "wait" for state to be updated after an event has been fired off?
+####  Fill in the missing code (________) to use the custom hook in a form component:
+```
+const useForm = initialValue => {
+  const [values, setValues] = useState(initialValue)
+  const handleChanges = event => {
+    setValues({ ...values, [event.target.name]: event.target.value })
+  }
+  return [
+    ________,
+    values
+  ]
+};
 
-- ```screen.queryByTestId()``` 
-- ```All of the Above``` 
-- ```screen.findByText()``` 
-- ```screen.getAllByRole()``` 
+// in the form component
+const [________, values] = useForm(initialValue);
+```
 
-#### Answer:   (C) 
+- ```useForm``` 
+- ```changes``` 
+- ```event.target.value``` 
+- ```handleChanges``` 
 
-- Hints: By now you get it... check out the documentation!
+#### Answer:   (D)
 
 ## Question 5
 
-####  Which query functions allow you to "wait" for state to be updated after an event has been fired off?
+What is the purpose of the following code in testing?
+```
+test('renders without crashing', () => {
+render(
+hello world
+);
+});
+```
 
-- ```screen.queryByTestId()``` 
-- ```All of the Above``` 
-- ```screen.findByText()``` 
-- ```screen.getAllByRole()``` 
+-   Test a button click 
+-   render a span on the DOM 
+-   run a unit test on an isolated function 
+-   render a react element to initialize tests
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
-- Hints: By now you get it... check out the documentation!
+
 
 
 
