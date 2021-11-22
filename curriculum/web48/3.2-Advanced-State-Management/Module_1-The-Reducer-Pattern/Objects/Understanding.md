@@ -97,7 +97,7 @@ case "ADD_HOBBY":
   }
 ``` 
 
-#### Answer:   (B) 
+#### Answer:   (D) 
 
 - Hint: Always spread state when returning a state object to insure you don't accidentally delete unmodified slices of state!
 
