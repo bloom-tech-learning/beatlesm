@@ -1,87 +1,74 @@
-# Module 3.1.1 - Class Components
+# Module 3.2.3 - Async Redux Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  A finite state machine has a(n) **_ number of possible states, and can be in _** state(s) at any given time.
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+- finite, all  
+- infinite, one 
+- finite, one 
+- infinite, all  
 
 #### Answer:   (C) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: You're correct(B) that it can only be in one state at a time. However, there are only a finite number of states, not infinite.
+- Hints: This is a mathematical model that we're applying to our React/Redux apps. OOur apps can only be in one state at a time, and only have a finite number of states.
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  What can a middleware function NOT do?
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- Update state based on the dispatched action  
+- Forward an action untouched  
+- Dispatch multiple actions  
+- Dispatch multiple actions 
 
-#### Answer:   (C) 
+#### Answer:   (A) 
 
-- Hints: In class components, we always need to use this.setState() to modify state.
+- Hints: A middleware function CAN do this(C). Just like redux-thunk will stop a function that's returned from an action creator so it doesn't break the reducer.
+- Hints: Middleware functions intercept actions before they are dispatched to a reducer. That means that a middleware function is not going to update the state. Only the reducer can do that.
 
 ## Question 3
 
-####  How would you refer to a state property called "pokemon" in the class component?
+####  What function do you import from redux to be able to use middleware functions in your react/redux apps?
 
-- ```pokemon``` 
-- ```this.state.pokemon``` 
-- ```state.pokemon``` 
-- ```this.pokemon``` 
+- ```combineReducers``` 
+- ```useMiddleware``` 
+- ```applyMiddleware``` 
+- ```updateMiddleware``` 
 
-#### Answer:   (B) 
+#### Answer:   (c) 
 
-- Hints: To access a class component's state, always use this.state followed by the slice of state required.
+- Hints: We want to "apply" a middleware function to our redux apps, so we use the "applyMiddleware" function.
 
 ## Question 4
 
-####  How do you reference props in a class component?
+####  Which of the following best describes the term "thunk"?
 
-- ```props``` 
-- ```this.props``` 
-- ```this.state.props``` 
-- ```state.props``` 
-
-#### Answer:   (B) 
-
-- Hints: In a class component, props is held within the this property, the class' instance reference.
-
-## Question 5
-
-####  How would you update a state property called "username" that is controlling a text input?
-
-- ```setUsername(e.target.value)``` 
-- ```this.setState({ username: e.target.value })``` 
-- ```None of the Above ``` 
-- ```this.setState({ value: e.target.username })``` 
-
-#### Answer:   (B) 
-
-- Hints: When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
-
-## Question 7
-
-####  What is the purpose of the following code?
-
-```
- <li onClick={() => toggleCompleted(todo.id)}>
-      {todo.task}
-    </li>
-```
-
-- Change the value of ```todo.task``` based on ```toggleCompleted```.
-- Stop the function ```toggleCompleted``` each time the user clicks on an item.  
-- Sets ```toggleCompleted``` to run when the user clicks on this list item object.
+- A callback function  
+- An action creator function  
+- A function that is returned from another function  
+- A middleware function 
 
 #### Answer:   (C) 
 
-- Hints: This is an example of setting an eventlistener for a DOM element.
+- Hints: This is the actual definition of the term "thunk", and it's why redux-thunk is named that. It uses this principle to give access to the dispatch function in our action creators.
+
+## Question 5
+
+####  What is something that redux-thunk does NOT allow you to do in action creators?
+
+- Run asynchronous operations  
+- dispatch actions to the reducer 
+- Fetch data from an API  
+- Update state  
+
+#### Answer:   (D) 
+
+- Hints: (B)redux-thunk DOES allow us to dispatch actions to the reducer
+- Hints: Only reducer functions can update the state in a redux app.
+
+
 
 
 
