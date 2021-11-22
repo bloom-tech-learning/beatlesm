@@ -1,87 +1,75 @@
-# Module 3.1.1 - Class Components
+# Module 3.2.4 - Context API Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  What caution does the React docs give when using the context API?
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+- Context API adds too many layers of components in the browser  
+- Context API causes you to use prop drilling  
+- Using the context API makes passing data to children components harder  
+- Using the context API makes component reuse harder  
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: (B) This is a benefit of context, not something we are warned against.
+- Hints: (D) This happens because in order to reuse a component in a component tree outside of the context provider, you'd have to move your provider and the data to a higher component.
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  What is the syntax to create a context object?
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- ```const SampleContext = createContext();``` 
+- ```useContext(const SampleContext = createContext)``` 
+- ```const Context = useContext();``` 
+- ```const SampleContext = createContextObject()``` 
 
-#### Answer:   (C) 
+#### Answer:   (A) 
 
-- Hints: In class components, we always need to use this.setState() to modify state.
+- Hints: (A) The `createContext` is the React function that we call to create a context object.
 
 ## Question 3
 
-####  How would you refer to a state property called "pokemon" in the class component?
+####  To what prop on the Provider component do you pass your data?
 
-- ```pokemon``` 
-- ```this.state.pokemon``` 
-- ```state.pokemon``` 
-- ```this.pokemon``` 
+- ```value``` 
+- ```state``` 
+- ```action``` 
+- ```data``` 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
-- Hints: To access a class component's state, always use this.state followed by the slice of state required.
+- Hints: (B) We actually want to use the ```value``` prop.
+- Hints: (A) This is the prop we use to pass data to the Provider component so we can access that data in its children components
 
 ## Question 4
 
-####  How do you reference props in a class component?
+####  What is the pattern called that we use to cosume context data with the Consumer component?
 
-- ```props``` 
-- ```this.props``` 
-- ```this.state.props``` 
-- ```state.props``` 
+- custom hooks
+- context hook  
+- Context Consumer pattern 
+- render props 
 
-#### Answer:   (B) 
+#### Answer:   (D) 
 
-- Hints: In a class component, props is held within the this property, the class' instance reference.
+- Hints: (B) The hook pattern is the other pattern. This pattern is the render prop pattern.
+- Hints: (D) This is an old pattern that solved a problem in React that is now solved by hooks. While you won't see it often, it's good to know what it is for the times you may see it in a React app.
 
 ## Question 5
 
-####  How would you update a state property called "username" that is controlling a text input?
+####  What does the ```useContext``` hook return when called?
 
-- ```setUsername(e.target.value)``` 
-- ```this.setState({ username: e.target.value })``` 
-- ```None of the Above ``` 
-- ```this.setState({ value: e.target.username })``` 
-
-#### Answer:   (B) 
-
-- Hints: When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
-
-## Question 7
-
-####  What is the purpose of the following code?
-
-```
- <li onClick={() => toggleCompleted(todo.id)}>
-      {todo.task}
-    </li>
-```
-
-- Change the value of ```todo.task``` based on ```toggleCompleted```.
-- Stop the function ```toggleCompleted``` each time the user clicks on an item.  
-- Sets ```toggleCompleted``` to run when the user clicks on this list item object.
+- Any state that is managed by the Provider's component 
+- Whatever you passed into the Provider for that context object.  
+- a function to update data from a seperate store.  
+- A store that is seperate from the component tree structure  
 
 #### Answer:   (C) 
 
-- Hints: This is an example of setting an eventlistener for a DOM element.
+- Hints: (A) Almost, but only data passed into the Provider will be returned by useContext.
+- Hints: (C) The data we pass to a provider can be a variable, object, array, or any JavaScript type. The useContext hook will return whatever is passed into the Provider.
+
+
 
 
 
