@@ -19,7 +19,7 @@
 
 ### [Objective 3 - Compose Hooks in a Custom Hook to Extend Multiple Pieces of Stateful Logic](./Objects/Object_3.md)
 
-### [Check For Understanding](./Objects/Understanding.md)
+#### [Check For Understanding](./Objects/Understanding.md)
 
 
 ### Today’s Office Hours:
