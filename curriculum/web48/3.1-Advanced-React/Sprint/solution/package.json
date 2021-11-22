@@ -1,23 +1,23 @@
 {
-  "name": "web-sprint-challenge-intro-to-react",
-  "version": "0.1.1",
+  "name": "web-sprint-challenge-advanced-react",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^13.1.8",
-    "axios": "^0.21.4",
-    "msw": "^0.28.2",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
+    "@testing-library/user-event": "^10.1.0",
+    "axios": "^0.19.2",
     "mutationobserver-shim": "^0.3.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "styled-components": "^5.3.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^5.6.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --silent --verbose",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,14 +35,8 @@
       "last 1 safari version"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react.git"
-  },
-  "bugs": {
-    "url": "https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react/issues"
-  },
-  "msw": {
-    "workerDirectory": "public"
+  "devDependencies": {
+    "@sheerun/mutationobserver-shim": "^0.3.3",
+    "msw": "^0.21.3"
   }
 }

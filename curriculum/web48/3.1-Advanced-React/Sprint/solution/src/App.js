@@ -1,37 +1,68 @@
-import React, { useState, useEffect }  from 'react';
-import axios from 'axios';
-import Character from './components/Character';
-import './App.css';
+import React, {useState } from "react";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
-const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
-  const [characters, setCharacters] = useState([]);
+import PlantList from "./components/PlantList";
+import ShoppingCart from "./components/ShoppingCart";
+import CheckoutForm from "./components/CheckoutForm";
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+import "./App.css";
 
-  useEffect(() => {
-    axios.get(`https://swapi.dev/api/people`)
-      .then(res => {
-       
-        setCharacters(res.data);       
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [])
-  console.log('characters: ', characters);
+function App() {
+  // array of plants that have been added to the cart
+  const [cart, setCart] = useState([]);
+
+  // add a plant to the cart
+  const addToCart = (plant) => {
+    setCart([...cart, plant]);
+  };
+
+  // remove a plant from the cart
+  const removeFromCart = (plant) => {
+    setCart(cart.filter((p) => p.id !== plant.id));
+  };
+
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
-      {
-        characters.map(char => {
-          return <Character character={char}  />
-        })
-      }
+    <div>
+      <Router>
+        <nav className="container">
+          <h1>
+            React Plants <span role="img" aria-label="plants"> 🌿 </span>
+          </h1>
+          <ul className="steps">
+            <li>
+              <NavLink exact to="/">
+                Plants
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/cart">
+                Cart
+                <span className="cart-badge">
+                  {cart.length > 0 && cart.length}
+                </span>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <Route
+          exact
+          path="/"
+          render={() => <PlantList addToCart={addToCart} />}
+        />
+        <Route
+          path="/cart"
+          render={(props) => (
+            <ShoppingCart
+              {...props}
+              cart={cart}
+              removeFromCart={removeFromCart}
+            />
+          )}
+        />
+        <Route path="/checkout" component={CheckoutForm} />
+      </Router>
     </div>
   );
 }
 
+export default App;
