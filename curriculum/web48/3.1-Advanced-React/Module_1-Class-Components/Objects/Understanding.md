@@ -1,4 +1,4 @@
-# Module 3.1.1 - Class Components
+# Module 3.1.1 - Class Components Check For Understanding
 
 ## Question 1
 
