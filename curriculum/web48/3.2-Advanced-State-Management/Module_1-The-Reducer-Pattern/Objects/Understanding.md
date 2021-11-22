@@ -1,87 +1,107 @@
-# Module 3.1.1 - Class Components
+# Module 3.2.1 - The Reducer Pattern Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  Why is it important to follow immutability principles in React?
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+- React components will only re-render if your state updates are mutable  
+- mutable updates make state management more unpredictable  
+- You can only have a certain number of mutable properties in React  
+- React components will only re-render if your state updates are immutable  
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: React requires "fresh" data for it's re-rendering process. Practicing immutablity insures successful re-rendering.
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  In general, what does a reducer function do?
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- aggregates values based on app settings  
+- Reduce sauce for your steak dinner  
+- Takes in one argument and returns two seperate items  
+- takes in two arguments and returns an new, immutable item 
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
-- Hints: In class components, we always need to use this.setState() to modify state.
+- Hints: In our case, the item a reducer returns is an updated state value.
 
 ## Question 3
 
-####  How would you refer to a state property called "pokemon" in the class component?
+####  When you call useReducer and pass in a reducer and an initial state object, what does it return?
 
-- ```pokemon``` 
-- ```this.state.pokemon``` 
-- ```state.pokemon``` 
-- ```this.pokemon``` 
+- ```[props, action]``` 
+- ```[action, dispatch]``` 
+- ```[state, action]``` 
+- ```[state, dispatch]``` 
 
-#### Answer:   (B) 
+#### Answer:   (D) 
 
-- Hints: To access a class component's state, always use this.state followed by the slice of state required.
+- Hints: The state holds the current values of the state. Dispatch allows for actions to be called to routed to the reducer.
 
 ## Question 4
 
-####  How do you reference props in a class component?
+####  What is the required property in action objects?
 
-- ```props``` 
-- ```this.props``` 
-- ```this.state.props``` 
-- ```state.props``` 
+- ```type``` 
+- ```data``` 
+- ```payload``` 
+- ```dataType``` 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
-- Hints: In a class component, props is held within the this property, the class' instance reference.
+- Hints: As a matter of convention, type is most often used to identify the what action case we are triggering.
 
 ## Question 5
 
-####  How would you update a state property called "username" that is controlling a text input?
+#### What ```case``` statement should be added to your reducer for adding a hobby with the following state and action objects?
+```
+const initialState = {
+  user: {},
+  friends: [],
+  hobbies: []
+}
+```
+```
+{ type: "ADD_HOBBY", payload: newHobby }
+```
 
-- ```setUsername(e.target.value)``` 
-- ```this.setState({ username: e.target.value })``` 
-- ```None of the Above ``` 
-- ```this.setState({ value: e.target.username })``` 
+- 
+```
+  case "HOBBY_UPDATER":
+    return {
+      ...state,
+      hobbies: [...state.hobbies, action.payload]
+    }
+  ``` 
+- 
+```
+case "ADD_HOBBY":
+  return {
+    ...state,
+    hobbies: [...state.hobbies, action.payload]
+  }
+``` 
+- 
+```
+case "ADD_HOBBY":
+  return {
+    hobbies: [...state.hobbies, action.payload]
+  }
+``` 
+- 
+```
+case "ADD_HOBBY":
+  return {
+    hobbies: [...state.hobbies, action.payload]
+  }
+``` 
 
 #### Answer:   (B) 
 
-- Hints: When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
+- Hint: Always spread state when returning a state object to insure you don't accidentally delete unmodified slices of state!
 
-## Question 7
-
-####  What is the purpose of the following code?
-
-```
- <li onClick={() => toggleCompleted(todo.id)}>
-      {todo.task}
-    </li>
-```
-
-- Change the value of ```todo.task``` based on ```toggleCompleted```.
-- Stop the function ```toggleCompleted``` each time the user clicks on an item.  
-- Sets ```toggleCompleted``` to run when the user clicks on this list item object.
-
-#### Answer:   (C) 
-
-- Hints: This is an example of setting an eventlistener for a DOM element.
+- Hints: One way to go about adding a value to a list state object is through spreading another array within it and adding a new value at the end.
 
 
 
