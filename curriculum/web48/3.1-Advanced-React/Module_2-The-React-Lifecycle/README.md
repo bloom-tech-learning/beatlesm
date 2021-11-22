@@ -18,4 +18,4 @@
 
 ### [Objective 3 - Use the componentDidMount Function to Set a Component's State Post Render](./Objects/Object_3.md)
 
-### [Check For Understanding](./Objects/Understanding.md)
+#### [Check For Understanding](./Objects/Understanding.md)

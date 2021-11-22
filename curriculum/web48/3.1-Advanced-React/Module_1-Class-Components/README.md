@@ -21,7 +21,7 @@
 ### [Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React](./Objects/Object_3.md)
 
 
-### [Check For Understanding](./Objects/Understanding.md)
+#### [Check For Understanding](./Objects/Understanding.md)
 
 
 ### Today’s Office Hours:

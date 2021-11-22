@@ -1,4 +1,4 @@
-# Web48 - Module 3.1.2 - The React Lifecycle
+# Web48 - The React Lifecycle Check For Understanding
 
 ## Question 1
 
@@ -9,9 +9,7 @@
 - Mounting, Rendering, Unrendering 
 - Updating, Propagating, Unmounting  
 
-#### Answer:   (B) 
-
-
+#### Answer:   (B)
 
 ## Question 2
 
