@@ -1,87 +1,59 @@
-# Module 3.1.1 - Class Components
+# Module 3.3.3 - HTTP:AJAX II Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  We use the __ method to change a resource's information.
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+- DELETE 
+- GET
+- UPDATE 
+- PUT  
 
-#### Answer:   (C) 
-
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+#### Answer:   (D) 
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  ```axios.put``` accepts which of the following type(s) of argument.
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- url, state  
+- state, data body 
+- url  
+- url, data body 
 
-#### Answer:   (C) 
-
-- Hints: In class components, we always need to use this.setState() to modify state.
+#### Answer:   (D) 
 
 ## Question 3
 
-####  How would you refer to a state property called "pokemon" in the class component?
+####  What is returned by the API after a put request is made
 
-- ```pokemon``` 
-- ```this.state.pokemon``` 
-- ```state.pokemon``` 
-- ```this.pokemon``` 
+- The entire dataset 
+- The ```id``` of the data that was updated 
+- The data that was updated 
+- Unkown - every API is different 
 
-#### Answer:   (B) 
-
-- Hints: To access a class component's state, always use this.state followed by the slice of state required.
+#### Answer:   (D) 
 
 ## Question 4
 
-####  How do you reference props in a class component?
+####  Using ```axios.delete``` removes data on the _.
 
-- ```props``` 
-- ```this.props``` 
-- ```this.state.props``` 
-- ```state.props``` 
+- server 
+- database 
+- DOM  
+- local host 
 
 #### Answer:   (B) 
-
-- Hints: In a class component, props is held within the this property, the class' instance reference.
 
 ## Question 5
 
-####  How would you update a state property called "username" that is controlling a text input?
+####  True or False: Delete should be used regularly when data is no longer needed
 
-- ```setUsername(e.target.value)``` 
-- ```this.setState({ username: e.target.value })``` 
-- ```None of the Above ``` 
-- ```this.setState({ value: e.target.username })``` 
+-   FALSE 
+-   TRUE  
 
-#### Answer:   (B) 
 
-- Hints: When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
+#### Answer:   (A) 
 
-## Question 7
-
-####  What is the purpose of the following code?
-
-```
- <li onClick={() => toggleCompleted(todo.id)}>
-      {todo.task}
-    </li>
-```
-
-- Change the value of ```todo.task``` based on ```toggleCompleted```.
-- Stop the function ```toggleCompleted``` each time the user clicks on an item.  
-- Sets ```toggleCompleted``` to run when the user clicks on this list item object.
-
-#### Answer:   (C) 
-
-- Hints: This is an example of setting an eventlistener for a DOM element.
 
 
 
