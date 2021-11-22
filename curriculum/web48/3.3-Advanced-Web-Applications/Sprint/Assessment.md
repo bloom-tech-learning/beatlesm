@@ -1,37 +1,52 @@
-# Web48 - 3.1 Sprint Assessment
+# Web48 - 3.3 Sprint Assessment
 
 ## Question 1
 
-####  constructor methods are executed in which phase of Module 2 - The React Lifecycle?
+####  Which is the proper syntax to update an API?
 
-- ```Updating``` 
-- ```Rendering``` 
-- ```Mouting``` 
-- ```Unmounting``` 
+- ```.update(https://lambda-school-test-apis.herokuapp.com/quotes/76)``` 
+- ```.put(https://lambda-school-test-apis.herokuapp.com/quotes/76)``` 
+- ```.update(https://lambda-school-test-apis.herokuapp.com/quotes/76, myQuote)``` 
+- ```.put(https://lambda-school-test-apis.herokuapp.com/quotes/76, myQuote)``` 
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
 ## Question 2
 
-####  Fill in the blank for the method that belongs in the empty box.
+####  Fill in the blank to make this function useful for handling authentication with tokens.
 
-![React_life_Cycle](./b0HTXNp.png)
+```
+const axiosWithAuth = () => {
+  return axios.create({
+    _______: { authentication: token }
+  });
+};
+```
 
-- ```componentWillChange``` 
-- ```componentDidUpdate``` 
-- ```componentDidChange``` 
-- ```componentWillUpdate``` 
+- headers 
+- body 
+- status 
+- bearer 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
 ## Question 3
 
-####  componentDidMount will be invoked _ render.
+####  Fill in the blank to make this put method functional.
 
-- alongside 
-- before  
-- with no regard to 
-- after 
+```
+putMessage = quote => {
+  axios
+    .put(`https://lambda-school-test-apis.herokuapp.com/quotes/76`)
+    .______(response => console.log(response))
+    .catch(err => console.log(err));
+};
+```
+
+- ```next ``` 
+- ```post ``` 
+- ```put ``` 
+- ```then ``` 
 
 #### Answer:   (D) 
 
@@ -39,47 +54,39 @@
 
 ## Question 4
 
-####  Fill in the missing code (________) to use the custom hook in a form component:
+####  What type of data does the following code initially return?
 ```
-const useForm = initialValue => {
-  const [values, setValues] = useState(initialValue)
-  const handleChanges = event => {
-    setValues({ ...values, [event.target.name]: event.target.value })
-  }
-  return [
-    ________,
-    values
-  ]
-};
-
-// in the form component
-const [________, values] = useForm(initialValue);
+axios.get('http://serverlocation.com/data')
 ```
 
-- ```useForm``` 
-- ```changes``` 
-- ```event.target.value``` 
-- ```handleChanges``` 
+- JSON  
+- promise 
+- object  
+- array 
 
-#### Answer:   (D)
+#### Answer:   (B)
 
 ## Question 5
 
-What is the purpose of the following code in testing?
-```
-test('renders without crashing', () => {
-render(
-hello world
-);
-});
-```
+Where does an authorization ```<token>``` belong in a request?
 
--   Test a button click 
--   render a span on the DOM 
--   run a unit test on an isolated function 
--   render a react element to initialize tests
+-   authorization tokens should never be sent in a request 
+-   body 
+-   payload 
+-   header
 
 #### Answer:   (D) 
+
+## Question 6
+
+Which statement is true about state with react's context API?
+
+-   State is passed down via props 
+-   Data is accessed from an ancestor component's state 
+-   State can be stored on a context object  
+-   State is controlled without props 
+
+#### Answer:   (C) 
 
 
 

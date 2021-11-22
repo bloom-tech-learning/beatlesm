@@ -35,8 +35,6 @@
 
 #### Answer:   (D) 
 
-- Hints: Again, we'd reccomend you check out the [RTL docs](https://testing-library.com/docs/ecosystem-user-event/) to learn more about user events.
-
 ## Question 4
 
 ####  Fill in the missing code (________) to use the custom hook in a form component:
