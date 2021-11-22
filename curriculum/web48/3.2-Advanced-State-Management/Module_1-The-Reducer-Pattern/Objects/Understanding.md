@@ -97,9 +97,10 @@ case "ADD_HOBBY":
   }
 ``` 
 
-#### Answer:   (D) 
+#### Answer:   (B) 
 
 - Hint: Always spread state when returning a state object to insure you don't accidentally delete unmodified slices of state!
+
 
 - Hints: One way to go about adding a value to a list state object is through spreading another array within it and adding a new value at the end.
 
