@@ -1,16 +1,88 @@
-[back to home](https://github.com/beatlesm/)
+# Intro to React Sprint Challenge
 
-## [Module 1 - Class Components](https://github.com/beatlesm/web/tree/main/3.1/Module311)
+**Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-#### [Assignment 3.1.1](https://github.com/beatlesm/web/tree/main/3.1/Module311/Assignment311):
+This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **introductory React**. During this sprint, you studied **React components and advanced styling**.
 
--   **[https://github.com/LambdaSchool/React-Router-Movies](https://github.com/LambdaSchool/React-Router-Movies)**
-   
-#### [Guided project 2.3.1](https://github.com/beatlesm/web/tree/main/2.3/Module231/guided231):
+In your challenge this week, you will demonstrate your mastery of these skills by creating **a Star Wars page** using data from an API.
 
+This is an individual assessment. All work must be your own. All projects will be submitted to Codegrade for automated review. You will also be given feedback by code reviewers. For more information on the review process [click here.](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 
-#### Objective 1 - Describe the Three Phases of the React Component Lifecycle
+You are not allowed to collaborate during the sprint challenge.
 
-#### Objective 2 - Properly Explain What the Constructor and Render Methods Do and What Their Place is in the React Component Lifecycle
+## Project Set Up
 
-#### Objective 3 - Use the componentDidMount Function to Set a Component's State Post Render
+- [ ] Fork and clone the repo. Delete your old fork from Github first if you are repeating this Unit.
+- [ ] Open the assignment in Canvas and click on the "Set up git" option (Or, depending, if you see something along the lines of 'Load Sprint Challenge Submission in a new window' click that).
+- [ ] Wire your fork to Codegrade using the "Click here for instructions on setting up Git submissions" link, select Github, authorize Github.
+- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`. MAKE SURE TO PUSH TO MAIN, YOU NO LONGER NEED TO CREATE A NEW BRANCH!!
+- [ ] Make commits often! PUSH TO MAIN!!!
+- [ ] You can run tests locally by running npm run test.
+- [ ] Check to see that Codegrade has accepted your git submission.
+
+## Project Instructions
+
+### Introduction
+
+In this challenge you will create a web page that presents a styled list of characters obtained from an API. Being able to render out data to a web page is a large part of what JavaScript developers do, this challenge assesses your ability to achieve such a task.
+
+In meeting the minimum viable product (MVP) specifications listed below, your project might look somewhat similar to the solution examples below:
+
+[Example](https://tk-assets.lambdaschool.com/b011a132-0916-4ed2-8955-14192de03a75_sample-screenshot.png)
+
+[Another example](https://tk-assets.lambdaschool.com/3b82c793-2352-4d4d-a81d-e55bf350f7bd_sample-screenshot2.png)
+
+### Instructions
+
+Your finished project must include all of the following requirements:
+
+- [ ] Use the endpoint `[GET] https://swapi.dev/api/people` (mocked in [msw](https://github.com/mswjs/msw)) to obtain characters.
+- [ ] Set the list of characters into state.
+- [ ] Render your characters to the DOM:
+
+  1. Build a React component named 'Character' to render an individual character.
+  1. Map over the list in state, and for each character render a Character to the page.
+  1. Each rendered character must display its name in the DOM (e.g. "Luke Skywalker").
+  1. The character's name can't be hard-coded into the HTML. This data must be obtained from the API.
+  1. The components must be styled with **styled-components**.
+
+  **Notes:**
+
+- Data obtained from the endpoint using browser-run JavaScript is mocked with [msw](https://github.com/mswjs/msw).
+- If you test the endpoint using HTTPie or Postman you will obtain different results, as msw won't intercept the request.
+- You are welcome to create additional files but **do not move or rename existing files** or folders.
+- Do not alter your `package.json` file except to install extra libraries.
+- The `start` process can sometimes choke after adding new dependencies and may need to be restarted.
+- In your solution, it is essential that you follow best practices and produce clean and professional results.
+- Schedule time to review and polish your work, including spell-checking and grammar-checking.
+- It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+
+### Stretch Goals
+
+After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
+
+- [ ] Make the Character component more complex and break it into several subcomponents.
+- [ ] Use the endpoint `[GET] https://swapi.dev/api/films` (mocked in msw) to obtain movie information to render with the characters.
+- [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
+- [ ] Create transitions or animations with styled-components.
+- [ ] Use Promise.all to resolve an array of promises.
+
+## Submission format
+
+- [ ] Submit via Codegrade by committing and pushing any new changes to the main branch.
+- [ ] Check Codegrade for automated feedback.
+- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [ ] Any changes pushed after the deadline will not receive any feedback.
+
+## Interview Questions
+
+Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
+
+1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  - React JS is at popular front-end JavaScript library in the field of web development. The main problem solved by react is the development of large applications that have temporal data changes. The data in such applications is not static so it changes over time. 
+1. Describe component state.
+  - State is a plain JavaScript object used by React to represent an information about the component's current situation. It's managed in the component (just like any variable declared in a function).
+1. Describe props.
+  - “Props” is a special keyword in React, which stands for properties and is being used for passing data from one component to another. But the important part here is that data with props are being passed in a uni-directional flow. ( one way from parent to child)
+1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+  - A "side effect" is anything that affects something outside the scope of the function being executed. These can be, say, a network request, which has your code communicating with a third party (and thus making the request, causing logs to be recorded, caches to be saved or updated, all sorts of effects that are outside the function. A "side effect" can used sync effects in a React component to changes of certain state or props.
