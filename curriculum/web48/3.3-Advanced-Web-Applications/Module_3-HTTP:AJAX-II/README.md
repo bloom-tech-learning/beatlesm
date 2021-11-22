@@ -16,3 +16,5 @@
 
 ### [Objective 2 - Make DELETE Requests to an External API Using Axios](./Objects/Object_2.md)
 
+#### [Check For Understanding](./Objects/Understanding.md)
+

@@ -18,3 +18,5 @@
 ### [Objective 2 - Use Mocks in Web Application Tests](./Objects/Object_2.md)
 
 ### [Objective 3 - Test Asynchronous API Calls That Are Made in a Component](./Objects/Object_3.md)
+
+#### [Check For Understanding](./Objects/Understanding.md)
