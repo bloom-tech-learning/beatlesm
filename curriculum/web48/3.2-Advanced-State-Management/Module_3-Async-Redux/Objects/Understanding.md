@@ -11,8 +11,8 @@
 
 #### Answer:   (C) 
 
-- Hints: You're correct(B) that it can only be in one state at a time. However, there are only a finite number of states, not infinite.
-- Hints: This is a mathematical model that we're applying to our React/Redux apps. OOur apps can only be in one state at a time, and only have a finite number of states.
+- Hints: (B)    You're correct(B) that it can only be in one state at a time. However, there are only a finite number of states, not infinite.
+- Hints: (C)    This is a mathematical model that we're applying to our React/Redux apps. OOur apps can only be in one state at a time, and only have a finite number of states.
 
 ## Question 2
 
@@ -21,12 +21,12 @@
 - Update state based on the dispatched action  
 - Forward an action untouched  
 - Dispatch multiple actions  
-- Dispatch multiple actions 
+-  Stop actions from being dispatched 
 
 #### Answer:   (A) 
 
-- Hints: A middleware function CAN do this(C). Just like redux-thunk will stop a function that's returned from an action creator so it doesn't break the reducer.
-- Hints: Middleware functions intercept actions before they are dispatched to a reducer. That means that a middleware function is not going to update the state. Only the reducer can do that.
+- Hints: (D)    A middleware function CAN do this(D). Just like redux-thunk will stop a function that's returned from an action creator so it doesn't break the reducer.
+- Hints: (A)    Middleware functions intercept actions before they are dispatched to a reducer. That means that a middleware function is not going to update the state. Only the reducer can do that.
 
 ## Question 3
 
@@ -39,7 +39,7 @@
 
 #### Answer:   (c) 
 
-- Hints: We want to "apply" a middleware function to our redux apps, so we use the "applyMiddleware" function.
+- Hints: (C)    We want to "apply" a middleware function to our redux apps, so we use the "applyMiddleware" function.
 
 ## Question 4
 
@@ -52,7 +52,7 @@
 
 #### Answer:   (C) 
 
-- Hints: This is the actual definition of the term "thunk", and it's why redux-thunk is named that. It uses this principle to give access to the dispatch function in our action creators.
+- Hints: (A)    This is the actual definition of the term "thunk", and it's why redux-thunk is named that. It uses this principle to give access to the dispatch function in our action creators.
 
 ## Question 5
 
@@ -65,8 +65,8 @@
 
 #### Answer:   (D) 
 
-- Hints: (B)redux-thunk DOES allow us to dispatch actions to the reducer
-- Hints: Only reducer functions can update the state in a redux app.
+- Hints: (B)    redux-thunk DOES allow us to dispatch actions to the reducer
+- Hints: (D)    Only reducer functions can update the state in a redux app.
 
 
 
