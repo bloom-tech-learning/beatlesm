@@ -16,3 +16,5 @@
 
 ### [Objective 2 - Implement Protected Routes Using an Authentication Token and Redirect](./Objects/Object_2.md)
 
+#### [Check For Understanding](./Objects/Understanding.md)
+

@@ -17,3 +17,5 @@
 ### [Objective 2 - Explain What it Means to Deploy a Static Website](./Objects/Object_2.md)
 
 ### [Objective 3 - Demonstrate the Ability to Deploy and Maintain a React App Using Vercel](./Objects/Object_3.md)
+
+#### [Check For Understanding](./Objects/Understanding.md)

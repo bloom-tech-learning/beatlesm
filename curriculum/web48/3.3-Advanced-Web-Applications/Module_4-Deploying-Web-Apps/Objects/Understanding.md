@@ -1,87 +1,56 @@
-# Module 3.1.1 - Class Components
+# Module 3.3.4 - Deploying Web Apps Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  What is a "web server"?
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+- Just a server machine 
+- Just the code that runs a server  
+- Both a server machine, and the code to run it  
+- A database 
 
 #### Answer:   (C) 
 
-- Hints: Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: (C)  This can be confusing at times, but it's important to understand as you continue to learn programming.
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  What would NOT be considered a "client" in web programming?
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- A mobile app 
+- A desktop application 
+- The web server  
+- The web browser 
 
 #### Answer:   (C) 
 
-- Hints: In class components, we always need to use this.setState() to modify state.
+- Hints: (C) A client is the interface that is used by our users. A web server is the backend of those applications and is not a "client".
 
 ## Question 3
 
-####  How would you refer to a state property called "pokemon" in the class component?
+####  Unlike static apps, in our definition dynamic apps _.
 
-- ```pokemon``` 
-- ```this.state.pokemon``` 
-- ```state.pokemon``` 
-- ```this.pokemon``` 
+- Only display static data 
+- consume a 3rd party API  
+- are fullstack apps 
 
 #### Answer:   (B) 
 
-- Hints: To access a class component's state, always use this.state followed by the slice of state required.
+- Hints: (B)  By consuming data from an API, the application no longer just displays static data
 
 ## Question 4
 
-####  How do you reference props in a class component?
+####  What is the CLI command to deploy a project?
 
-- ```props``` 
-- ```this.props``` 
-- ```this.state.props``` 
-- ```state.props``` 
+- now -s 
+- deploy -s
+- vercel deploy 
+- vercel 
 
-#### Answer:   (B) 
+#### Answer:   (D) 
 
-- Hints: In a class component, props is held within the this property, the class' instance reference.
+- Hints: (D)  This is the CLI built by Vercel to help us deploy an app straight from the terminal
 
-## Question 5
-
-####  How would you update a state property called "username" that is controlling a text input?
-
-- ```setUsername(e.target.value)``` 
-- ```this.setState({ username: e.target.value })``` 
-- ```None of the Above ``` 
-- ```this.setState({ value: e.target.username })``` 
-
-#### Answer:   (B) 
-
-- Hints: When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
-
-## Question 7
-
-####  What is the purpose of the following code?
-
-```
- <li onClick={() => toggleCompleted(todo.id)}>
-      {todo.task}
-    </li>
-```
-
-- Change the value of ```todo.task``` based on ```toggleCompleted```.
-- Stop the function ```toggleCompleted``` each time the user clicks on an item.  
-- Sets ```toggleCompleted``` to run when the user clicks on this list item object.
-
-#### Answer:   (C) 
-
-- Hints: This is an example of setting an eventlistener for a DOM element.
 
 
 
