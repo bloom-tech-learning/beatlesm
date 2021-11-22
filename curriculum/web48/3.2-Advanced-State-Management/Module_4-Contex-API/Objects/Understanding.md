@@ -64,10 +64,10 @@
 - a function to update data from a seperate store.  
 - A store that is seperate from the component tree structure  
 
-#### Answer:   (C) 
+#### Answer:  (B) 
 
 - Hints: (A) Almost, but only data passed into the Provider will be returned by useContext.
-- Hints: (C) The data we pass to a provider can be a variable, object, array, or any JavaScript type. The useContext hook will return whatever is passed into the Provider.
+- Hints: (B) The data we pass to a provider can be a variable, object, array, or any JavaScript type. The useContext hook will return whatever is passed into the Provider.
 
 
 
