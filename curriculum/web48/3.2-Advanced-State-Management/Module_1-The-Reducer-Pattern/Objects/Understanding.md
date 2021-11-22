@@ -11,7 +11,7 @@
 
 #### Answer:   (D) 
 
-- Hints: React requires "fresh" data for it's re-rendering process. Practicing immutablity insures successful re-rendering.
+- Hints: (D)  React requires "fresh" data for it's re-rendering process. Practicing immutablity insures successful re-rendering.
 
 ## Question 2
 
@@ -24,7 +24,7 @@
 
 #### Answer:   (D) 
 
-- Hints: In our case, the item a reducer returns is an updated state value.
+- Hints: (D)  In our case, the item a reducer returns is an updated state value.
 
 ## Question 3
 
@@ -37,7 +37,7 @@
 
 #### Answer:   (D) 
 
-- Hints: The state holds the current values of the state. Dispatch allows for actions to be called to routed to the reducer.
+- Hints: (D)  The state holds the current values of the state. Dispatch allows for actions to be called to routed to the reducer.
 
 ## Question 4
 
@@ -50,7 +50,7 @@
 
 #### Answer:   (A) 
 
-- Hints: As a matter of convention, type is most often used to identify the what action case we are triggering.
+- Hints: (A)  As a matter of convention, type is most often used to identify the what action case we are triggering.
 
 ## Question 5
 
@@ -99,10 +99,10 @@ case "ADD_HOBBY":
 
 #### Answer:   (B) 
 
-- Hint: Always spread state when returning a state object to insure you don't accidentally delete unmodified slices of state!
+- Hint: (D) Always spread state when returning a state object to insure you don't accidentally delete unmodified slices of state!
 
 
-- Hints: One way to go about adding a value to a list state object is through spreading another array within it and adding a new value at the end.
+- Hints: (B)  One way to go about adding a value to a list state object is through spreading another array within it and adding a new value at the end.
 
 
 
