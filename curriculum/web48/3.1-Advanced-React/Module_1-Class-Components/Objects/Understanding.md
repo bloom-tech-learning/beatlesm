@@ -63,7 +63,18 @@
 
 #### Answer:   (B) 
 
-- Hints: When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
+## Question 6
+
+####  We use **_ when saving data that will change within a component. We use _** when passing data into a component.
+
+- ```state, props``` 
+- ```props, props``` 
+- ```props, state``` 
+- ```state, state``` 
+
+#### Answer:   (A) 
+
+- Hints: The state object is where you store property values that belongs to the component. Props are values that are passed into a component from a parent.
 
 ## Question 7
 
