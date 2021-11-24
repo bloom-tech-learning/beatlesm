@@ -4,7 +4,7 @@
 
 This week is all about exposing you to applying your Javascript knowledge to the Document Object Model (DOM) and creating rich Javascript user interfaces.
 
-## [Module 1: DOM I](https://github.com/beatlesm/web/tree/main/2.1/project211)
+## [Module 1: DOM I](./Module_1-DOM-I/README.md)
 
 -   **[https://github.com/LambdaSchool/DOM-I](https://github.com/beatlesm/DOM-I)**
 
@@ -13,6 +13,8 @@ This week is all about exposing you to applying your Javascript knowledge to the
 -   **[https://github.com/LambdaSchool/web-guided-project-dom-1](https://github.com/LambdaSchool/web-guided-project-dom-1)**
 
 -   **[Youtube - Web 2.1 - DOM 1 Guided Project](https://www.youtube.com/watch?v=zp4yEAN7uQo)**
+
+[Check For Understanding](./Module_1-DOM-I/Objects/Understanding.md)
 
 Now that we can build a basic static web page with HTML and CSS, we need to add functionality. The first step in building vibrant, dynamic web pages and applications is learning about the DOM. What it is, how it affects our page, and how to access and manipulate it. DOM manipulation is at the core of every framework, and before we start using frameworks, we need to understand the DOM.
 
