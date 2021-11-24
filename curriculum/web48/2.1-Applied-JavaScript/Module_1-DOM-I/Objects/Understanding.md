@@ -1,103 +1,104 @@
-# Module 3.1.1 - Class Components Check For Understanding
+# Module 2.1.1 - DOM I Check For Understanding
 
 ## Question 1
 
-####  Which of the following sets a class component apart from a function component?
+####  What would the output be for the following code?
+```
+console.log(document);
+```
 
-- None of the Above 
-- Allows you to manage state 
-- Has unique lifecycle methods 
-- Renders jsx 
+-  the document body 
+- the document head 
+- he doctype declaration 
+- the entire HTML document 
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
-- Hints: (D)  All react components can render jsw to the browser
-- Hints: (C)  Lifecyle methods are unique to class based components and allow for deep customication of the reactive process.
+- Hints: (D)  The code shown would output the entire HTML document.
 
 ## Question 2
 
-####  How would you update a state property called "doggos" in a class component with the value ```doggoData```?
+####  How would you add an src attribute to the empty img element below?
 
-- ```setDoggos.doggoData()``` 
-- ```setDoggos(doggoData)``` 
-- ```this.setState({ doggos: doggoData })``` 
-- ```this.setState({ doggoData: doggos })``` 
+- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
+- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
+- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
+- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
 
 #### Answer:   (C) 
 
-- Hints: (D)  Not quite. In this case, ```doggos``` is the key for our slice of state, while ```doggoData``` is the value itself.
-- Hints: (C)  In class components, we always need to use this.setState() to modify state.
+- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
 
 ## Question 3
 
-####  How would you refer to a state property called "pokemon" in the class component?
+####  What would result if we applied image.classList.toggle('.bar') to the code below?
+```
+<img id="image" src="cat.jpg" class="foo" />
+```
 
-- ```pokemon``` 
-- ```this.state.pokemon``` 
-- ```state.pokemon``` 
-- ```this.pokemon``` 
+- ```<img id="image" src="cat.jpg" class="bar" />``` 
+- ```<img id="image" src="cat.jpg" class=".bar" />``` 
+- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
+- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
 
 #### Answer:   (B) 
 
-- Hints: (B)  To access a class component's state, always use this.state followed by the slice of state required.
+- Hints: (C)  `class="foo bar"` is missing a period.
+- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
 
 ## Question 4
 
-####  How do you reference props in a class component?
+####  How would you add all of the fruits in this array to the body of the page?
 
-- ```props``` 
-- ```this.props``` 
-- ```this.state.props``` 
-- ```state.props``` 
+```
+const fruits = ["apples", "oranges", "lemons", "limes"];
+```
 
-#### Answer:   (B) 
+- 
+```
+fruits.forEach(fruit => {
+        document.body.textContent = fruit;
+    });
+``` 
+- 
+```
+fruits.forEach(fruit => {
+        const span = document.createElement('span');
+        span.textContent = fruit;
+        document.body.appendChild(fruit);
+    });
+``` 
+- 
+```
+fruits.forEach(fruit => {
+        document.body.appendChild(fruit);
+    });
+``` 
+- 
+```
+ fruits.forEach(fruit => {
+        const span = document.createElement('span');
+        span.textContent = fruit;
+        document.body.appendChild(span);
+    });
+``` 
 
-- Hints: (B)  In a class component, props is held within the this property, the class' instance reference.
+#### Answer:   (D) 
+
+- Hints: (C)  The document.createElement is missing
+- Hints: (D)  
 
 ## Question 5
 
-####  How would you update a state property called "username" that is controlling a text input?
+####  True or false: document.createElement adds a new element to the DOM
 
-- ```setUsername(e.target.value)``` 
-- ```this.setState({ username: e.target.value })``` 
-- ```None of the Above ``` 
-- ```this.setState({ value: e.target.username })``` 
-
-#### Answer:   (B) 
-
-- Hints: (A)  Remember that we are using class based components in this case, so we need to use this.setState to modify state.
-- Hints: (B)  When setting state in a class component, make sure to use this.setState and pass in an object containing the key and value of the changed state.
-
-## Question 6
-
-####  We use **_ when saving data that will change within a component. We use _** when passing data into a component.
-
-- ```state, props``` 
-- ```props, props``` 
-- ```props, state``` 
-- ```state, state``` 
+- FALSE
+- TRUE
 
 #### Answer:   (A) 
 
-- Hints: (A)  The state object is where you store property values that belongs to the component. Props are values that are passed into a component from a parent.
-
-## Question 7
-
-####  What is the purpose of the following code?
-
-```
- <li onClick={() => toggleCompleted(todo.id)}>
-      {todo.task}
-    </li>
-```
-
-- Change the value of ```todo.task``` based on ```toggleCompleted```.
-- Stop the function ```toggleCompleted``` each time the user clicks on an item.  
-- Sets ```toggleCompleted``` to run when the user clicks on this list item object.
-
-#### Answer:   (C) 
-
-- Hints: (C)  This is an example of setting an eventlistener for a DOM element.
+- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
 
 
 
