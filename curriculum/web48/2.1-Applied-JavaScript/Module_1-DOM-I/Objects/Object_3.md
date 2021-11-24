@@ -1,140 +1,163 @@
-# Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
+# Objective 3 -Use Different Properties and Methods to Manipulate a Selected Element
 
 You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
 
-##  Overview
+## <span style="color:red">Overview</span>
 
-In our last objective, we explored how ```state``` can be displayed and changed by passing state value and state modifying functions respectively through ```props```. We explored this using the onChange ```eventlistener`. That is, of course, only one of many user event you can integrate into your applications!
+Now that we have access to element(s), we can manipulate them and change their characteristics from the original HTML.
 
-We have already seen how events are handled within React class components. We need an ```event handler``` function and we need to link it to an ```eventlistener``` method within our DOM.
+After we have captured our element (eg. ```const el = document.querySelector('#idName');``` we can use that instance of the element we selected to access and assign values to properties natively contained on it. Once again, there are dozens of properties and methods given to us on each element. Here are a few of the most commonly used properties:
 
-```
-class Button extends React.Component {
-  handleButton = (e)=> {
-    console.log(e);  }
+### .textContent
+- Gets and sets the text of an element, essentially whatever text is between the open and closing tags of an HTML element.
+- Can use the assignment operator ( = ) to reset the text of an element.
+- Setting this property on a node removes all of its children and replaces them with the new single text node.
+- ```<div>Something Here</div>```
+- ```element.textContent = 'Something New```;
 
-  render() {
-    return <button onClick={this.handleButton}>Click Me</button>;
-  }
-}
-```
+### .setAttribute() (or .{attr})
+- This method (or property) is used as a way to set or reassign an attribute on the element.
+- `.setAttribute()` is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
+- eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
+- Can also use the pattern: `element.'attrName' = 'value'`.
+- eg: `element.src = 'http://www.imagsource.com/image.jpg'`
 
-Notice once again the need for that ```this``` object when referencing our ```event handler```. Within class components, just like our props and state, our event handlers are bound to the instance of this class and are accessed through ```this```.
+### .style
+- Every element contains a style object. This property accesses that style object which contains every available style as a key and a value. It is important to note that these are NOT the CSS styles; these are inline HTML styles.
+- These styles are associated with the HTML inline style set on the element
+  -   eg: `<div style="color: red;">DIV STUFF</div>`
+- You can access and change a property on the style object by using the assignment operator =.
+- eg: element.style.color = 'blue';
+- hanging a property on the style object will effectively give this element an inline style.
+- Inline styles have the highest specificity, overriding any other selector except !important.
+- VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
 
-We have also seen that "e" parameter before. This parameter is known is React as a ```synthetic event``` object. Inside this object, we will have access to various pieces of information regarding this event triggered, including the target DOM element, the type of event, and methods that control the propagation of that event like preventDefault. For more details on the ```synthetic event``` objects, check out the reference materials [here](https://reactjs.org/docs/events.html.).
+##  .className, .id
+- .className accesses or assigns a string containing all of the classes on the element.
+- .id accesses or assigns a string containing the id of the element.
 
-Let's add in some functionality to our event handler.
+##  .classList
+- classList will return an array-like object of all the classes on the element. There are many useful methods available on classList.
+  - `classList` is a `DOMTokenList`.
+  - A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
+  - Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
+    - `.add('className')` and `.remove('className')` do as their names indicate.
+    - `.toggle('className')` will add the class if it does not exist and remove it if if does.
 
-```
-class Button extends React.Component {
-  clickHandler = event => {
-    console.log(event); // this is the react Synthetic Event
-  };
+##  .appendChild() and .prepend()
+- These methods add child elements to parent elements.
+- `.appendChild(child)` will take an element and add it to it's children. It will add it to the 'end' physically so if the children are displayed in order it will be the last.
+  - eg: `parentElement.appendChild(childElement)`
+- `.prepend(child)` adds a child to the beginning, displaying it first.
+  - eq: `parentElement.prepend(childElement)`
 
-  render() {
-    return <button onClick={this.clickHandler}>Click Me</button>;
-  }
-}
-```
-Now, when we click on our button, we can actually print out our ```synthetic event``` object. We can now do anything we want within ```event handler```, from triggering a change of state to starting an external api call.
+##  .children and .parentNode
+- These properties are used for accessing relatives of the element.
+- `.children` returns an `HTMLCollection` of all the children of that element.
+- `.parentNode` returns the parent element of that element.
 
 ## Follow Along
 
-Now, let's build out a little Application that can handle some data that we pass through a few JSX elements. We're going to build out some ```event handler``` functions using the following ```event listeners```:
+### DOM Manipulation Tutorial
 
--   onClick
--   onDoubleClick
--   onMouseEnter
--   OnChange
+Let's get some practice manipulating the DOM. You can use this code as a base for your JavaScript (Links to an external site) (Links to an external site.) or write your HTML and CSS along the way.
 
-First, let's build out a singleClickHandler function.
+####  Updating Text
+
+When we want to update the text using the DOM, the go-to property is called textContent. We can both read and write text inside of elements using `textContent`.
+
+Given this HTML, lets make some updates to the text:
+```
+  <h2 class="second-heading">I am the DOM</h2>
+```
+First, let's set up a reference to our element on the DOM:
+```
+  const secondHeading = document.querySelector('.second-heading');
+```
+We are now prepared to update the content of our heading. Let's update the content to say "DOM updated!"
+```
+  secondHeading.textContent = "DOM updated!";
+```
+Notice that we are first getting the text node of the element and then setting a new value!
+
+**Security Note** You may read about `innerHTML` in your DOM learning. Avoid using `innerHTML` as it could potentially be used as an attack vector for cross site attacks.
+
+### Updating Attributes
+
+Updating HTML attributes is vital to DOM manipulation. Let's update the style for the h1 in the code below.
 
 ```
-singleClickHandler = () => alert("Single Click!");
+<header>
+  <h1 class="main-header">Dom Manipulation</h1>
+  <nav class="main-nav">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">About</a>
+    <a href="#" class="nav-item">Blog</a>
+    <a href="#" class="nav-item">Contact</a>
+  </nav>
+</header>
 ```
-Now, we add it to a button within our app's render function.
+Updating the DOM usually happens in two steps:
 
+####  Step 1: Select the element
 ```
-render() {
-. . .
-<button onClick={this.singleClickHandler}>Click Handler Demo</button>
-. . .
+const mainHeader = document.querySelector('.main-header');
 ```
-
-Lets repeat the process for our doubleClick, mouseEnter and onChange events.
-
-
+####  Step 2: Use the desired attribute property to update the element
 ```
-doubleClickHandler = () => alert("Double Clicked!");
-
-mouseEnterHandler = () => alert("Mouse Entered");
-
-changeHandler = () => alert("Item was changed");
-<div className="App">
-    <h1>Hello Handlers</h1>
-    <h2>Lets build out some handler functions.</h2>
-    <button onClick={this.singleClickHandler}>Click Handler Demo</button>
-    <button onDoubleClick={this.doubleClickHandler}>
-      Double Click Handler
-    </button>
-    <div onMouseEnter={this.mouseEnterHandler}>Mouse Enter</div>
-    <input onChange={this.changeHandler} placeholder="Change my input" />
-</div>
+mainHeader.style.color = 'red';
 ```
-
-Try playing around with the events and see how are interacting one with another.
-
-Lets take a closer look at the input onChange event for a min. Let's pass in the synthetic event through the function body by adding it as a ```parameter``` to the ```event handler``` connected to it.
-
+You can even chain the two steps together like this:
 ```
-changeHandler = (e) => alert(event.target.value);
+const mainHeader = document.querySelector('.main-header').style.color = 'red';
+```
+This two-step process can be repeated for other attributes as well! What if we had an empty `src` attribute on an image tag? Let's try it out provided we have this HTML:
+```
+<img class="custom-img" src="" alt="Kitty image" />
+```
+Select the image element's class and update the `src` attribute with this link:
+```
+https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350
+```
+```
+const customImg = document.querySelector('.custom-img');
+
+customImg.src = 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350';
 ```
 
-One of the most useful properties attached to ```synthetic events``` is target. This provides information on the text, value, style, attached attributes and other useful data within our DOM element. In this case we can print out our input's value.
+####  JavaScript CSS Syntax
 
-Lets add in some state to get realtime feedback of what we are typing. Once again, we do this within class components by within the class ```constructor``` and make our app display that change.
+When using JavaScript to update CSS style properties, we need to be careful to remember that JavaScript does not accept dashes as a valid naming value! Therefore, whenever a CSS property contains a dash, we must use camel casing in JavaScript.
+
+Example:
 
 ```
-class App extends React.Component {
- constructor() {
-    super();
-    this.state = {
-      displayText: '',
-    }
-  }
-…
- render() {
-    return(     …
-        <h1>{this.displayText}</h1>
-        …
-    );
- }
+.some-class {
+  background-color: gray;
 }
-
+```
+The JavaScript version would look like this:
 ```
 
-Lets also update our change handler to update our state:
+  const someClass = document.querySelector('.some-class');
 
+  someClass.style.backgroundColor = "gray";
 ```
-changeHandler = event => {
-  this.setState({displayText: event.target.value});
-};
-```
-
-Excellent! Now, ```setState``` will update our display property on our state object by simply typing in the input field. Let's prove this by logging our state object inside the render function.
-
-You can see a working copy of this example [here](https://codesandbox.io/s/rmnj2r1o0p)
+**Pro Tip:** Don't forget the string when you assign a value to a CSS property.
 
 ## Challenge
 
-Lets expand on our example!
+### DOM Manipulation Challenge
 
-Fork the code provided above and do the following.
+[Take the example code from your tutorial](https://codepen.io/BloomTech/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
 
--   Add another value to state that holds the secondDisplayValue.
--   Display that value in a h2 tag.
--   Create a button that will put the value of state.displayText within our secondDisplayValue property.
--   Add an event listener and event handler function that will cause our h2 to show displayText when we click our new button.
+Here are some ideas:
+
+- Change the color of the paragraphs.
+- Change the text contents of any element of your choosing
+- Change the href of an anchor tag
+- Update the alt tag of an image
+- Update layout styles, try out flex properties with JavaScript syntax
 
 
 
