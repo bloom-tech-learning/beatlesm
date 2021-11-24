@@ -12,7 +12,7 @@
 
 #### Answer:   (D) 
 
-- Hints: The display of state is not stateful logic.
+- Hints: (D)    The display of state is not stateful logic.
 
 ## Question 2
 
@@ -46,7 +46,7 @@
 
 #### Answer:   (C) 
 
-- Hints: Hooks often extend behavoirs of other hooks.
+- Hints: (C)    Hooks often extend behavoirs of other hooks.
 
 
 

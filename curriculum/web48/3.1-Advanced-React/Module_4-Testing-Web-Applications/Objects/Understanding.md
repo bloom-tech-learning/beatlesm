@@ -11,7 +11,7 @@
 
 #### Answer:   (A) 
 
-- Hints: `toBeTruthy` tests the truthiness (or falsiness) of a value!
+- Hints: (A)    `toBeTruthy` tests the truthiness (or falsiness) of a value!
 
 ## Question 2
 
@@ -35,7 +35,7 @@
 
 #### Answer:   (A) 
 
-- Hints: Again, we'd reccomend you check out the [RTL docs](https://testing-library.com/docs/ecosystem-user-event/) to learn more about user events.
+- Hints: (A)    Again, we'd reccomend you check out the [RTL docs](https://testing-library.com/docs/ecosystem-user-event/) to learn more about user events.
 
 ## Question 4
 
@@ -48,7 +48,7 @@
 
 #### Answer:   (C) 
 
-- Hints: By now you get it... check out the documentation!
+- Hints: (C)    By now you get it... check out the documentation!
 
 
 
