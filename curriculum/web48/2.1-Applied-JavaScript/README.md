@@ -1,7 +1,6 @@
 # WEB - 2.1 - Applied JavaScript 
 
 ## <span style="color:red">Overview</span>
-[back to home](https://github.com/beatlesm/)
 
 This week is all about exposing you to applying your Javascript knowledge to the Document Object Model (DOM) and creating rich Javascript user interfaces.
 
