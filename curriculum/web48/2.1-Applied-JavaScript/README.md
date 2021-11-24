@@ -18,7 +18,7 @@ This week is all about exposing you to applying your Javascript knowledge to the
 
 Now that we can build a basic static web page with HTML and CSS, we need to add functionality. The first step in building vibrant, dynamic web pages and applications is learning about the DOM. What it is, how it affects our page, and how to access and manipulate it. DOM manipulation is at the core of every framework, and before we start using frameworks, we need to understand the DOM.
 
-## [Module 2: DOM II](https://github.com/beatlesm/web/tree/main/2.1/project212)
+## [Module 2: DOM II](./Module_2-DOM-II/README.md)
 
 - **[https://github.com/LambdaSchool/DOM-II](https://github.com/LambdaSchool/DOM-II)**
 
@@ -28,9 +28,11 @@ Now that we can build a basic static web page with HTML and CSS, we need to add 
 
 - **[Youtube - Web 2.1 - Unit 2 Orientation](https://www.youtube.com/watch?v=JmOd-2XqX7A)**
 
+[Check For Understanding](./Module_2-DOM-II/Objects/Understanding.md)
+
 Events are the way web users interact with the page. Any time there is some interaction through a mouse, keyboard, etc., the DOM creates and propagates an event object. This event object carries information about the event to be handled at any point up the tree from the point of origin.
 
-## [Module 3: Components I](https://github.com/beatlesm/web/tree/main/2.1/project213)
+## [Module 3: Components I](./Module_3-Components-I/README.md)
 
 -   **[https://github.com/LambdaSchool/Newsfeed-Components](https://github.com/LambdaSchool/Newsfeed-Components)**
 
@@ -40,9 +42,11 @@ Events are the way web users interact with the page. Any time there is some inte
 
 -   **[Youtube - Web 2.1 - Components 1 Guided Practice](https://youtu.be/LN7HkHVfTeo)**
 
+[Check For Understanding](./Module_3-Components-I/Objects/Understanding.md)
+
 As we build larger and more feature-rich web pages, we may notice a trend in our code; elements essentially using the same functionality and styling with minor differences in the data they present. To keep our code readable, reusable, and most of all DRY, we can build on these repeating patterns and create components. Components are reusable pieces of code that can be used to build elements sharing functionality and styling. Components are the heart of any dynamic web application and JavaScript framework.
 
-## [Module 4: Components II](https://github.com/beatlesm/web/tree/main/2.1/project214)
+## [Module 4: Components II](./Module_4-Components-II/README.md)
 
 -   **[https://github.com/LambdaSchool/github-usercard](https://github.com/LambdaSchool/github-usercard)**
 
@@ -51,6 +55,8 @@ As we build larger and more feature-rich web pages, we may notice a trend in our
 -   **[https://github.com/LambdaSchool/web-guided-project-components-2](https://github.com/LambdaSchool/web-guided-project-components-2)**
 
 -   **[Youtube - Web 2.1 - Components 2 Guided practice](https://www.youtube.com/watch?v=hemiMfKqmIk)**
+
+[Check For Understanding](./Module_4-Components-II/Understanding.md)
 
 Now that we understand what a component is, we can learn to utilize asynchronous JavaScript and Promises to make HTTP requests and get data from a server.
 
