@@ -1,4 +1,4 @@
-# Module 2.1.1 - DOM II Check For Understanding
+# Module 2.1.2 - DOM II Check For Understanding
 
 ## Question 1
 
