@@ -72,6 +72,7 @@ CSS by itself can be hard to scale in large applications. In this module, we wil
 ## [Sprint Challenge](./Sprint)
 
 -   **[https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react](https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react)**
+-   **[https://github.com/beatlesm/web-sprint-challenge-intro-to-react](https://github.com/beatlesm/web-sprint-challenge-intro-to-react)**
 
 
 [Sprint Challenge and Assessment](./Sprint/Assessment.md)
