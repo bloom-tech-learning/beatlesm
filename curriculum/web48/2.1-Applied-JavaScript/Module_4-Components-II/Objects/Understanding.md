@@ -1,50 +1,85 @@
-# Module 2.1.1 - DOM II Check For Understanding
+# Module 2.1.3 - Components I Check For Understanding
 
 ## Question 1
 
-####  What does the code below do?
-```
-    button.addEventListener('click', callback);
-```
+####  Components bring together ___ in an encapsulated, reusable form.
 
-- Replace other click listeners on the button with `callback`
-- Schedule `callback` to execute on clicks of a particular button 
-- Execute `callback` immediately so future clicks can be handled 
-- Schedule `callback` to execute on clicks of any buttons on the page 
+-   markup, logic and style 
+-   frontend and backend 
+-   single page applications 
+-   web applications and native applications 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
 ## Question 2
 
-####  The callback passed to `.addEventListener` receives ___ as its argument.
+####  The idea behind components is to build functions that take ___ as arguments and return ___.
 
-- the (DOM element) target of the event  
-- an event object  
-- ```res.data``` 
-- an event type 
+-   events, side effects 
+-   specifications, wireframes 
+-   Correct!
+-   data, HTML elements 
+-   arrays, objects 
 
-#### Answer:   (B) 
+#### Answer:   (C) 
 
 ## Question 3
 
-####  What is another word for an event that happens on a page?
+####  What is the value of firstButton in the following code?
+```
+    function buttonCreator(buttonText){
+        const button = document.createElement('button');
+        button.textContent = buttonText;
+        button.classList.add('custom');
+        button.addEventListener('click', (e) => {
+            console.log('click!');
+        });
+        return button;
+    }
 
-- DOM 
-- document  
-- Click  
-- Trigger 
+    let firstButton = buttonCreator('click bait');
+```
+-   `<button class="custom button">click!</button>`
+-   `<button class="custom">click</button>`
+-   `<button class="custom">click bait</button>`
+-   `<button class="click bait">click!</button>`
 
-#### Answer:   (D) 
+#### Answer:   (C) 
 
 ## Question 4
 
-####  The method ___ disrupts the trip of the event along the DOM.
+####  What is the best way to loop over an array of elements, appending them to the document body?
+
+(Fill the gap in the code.)
+```
+    [elem1, elem2, elem3].\_\_\_(e => {
+        document.body.appendChild(e);
+    });
+```
+
+-   `filter`
+-   `reduce`
+-   `map`
+-   `forEach`
 
 
-- ```event.cancelPropagation``` 
-- ```event.cancelImmediatePropagation``` 
-- ```event.preventDefault``` 
-- ```event.stopPropagation``` 
+#### Answer:   (D) 
+
+## Question 5
+
+####  What is the better option to build an array of elements from an array of strings? (Fill the gap in the code.)
+```
+    const spans = ['foo', 'bar', 'baz'].\_\_\_(str => {
+        const span = document.createElement('span');
+        span.textContent = str;
+        return span;
+    });
+```
+
+-   `filter`
+-   `reduce`
+-   `forEach`
+-   `map`
 
 
 #### Answer:   (D) 
