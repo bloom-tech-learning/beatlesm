@@ -2,33 +2,13 @@
 
 ## <span style="color:red">Overview</span>
 
-### .addEventListener
+We use JavaScript to make our pages dynamic and usable. Now that we can access and manipulate elements on our page, you might be wondering to yourself, "Why don't we change the elements in the HTML file directly? Why do we have to go through all of this to change some styling on an element?" Those are valid questions, and the way we have been using JavaScript so far, it would make sense to change our HTML instead.
 
-Once we have an element selected, we can use the `.addEventListener` method on that element. `.addEventListener` takes two arguments, first the event to listen for and, second, the callback to fire when that event is triggered. For a complete list of events see the resources below. In use, this looks something like `element.addEventListener('click', callback);`.
+But, JavaScript's real power lies in its ability to make web pages interactive. In addition to manipulating elements, JavaScript also allows us to add features and modify our site by directly reacting to user interactions. Think about a button click, drag and drop, zoom, or any number of user interactions. We create functionality for those interactions using JavaScript. Now that we know how to manipulate and modify DOM nodes, we can learn about events.
 
-### Events
+Every user interaction with a site is an event: a click, moving the mouse, scrolling the page, pressing a key on the keyboard, these are all events on the page, and the browser can detect all of them. There are tons of different events the browser tracks. When an event happens on a page, it is known as a trigger.
 
-We learned before that there are different types of events we can listen for. The most common are mouse events highlighted by the 'click' event, but there are dozens of more events we can listen for. We can add event listeners for as many events as there are for each element, meaning we can listen for a `mouseclick`, `keypress`, `hover`, and more all on the same element. Although to do so we need to call .addEventListener and pass in a callback for each one.
-
-Take 5 minutes and study this MDN page. Then, please choose an event, NOT a mouse event, and read about how it works.
-
-[MDN Event Listeners](https://developer.mozilla.org/en-US/docs/Web/Events)
-
-### The callback and the `Event Object`
-
-The callback (also known as an event handler) will take a single argument; this is known as the `Event Object`. This is a Javascript Object and contains all we need to know about the event and the element it happened on.
-
--   eg: `element.addEventListener('click', (event) => {//Handle event});`
--   One of the most important properties of the event object is `.target`, this property will give us all of the info about the DOM node where the event happened. It has many of the same properties as a regular DOM node, `.children`, `.parent`, `.style`, `innerText`, etc. We can use these properties to manipulate the element itself, or it's relatives.
--   We can use this to manipulate the target in any way we want, for example to change the background color we would write the following: `element.addEventListener('click', (event) => { event.target.style.backgroundColor = 'blue'; });`
--   Depending on the type of event listened for, we can have access to other information about the event, such as the key pressed (in the form of a code) and other things. Spend 5 minutes reading about the event object here: [MDN Event Object: Properties](https://developer.mozilla.org/en-US/docs/Web/API/Event#properties)
-
-##  Challenge
-
-Follow the instructions in the Javascript section of this codepen on your own. Use the `sampleButton` element at the top as a reference, and add the appropriate event listeners to the elements. Then, please Fork and save your code.
-
-[Codepen: DOM-II Events](https://codepen.io/BloomTech/pen/gqmrwx?editors=0010)
-
+Now that we know what an event is and we know the browser is constantly tracking them, we need to listen for specific events on specific elements. For example, did a user click that button? Did a user's mouse hover over an element? Was there text entered into the input field? There are dozens of events an element can listen for. Then, when one of those events happens on that element, we can do something about it. The tracking process and subsequent action taken is called an event listener. We put an event listener on an element and give it a callback. When that event is triggered on the element, the callback is run.
 
 
 [Previous](./Object_2.md) | [Next](./Object_4.md)
