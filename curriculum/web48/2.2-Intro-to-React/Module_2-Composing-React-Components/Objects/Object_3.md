@@ -1,7 +1,5 @@
 # Objective 3 - Explain What State is in Web Applications and Demonstrate How to Make a React Component Stateful
 
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
-
 ## <span style="color:red">Overview</span>
 
 You already know this, though you may not realize it. If you're at a soccer game, and each team has three goals, you might say that the "state" of the game is "tied." A traffic light has three possible states: red, yellow, and green. Similarly, our applications also have states. If you have a to-do app, it might be said to have a state of "three to-dos, none of which are completed." Upon completing one of the to-dos, you've changed the application's state.
