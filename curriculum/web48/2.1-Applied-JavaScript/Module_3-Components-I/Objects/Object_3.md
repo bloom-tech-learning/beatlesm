@@ -1,14 +1,62 @@
-# Objective 3 - Explain What Events Are in the Browser Window and How Event Listeners Can Listen for Those Events.
+# Objective 3 - Iterate Over a List of Data Creating a New Component for Each Item and Attaching that Component to the DOM
 
 ## <span style="color:red">Overview</span>
 
-We use JavaScript to make our pages dynamic and usable. Now that we can access and manipulate elements on our page, you might be wondering to yourself, "Why don't we change the elements in the HTML file directly? Why do we have to go through all of this to change some styling on an element?" Those are valid questions, and the way we have been using JavaScript so far, it would make sense to change our HTML instead.
+In the next lesson, we will learn how to retrieve dynamic data, but we will build and use our array for now. Let's imagine that this data can change and may not always look like how we built it. We want a way to create components based on the data present. This data can come in many different forms. In this simple case, we are using an array of strings:
+```
+const data = [
+    "Button One",
+    "Button Two",
+    "Button Three",
+    "Button Four"
+]
+```
+Let's use the buttonCreator function from the last objective:
 
-But, JavaScript's real power lies in its ability to make web pages interactive. In addition to manipulating elements, JavaScript also allows us to add features and modify our site by directly reacting to user interactions. Think about a button click, drag and drop, zoom, or any number of user interactions. We create functionality for those interactions using JavaScript. Now that we know how to manipulate and modify DOM nodes, we can learn about events.
+```
+function buttonCreator(buttonText){
+    const button = document.createElement('button');
 
-Every user interaction with a site is an event: a click, moving the mouse, scrolling the page, pressing a key on the keyboard, these are all events on the page, and the browser can detect all of them. There are tons of different events the browser tracks. When an event happens on a page, it is known as a trigger.
+    button.textContent = buttonText;
 
-Now that we know what an event is and we know the browser is constantly tracking them, we need to listen for specific events on specific elements. For example, did a user click that button? Did a user's mouse hover over an element? Was there text entered into the input field? There are dozens of events an element can listen for. Then, when one of those events happens on that element, we can do something about it. The tracking process and subsequent action taken is called an event listener. We put an event listener on an element and give it a callback. When that event is triggered on the element, the callback is run.
+    button.classList.add('button');
+
+    button.addEventListener('click', (e) => {
+        console.log('clicked!');
+    });
+
+    return button;
+})
+```
+
+### .forEach
+
+One of the simplest array methods is .forEach - it runs the array through a loop, passing each item to our callback function. It doesn't return a new array or mutate the data at all (unless we tell it to). .forEach is a simple way to iterate over the array, create components, and add them instantly to the DOM.
+```
+data.forEach((arrayItem) => {
+  let newButton = buttonCreator(arrayItem);
+
+  parent.appendChild(newButton);
+});
+```
+That was super simple! Just like that, we created a new component for each item in the array and added it to the DOM. No matter how many items are in the array, it will still work. One downside to this method is that we instantly add the items to the DOM; what if we wanted to create the components and add them at a different time?
+
+### .map
+We know that .map returns a new array with the items transformed (by our callback). We can then do whatever we please with this array.
+```
+let newComponents = data.map((arrayItem) => {
+  let newButton = buttonCreator(arrayItem);
+
+  // Remember, we always need to return something when we use .map
+  return newButton;
+});
+```
+Now that we have an array of DOM elements (components), we can do whatever we'd like with them. We can wait to add the components to the DOM or manipulate them further; the sky's the limit! Let's add them to the DOM now, using .forEach
+```
+newComponents.forEach(component => {
+  parent.appendChild(component);
+});
+```
 
 
 [Previous](./Object_2.md) | [Next](./Understanding.md)
