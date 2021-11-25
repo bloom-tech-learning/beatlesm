@@ -1,88 +1,81 @@
-# Module 2.1.3 - Components I Check For Understanding
+# Module 2.1.4 - Components II Check For Understanding
 
 ## Question 1
 
-####  Components bring together ___ in an encapsulated, reusable form.
+####  The most common way to deal with asynchronous operations in pre-ES6 JavaScript was using __.
 
--   markup, logic and style 
--   frontend and backend 
--   single page applications 
--   web applications and native applications 
+-   generators 
+-   promises 
+-   async/await 
+-   callbacks 
 
-#### Answer:   (A) 
+#### Answer:   (D) 
 
 ## Question 2
 
-####  The idea behind components is to build functions that take ___ as arguments and return ___.
+####  A promise is best described as ___.
 
--   events, side effects 
--   specifications, wireframes 
--   Correct!
--   data, HTML elements 
--   arrays, objects 
+-   background code 
+-   an AJAX request 
+-   a side effect 
+-   a representation of a future value 
 
-#### Answer:   (C) 
+#### Answer:   (D) 
 
 ## Question 3
 
-####  What is the value of firstButton in the following code?
+####  In the code below, `callback` can be considered the promise ___ handler.
 ```
-    function buttonCreator(buttonText){
-        const button = document.createElement('button');
-        button.textContent = buttonText;
-        button.classList.add('custom');
-        button.addEventListener('click', (e) => {
-            console.log('click!');
-        });
-        return button;
-    }
-
-    let firstButton = buttonCreator('click bait');
+    fetch('http://api.com').catch(callback)
 ```
--   `<button class="custom button">click!</button>`
--   `<button class="custom">click</button>`
--   `<button class="custom">click bait</button>`
--   `<button class="click bait">click!</button>`
 
-#### Answer:   (C) 
+-   rejection 
+-   timeout 
+-   settlement 
+-   fulfillment 
+
+#### Answer:   (A) 
 
 ## Question 4
 
-####  What is the best way to loop over an array of elements, appending them to the document body?
+####  Which HTTP method is used to add a new resource on the server?
 
-(Fill the gap in the code.)
-```
-    [elem1, elem2, elem3].\_\_\_(e => {
-        document.body.appendChild(e);
-    });
-```
+-   `POST`
+-   `OPTIONS`
+-   `GET`
+-   `PUT`
 
--   `filter`
--   `reduce`
--   `map`
--   `forEach`
-
-
-#### Answer:   (D) 
+#### Answer:   (A) 
 
 ## Question 5
 
-####  What is the better option to build an array of elements from an array of strings? (Fill the gap in the code.)
-```
-    const spans = ['foo', 'bar', 'baz'].\_\_\_(str => {
-        const span = document.createElement('span');
-        span.textContent = str;
-        return span;
-    });
-```
+####  The axios.get method returns ___.
 
--   `filter`
--   `reduce`
--   `forEach`
--   `map`
-
+-   JSON data 
+-   a callback 
+-   the resolved response 
+-   a promise 
 
 #### Answer:   (D) 
+
+## Question 6
+
+####  Why does the code below fail to append any cats?
+```
+    let cats;
+    axios.get('http://api.com/cats')
+        .then(res => {
+            cats = res.data;
+        });
+    cats.forEach(cat => document.body.append(cat));
+```
+
+-   The code wrongly assumes that `res.data` is an array
+-   The `cats` variable is not visible from within the `.then` callback
+-   The `forEach` loop happens before the promise returned by `axios.get` fulfills
+-   The `cats` variable is declared using the `let` keyword so it can't be re-assigned
+
+#### Answer:   (C) 
 
 
 

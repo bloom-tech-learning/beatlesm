@@ -1,62 +1,42 @@
-# Objective 3 - Iterate Over a List of Data Creating a New Component for Each Item and Attaching that Component to the DOM
+# Objective 3 - Iterate Over a List of Data Received From a Server, Creating a Set of Components and Adding Them to the DOM
 
 ## <span style="color:red">Overview</span>
 
-In the next lesson, we will learn how to retrieve dynamic data, but we will build and use our array for now. Let's imagine that this data can change and may not always look like how we built it. We want a way to create components based on the data present. This data can come in many different forms. In this simple case, we are using an array of strings:
-```
-const data = [
-    "Button One",
-    "Button Two",
-    "Button Three",
-    "Button Four"
-]
-```
-Let's use the buttonCreator function from the last objective:
+Putting everything together, we can now build a component function, request dynamic data from a server, build components based on that data, and add those components to the DOM.
+
+Let's see it in action:
+
+First we will build our component creator function:
 
 ```
-function buttonCreator(buttonText){
-    const button = document.createElement('button');
+function buttonCreator(buttonTitle){
+    let newButton = document.createElement('button');
+    newButton.textContent = buttonTitle;
+    newButton.classList.add('button');
 
-    button.textContent = buttonText;
-
-    button.classList.add('button');
-
-    button.addEventListener('click', (e) => {
-        console.log('clicked!');
-    });
-
-    return button;
-})
+    return newButton;
+}
 ```
 
-### .forEach
+Next, let's grab some data. Once we receive the data, we will map over it and create components out of it. Then we can add it to the DOM:
 
-One of the simplest array methods is .forEach - it runs the array through a loop, passing each item to our callback function. It doesn't return a new array or mutate the data at all (unless we tell it to). .forEach is a simple way to iterate over the array, create components, and add them instantly to the DOM.
-```
-data.forEach((arrayItem) => {
-  let newButton = buttonCreator(arrayItem);
+- One important thing to note is that the data that comes back from the server will be formatted differently for every server. It is good practice to either read the documentation of the server you are using, or inspect the data yourself before attempting to use it. In this example the `response` object will have a key on it called `data` that key will have a value of an array with a list of strings.
 
-  parent.appendChild(newButton);
-});
 ```
-That was super simple! Just like that, we created a new component for each item in the array and added it to the DOM. No matter how many items are in the array, it will still work. One downside to this method is that we instantly add the items to the DOM; what if we wanted to create the components and add them at a different time?
+axios.get('http://fakeserver.com/data')
+    .then( response => {
+        // Remember response is an object, response.data is an array.
+        response.data.forEach( item => {
+            let button = buttonCreator(item);
+            parent.appendChild(button);
+        })
+    })
+    .catch( error => {
+        console.log("Error:", err);
+    })
+```
 
-### .map
-We know that .map returns a new array with the items transformed (by our callback). We can then do whatever we please with this array.
-```
-let newComponents = data.map((arrayItem) => {
-  let newButton = buttonCreator(arrayItem);
-
-  // Remember, we always need to return something when we use .map
-  return newButton;
-});
-```
-Now that we have an array of DOM elements (components), we can do whatever we'd like with them. We can wait to add the components to the DOM or manipulate them further; the sky's the limit! Let's add them to the DOM now, using .forEach
-```
-newComponents.forEach(component => {
-  parent.appendChild(component);
-});
-```
+And there you have it! We have retrieved data, created new components based on that data, and added them to the DOM!
 
 
 [Previous](./Object_2.md) | [Next](./Understanding.md)
