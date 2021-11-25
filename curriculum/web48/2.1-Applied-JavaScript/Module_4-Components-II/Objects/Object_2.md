@@ -1,58 +1,61 @@
-# Objective 2 - Write a Function that Utilizes createElement and Returns a New DOM
+# Objective 2 - Understand HTTP Requests and Get Data From a Server Using Axios
 
 ## <span style="color:red">Overview</span>
 
-Sometimes it makes sense to build several elements with similar functionality. For example, many components have click handlers that use the same callback, or a group of components shares the same style. This verbiage can be frustrating, but thankfully, it isn't necessary to repeat yourself in code. Utilizing a JavaScript function, we can create dynamic components on the fly and add them to the DOM.
+### HTTP
 
-### createElement
+HTTP is a network protocol, a set of rules governing how web clients, like a browser, communicate with web servers over the internet.
 
-We know about the `.createElement` method in our previous lessons. We learned that it could build DOM elements that we can later add to the DOM.
+We, as developers, need to know what HTTP methods are and how they are used to perform CRUD (Create, Read, Update, Delete) operations on server resources and what HTTP status codes are, and for what they are used.
 
-We also learned that once we create an element, we can use any property or method on it as we use on an element selected from the DOM. We can even add event listeners to the newly formed element.
+`HTTP Methods` provide a common language or terminology that the client can use to let the server know what operation it wants to perform.
 
+When a client needs to ask a server for information, a GET request should specify a URL that points to the desired resource.
+
+A POST request is used to ask the server to add or create new resources.
+
+The method used by the client to ask the server to make changes to specific resources is PUT.
+
+To remove or delete data from the server, the client needs to send a DELETE request.
+
+We will see examples of how to use those methods from our React Applications.
+
+`HTTP Status Codes` are used to indicate if a request has been successful or not and why. The server will set the status code for all responses sent to the client.
+
+### axios
+
+`axios` is a Javascript library. It is used to send HTTP requests to servers. It is not necessary to do this, but it makes things much easier. Because all server requests are asynchronous, `axios` uses Promises. Once you get the basic pattern down, `axios` is incredibly easy to use.
+
+To read more you can check out [the documentation here: ](https://github.com/axios/axiosn) 
+
+In this lesson, we will only concern ourselves with the HTTP GET request; this will allow us to ask a server for data.
+
+We need to start by including some code in our HTML file; this will essentially download axios and use it in our JavaScript file.
+
+We will put the following line in the `head` section of our HTML:
 ```
-let button = document.createElement('button');
-
-button.textContent = 'Button 1';
-
-button.classList.add('button');
-
-button.addEventListener('click', (e) => {
-    console.log('clicked!');
-});
-
-parent.appendChild(button);
-```
-
-### functions
-
-Now, sticking with that last example, let's imagine we want to create many buttons on our page. We could very quickly repeat the code for each button we want to create, appending them to the parent each time. Although from our knowledge so far, we know that repeating ourselves is something we want to avoid. We can easily compartmentalize all of the code into a function. Looking back on that last example, can you identify the pieces that might change? Anything that may change, we can add in as an argument; everything else will stay the same. This function will allow us to create components.
-
-```
-function buttonCreator(buttonText){
-    const button = document.createElement('button');
-
-    button.textContent = buttonText;
-
-    button.classList.add('button');
-
-    button.addEventListener('click', (e) => {
-        console.log('clicked!');
-    });
-
-    return button;
-}
-
-let firstButton = buttonCreator('Button 1');
-
-let secondButton = buttonCreator('Button 2');
-
-parent.appendChild(firstButton);
-parent.appendChild(secondButton);
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
-And just like that, we can create as many new `button` components we want without repeating ourselves!
+Now that we have access to the axios library in our JavaScript file, we can use it. We will use it to request data from a server when we load the page, although we could request that data based on user interaction or anything.
 
+`axios` is an object containing many methods, `.get` being one of them. It takes a string as its first argument. This string is the url of the resource we are requesting:
+
+```
+axios.get(url)
+```
+
+axios.get will return a Promise to us. This tells us that it is busy getting the data and will return in a moment. As with all promises, we will use `.then` and `.catch` to deal with the data.
+
+```
+axios.get('http://serverlocation.com/data')
+    .then( response => {
+        // deal with the response data in here
+    })
+    .catch( err => {
+        // deal with the error in here
+    })
+```
 
 
 
