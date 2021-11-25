@@ -64,7 +64,9 @@ Now that we understand what a component is, we can learn to utilize asynchronous
 
 -   **[https://github.com/LambdaSchool/web-sprint-challenge-applied-javascript](https://github.com/LambdaSchool/web-sprint-challenge-applied-javascript)**
 
+
 [Sprint Challenge and Assessment](./Sprint/Assessment.md)
+
 -------------------------------------------------------------------
 
 ## Resources
