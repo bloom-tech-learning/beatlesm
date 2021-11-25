@@ -60,7 +60,7 @@ As we build larger and more feature-rich web pages, we may notice a trend in our
 
 Now that we understand what a component is, we can learn to utilize asynchronous JavaScript and Promises to make HTTP requests and get data from a server.
 
-## [Module 5: Sprint Challenge and Assessment](https://github.com/beatlesm/web/tree/main/2.1/sprint21)
+## [Sprint Challenge and Assessment](./Sprint)
 
 -   **[https://github.com/LambdaSchool/web-sprint-challenge-applied-javascript](https://github.com/LambdaSchool/web-sprint-challenge-applied-javascript)**
 
