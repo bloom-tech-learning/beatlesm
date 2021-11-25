@@ -7,7 +7,7 @@ React is a UI library that is used in various forms to create complex, rich user
 
 React is one of the most popular UI libraries today, and in terms of Single Page Applications, many (including the React team) tend to think of the library as the "V" in MVC. That is the View layer of the Model, View, Controller paradigm. React is a pattern, a mindset, that will help developers build small, reusable pieces of UI that can be easily put together to make a large-scale application.
 
-## [Module 1: React Components and Component State](https://github.com/beatlesm/web/tree/main/2.2/Module221)
+## [Module 1: React Components and Component State](./Module_1-React-Component-and-Component-States/Objects/Object_1.md)
 
 -   **[https://github.com/beatlesm/react-stateful-widgets](https://github.com/beatlesm/react-stateful-widgets)**
 
@@ -21,7 +21,7 @@ React is one of the most popular UI libraries today, and in terms of Single Page
 
 Components are the building blocks of React applications. We use components to display some data (often called "state") to the screen for our users. This module will teach how to build components that can hold state to create an excellent experience for our end users.
 
-## [Module 2: Composing React Components and Passing Data Via Props](https://github.com/beatlesm/web/tree/main/2.2/Module222)
+## [Module 2: Composing React Components and Passing Data Via Props](./Module_2-Composing-React-Components/Objects/Object_1.md)
 
 -   **[https://github.com/LambdaSchool/React-Components-Insta-Clone](https://github.com/LambdaSchool/React-Components-Insta-Clone)**
 
@@ -37,7 +37,7 @@ Components are the building blocks of React applications. We use components to d
 
 As you build more extensive applications, you'll want to start splitting up your app into smaller pieces so that it is easier to work on and maintain. These small pieces you will build are called components. Components will need to share state, so we will learn to do this with a helper object called props.
 
-## [Module 3: Component Side Effects](https://github.com/beatlesm/web/tree/main/2.2/Module223)
+## [Module 3: Component Side Effects](./Module_3-Composing-Side-Effects/Objects/Object_1.md)
 
 -   **[https://github.com/LambdaSchool/nasa-photo-of-the-day](https://github.com/LambdaSchool/nasa-photo-of-the-day)**
 
@@ -53,7 +53,7 @@ As you build more extensive applications, you'll want to start splitting up your
 
 Side effects in web apps are very common. Therefore, it's essential to understand what side effects are to handle them properly in our components.
 
-## [Module 4: Advanced Styling Techniques](https://github.com/beatlesm/web/tree/main/2.2/Module224)
+## [Module 4: Advanced Styling Techniques](./Module_4-Advanced-Styling-Techniques/Objects/Object_1.md)
 
 -   **[https://github.com/LambdaSchool/nasa-photo-of-the-day](https://github.com/LambdaSchool/nasa-photo-of-the-day)**
 
@@ -69,7 +69,12 @@ Side effects in web apps are very common. Therefore, it's essential to understan
 
 CSS by itself can be hard to scale in large applications. In this module, we will see multiple libraries that have been built to help us style our apps in a much more scalable way.
 
-## [Sprint 2.2: Sprint Challenge and Assessment](https://github.com/beatlesm/web/tree/main/2.2/sprint22)
+## [Sprint Challenge](./Sprint)
+
+-   **[https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react](https://github.com/LambdaSchool/web-sprint-challenge-intro-to-react)**
+
+
+[Sprint Challenge and Assessment](./Sprint/Assessment.md)
 
 -------------------------------------------------------------------
 
