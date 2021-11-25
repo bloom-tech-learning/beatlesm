@@ -1,59 +1,108 @@
-# Module 2.1.1 - DOM II Check For Understanding
+# Module 2.1.1 - DOM I Check For Understanding
 
 ## Question 1
 
-####  What does the code below do?
+####  What would the output be for the following code?
 ```
-    button.addEventListener('click', callback);
+console.log(document);
 ```
 
-- Replace other click listeners on the button with `callback`
-- Schedule `callback` to execute on clicks of a particular button 
-- Execute `callback` immediately so future clicks can be handled 
-- Schedule `callback` to execute on clicks of any buttons on the page 
+-  the document body 
+- the document head 
+- he doctype declaration 
+- the entire HTML document 
 
-#### Answer:   (B) 
+#### Answer:   (D) 
+
+- Hints: (D)  The code shown would output the entire HTML document.
 
 ## Question 2
 
-####  The callback passed to `.addEventListener` receives ___ as its argument.
+####  How would you add an src attribute to the empty img element below?
 
-- the (DOM element) target of the event  
-- an event object  
-- ```res.data``` 
-- an event type 
+- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
+- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
+- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
+- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
 
-#### Answer:   (B) 
+#### Answer:   (C) 
+
+- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
 
 ## Question 3
 
-####  What is another word for an event that happens on a page?
+####  What would result if we applied image.classList.toggle('.bar') to the code below?
+```
+<img id="image" src="cat.jpg" class="foo" />
+```
 
-- DOM 
-- document  
-- Click  
-- Trigger 
+- ```<img id="image" src="cat.jpg" class="bar" />``` 
+- ```<img id="image" src="cat.jpg" class=".bar" />``` 
+- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
+- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
 
-#### Answer:   (D) 
+#### Answer:   (B) 
+
+- Hints: (C)  `class="foo bar"` is missing a period.
+- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
 
 ## Question 4
 
-####  The method ___ disrupts the trip of the event along the DOM.
+####  How would you add all of the fruits in this array to the body of the page?
 
+```
+const fruits = ["apples", "oranges", "lemons", "limes"];
+```
 
-- ```event.cancelPropagation``` 
-- ```event.cancelImmediatePropagation``` 
-- ```event.preventDefault``` 
-- ```event.stopPropagation``` 
-
+- 
+```
+fruits.forEach(fruit => {
+        document.body.textContent = fruit;
+    });
+``` 
+- 
+```
+fruits.forEach(fruit => {
+        const span = document.createElement('span');
+        span.textContent = fruit;
+        document.body.appendChild(fruit);
+    });
+``` 
+- 
+```
+fruits.forEach(fruit => {
+        document.body.appendChild(fruit);
+    });
+``` 
+- 
+```
+ fruits.forEach(fruit => {
+        const span = document.createElement('span');
+        span.textContent = fruit;
+        document.body.appendChild(span);
+    });
+``` 
 
 #### Answer:   (D) 
 
+- Hints: (C)  The document.createElement is missing
+- Hints: (D)  
+
+## Question 5
+
+####  True or false: document.createElement adds a new element to the DOM
+
+- FALSE
+- TRUE
+
+#### Answer:   (A) 
+
+- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
 
 
 
 
 
 
-
-[Previous](./Object_3.md) | [Module 1](../../Module_1-Class-Components/README.md)
+[Previous](./Object_4.md) | [Module 1](../../Module_1-Class-Components/README.md)
