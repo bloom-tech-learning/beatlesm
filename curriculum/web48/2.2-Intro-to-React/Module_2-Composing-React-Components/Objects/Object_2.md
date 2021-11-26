@@ -1,5 +1,4 @@
-# Objective 2 - Explain What Components are and How They Work in React
-
+# Objective 2 - 
 ## <span style="color:red">Overview</span>
 
 ### Anatomy of a React Component
