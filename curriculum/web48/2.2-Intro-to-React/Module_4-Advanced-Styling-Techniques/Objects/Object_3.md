@@ -161,6 +161,6 @@ Here are some ideas:
 
 
 
-[Previous](./Object_2.md) | [Next](./Object_4.md)
+[Previous](./Object_2.md) | [Next](./Understanding.md)
 
 
