@@ -1,4 +1,4 @@
-# Objective 2 - Use DOM Selectors, and Describe the Differences in the Behavior of Each
+# Objective 2 - Explain What Components are and How They Work in React
 
 ## <span style="color:red">Overview</span>
 

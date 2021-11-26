@@ -1,4 +1,4 @@
-# Objective 4 - Create a New Element, Manipulate it, and Add it to the DOM
+# Objective 4 - Change the State of the Component With a Click Listener
 
 ## <span style="color:red">Overview</span>
 
