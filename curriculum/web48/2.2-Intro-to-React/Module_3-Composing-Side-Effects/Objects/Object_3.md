@@ -1,163 +1,220 @@
-# Objective 3 -Use Different Properties and Methods to Manipulate a Selected Element
+# Objective 3 - Fetch Data From an API Using the Effect Hook
 
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
 
 ## <span style="color:red">Overview</span>
 
-Now that we have access to element(s), we can manipulate them and change their characteristics from the original HTML.
-
-After we have captured our element (eg. ```const el = document.querySelector('#idName');``` we can use that instance of the element we selected to access and assign values to properties natively contained on it. Once again, there are dozens of properties and methods given to us on each element. Here are a few of the most commonly used properties:
-
-### .textContent
-- Gets and sets the text of an element, essentially whatever text is between the open and closing tags of an HTML element.
-- Can use the assignment operator ( = ) to reset the text of an element.
-- Setting this property on a node removes all of its children and replaces them with the new single text node.
-- ```<div>Something Here</div>```
-- ```element.textContent = 'Something New```;
-
-### .setAttribute() (or .{attr})
-- This method (or property) is used as a way to set or reassign an attribute on the element.
-- `.setAttribute()` is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
-- eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
-- Can also use the pattern: `element.'attrName' = 'value'`.
-- eg: `element.src = 'http://www.imagsource.com/image.jpg'`
-
-### .style
-- Every element contains a style object. This property accesses that style object which contains every available style as a key and a value. It is important to note that these are NOT the CSS styles; these are inline HTML styles.
-- These styles are associated with the HTML inline style set on the element
-  -   eg: `<div style="color: red;">DIV STUFF</div>`
-- You can access and change a property on the style object by using the assignment operator =.
-- eg: element.style.color = 'blue';
-- hanging a property on the style object will effectively give this element an inline style.
-- Inline styles have the highest specificity, overriding any other selector except !important.
-- VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
-
-##  .className, .id
-- .className accesses or assigns a string containing all of the classes on the element.
-- .id accesses or assigns a string containing the id of the element.
-
-##  .classList
-- classList will return an array-like object of all the classes on the element. There are many useful methods available on classList.
-  - `classList` is a `DOMTokenList`.
-  - A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
-  - Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
-    - `.add('className')` and `.remove('className')` do as their names indicate.
-    - `.toggle('className')` will add the class if it does not exist and remove it if if does.
-
-##  .appendChild() and .prepend()
-- These methods add child elements to parent elements.
-- `.appendChild(child)` will take an element and add it to it's children. It will add it to the 'end' physically so if the children are displayed in order it will be the last.
-  - eg: `parentElement.appendChild(childElement)`
-- `.prepend(child)` adds a child to the beginning, displaying it first.
-  - eq: `parentElement.prepend(childElement)`
-
-##  .children and .parentNode
-- These properties are used for accessing relatives of the element.
-- `.children` returns an `HTMLCollection` of all the children of that element.
-- `.parentNode` returns the parent element of that element.
+Now that we know how to sync effects with data and we know how to avoid infinite loops let's take a more in-depth look at fetching data using an effect hook. There are a couple of possible situations we want to look at when fetching data in a component. First is writing an effect that is not synced with any state or props so that it only fetches data once as the component mounts. Next is writing an effect that makes an API call that could fire again during the component's life, depending on a piece of state or a prop.
 
 ## Follow Along
 
-### DOM Manipulation Tutorial
+### Fetching Data when a Component Mounts
 
-Let's get some practice manipulating the DOM. You can use this code as a base for your JavaScript (Links to an external site) (Links to an external site.) or write your HTML and CSS along the way.
+Let's fetch a random dog image to render when this component mounts. We'll do this using the "dogs" API. Open a new sandbox and follow along.
 
-####  Updating Text
-
-When we want to update the text using the DOM, the go-to property is called textContent. We can both read and write text inside of elements using `textContent`.
-
-Given this HTML, lets make some updates to the text:
-```
-  <h2 class="second-heading">I am the DOM</h2>
-```
-First, let's set up a reference to our element on the DOM:
-```
-  const secondHeading = document.querySelector('.second-heading');
-```
-We are now prepared to update the content of our heading. Let's update the content to say "DOM updated!"
-```
-  secondHeading.textContent = "DOM updated!";
-```
-Notice that we are first getting the text node of the element and then setting a new value!
-
-**Security Note** You may read about `innerHTML` in your DOM learning. Avoid using `innerHTML` as it could potentially be used as an attack vector for cross site attacks.
-
-### Updating Attributes
-
-Updating HTML attributes is vital to DOM manipulation. Let's update the style for the h1 in the code below.
+The first thing we'll do is get our `App` component ready with some state and the proper JSX:
 
 ```
-<header>
-  <h1 class="main-header">Dom Manipulation</h1>
-  <nav class="main-nav">
-    <a href="#" class="nav-item">Home</a>
-    <a href="#" class="nav-item">About</a>
-    <a href="#" class="nav-item">Blog</a>
-    <a href="#" class="nav-item">Contact</a>
-  </nav>
-</header>
-```
-Updating the DOM usually happens in two steps:
+function App() {
+  // Initialize state to hold the image URL
+  const [dogPic, setDogPic] = useState("");
 
-####  Step 1: Select the element
-```
-const mainHeader = document.querySelector('.main-header');
-```
-####  Step 2: Use the desired attribute property to update the element
-```
-mainHeader.style.color = 'red';
-```
-You can even chain the two steps together like this:
-```
-const mainHeader = document.querySelector('.main-header').style.color = 'red';
-```
-This two-step process can be repeated for other attributes as well! What if we had an empty `src` attribute on an image tag? Let's try it out provided we have this HTML:
-```
-<img class="custom-img" src="" alt="Kitty image" />
-```
-Select the image element's class and update the `src` attribute with this link:
-```
-https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350
-```
-```
-const customImg = document.querySelector('.custom-img');
-
-customImg.src = 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350';
-```
-
-####  JavaScript CSS Syntax
-
-When using JavaScript to update CSS style properties, we need to be careful to remember that JavaScript does not accept dashes as a valid naming value! Therefore, whenever a CSS property contains a dash, we must use camel casing in JavaScript.
-
-Example:
-
-```
-.some-class {
-  background-color: gray;
+  return (
+    <div className="App">
+      <h1>We Love Puppers</h1>
+      <img src={dogPic} alt="a random dog" />
+    </div>
+  );
 }
 ```
-The JavaScript version would look like this:
+Next, we'll add the effect hook (minus the data fetch logic) with an empty dependency array.
+
+```
+function App() {
+  // Initialize state to hold the image URL
+  const [dogPic, setDogPic] = useState("");
+  useEffect(() => {}, []); // Not synced with any data, so this effect only fires once
+
+  return (
+    <div className="App">
+      <h1>We Love Puppers</h1>
+      <img src={dogPic} alt="a random dog" />
+    </div>
+  );
+}
 ```
 
-  const someClass = document.querySelector('.some-class');
+Now we can add the fetch logic. We'll use Axios here as we've previously learned.
 
-  someClass.style.backgroundColor = "gray";
 ```
-**Pro Tip:** Don't forget the string when you assign a value to a CSS property.
+function App() {
+  // Initialize state to hold the image URL
+  const [dogPic, setDogPic] = useState("");
+  useEffect(() => {
+    // This axios GET request will return a single image
+    axios
+      .get("https://dog.ceo/api/breeds/image/random")
+      // Which we then set to state
+      .then(res => setDogPic(res.data.message))
+      // Always include error handling
+      .catch(err => console.log(err));
+  }, []);
 
-## Challenge
+  return (
+    <div className="App">
+      <h1>We Love Puppers</h1>
+      <img src={dogPic} alt="a random dog" />
+    </div>
+  );
+}
+```
 
-### DOM Manipulation Challenge
+See a working example of the completed example [here](https://codesandbox.io/s/affectionate-chaplygin-9p27c).
 
-[Take the example code from your tutorial](https://codepen.io/BloomTech/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
+### Fetching Data Multiple Times with Synced Effect Hooks
 
-Here are some ideas:
+Often, we will want to make the same fetch call multiple times during the life of a component, all based on when certain data changes. It can be tempting to write a function outside of the effect hook that calls an API, call that function from the effect hook during the mounting stage, and then call it from a handler function later. Like this:
 
-- Change the color of the paragraphs.
-- Change the text contents of any element of your choosing
-- Change the href of an anchor tag
-- Update the alt tag of an image
-- Update layout styles, try out flex properties with JavaScript syntax
+```
+const [data, setData] = useState();
+  const [query, setQuery] = useState("react");
+
+  // This effect will only fire once when the component mounts
+  useEffect(() => {
+    fetchData(); // calls an external function that is dependent on state or props ⚠️
+  }, []);
+
+  // external function that relies on (or is dependent on) query
+  const fetchData = () => {
+    axios.get("some/api/endpoint/" + query)
+      .then(res => setData(res.data));
+  }
+
+  const handleChange = e => {
+    setQuery(e.target.value)
+    fetchData(); // calls same external function after setting query
+  }
+
+  return (
+    <>
+      <input value={query} onChange={handleChange} />
+      ...
+    </>
+  );
+}
+```
+
+This is not safe, as the effect hook calls `fetchData` which relies on `query`. According to the [React docs](https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies)
+
+>It's difficult to remember which props or state are used by functions outside of the effect. This is why usually you'll want to declare functions needed by an effect inside of it. Then it's easy to see what values from the component scope that effect depends on.
+
+Let's put the `fetchData` function inside the effect hook, and sync the hook with `query`:
+
+```
+const [data, setData] = useState();
+  const [query, setQuery] = useState("react");
+
+  // This effect will fire when the component mounts, AND each time "query" is updated! ✅
+  useEffect(() => {
+    const fetchData = () => {
+      axios.get("some/api/endpoint/" + query)
+        .then(res => setData(res.data));
+    }
+
+    fetchData(); // calls an external function
+  }, [query]);
+
+
+  const handleChange = e => {
+    setQuery(e.target.value)
+  }
+
+  return (
+    <>
+      <input value={query} onChange={handleChange} />
+      ...
+    </>
+  );
+}
+```
+So, to examine this more closely, we will fetch data from the algolia API based on a query string typed into an input. Again, open a new sandbox to follow along.
+
+To start out, we will have our state and JSX ready.
+
+```
+function App() {
+  const [data, setData] = useState({ hits: [] });
+  const [query, setQuery] = useState("react");
+
+  return (
+    <>
+      <input value={query} onChange={e => setQuery(e.target.value)} />
+      <ul>
+        {data.hits.map(item => (
+          <li key={item.objectID}>
+            <a href={item.url}>{item.title}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+Next, we will add the effect hook, synchronizing the hook to the query state, tied into the input.
+
+```
+function App() {
+  const [data, setData] = useState({ hits: [] });
+  const [query, setQuery] = useState("react");
+
+  useEffect(() => {}, [query]); // when query changes, fire this effect again
+
+  return (
+    <>
+      <input value={query} onChange={e => setQuery(e.target.value)} />
+      <ul>
+        {data.hits.map(item => (
+          <li key={item.objectID}>
+            <a href={item.url}>{item.title}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+Finally, we will add the fetch logic.
+
+function App() {
+  const [data, setData] = useState({ hits: [] });
+  const [query, setQuery] = useState("react");
+
+  useEffect(() => {
+    const fetchData = () => {
+      axios
+        .get("https://hn.algolia.com/api/v1/search?query=" + query)
+        .then(res => setData(result.data));
+    };
+
+    fetchData();
+  }, [query]);
+
+  return (
+    <>
+      <input value={query} onChange={e => setQuery(e.target.value)} />
+      <ul>
+        {data.hits.map(item => (
+          <li key={item.objectID}>
+            <a href={item.url}>{item.title}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+See the final sandbox [here](https://codesandbox.io/s/xenodochial-field-h4rfd).
 
 
 
