@@ -12,7 +12,7 @@ Before we talk about the how of routing, we need a solid definition of the what.
 
 You may be familiar with this type of server room from movies or TV. Each of those boxes is a server, housing thousands of filing cabinets worth of data every couple of inches.
 
-![inline_image_preview](inline_image_preview.png)
+![inline_image_preview](inline_image_preview.)
 
 Websites and web applications all rely heavily on information that is controlled by a server. We can't get away from them; even when we hear buzz-words like "serverless" servers (hint: they're not server-less), we still rely on machines that communicate across channels to deliver content to us as end-users. For example, imagine if you had to request a resource from a server every time you clicked on something on a website. Then the server had to go and retrieve that resource, and then that server had to send back some HTML/CSS and eventually some JavaScript to display the data on the screen. For a long time, this was how the web worked. This hasn't entirely gone away, but we now have a slightly better way of doing things.
 

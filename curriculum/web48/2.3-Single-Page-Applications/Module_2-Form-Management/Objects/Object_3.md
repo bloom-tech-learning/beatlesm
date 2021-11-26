@@ -1,163 +1,89 @@
-# Objective 3 -Use Different Properties and Methods to Manipulate a Selected Element
-
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
+# Objective 3 - Use Router's useParam Hook to Add Dynamic Routes to an Application
 
 ## <span style="color:red">Overview</span>
 
-Now that we have access to element(s), we can manipulate them and change their characteristics from the original HTML.
+React's newest update, 5.1, released late in 2019, supports hooks. This is helpful for routing, so we'll spend the next few objectives exploring use cases of some common hooks.
 
-After we have captured our element (eg. ```const el = document.querySelector('#idName');``` we can use that instance of the element we selected to access and assign values to properties natively contained on it. Once again, there are dozens of properties and methods given to us on each element. Here are a few of the most commonly used properties:
+`useParam`
 
-### .textContent
-- Gets and sets the text of an element, essentially whatever text is between the open and closing tags of an HTML element.
-- Can use the assignment operator ( = ) to reset the text of an element.
-- Setting this property on a node removes all of its children and replaces them with the new single text node.
-- ```<div>Something Here</div>```
-- ```element.textContent = 'Something New```;
+The `useParam` hook relies on props to pass new and changing data into the app.
+Parameters are placeholders in a URL that represent some changing data. When we've set up routes in the past we've written some route like `<Route path="/employee` that corresponds to some component, but what if we want to load different data depending on the URL?
 
-### .setAttribute() (or .{attr})
-- This method (or property) is used as a way to set or reassign an attribute on the element.
-- `.setAttribute()` is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
-- eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
-- Can also use the pattern: `element.'attrName' = 'value'`.
-- eg: `element.src = 'http://www.imagsource.com/image.jpg'`
+The `useParam` hook allows us to create dynamic routes that will render content based on the URL. So, instead of requiring that all routes are written out ahead of time, the URL determines what renders on the page. For example, a url `"website.com/johnSmith"` would render data about John Smith, while `"website.com/janeDoe" `would render data about Jane Doe - neither have to be specified in your code. The browser "matches" the URL to the data, thus the name. If no data is found, it throws an errorIn some ways this provides access to search parameters in the URL. Before React Router 5.1 this was only possible using `match.params`.
 
-### .style
-- Every element contains a style object. This property accesses that style object which contains every available style as a key and a value. It is important to note that these are NOT the CSS styles; these are inline HTML styles.
-- These styles are associated with the HTML inline style set on the element
-  -   eg: `<div style="color: red;">DIV STUFF</div>`
-- You can access and change a property on the style object by using the assignment operator =.
-- eg: element.style.color = 'blue';
-- hanging a property on the style object will effectively give this element an inline style.
-- Inline styles have the highest specificity, overriding any other selector except !important.
-- VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
+In order to use a parameter in routing we need to assign the route with a colon in `App.js` or wherever else the routes are defined. So, `<Route path="/employee` becomes `<Route path="/:employee`. With that simple change we can use the `useParam` hook to create dynamic routes.
 
-##  .className, .id
-- .className accesses or assigns a string containing all of the classes on the element.
-- .id accesses or assigns a string containing the id of the element.
+A real-life example of this is Twitter. It would be crazy to imagine that every time a user makes a new profile, a new line of code has to be written. Instead, Twitter routes look something like this:
 
-##  .classList
-- classList will return an array-like object of all the classes on the element. There are many useful methods available on classList.
-  - `classList` is a `DOMTokenList`.
-  - A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
-  - Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
-    - `.add('className')` and `.remove('className')` do as their names indicate.
-    - `.toggle('className')` will add the class if it does not exist and remove it if if does.
+```
+<Route path='/:handle' component={Profile} />
+```
 
-##  .appendChild() and .prepend()
-- These methods add child elements to parent elements.
-- `.appendChild(child)` will take an element and add it to it's children. It will add it to the 'end' physically so if the children are displayed in order it will be the last.
-  - eg: `parentElement.appendChild(childElement)`
-- `.prepend(child)` adds a child to the beginning, displaying it first.
-  - eq: `parentElement.prepend(childElement)`
-
-##  .children and .parentNode
-- These properties are used for accessing relatives of the element.
-- `.children` returns an `HTMLCollection` of all the children of that element.
-- `.parentNode` returns the parent element of that element.
+The path is specified with a : and the component will load accordingly.
 
 ## Follow Along
 
-### DOM Manipulation Tutorial
+Let's return to our avengers app and created dynamic routes with `useParam` such that `ourapp.com/avengers/Thor` will render information about an avenger from our `data.js` file, in this case, Thor.
 
-Let's get some practice manipulating the DOM. You can use this code as a base for your JavaScript (Links to an external site) (Links to an external site.) or write your HTML and CSS along the way.
+### App.js
 
-####  Updating Text
-
-When we want to update the text using the DOM, the go-to property is called textContent. We can both read and write text inside of elements using `textContent`.
-
-Given this HTML, lets make some updates to the text:
-```
-  <h2 class="second-heading">I am the DOM</h2>
-```
-First, let's set up a reference to our element on the DOM:
-```
-  const secondHeading = document.querySelector('.second-heading');
-```
-We are now prepared to update the content of our heading. Let's update the content to say "DOM updated!"
-```
-  secondHeading.textContent = "DOM updated!";
-```
-Notice that we are first getting the text node of the element and then setting a new value!
-
-**Security Note** You may read about `innerHTML` in your DOM learning. Avoid using `innerHTML` as it could potentially be used as an attack vector for cross site attacks.
-
-### Updating Attributes
-
-Updating HTML attributes is vital to DOM manipulation. Let's update the style for the h1 in the code below.
+We don't need to import `UseParams` in `App.js`, but we do need to make some changes here. Importantly, we need to pass data to `avengersList` and set up our routes such that they will accept any `hero` parameter.
 
 ```
-<header>
-  <h1 class="main-header">Dom Manipulation</h1>
-  <nav class="main-nav">
-    <a href="#" class="nav-item">Home</a>
-    <a href="#" class="nav-item">About</a>
-    <a href="#" class="nav-item">Blog</a>
-    <a href="#" class="nav-item">Contact</a>
-  </nav>
-</header>
-```
-Updating the DOM usually happens in two steps:
+<div className="App">
+        <Switch>
+          {/* we can use Route to render child components instead of having to use the component prop. This way we can easily pass down props to our components.  */}
+          <Route path="/avengers/:hero">
+            {/* Passing our data to avenger's list */}
+            <Avenger key={hero.id} hero={hero} />
+          </Route>
+          <Route path="/avengers/">
+            <AvengersList hero={hero} />
+            {/* Passing our data to avenger's list */}
+          </Route>
 
-####  Step 1: Select the element
-```
-const mainHeader = document.querySelector('.main-header');
-```
-####  Step 2: Use the desired attribute property to update the element
-```
-mainHeader.style.color = 'red';
-```
-You can even chain the two steps together like this:
-```
-const mainHeader = document.querySelector('.main-header').style.color = 'red';
-```
-This two-step process can be repeated for other attributes as well! What if we had an empty `src` attribute on an image tag? Let's try it out provided we have this HTML:
-```
-<img class="custom-img" src="" alt="Kitty image" />
-```
-Select the image element's class and update the `src` attribute with this link:
-```
-https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350
-```
-```
-const customImg = document.querySelector('.custom-img');
-
-customImg.src = 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350';
+          {/* You can also render a component with the component prop if you do not need to pass any additional props to your component */}
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
 ```
 
-####  JavaScript CSS Syntax
+### AvengerList.js
 
-When using JavaScript to update CSS style properties, we need to be careful to remember that JavaScript does not accept dashes as a valid naming value! Therefore, whenever a CSS property contains a dash, we must use camel casing in JavaScript.
-
-Example:
+In our `Avenger.js` file, we'll need to import `useParams` and set up the parameter for Avenger.
 
 ```
-.some-class {
-  background-color: gray;
+import React from "react";
+import { useParams } from "react-router-dom";
+```
+
+After that, we can edit our `Avenger` function to match the `hero` data to the route specified in the URL. JavaScript will look at the hero `id` and match it to the `id` in `data.js`.
+
+```
+function Avenger({ hero }) {
+  // console.log("Props", props);
+  const params = useParams();
+  // we can use this hook to grab information about the way React Router matched this route
+
+  // we want to match the hero to the route
+  const heros = hero.find(item => item.id === Number(params.hero));
+  return (
+    <div className="character-card">
+      <h2>{heros.name}</h2>
+      <p>{heros.nickname}</p>
+      <p>{heros.description}</p>
+      <img src={heros.thumbnail} alt="random avengers img" />
+    </div>
+  );
 }
-```
-The JavaScript version would look like this:
+export default Avenger;
 ```
 
-  const someClass = document.querySelector('.some-class');
-
-  someClass.style.backgroundColor = "gray";
-```
-**Pro Tip:** Don't forget the string when you assign a value to a CSS property.
+Once this is in place you should be able to visit a site such that `ourapp.com/avengers/3` will render information about Captain America. Similarly, `ourapp.com/avengers/4` should match and render information about Spiderman, and so on. Play around with this feature using different URL routes before moving on.
 
 ## Challenge
 
-### DOM Manipulation Challenge
-
-[Take the example code from your tutorial](https://codepen.io/BloomTech/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
-
-Here are some ideas:
-
-- Change the color of the paragraphs.
-- Change the text contents of any element of your choosing
-- Change the href of an anchor tag
-- Update the alt tag of an image
-- Update layout styles, try out flex properties with JavaScript syntax
+Create a dynamic route in your `Friends` application with `useParams`
 
 
 
