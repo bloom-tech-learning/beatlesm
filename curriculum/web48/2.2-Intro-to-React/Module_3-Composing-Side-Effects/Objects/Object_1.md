@@ -1,37 +1,59 @@
-#   Objective 1 - Explain What the DOM is and How it Relates to an HTML Page
+#   Objective 1 - Explain What Side Effects are in React Components
 
 ## <span style="color:red">Overview</span>
 
-When a web page is loaded into a browser, the browser first looks for the HTML file. Next, the browser uses the HTML file as a blueprint or instructions on building the page (this coupled with the CSS file later). Finally, the browser parses these instructions and builds a model for the page's look and act using Javascript. This model is a Javascript Object containing every element in order on the page. This object is referred to as the DOM or Document Object Model.
+What are "side effects"? A side effect is anything that affects something outside the scope of the function being executed. Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of side effects. There are two categories of side effects in React components - those that don't require cleanup and those that do require cleanup. We will discuss effects that require cleanup later in this module.
 
-The DOM is built as a data structure known as a 'Tree' because parent elements have nested children elements (or leaves). As with physical trees, we can follow tree branches to get to the exact leaf (or leaves) that we want to access. Each branch of our DOM tree can be its own tree. It is important to remember this as we move through this lesson.
+A React component without side effects is called a pure component. A component is considered pure if it always renders the same output for the same state and props. Similarly, a side effect can cause a component to return a different output for the same state and props. Pure components don't have any side effects. React offers us tools for managing side effects so we can avoid bugs and inconsistencies in our app. The effect hook (`useEffect()`) is one of those.
 
-![dom-tree](dom-tree.jpg)
+### The Effect Hook
 
-When the DOM is built and the webpage is loaded, developers get access to it in the form of the global Javascript object ```document```. ```document``` contains the entire hierarchy of the page, each element (or DOM node), and it also contains dozens of built in methods and properties. We can use these methods and properties to manipulate what we see on the screen.
+The effect hook tells React that a component needs to run, or execute, some side effect. This hook takes in two parameters. The first is a callback function where we can run the side effect. Let's take a look at an effect hook that is handling a `console.log` side effect:
 
-- **Note:** There are so many methods and properties on document (and its subsequent elements and collections) that it would take a lot longer to properly cover them all. We will only be covering the few most commonly used. From this point forward you will be expected to reference the official documentation to learn more about the different methods and properties available, when your need arises for something other than what we have taught. This is a very good habit to get into as we progress deeper in to the course.
+```
+useEffect(() => {
+  console.log("Hello from the effect hook!");
+});
+```
 
-## Follow Along
+Used inside the component, puts the effect function inside the component's function scope. This gives it access to state, props, and local variables. So we could also do something like this:
 
-### DOM Investigation
-Lets investigate the DOM together by visiting a live website and updating the DOM. Follow these steps in order:
+```
+useEffect(() => {
+  console.log(props.someProp, stateValueOne);
+});
+```
 
-**Prerequisite: This tutorial assumes you are using Google Chrome. You can get similar results in any other browser but these steps were tailored for a chrome experience.**
+Here are some basic examples of other common side effects we might see in React Components:
 
-1.  Navigate to lambdaschool.com (Links to an external site.).
-2.  Right click on the main heading and you should see a dropdown with an option to inspect element. Click that option and chrome developer tools should activate.
-3.  The developer tools should be showing the selection you made when you right clicked. Double click the content of the heading. You should now be able to edit the text of the header.
-4.  Update the text with anything you'd like. For this example, I will update the text to say "Hello there!" You won't see any changes until you deselect the content in the chrome developer tools.
-5.  Now try updating the content and HTML of other elements on the page.
-Notice that if you refresh the page, the changes you made are gone! **That is because the elements you were editing existed in the DOM and were not permanent!**
+```
+// Making API calls
+const [user, setUser] = useState();
+const [error, setError] = useState();
+useEffect(() => {
+  fetchUserData(userId)
+    .then(res => setUser(res.data.user))
+    .catch(err => setError(err.response.message));
+});
 
-You now have experience editing the DOM without writing code. Go check out the challenge below to see the DOM inside the console!
+// Manipulating the DOM
+const [count, setCount] = useState();
+useEffect(() => {
+  document.title = `Count is: ${count}`;
+});
 
-## Challenge
+```
 
-Open the console in your web browser and enter ```console.log(document);```.
+```
+useEffect(() => {
+  console.log("The component has mounted.");
+}, []);
+```
 
-This should make the document appear on the screen, play around with it for a minute. Notice how the document contains all of the HTML elements (otherwise now known as DOM nodes) on the page. Hover over these nodes and notice how the element on the page is highlighted.
+
+
+
+
+
 
 [Previous](../README.md) | [Next](./Object_2.md)
