@@ -1,37 +1,52 @@
-#   Objective 1 - Explain What the DOM is and How it Relates to an HTML Page
+#   Objective 1 - Explain the Difference Between Client-Side Routing and Server-Side Routing
 
 ## <span style="color:red">Overview</span>
 
-When a web page is loaded into a browser, the browser first looks for the HTML file. Next, the browser uses the HTML file as a blueprint or instructions on building the page (this coupled with the CSS file later). Finally, the browser parses these instructions and builds a model for the page's look and act using Javascript. This model is a Javascript Object containing every element in order on the page. This object is referred to as the DOM or Document Object Model.
+### What is Routing?
 
-The DOM is built as a data structure known as a 'Tree' because parent elements have nested children elements (or leaves). As with physical trees, we can follow tree branches to get to the exact leaf (or leaves) that we want to access. Each branch of our DOM tree can be its own tree. It is important to remember this as we move through this lesson.
+Accessing information based on a URL is not only a powerful tool at our disposal as end-users and developers, but it is also a standard. Routing is essential for handling a communication piece between computers. Routing is the way we navigate through websites and web applications today. When we click on a link on any web app or website, we are routing to a URL and requesting information that lives somewhere else. You do this every day - just type www.google.com in a web browser, and you've utilized routing to get resources from a server.
 
-![dom-tree](dom-tree.jpg)
+### What is a Server?
 
-When the DOM is built and the webpage is loaded, developers get access to it in the form of the global Javascript object ```document```. ```document``` contains the entire hierarchy of the page, each element (or DOM node), and it also contains dozens of built in methods and properties. We can use these methods and properties to manipulate what we see on the screen.
+Before we talk about the how of routing, we need a solid definition of the what. In computer science, the term "server" refers to centralized resources on a network. These servers are physical devices, usually housed with other servers in large warehouses, that run the "behind the scenes" work of the internet like data storage. So when you route, you're routing to a server.
 
-- **Note:** There are so many methods and properties on document (and its subsequent elements and collections) that it would take a lot longer to properly cover them all. We will only be covering the few most commonly used. From this point forward you will be expected to reference the official documentation to learn more about the different methods and properties available, when your need arises for something other than what we have taught. This is a very good habit to get into as we progress deeper in to the course.
+You may be familiar with this type of server room from movies or TV. Each of those boxes is a server, housing thousands of filing cabinets worth of data every couple of inches.
+
+![inline_image_preview](inline_image_preview.)
+
+Websites and web applications all rely heavily on information that is controlled by a server. We can't get away from them; even when we hear buzz-words like "serverless" servers (hint: they're not server-less), we still rely on machines that communicate across channels to deliver content to us as end-users. For example, imagine if you had to request a resource from a server every time you clicked on something on a website. Then the server had to go and retrieve that resource, and then that server had to send back some HTML/CSS and eventually some JavaScript to display the data on the screen. For a long time, this was how the web worked. This hasn't entirely gone away, but we now have a slightly better way of doing things.
+
+This image does a really good job of showing some of the key differences between client-side (traditional) and server-side(SPA) routing.
+
+### Server-Side Routing
+
+When we request information from a server (by clicking on a link or button), that server then sends back the document that was requested. For example, we click on a link and our URL changes to match the request, then the server goes and finds a template or some HTML file and sends it back across the world wide web to deliver that content to the user.
+
+All of this is handled and achieved on the server, and a few things happen here:
+
+1.  The server will refresh the web page at which we're looking. This is because a new request was made for information, and the information given was a bunch of DOM elements, so we have to re-paint the web page.
+2.  The information requested will be the only information given, no more, and no less.
+3.  Because of this, we get the opportunity to load smaller portions of the web page instead of requesting/loading the entire thing the whole time the way we do in client-side routing.
+
+When you (the client) request a lot of information, your computer and subsequent internet-related devices run through many protocols. As a result, the process can be really slow, especially when bandwidth is an issue.
+
+### Client-Side Routing
+
+Now that we know about how things used to be done, we can talk about modern routing. JavaScript and the other tools that we get to work with within JavaScript are super sophisticated. Because of the arrival of tools like Google Chrome's V8 Engine (Links to an external site) (Links to an external site.), we can do many things that weren't previously possible. One of those new patterns is using JavaScript to maintain state (or memory) within our applications and use that memory to tell the browser what to display when a resource is requested.
+
+When routing is handled internally by the JavaScript already on the page, we achieve what is known as client-side routing. And this tool is how we get things done today, especially in React! And the best part about this is that the page won't refresh! The data is just there, displayed when we ask for it. This works because when a user clicks on a requested resource, instead of the client asking for that resource from the server via a URL, JavaScript will prevent this. We then get the resource (state) that is already available to us rendered out, and when using react, this happens beautifully through component-based architecture.
 
 ## Follow Along
 
-### DOM Investigation
-Lets investigate the DOM together by visiting a live website and updating the DOM. Follow these steps in order:
+Read through this medium article [here](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f) Look at the image above as you read for a visual representation of how server-side routing and client-side routing work.
 
-**Prerequisite: This tutorial assumes you are using Google Chrome. You can get similar results in any other browser but these steps were tailored for a chrome experience.**
+##  Challenge
 
-1.  Navigate to lambdaschool.com (Links to an external site.).
-2.  Right click on the main heading and you should see a dropdown with an option to inspect element. Click that option and chrome developer tools should activate.
-3.  The developer tools should be showing the selection you made when you right clicked. Double click the content of the heading. You should now be able to edit the text of the header.
-4.  Update the text with anything you'd like. For this example, I will update the text to say "Hello there!" You won't see any changes until you deselect the content in the chrome developer tools.
-5.  Now try updating the content and HTML of other elements on the page.
-Notice that if you refresh the page, the changes you made are gone! **That is because the elements you were editing existed in the DOM and were not permanent!**
+Write down some of the pros and cons for both server-side and client-side routing. Then write a paragraph of what you like about both, which you would prefer to use, and why. Submit this to your TL via slack.
 
-You now have experience editing the DOM without writing code. Go check out the challenge below to see the DOM inside the console!
 
-## Challenge
 
-Open the console in your web browser and enter ```console.log(document);```.
 
-This should make the document appear on the screen, play around with it for a minute. Notice how the document contains all of the HTML elements (otherwise now known as DOM nodes) on the page. Hover over these nodes and notice how the element on the page is highlighted.
+
 
 [Previous](../README.md) | [Next](./Object_2.md)
