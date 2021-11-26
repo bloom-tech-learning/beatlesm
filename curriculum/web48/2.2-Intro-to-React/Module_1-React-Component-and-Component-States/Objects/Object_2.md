@@ -1,188 +1,226 @@
-# Objective 2 - Use DOM Selectors, and Describe the Differences in the Behavior of Each
+# Objective 2 - Explain What Components are and How They Work in React
 
 ## <span style="color:red">Overview</span>
 
-###  DOM Selectors
-Now that we know how to access the DOM using Javascript, we need to select individual elements (or groups of them). Doing so will give us access to all live elements and allow us to manipulate them.
-
-To manipulate elements on the DOM, we need to select them. There are many ways of doing this; for example, we can select the body and the head by asking for them (document.body, document.head). But, when we want to go deeper, that's where things get complicated. Thankfully, ```document``` has several built-in methods for accessing the exact element(s) we want.
-
-**It is important to note that all of these methods are case-sensitive. If you are unsure of the case while using them, please refer to the official documentation.**
-
-```getElement``` Methods
-
-These are the original methods for selecting elements from the DOM. They each take a single string as the only argument, containing either the id or class you are looking for.
+### Anatomy of a React Component
 
 ```
-document.getElementsByTagName('p');
+import React from 'react';
+
+const Intro = () => {
+  return (
+    <div>
+      <h1>Hi Lambda!</h1>
+    </div>
+  );
+};
 ```
 
-This method will take a single string as an argument containing the element name of the elements you want to select. It will return an array-like object called an ```HTMLCollection``` containing all the elements that contain the element name supplied. We will discuss what an HTMLCollection is after we talk about the rest of our selector methods.
+This is an example of a React "component." A "component" is a pretty loose term to describe a discrete chunk of your site. A header could be a component, for example. Or a footer. Or a hero section, etc. This one's pretty simple, all we're doing is rendering a div with an h1 inside of it.
+
+his is going to generate pretty much what you'd expect.
+
+![hi_lambda](hi_lambda.png)
+
+So what's so odd about this? Well, we're mixing two different syntaxes here. Part of this block is a regular JavaScript function, and part is HTML.
+
+Javascript:
 
 ```
-document.getElementById('idName');
+const Intro = () => {
+  return (
+   ...
+  );
+};
 ```
-This method will take a single string as an argument containing the id of an element, search through the DOM, and return the matching element.
+
+HTML:
 
 ```
-document.getElementsByClassName('className');
+    <div>
+      <h1>Hi Lambda!</h1>
+    </div>
 ```
 
-This method will take a single string as an argument containing the class of the elements you want to select. It will return an array-like object called an ```HTMLCollection``` containing all of the elements that hold the given class.
-```
-querySelector Methods
-```
-These are the newest element selection methods added to the DOM. These methods allow us to select element(s) based on CSS style selectors (remember . is class and # is id). Each method takes a string containing the selectors and returns the element(s). Note - we can select by element, id, class, or others with both methods.
-```
-document.querySelector('.custom-style');
-```
-This method will search for and return the first element that matches the value passed into the method. Remember that the biggest change from the older DOM selection methods is that we now need to pass the proper CSS selector into the argument.
+That's weird! You can't do that in JavaScript, so what the heck is going on here? We don't need to understand all the details yet, but the basic idea is that the above block only looks like HTML. In actuality, it is something else.
 
-If we passed ```('custom-style')``` and not ```('.custom-style')``` we would error out.
-```
-document.querySelectorAll('queryString');
-```
-This method will search for and return ALL elements matching the query string. This method returns these elements in an array-like object called a ```NodeList```
+The fake HTML is called JSX, and underneath its disguise, it's just a JavaScript object. This is a simplification, but what our example above effectively translates into is something like this.
 
-The Difference between ```HTMLCollection```, ```NodeList```, and ```Array```
-
-When we use ```getElementsByClassName()``` or ```querySelectorAll()``` we get back either an ```HTMLCollection``` or a ```NodeList``` respectively. We refer these to as 'array-like objects.' We have seen an array-like object before (the ```arguments``` object in a function). They both have numerical zero-based indices and the length property, but that is all they share with an Array. ```NodeList``` does take it one step further, and has access to ```.forEach```. There are no ```.reduce``` or ```.map``` or any other array method.
-
-Pro tip: The ```Array``` class contains a method we can use to create an array from an array-like object, called ```.from()```. To use this, we would give ```.from``` the array-like object as its only argument.
 ```
-Array.from(arrayLikeObject)
+import React from 'react';
+
+const Intro = () => {
+  return (
+
+      {
+          type: 'div',
+          props: {
+              children: {
+                  type: 'h1',
+                  props: {
+                      children: "Hi Lambda!"
+                  }
+              }
+          }
+      }
+
+  );
+};
 ```
+
+So when we return what looks like HTML in a React component, we're secretly returning a JavaScript object that describes the kind of HTML we want to make. But, of course, react is going to figure out how to make it for us later.
+
+It's important to understand early on that a React component is just a regular JavaScript function. We could return an object (sort of) like the one written above, and it would work, but we want to use JSX for a couple of reasons. First, it's easier to read than that big nested object. And second, it's going to allow us to put our application's logic where it belongs: directly next to the thing the logic applies to.
+
+### A brief demonstration of React's power
+
+In the above example, we've hardcoded the text of our `h1` tag to read `Hi Lambda!`. But React gives us the ability to control our app's content dynamically. Look at this:
+
+```
+import React from 'react';
+
+const Intro = () => {
+  const greeting = "Hi Lambda!";
+  return (
+    <div>
+      <h1>{greeting}</h1>
+    </div>
+  );
+};
+```
+
+![hi_lambda](hi_lambda.png)
+
+Our code changed, but our output is the same. Because we're just in a regular JavaScript function, we're free to declare a variable the way we normally do: `const greeting = "Hi Lambda!";`
+
+Once we're in our JSX, React gives us the power to escape back into regular JavaScript and refer to that variable by using the curly brackets `<h1>{greeting}</h1>`.
+
+These curly brakets will evaluate any valid JavaScript expression. So if we change `<h1>{greeting}</h1>` to `<h1>{2 + 2}</h1>`
+
+We get:
+
+![4](4.png)
+
+Now you know the underlying mechanism of React. We don't want to have to hardcode the content of our HTML; instead, we want to compute it.
+
+By now some of you are probably thinking, "Computing our markup, isn't that what we learned DOM manipulation for?" and it's a good question.
+
+### Why do it this way?
+
+We're going to focus on two central pillars of React's design philosophy for now. The separation of concerns and declarative programming.
+
+####  Separation of concerns
+
+How can we know the dancer from the dance?
+
+In computer programming, "the separation of concerns" refers to a design philosophy that each piece of your code should do one and only one thing. Functions with a lot of moving parts are hard to debug. In addition, one large function might be tricky to test. If we can split that function into smaller pieces that are easy to test individually, our application will be more robust and easier to understand.
+
+At first glance, it might appear that putting our markup right next to our JavaScript is a violation of this principle, but the React team thinks otherwise. They argue that we can't truly separate a `<button>` tag from the function the button invokes. Separating the two, one in an HTML file and another in a JavaScript file, isn't a separation of concerns; it's cutting one concern in half and then putting one half in the bedroom and the other half in the garage. It's a headache we don't need.
+
+Consider the difference between this, the way you're used to doing it:
+
+```
+//HTML FILE
+<button class="button"></button>
+
+//JS FILE
+let button = document.querySelector('.button');
+button.addEventListener("click", (data)=>{...logic} )
+```
+
+And the React way:
+
+```
+<button onClick={ () => submitForm(data) } />
+```
+I would argue there are a lot more opportunities for something to go wrong in the first approach.
+
+####  Imperative Programming vs Declarative Programming
+
+We have an array:
+
+```
+let myArray = [1,2,3,4,5];
+```
+
+And we want to iterate over it and double each number. Here are two ways we could go about it.
+
+```
+for (i = 0; i < myArray.length; i++) {
+    myArray[i] = myArray[i] * 2;
+}
+```
+
+Or:
+
+```
+const double =  number => number * 2;
+
+myArray.map(double);
+```
+
+The first approach is an example of imperative code, and this is the kind of approach with which we're most familiar. There's nothing wrong with imperative code, it's very explicit, and all code is ultimately imperative at a lower level. The problem with imperative code is it's pretty tricky, and in more complex examples, it can be hard to understand what the code does at a glance.
+
+The second approach is an example of declarative code. Instead of telling the computer, step by step, how we want it to do something, we just tell it what we want it to do.
+
+```
+myArray.map(double)
+```
+
+####  "Map over my array and double everything inside of it."
+
+With practice, declarative code is easier to parse. This is important because, believe it or not, as a programmer, most of your time isn't spent writing code. Instead, it's spent reading other people's code and trying to understand what it does. Suppose you can grasp this distinction and appreciate its value. Congratulations! You now understand the basis of functional programming, the programming paradigm that React is modeled after.
+
+So now we know the very basics of what React does and why it does it this way. In the next objective, we will introduce one of the single most important concepts in programming: state.
+
 ## Follow Along
 
-##  Selector Tutorial
-
-Let's get some practice using different selector methods. You can use this code (Links to an external site.) (Links to an external site) (Links to an external site.) or write your own.
-
-Study this HTML first:
-```
- <header>
-    <h1 class="main-header">Selectors!</h1>
-    <nav class="main-nav">
-      <a href="#" class="nav-item">Home</a>
-      <a href="#" class="nav-item">About</a>
-      <a href="#" class="nav-item">Blog</a>
-      <a href="#" class="nav-item">Contact</a>
-    </nav>
-  </header>
-```
-```
-querySelector()
-```
-What if we wanted to select all the first a tags within our navigation? There are several ways to accomplish this task, but let's use ```querySelector()``` to get started.
-
-When working with the DOM, we may want to re-use the reference several times in our code. Let's declare a ```const``` to hold our DOM reference:
-```
-const mySelection = document.querySelector('a');
-```
-Notice we had to use ```document``` in front of ```querySelector()``` that is because querySelector is a method of the document object.
-
-Next, let's log the result of our selection.
-```
-const mySelection = document.querySelector('a');
-console.log(mySelection);
-```
-We should see this log in the console:
+Let's build a component that displays an image. This is how we would do that.
 
 ```
-"<a href='#' class='nav-item'>Home</a>"
-```
-We now have access to that element node in the DOM! What if we wanted to select multiple elements at once? We have just the method for that: 
-```
-querySelectorAll().
-```
-```
-querySelectorAll()
-```
-If you recall from the introduction to selectors, ```querySelectorAll()``` will allow us to return an array-like object called a ```NodeList```. Let's set up a new const for our new selection:
-```
-const multipleSelections = document.querySelectorAll('a');
-```
-
-Notice that all we changed on the right side of the operator was adding an "All" to "querySelector." The returned value is very different though, check your console's log to see what happened. If you are using chrome developer tools, you will see something like this in your console:
-```
-NodeList(4)
-  0: a.nav-item
-  1: a.nav-item
-  2: a.nav-item
-  3: a.nav-item
-  length: 4
-  __proto__: NodeList
+import React from "react";
+function App() {
+  return (
+    <div className="App">
+      <img
+        src="https://i.pinimg.com/originals/92/94/ba/9294badee7b8f3d93fa9bc6c874641b2.png"
+        alt="lightbulb"
+      />
+    </div>
+  );
+}
 ```
 
-Wow, that is totally different than our result from ```querySelector()``` in the first example! We now have a ```NodeList``` and all of the nodes matching the ```a``` elements.
+Notice how we have `className` instead of `class` in our JSX? That is because JSX is just JavaScript, and `class` is a reserved word in JS.
 
-What can we do with a ```NodeList```? You can [dig deeper into the documentation](https://developer.mozilla.org/en-US/docs/Web/API/NodeList), but for our tutorial, let's see how it is "array-like."
-
-Study this code:
-```
-const multipleSelections = document.querySelectorAll('a');
-console.log(multipleSelections[2]);
-```
-Notice the multipleSelections[2]. That looks very similar to how we can use indices in arrays. The log result from the code above should read as follows:
-```
-"<a href='#' class='nav-item'>Blog</a>"
-```
-Accessing elements in this way is extremely powerful and will allow you to be creative if an HTML solution is not possible. For example, imagine you didn't have a class or ID to hook into; you could use the ```NodeList``` index to get the job done!
-
-####  Don't Forget The Selector
-
-When using ```querySelectorAll()``` don't forget it requires you to use the proper CSS selector. Using the same HTML example:
+Now, one more trick we can do with JSX. We can evaluate JavaScript expressions. So we can read variables, run functions, read data from objects or arrays, all kinds of things! To do this, we use curly braces - `{}`. Here we will use curly braces to render the value of an object property as a header, and then we will evaluate a string variable as the `src` of the image.
 
 ```
-<header>
-  <h1 class="main-header">Selectors!</h1>
-  <nav class="main-nav">
-    <a href="#" class="nav-item">Home</a>
-    <a href="#" class="nav-item">About</a>
-    <a href="#" class="nav-item">Blog</a>
-    <a href="#" class="nav-item">Contact</a>
-  </nav>
-</header>
+import React from "react";
+
+const image =
+  "https://i.pinimg.com/originals/92/94/ba/9294badee7b8f3d93fa9bc6c874641b2.png";
+const titleObj = {
+  title: "Light Bulb!"
+};
+
+function App() {
+  return (
+    <div className="App">
+      <h2>{titleObj.title}</h2> // this evaluates down to the string "Light
+      Bulb!"
+      <img src={image} alt="lightbulb" /> // this will evaluate down to the image
+      url string for the img src
+    </div>
+  );
+}
 ```
-Use querySelectorAll() to select all the ```nav-item``` classes:
 
-```
-const multipleClasses = document.querySelectorAll('.nav-item');
-```
-Note that we had to type out the . in .nav-item. This trips up new developers to JavaScript all the time. If you were to log out the results of this session, you would see it's just a NodeList like before, but now it's using classes instead of the a element. Push yourself further by using the challenge below
-
-###  Challenge
-
-Finish the DOM selector requests based on given HTML, LESS, and JS - follow this link for the challenge. (Links to an external site.)
-
-When the DOM is built, and the webpage is loaded, developers access it in the global Javascript object document. Document contains the entire hierarchy of the page, each element (or DOM node), and it also contains dozens of built-in methods and properties. We can use these methods and properties to manipulate what we see on the screen.
-
-- Note: There are so many methods and properties on document (and its subsequent elements and collections) that it would take a lot longer to cover them all adequately. We will only be covering the few most commonly used. From this point forward, you will be expected to reference the official documentation to learn more about the different methods and properties available when your need arises for something other than what we have taught. This is an excellent habit to get into as we progress deeper into the course.
-
-## Follow Along
-
-### DOM Investigation
-
-Let's investigate the DOM together by visiting a live website and updating the DOM. Follow these steps in order:
-
-**Prerequisite:** This tutorial assumes you are using Google Chrome. You can get similar results in any other browser, but these steps were tailored for a chrome experience.
-
-1.  Navigate to [lambdaschool.com](https://www.bloomtech.com/)
-2.  [(Links to an external site.)](https://www.bloomtech.com/)
-3.  Right-click on the main heading, and you should see a dropdown with an option to inspect element. Click that option, and chrome developer tools should activate.
-4.  The developer tools should be showing the selection you made when you right-clicked. Double click the content of the heading. You should now be able to edit the text of the header.
-5.  Update the text with anything you'd like. For this example, I will update the text to say, "Hello there!" You won't see any changes until you deselect the content in the chrome developer tools.
-6.  Now try updating the content and HTML of other elements on the page.
-
-Notice that if you refresh the page, the changes you made are gone! That is because the elements you were editing existed in the DOM and were not permanent!
-
-You now have experience editing the DOM without writing code. Go check out the challenge below to see the DOM inside the console!
+JSX is so powerful!
 
 ## Challenge
 
-Open the console in your web browser and enter console.log(document);.
-
-This should make the document appear on the screen; play around with it for a minute. Notice how the document contains all HTML elements (otherwise known as DOM nodes) on the page. Hover over these nodes and notice how the element on the page is highlighted.
+Start to build out React components from scratch. Have fun with this. Experiment with different elements.
 
 
 
