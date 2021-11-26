@@ -1,193 +1,183 @@
-# Objective 3 - Explain What State is in Web Applications and Demonstrate How to Make a React Component Stateful
+# Objective 3 - Demonstrate the Ability to Compose React Components to Build Out a UI
 
 ## <span style="color:red">Overview</span>
 
-You already know this, though you may not realize it. If you're at a soccer game, and each team has three goals, you might say that the "state" of the game is "tied." A traffic light has three possible states: red, yellow, and green. Similarly, our applications also have states. If you have a to-do app, it might be said to have a state of "three to-dos, none of which are completed." Upon completing one of the to-dos, you've changed the application's state.
+Now that we know all about functional components and how to pass arguments (props) through to those components and render those props data to the screen using JSX, we will learn all about nesting components that may rely on one or another prop value from a parent component.
 
-To see what this means concretely, let's start with the simplest state possible: a boolean. Next, we'll create an app that displays a light. The light will either be on or off.
+Let's take a look at the following code example and learn how we can achieve this idea of nesting components:
+
+```
+const App = props => {
+  return (
+    <div>
+      <h2>Hello world from, {props.name}</h2>
+      <div>
+        <h4>My best friend in this world is: {props.bestFriend}</h4>
+        <p>My favorite book is: {props.favoriteBook}</p>
+      </div>
+    </div>
+  );
+}
+```
+
+This component is doing some simple rendering of DOM elements. It only relies on three props, so it's not super sophisticated, but it makes for some cumbersome programming. Meaning, here we essentially have a component nested inside of another component. So let's start by breaking out the inner DOM elements whose purpose is to render the best-friend data into it's own component.
+
+```
+const BestFriend = props => {
+  return (
+    <div>
+      <h4>My best friend in this world is: {props.bestFriend}</h4>
+      <p>My favorite book is: {props.favoriteBook}</p>
+    </div>
+  );
+};
+```
+
+While this is good, we really should make it so that BestFriend can be reused and nested. Now, when we use this component inside of our App component, we can pass data to it as props.
+
+```
+const App = () => {
+      return (
+        <div>
+          <BestFriend bestFriend="Homer Hickam" favoriteBook="October Sky"/>
+        </div>
+      );
+    };
+```
+
+Now our component looks a little cleaner. But we can take it one step further. Notice that our <p/> tag could also be (if we wanted) it's very own component. For demonstration purposes of why this is neat, we'll go ahead and make it happen.
+
+```
+const Book = props => <p>My favorite book is: {props.favoriteBook}</p>;
+```
+And to use it nested within the BestFriend component
+
+```
+const BestFriend = props => {
+  return (
+    <div>
+      <h4>My best friends in this world is: {props.bestFriend}</h4>
+      <Book favoriteBook={props.favoriteBook} />
+    </div>
+  );
+};
+```
+
+Now things are getting a little ridiculous, but this demonstration shows that react can pass props down as far as you'd like. However, we recommend not nesting components super deep because, in the long run, this can cause issues when attempting to work with the props that you're passing down as well.
 
 ##  Follow Along
 
-Let's get some code on the page.
+Now let's build a few container components that each render their children and grandchildren. Finally, let's build out an ancestry tree that shows off the generations of the Simpsons.
+
+Here is our data set:
 
 ```
-import React from "react";
-import { render } from "react-dom";
-import "./styles.css";
+const simpsonData = {
+  name: "Orville Simpson",
+  spouse: "Yuma Hickman",
+  children: [
+    {
+      name: "Abraham Simpson",
+      spouse: "Mona",
+      children: [
+        {
+          name: "Homer Simpson",
+          spouse: "Marge Bouvier",
+          children: [
+            {
+              name: "Bart Simpson"
+            },
+            {
+              name: "Lisa Simpson"
+            },
+            {
+              name: "Maggie Simpson"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+```
 
-const white = "https://image.flaticon.com/icons/png/512/32/32177.png";
-const yellow =
-  "https://i.pinimg.com/originals/92/94/ba/9294badee7b8f3d93fa9bc6c874641b2.png";
+Let's start by building out our `Parent Component`. Luckily our Parent components will be pretty straightforward.
 
-function App() {
+```
+const Parent = props => {
+  return <h1>Parent: {props.name}</h1>;
+};
+```
+
+Now that we have our data and component, we can mount up this component inside of a container component.
+
+
+```
+<Parent name={simpsonData[0].name} />
+```
+
+Should mount an `h1` with `Abraham Simpson's` name printed to the screen. Now let's tweak our Parent component to be able to conditionally mount a `child` component if a child prop is on the `props object`. To achieve this we'll need a `Ternary Operator` that checks if the `child` prop is defined. If it is, we want to mount a `Child` component; if not, we want to mount `null`.
+
+```
+const Parent = props => {
   return (
-    <div className="App">
-      <img src={white} />
-      <img src={yellow} />
+    <div>
+      <h1>Parent: {props.name}</h1>
+      {props.child ? <Child name={props.child} /> : null}
     </div>
   );
-}
-
-const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+};
 ```
 
-This doesn't quite get us where we want to go.
+Now we have to build out our child component so that we can properly use this one.
 
-![same-bulbs](same-bulbs.png)
-
-Our application has the assets we want, but we only want one lightbulb image to show at a time. To achieve this, we're going to have to keep track of its state.
 
 ```
-import React, {useState} from "react";
-import { render } from "react-dom";
-import "./styles.css";
-
-const white = "https://image.flaticon.com/icons/png/512/32/32177.png";
-const yellow =
-  "https://i.pinimg.com/originals/92/94/ba/9294badee7b8f3d93fa9bc6c874641b2.png";
-
-function App() {
-
-  const [lightOn, setLightOn ] = useState();
-
+const Child = props => {
   return (
-    <div className="App">
-      <img src={white} />
-      <img src={yellow} />
+    <div>
+      <h2>Child: {props.name}</h2>
+      {props.grandChild ? <GrandChild name={props.grandChild} /> : null}
     </div>
   );
-}
-
-const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+};
 ```
 
-A couple of things have changed here. First, we're importing the `useState` hook from the React library so we can use it.
+Notice we have the same behavior here as we did in the Parent. We'll mount a `<GrandChild />` component if the correct prop exists. So now we need to build out `GrandChild`.
 
 ```
-import React, {useState} from "react";
-```
-
-Second, we've got this odd bit of syntax.
-
-```
-const [lightOn, setLightOn ] = useState();
-```
-This is the `useState` hook, and it's fundamental to understanding modern React. If its syntax looks strange to you, you're not alone, but we'll get back to why it looks like that later. For now, what you should understand is that while the line may look strange, all it's doing is declaring two variables the way you normally might. For now, it's okay to imagine that it's doing something close to this:
-
-```
-let lightOn;
-let setLightOn = (value) => {lightOn = value;};
-```
-(Note: ignore the discrepancy between the use of `const`in the hook and `let` in my example. It's not important for now.)
-
-The sharp-eyed among you might have noticed that `lightOn` doesn't have a value.
-But as you can see, if we were to invoke `setLightOn` and pass a value in as an argument, we can change the value of `lightOn`.
-
-```
-setLightOn("sup");
-console.log(lightOn); // "sup"
-```
-
-But what if we don't want to have to assign a value to `lightOn` right away? What if we want that variable to be initialized with a value from the get-go? We can do that.
-
-Let's change:
-
-```
-const [lightOn, setLightOn ] = useState();
-```
-
-To:
-
-```
-const [lightOn, setLightOn ] = useState(false);
-```
-
-Now it's sort of like we're saying this:
-
-```
-let lightOn = false;
-let setLightOn = (value) => {lightOn = value;};
-```
-
-In summation the `useState` hook `const [lightOn, setLightOn ] = useState(false);` works like this:
-
-`lightOn` is a variable the value of which is whatever we passed in to `useState`. In this case, it's value is the boolean primitive `false`. `setLightOn` is a function that will change the value of `lightOn`. We'll also note that I could have named `lightOn` and `setLightOn` whatever I wanted. I could've named them `peanutButter` and `jelly` if I wanted but that would've made it pretty confusing for someone reading my code to understand what they do.
-
-### Recap State
-
-Okay, so what have we learned? We know what state is in an application. We also know how to keep track of a state variable from within a component, we know how to initialize it with a value, and we know how to change that value. What's missing?
-
-Well, for one, we still have two light bulbs. We have a state variable initialized and a way to change it, but our light bulbs don't know it exists. We have to make our light bulbs aware of what the state is in some way to know what to do when it changes. We're going to need to learn a critically important pattern to make that happen.
-
-### What is Conditional Rendering?
-
-Conditional rendering is just a fancy name for a very common pattern in React. We don't want to see both lightbulbs at once. We only want to render one or the other based on some condition. In this case, if the `lightOn` boolean is set to `false` we want to see the white lightbulb. If it's set to true we want to see the yellow one. This is a straightforward use-case for the ternary operator in JavaScript.
-
-```
-import React, { useState } from "react";
-import { render } from "react-dom";
-import "./styles.css";
-
-const white = "https://image.flaticon.com/icons/png/512/32/32177.png";
-const yellow =
-  "https://i.pinimg.com/originals/92/94/ba/9294badee7b8f3d93fa9bc6c874641b2.png";
-
-function App() {
-  const [lightOn, setLightOn] = useState(false);
-
+const GrandChild = props => {
   return (
-    <div className="App">
-      {lightOn === false ? <img src={white} /> : <img src={yellow} />}
+    <div>
+      <h3>{props.name}</h3>
     </div>
   );
-}
-
-const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+};
 ```
 
-This is the only part that changed:
+So now that everything is put together let's see how we can mount all these components up correctly.
+
 ```
-    <div className="App">
-      {lightOn === false ? <img src={white} /> : <img src={yellow} />}
-    </div>
+<Parent
+  name={simpsonData[0].name}
+  child={simpsonData[0].children[0].name}
+  grandChild={simpsonData[0].children[0].children[0].name}
+/>
 ```
 
-A ternary operator acts as a single line `if/else` statment. This line:
+Ok, so our data set isn't the greatest, and the way this app works is entirely stringent upon specific data formatting, but it gets the idea across.
 
-`{lightOn === false ? <img src={white} /> : <img src={yellow} />}`
+Your goal now is to try and extend this to `GreatGreatGrandchild` to be able to render out `Bart, Lisa, and Maggie` to the screen!
 
-It's saying "Is the `lightOn` state variable set to `false`? If so render `<img src={white} />`, otherwise render `<img src={yellow} />`
+A good place to start would be right [here](https://codesandbox.io/embed/pwkl9zr140).
 
-Remember this pattern, you'll use it a lot.
-
-So what's the result of this code? Well, let's find out.
-
-![dar-bulb](dark-bulb.png)
-
-Progress. It's only showing the white bulb. What if we want it to show the yellow one now? Well, remember, our ternary operator is conditionally rendering one lightbulb or the other. It's being told to show the white one if `lightOn` is set to false, and to show the yellow one if it's `true`. What happens if we hard code the initial value of `lightOn` to true?
-
-`const [lightOn, setLightOn] = useState(true);`
-
-The result?
-
-![lit-bulb](lit-bulb.png)
-
-Victory is nearly ours. We have just set up a condition on which to render one bulb or the other. That condition was based on our application's state. When we forced the application's state to change, what appeared on the page reacted to that change. That's what React is all about. Your state changes, and your application reacts.
-
-The last step is figuring out how to change the state.
-
-Remember our hook from earlier?
-
-`const [lightOn, setLightOn] = useState(false);`
-
-You'll recall that `setLightOn` is a function that can change the value of `lightOn`. Now we just have to find a way to invoke this function.
+You can use CodeSandbox to build live ReactJS applications. I recommend logging in through their Github OAuth portal. Have fun!
 
 ## Challenge
 
-Build a component that holds a `person` object in state. Display the person's data in the component.
+Create an object that represents a generational tree of your family similar to the `Simpsons Object` found in our 'Follow Along' example. Keep it simple. Build out a few nested components that demonstrate the ability to pass data and conditionally render components if certain props are available.
+
+
 
 
 
