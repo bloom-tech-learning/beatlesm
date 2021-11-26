@@ -1,28 +1,89 @@
-#   Objective 1 - Describe ReactJS and the Problems that it Tries to Solve
+#  Objective 1 - Use JavaScript modules to export and import components
 
 ## <span style="color:red">Overview</span>
 
-React has quickly become one of the most commonly used libraries for building applications today. Because you've now seen some code that allows you to build custom components with so-called vanilla JavaScript (JS), you've come to an understanding of how you can use JS to manipulate DOM elements. React will take that knowledge you have learned and abstract away a lot of the `document.getElementByClassname` syntax. As you'll see later on, your entire application will live within one targeted DOM element. React will handle the rest for you.
+When JavaScript was first introduced, inserting it into a web application meant writing the code inside a script tag inside an HTML file. The script ran sequentially, that is, from top to bottom. Back then, if you wanted to use the same code in another project, you had to copy and paste it. There were also performance issues - namely, functions and variables were all global - if you weren't careful, you could quickly see the trouble with declarations holding unexpected values. Eventually, including an `<src>` attribute did allow for more reusability, but it was still dependent on order and still globally scoped.
 
-Because we have such rich user interfaces today that interact with ever-changing data, users interacting with DOM elements, and lots of animations and events firing, the DOM is undoubtedly doing a lot of work. Imagine an app like Twitter or Facebook that has users clicking everywhere, with data changing and almost instant status updates. For these types of large-scale applications, React is very important. Simply put, we need a way to offload a lot of the `state` (data) that our apps need to use from the DOM. To keep up with today's demands of the web, we need a way to build applications that can take care of a lot of the work for us.
+Then, a little over ten years ago, developers used module patterns like IIFE (Immediately Invoked Function Expression, pronounced 'iffy'). This function runs as soon as it is defined. For example, take the seemingly normal-looking code below. On closer inspection, you'll notice the enclosing parentheses wrapping the anonymous function, as well as another set of calling parentheses, which results in the immediate execution of the code. While this keeps the global space tidy and grants privacy to any inner variables, it's somewhat fragile and none too eloquent.
 
-Lets face it, working with the DOM API is hard. The React team recognizes this, so they built a simple engine called the `virtual DOM` that interacts with the actual DOM for us. We tell the `virtual DOM` which elements and `state` (data) to render to the actual DOM, and it will do so. Beyond that, it will "react" when the `state` (data) in our app changes, and will update the DOM accordingly. All on its own!
+```
+(function() {
+  //lexically enclosed function statement
+})();
+```
 
-In a process called "reconciliation," React will detect that the app's state has changed. Then it will update the virtual DOM, taking note of which nodes have changed due to the state changes. Finally, once it knows which nodes have changed, it will update only those specific nodes on the actual DOM. This takes a lot of pressure off of our browsers, and it's why React is as powerful as it is.
+You can read more about the history of programming modules and IIFE here (Links to an external site.)
 
-Today, web applications are enormous, complex pieces of software that millions and millions of users interact with simultaneously. React provides a smooth experience for our users, as well as those developing applications.
+### Server side JS
+
+The release of Node.js in 2009 meant that JavaScript could now execute outside of the browser. With the adoption of a common JavaScript specified standard library known as CommonJS, we have defined terms for sending data to and from our file systems. These advances were a complete game-changer for JavaScript developers, but all still relied heavily on third-party bundlers and transpilers to address common issues. Tools like webpack and rollup would compile packs of modules and assign any missing dependencies before sending them off to the browser. Transpilers such as Babel handle translating source code for the browser and convert the latest features of ES6 (any not supported in the browser) into compatible ES5. While handy, all of these programs require downloading, updating, and configuring.
+
+### JS modules (ECMAScript modules)
+
+This brings us to today—the first standardized syntax for using modules in JavaScript. Where past methods relied on specific functions or third-party libraries, we can now export functions, data, and components from our files by merely prefixing the export keyword with the latest version of JS. Then, when we want to bring such features into our file, we use the `import` keyword, the name of the exported item, and specify where it's located. And that's it. No dependencies or configurations; everything is ready to go right out of the box.
+
 
 ## Follow Along
 
-Please read through the ['Try React' tutorial found here](https://reactjs.org/docs/getting-started.html) and follow along with the documentation. Take it as far as you'd like. But we'd love for you to come into class on Monday, having played around with React and seen some React code.
+Let's go through some examples. If you open a new CodeSandbox and create a few different files, you can try this out.
 
--   So read through [this portion](https://reactjs.org/docs/thinking-in-react.html) of the React documentation.
+`export` exports a single named function that can now be imported into another module using the import keyword
+
+```
+export const emphasize = str => {
+  return str.toUpperCase();
+};
+```
+
+When `export default` is specified (either inline or at the end of the file), the declaration that follows is exported by default. Additional modules will need to be exported (and imported) by name.
+
+```
+const emphasize = str => {
+  return str.toUpperCase();
+};
+
+export default emphasize;
+```
+
+Multiple items exported from one module can then be imported into separate modules or extracted for use with object destructuring in the import declaration (see import examples below).
+
+This pattern is incredibly efficient; most errors are syntactical or from renaming or changing your file structure. Another advantage of modules is that top-level variables do not pollute the global object. In addition to connecting our project files, bringing in a library or an external component to our project is a matter of downloading it with our CLI and then directly importing it to our file. Fonts, loaders, middleware, pretty much anything you need. We won't go into any detail about any of these libraries right now but refer to the docs for download commands and directions for implementation. For now, let's take a better look at the import and export line syntax.
+
+Importing a file/module starts with declaring the `import` keyword followed by the name of the import, then the `from` keyword followed by the module specifier. The module specifier usually is a file path or an npm module name. We will be working with file paths today.
+
+Import examples
+
+-   A single named export
+
+```
+import { a } from './directory/fileName'
+```
+
+-   Multiple named exports
+
+```
+import { item1, item2, item3 } from './directory/items.js'
+```
+
+-   Exported as default
+
+```
+import Component from './folderName/Component.js'
+```
+
+### File path specification
+
+The prefixing './' on the file URL points to a unique location of your file system. It indicates the file for import is exported elsewhere in the current directory. When the file is read, the loader knows where it is located in the directory tree. Adding an additional dot ('../') to the path will indicate a location one directory higher. Use the table below to reference quick file location indicators.
+
+File Location           |	Path prefix
+| --------------------- | -------------- |
+Current Directory       |	./
+Parent Directory        |	../
+Parent of Parent Dir    |	../../
 
 ## Challenge
 
-On your own, write a paragraph about what ReactJS is and what problems it tries to solve.
-
-Submit that paragraph to your Team Lead via Slack
+Using the CodeSandbox you've been trying this out in, make a React component in one file that is exported as the default export, and see if you can import it and render it in the App component. This is a good chance to try it out on your own before we do it together later.
 
 
 
