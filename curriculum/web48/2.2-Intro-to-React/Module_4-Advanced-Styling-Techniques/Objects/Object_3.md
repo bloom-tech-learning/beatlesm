@@ -1,163 +1,174 @@
-# Objective 3 -Use Different Properties and Methods to Manipulate a Selected Element
-
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
+# Objective 3 - Use Styled-Components to Add Functional Styles to Their React Components
 
 ## <span style="color:red">Overview</span>
 
-Now that we have access to element(s), we can manipulate them and change their characteristics from the original HTML.
+`Styled Components` is a library for writing CSS in our JS files. As mentioned in the article above, it's not that the idea of having HTML or CSS written in JS is bad, it's more that the implementation isn't properly implemented for either. React introduced JSX as a better tool for writing HTML in JS, and now we have great libraries to write CSS in JS.
 
-After we have captured our element (eg. ```const el = document.querySelector('#idName');``` we can use that instance of the element we selected to access and assign values to properties natively contained on it. Once again, there are dozens of properties and methods given to us on each element. Here are a few of the most commonly used properties:
+To get started with `styled-components` we run `npm install styled-components`. And that's it! Now you're ready to roll! We can import it into our js files, and start building components.
 
-### .textContent
-- Gets and sets the text of an element, essentially whatever text is between the open and closing tags of an HTML element.
-- Can use the assignment operator ( = ) to reset the text of an element.
-- Setting this property on a node removes all of its children and replaces them with the new single text node.
-- ```<div>Something Here</div>```
-- ```element.textContent = 'Something New```;
+Now that I have installed `styled-components` Let's look at how you can use them.
 
-### .setAttribute() (or .{attr})
-- This method (or property) is used as a way to set or reassign an attribute on the element.
-- `.setAttribute()` is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
-- eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
-- Can also use the pattern: `element.'attrName' = 'value'`.
-- eg: `element.src = 'http://www.imagsource.com/image.jpg'`
+First, import the `styled` default object from `styled-components`. This gives you access to every property on that object. Each property is a React component that will print out whatever property you reference as a DOM element.
 
-### .style
-- Every element contains a style object. This property accesses that style object which contains every available style as a key and a value. It is important to note that these are NOT the CSS styles; these are inline HTML styles.
-- These styles are associated with the HTML inline style set on the element
-  -   eg: `<div style="color: red;">DIV STUFF</div>`
-- You can access and change a property on the style object by using the assignment operator =.
-- eg: element.style.color = 'blue';
-- hanging a property on the style object will effectively give this element an inline style.
-- Inline styles have the highest specificity, overriding any other selector except !important.
-- VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
+```
+import styled from 'styled-components'
+```
+```
+// div
+const StyledDiv = styled.div``;
 
-##  .className, .id
-- .className accesses or assigns a string containing all of the classes on the element.
-- .id accesses or assigns a string containing the id of the element.
+// paragraph
+const StyledP = styled.p``;
 
-##  .classList
-- classList will return an array-like object of all the classes on the element. There are many useful methods available on classList.
-  - `classList` is a `DOMTokenList`.
-  - A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
-  - Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
-    - `.add('className')` and `.remove('className')` do as their names indicate.
-    - `.toggle('className')` will add the class if it does not exist and remove it if if does.
+// section
+const StyledSection = styled.section``;
 
-##  .appendChild() and .prepend()
-- These methods add child elements to parent elements.
-- `.appendChild(child)` will take an element and add it to it's children. It will add it to the 'end' physically so if the children are displayed in order it will be the last.
-  - eg: `parentElement.appendChild(childElement)`
-- `.prepend(child)` adds a child to the beginning, displaying it first.
-  - eq: `parentElement.prepend(childElement)`
+// headers h1 - h6
+const StyledHeading = styled.h1``;
 
-##  .children and .parentNode
-- These properties are used for accessing relatives of the element.
-- `.children` returns an `HTMLCollection` of all the children of that element.
-- `.parentNode` returns the parent element of that element.
+// a
+const StyledA = styled.a``;
+
+// etc.....
+```
+
+Hopefully, you're starting to get the point. You'll notice that I'm using that fancy [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax. That's because each one of the properties found on the styled objects are actually methods. In JS, we can pass in string arguments using string literals.
 
 ## Follow Along
 
-### DOM Manipulation Tutorial
+[Link to codesandbox from the video to follow along](https://codesandbox.io/s/yqvkxxrmn1)
 
-Let's get some practice manipulating the DOM. You can use this code as a base for your JavaScript (Links to an external site) (Links to an external site.) or write your HTML and CSS along the way.
+##  Lets build out div component
 
-####  Updating Text
-
-When we want to update the text using the DOM, the go-to property is called textContent. We can both read and write text inside of elements using `textContent`.
-
-Given this HTML, lets make some updates to the text:
-```
-  <h2 class="second-heading">I am the DOM</h2>
-```
-First, let's set up a reference to our element on the DOM:
-```
-  const secondHeading = document.querySelector('.second-heading');
-```
-We are now prepared to update the content of our heading. Let's update the content to say "DOM updated!"
-```
-  secondHeading.textContent = "DOM updated!";
-```
-Notice that we are first getting the text node of the element and then setting a new value!
-
-**Security Note** You may read about `innerHTML` in your DOM learning. Avoid using `innerHTML` as it could potentially be used as an attack vector for cross site attacks.
-
-### Updating Attributes
-
-Updating HTML attributes is vital to DOM manipulation. Let's update the style for the h1 in the code below.
+To import styled-components, add `import styled from 'styled-components'`; to your js file. Then we will use `styled.div` to create a new component. Look at how we set this up, then we'll talk about the funny syntax:
 
 ```
-<header>
-  <h1 class="main-header">Dom Manipulation</h1>
-  <nav class="main-nav">
-    <a href="#" class="nav-item">Home</a>
-    <a href="#" class="nav-item">About</a>
-    <a href="#" class="nav-item">Blog</a>
-    <a href="#" class="nav-item">Contact</a>
-  </nav>
-</header>
-```
-Updating the DOM usually happens in two steps:
+import React from 'react';
+import styled from 'styled-components';
 
-####  Step 1: Select the element
-```
-const mainHeader = document.querySelector('.main-header');
-```
-####  Step 2: Use the desired attribute property to update the element
-```
-mainHeader.style.color = 'red';
-```
-You can even chain the two steps together like this:
-```
-const mainHeader = document.querySelector('.main-header').style.color = 'red';
-```
-This two-step process can be repeated for other attributes as well! What if we had an empty `src` attribute on an image tag? Let's try it out provided we have this HTML:
-```
-<img class="custom-img" src="" alt="Kitty image" />
-```
-Select the image element's class and update the `src` attribute with this link:
-```
-https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350
-```
-```
-const customImg = document.querySelector('.custom-img');
+const WrapperDiv = styled.div`
+    width: 100%;
+    height: 100%;
+`;
 
-customImg.src = 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350';
-```
-
-####  JavaScript CSS Syntax
-
-When using JavaScript to update CSS style properties, we need to be careful to remember that JavaScript does not accept dashes as a valid naming value! Therefore, whenever a CSS property contains a dash, we must use camel casing in JavaScript.
-
-Example:
-
-```
-.some-class {
-  background-color: gray;
+function SomeComponent() {
+  return (
+    <div className="wrapper">
+      <h1>Hello From the Home Component</h1>
+    </div>
+  );
 }
+
+export default SomeComponent;
 ```
-The JavaScript version would look like this:
+
+We have created a component called `WrapperDiv` that is going to take the place of the `.wrapper` div. We have passed two css properties and values - `width` and `height`. But what is up with the backtick syntax?
+
+From their docs: "This unusual backtick syntax is a new JavaScript feature called a tagged template literal. Do you know how you can call functions with parenthesis? (myFunc()) Well, now you can also call functions with backticks!"
+
+So we are just invoking a function! And when we invoke this function, we are passing a string with our styles to it. Under the hood, styled-components will render a div with a funny-looking class name and apply the styles we passed. Now we can take our new component and put it into the JSX.
+
+```
+import React from 'react';
+import styled from 'styled-components';
+
+const WrapperDiv = styled.div`
+    width: 100%;
+    height: 100%;
+`;
+
+function SomeComponent() {
+  return (
+    <WrapperDiv>
+      <h1>Hello From the Home Component</h1>
+    </WrapperDiv>
+  );
+}
+
+export default SomeComponent;
 ```
 
-  const someClass = document.querySelector('.some-class');
+### There's more…
 
-  someClass.style.backgroundColor = "gray";
+While cool, it seems like too much work if that is all we are gaining from style-components, right? Until we realize that there is so much more we can do! How about passing in props to change the color of buttons?
+
 ```
-**Pro Tip:** Don't forget the string when you assign a value to a CSS property.
+import React from 'react';
+import styled from 'styled-components';
 
-## Challenge
+const Button = styled.button`
+    padding: 6px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    color: white;
 
-### DOM Manipulation Challenge
+    ${props => (props.type === 'primary' ? `background: #2196f3;` : null)}
+    ${props => (props.type === 'success' ? `background: #4caf50;` : null)}
+    ${props => (props.type === 'danger' ? `background: #f44336;` : null)}
+    ${props => (props.type === 'warning' ? `background: #fdd835;` : null)}
+`;
 
-[Take the example code from your tutorial](https://codepen.io/BloomTech/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
+function SomeComponent() {
+  return (
+    <div>
+      <Button type="primary">Primary</Button>
+      <Button type="success">Success</Button>
+      <Button type="danger">Danger</Button>
+      <Button type="warning">Warning</Button>
+    </div>
+  );
+}
 
-Here are some ideas:
+export default SomeComponent;
+```
 
-- Change the color of the paragraphs.
-- Change the text contents of any element of your choosing
-- Change the href of an anchor tag
-- Update the alt tag of an image
-- Update layout styles, try out flex properties with JavaScript syntax
+![ScreenShot2018-09-11](ScreenShot2018-09-11.png)
+
+Note that inside the ${} we are running a function that takes in props, and returns the correct background color based on props.type. This has endless possibilities!
+
+So we just created a single, reusable `<Button />` component that will change colors based on what we pass to the type prop! But wait… there's more!!! Let's create a "base" `Button` component, then create a `TomatoButton` component that extends some extra styles to it (this example is straight out of the docs)!
+
+```
+import React from 'react';
+import styled from 'styled-components';
+
+
+const Button = styled.button`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+// A new component based on Button, but with some override styles
+const TomatoButton = styled(Button)`
+  color: tomato;
+  border-color: tomato;
+`;
+
+function SomeComponent() {
+  return (
+  <div>
+    <Button>Normal Button</Button>
+    <TomatoButton>Tomato Button</TomatoButton>
+  </div>
+);
+
+export default SomeComponent;
+```
+
+![ScreenShot2018-09-118](ScreenShot2018-09-118.png)
+
+(You may have noticed that we are invoking a function, passing in a component, and it is returning a new component with added functionality. Styled is a HOC!!!!)
+
+Now we're talking! With this, and so much more that we can learn from the styled-components docs, we can move styling into our JS, create many dynamic reusable components, and even create our style library quickly. Components can be plugged in anywhere!
+
+##  Challenge
+
+Take your Todo APP that you built out last week, and apply the principles you've learned today to style that app. Make it look nice and pretty! Then, share your newly polished app with your peers in the #show_it_off channel!
 
 
 
