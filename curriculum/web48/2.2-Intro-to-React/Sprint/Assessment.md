@@ -1,98 +1,90 @@
-# Web48 - 2.1 Sprint Assessment
+# Web48 - 2.2 Sprint Assessment
 
 ## Question 1
 
-####  Fill in the missing code to select all elements in the class 'card-title'.
+####  Which is one advantage of React over Vanilla JS?
 
-```
-cardTitles = __________('.card-title');
-```
+- components 
+- array methods 
+- variable scoping 
+- functions 
 
-- `document.getElement`
-- `document.getElementById`
-- `document.select`
-- `document.querySelectorAll`
-
-#### Answer:   (D) 
+#### Answer:   (A) 
 
 ## Question 2
 
-####  True or false: A child can have many parent elements
+####  Assuming 'reptiles' is an array, which option most closely depicts how this would render on a page?
+```
+<ol>
+  {reptiles.map(reptile => (
+    <li key={reptile}>{reptile}</li>
+  ))}
+</ol>
+```
+- 
+```
+1.  lizard
+2.  snake
+3.  turtle
+```
+- 
+```
+.
+. lizard
+. snake
+. turtle
+```
+-  `lizard, snake, turtle `
+- 
+```
+. lizard
+. snake
+. turtle
+```
 
-- TRUE 
-- FALSE 
-
-#### Answer:   (B) 
+#### Answer:   (A) 
 
 ## Question 3
 
-####  In what order does event flow occur after a 'click'?
+####  When will the following hook run?
+```
+  useEffect(() => {
+    document.title = `You clicked ${count}
+```
 
-- Capture, Bubbling, Target 
-- Capture, Target, Bubbling 
-- Bubbling, Target, Capture 
-- Bubbling, Capture, Target 
+All of the above 
+When the component first mounts 
+When the component receives new props or state 
+When the component re-renders 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
 ## Question 4
 
-####  Add the missing code to be able to use the createPanel function later on in your code.
+####  True or false: Hooks are JavaScript functions.
 
-```
-function createPanel(title, content) {
-      // define new elements
-      const panel = document.createElement('div');
-      const panelBar = document.createElement('div');
-      const panelTitle = document.createElement('h3');
-      const buttonPanel = document.createElement('div');
-      const buttonOpen = document.createElement('button');
-      const buttonClose = document.createElement('button');
-      const panelContent = document.createElement('div');
-
-      // Setup structure of elements
-      panel.appendChild(panelBar)
-      panel.appendChild(panelContent)
-      panelBar.appendChild(panelTitle)
-      panelBar.appendChild(buttonPanel)
-      buttonPanel.appendChild(buttonOpen)
-      buttonPanel.appendChild(buttonClose)
-      return __________;
-    }
-```
-
-- panel 
-- buttonPanel 
-- panel.append 
-- createPanel 
+- TRUE
+- FALSE 
 
 #### Answer:   (A)
 
 ## Question 5
 
-####  What type of data does the following code initially return?
-
+####  Why include event.preventDefault(); in a form script?
 ```
-axios.get('http://serverlocation.com/data')
+ const handleSubmit = event => {
+    event.preventDefault();
+    console.log(name);
+  };
 ```
 
-- JSON 
-- promise 
-- object 
-- array 
+- The form submission causes default refresh 
+- The default when a user types is to console.log not save data 
+- This isn't necessary
+- The window default will submit constantly 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
-## Question 6
-
-####  Which of the following is not a DOM event name?
-
-- click 
-- scroll 
-- mouse 
-- load 
-
-#### Answer:   (C) 
 
 
 
