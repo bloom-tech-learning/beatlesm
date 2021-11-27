@@ -1,104 +1,87 @@
-# Module 2.1.1 - DOM I Check For Understanding
+# Module 2.2.4 - Advanced Styling Techniques Check For Understanding
 
 ## Question 1
 
-####  What would the output be for the following code?
-```
-console.log(document);
-```
+####  What's the tool that allows to utilize npm packages without explicitly installing them first?
 
--  the document body 
-- the document head 
-- he doctype declaration 
-- the entire HTML document 
+-   node modules 
+-   npm 
+-   node 
+-   npx 
 
 #### Answer:   (D) 
-
-- Hints: (D)  The code shown would output the entire HTML document.
 
 ## Question 2
 
-####  How would you add an src attribute to the empty img element below?
+####  Given the following styled component:
+```
+  const Button = styled.button`
+  color: ${props => props.foo ? 'red' : 'pink'};
+`
+```
+What text color does the following button have?
+```
+  <Button foo>click me</Button>
+```
 
-- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
-- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
+-   This code crashes 
+-   Pink 
+-   Red 
+-   The initial color 
 
 #### Answer:   (C) 
 
-- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
-
 ## Question 3
 
-####  What would result if we applied image.classList.toggle('.bar') to the code below?
+####  Given the following code:
 ```
-<img id="image" src="cat.jpg" class="foo" />
+  const Styled = styled.div`
+    color: red;
+  `
+
+  function Foo(props) {
+    return <Styled>{props.children}</Styled>
+  }
+```
+What element is rendered to the DOM in the code below?
+```
+  <Foo>Hello World</Foo>
 ```
 
-- ```<img id="image" src="cat.jpg" class="bar" />``` 
-- ```<img id="image" src="cat.jpg" class=".bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
-
-#### Answer:   (B) 
-
-- Hints: (C)  `class="foo bar"` is missing a period.
-- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
-
-## Question 4
-
-####  How would you add all of the fruits in this array to the body of the page?
-
-```
-const fruits = ["apples", "oranges", "lemons", "limes"];
-```
-
-- 
-```
-fruits.forEach(fruit => {
-        document.body.textContent = fruit;
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
- fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(span);
-    });
-``` 
+-   foo 
+-   This code crashes 
+-   span 
+-   div 
 
 #### Answer:   (D) 
 
-- Hints: (C)  The document.createElement is missing
-- Hints: (D)  
+## Question 4
 
-## Question 5
+####  Given the following code:
+```
+  const Styled = styled.div`
+    color: ${props => props.foo ? 'red' : 'pink'};
+  `
 
-####  True or false: document.createElement adds a new element to the DOM
+  function Foo(props) {
+    return <Styled foo={props.foo}>{props.children}</Styled>
+  }
+```
+What text color is the Hello World in the code below?
+```
+  <Foo foo='bar'>Hello World</Foo>
+```
 
-- FALSE
-- TRUE
+-   This code crashes 
+-   You Answered
+-   The initial color 
+-   Red 
+-   Pink 
 
-#### Answer:   (A) 
+#### Answer:   (C) 
 
-- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
-- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+
+
 
 
 
