@@ -1,104 +1,93 @@
-# Module 2.1.1 - DOM I Check For Understanding
+# Module 2.2.2 - Composing React Components Check For Understanding
 
 ## Question 1
 
-####  What would the output be for the following code?
-```
-console.log(document);
-```
+####  What is the proper way to import the module a from `./directory/fileName`?
 
--  the document body 
-- the document head 
-- he doctype declaration 
-- the entire HTML document 
+-   `import [ a ] from ./directory/fileName`
+-   `from ./directory/fileName import a`
+-   `var location = "./directory/fileName" location.import(a)`
+-   `import { a } from './directory/fileName'`
 
 #### Answer:   (D) 
-
-- Hints: (D)  The code shown would output the entire HTML document.
 
 ## Question 2
 
-####  How would you add an src attribute to the empty img element below?
-
-- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
-- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
-
-#### Answer:   (C) 
-
-- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
-
-## Question 3
-
-####  What would result if we applied image.classList.toggle('.bar') to the code below?
+####  Fill out the gaps in the code below:
 ```
-<img id="image" src="cat.jpg" class="foo" />
+  function Person(props) {
+    const { name } = _A_
+    return <div>I am {name}</div>
+  }
+  function Container() {
+    return <Person _B_=_C_ />
+  }
 ```
 
-- ```<img id="image" src="cat.jpg" class="bar" />``` 
-- ```<img id="image" src="cat.jpg" class=".bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
-
-#### Answer:   (B) 
-
-- Hints: (C)  `class="foo bar"` is missing a period.
-- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
-
-## Question 4
-
-####  How would you add all of the fruits in this array to the body of the page?
-
-```
-const fruits = ["apples", "oranges", "lemons", "limes"];
-```
-
-- 
-```
-fruits.forEach(fruit => {
-        document.body.textContent = fruit;
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
- fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(span);
-    });
-``` 
+-   A: props.name, B: name, C: "Jane"
+-   A: props.name, B: prop, C: "Jane"
+-   A: "Jane", B: prop, C: name
+-   A: props, B: name, C: "Jane"
 
 #### Answer:   (D) 
 
-- Hints: (C)  The document.createElement is missing
-- Hints: (D)  
+## Question 3
+
+####  Stateless components receive A through B.
+
+-   A: children, C: application state 
+-   A: props, C: application state 
+-   A: application state, B: props 
+-   A: state, C: the shadow DOM 
+
+#### Answer:   (C) 
+
+## Question 4
+
+####  What renders to the DOM from the code below?
+```
+  function App() {
+    const [savings] = useState(100)
+    return <>
+      <Child allowance={savings / 2} />
+      <Child allowance={savings / 2} />
+    </>
+  }
+  function Child({ allowance }) {
+    return <div>{allowance}</div>
+  }
+  ReactDOM.render(<App />, root)
+```
+
+-   `<div><div>50 25</div></div>`
+-   `Nothing as the code inside Child throws an exception`
+-   `<div>50</div><div>25</div>`
+-   `<div>50</div><div>50</div>`
+
+#### Answer:   (D) 
 
 ## Question 5
 
-####  True or false: document.createElement adds a new element to the DOM
+####  What's the value of points after three button clicks?
+```
+  function App() {
+    const [points, setPoints] = useState(100)
+    return <Child action={amount => setPoints(points + amount)} />
+  }
+  function Child(props) {
+    return <button onClick={() => props.action(2)}>do it</button>
+  }
+  ReactDOM.render(<App />, root)
+```
 
-- FALSE
-- TRUE
+-   Nothing as the code inside Child throws an exception
+-   103 
+-   6 
+-   106 
 
-#### Answer:   (A) 
+#### Answer:   (D) 
 
-- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
-- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+
 
 
 
