@@ -1,104 +1,79 @@
-# Module 2.1.1 - DOM I Check For Understanding
+# Module 2.2.3 - Composing Side Effects Check For Understanding
 
 ## Question 1
 
-####  What would the output be for the following code?
-```
-console.log(document);
-```
+####  Fetching data from an API, timers, logging, and manually manipulating the DOM are all examples of ___.
 
--  the document body 
-- the document head 
-- he doctype declaration 
-- the entire HTML document 
-
-#### Answer:   (D) 
-
-- Hints: (D)  The code shown would output the entire HTML document.
-
-## Question 2
-
-####  How would you add an src attribute to the empty img element below?
-
-- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
-- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
+-   closures 
+-   promises 
+-   side effects 
+-   props 
 
 #### Answer:   (C) 
 
-- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
+## Question 2
 
-## Question 3
+####  What's the React hook used to schedule side effects after updates to the DOM?
 
-####  What would result if we applied image.classList.toggle('.bar') to the code below?
-```
-<img id="image" src="cat.jpg" class="foo" />
-```
-
-- ```<img id="image" src="cat.jpg" class="bar" />``` 
-- ```<img id="image" src="cat.jpg" class=".bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
-
-#### Answer:   (B) 
-
-- Hints: (C)  `class="foo bar"` is missing a period.
-- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
-
-## Question 4
-
-####  How would you add all of the fruits in this array to the body of the page?
-
-```
-const fruits = ["apples", "oranges", "lemons", "limes"];
-```
-
-- 
-```
-fruits.forEach(fruit => {
-        document.body.textContent = fruit;
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
- fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(span);
-    });
-``` 
+-   useReducer 
+-   useState 
+-   useParams 
+-   useEffect 
 
 #### Answer:   (D) 
 
-- Hints: (C)  The document.createElement is missing
-- Hints: (D)  
+## Question 3
 
-## Question 5
+####  When do we see 'foo' logged to the console?
+```
+  useEffect(() => {
+    console.log('foo')
+  }, [bar, baz])
+```
 
-####  True or false: document.createElement adds a new element to the DOM
+-   Right before the component unmounts 
+-   After renders caused by a change in `bar` AND a change in `baz`
+-   Never 
+-   After renders caused by a change in `bar` OR a change in `baz`
 
-- FALSE
-- TRUE
+#### Answer:   (D) 
+
+## Question 4
+
+####  When is the network request triggered in the code below?
+```
+  useEffect(() => {
+    axios.get('https://api.com/cats/' + id)
+      .then(res => setCats(res.data))
+  }, [id])
+```
+
+-   After renders caused by changes in id
+-   Never 
+-   After the first render of the component 
+-   Before the first update of the DOM by React 
 
 #### Answer:   (A) 
 
-- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
-- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+## Question 5
+
+####  What should we do inside the callback?
+```
+  useEffect(() => {
+    document.body.addEventListener('click', listener)
+    return () => {
+      // ?
+    }
+  }, [])
+```
+
+-   Cancel pending promises 
+-   Remove the event listener 
+-   It doesn't matter
+-   Log a warning to the console 
+
+#### Answer:   (B) 
+
 
 
 
