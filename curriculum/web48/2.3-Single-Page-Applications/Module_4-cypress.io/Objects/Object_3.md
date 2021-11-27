@@ -1,163 +1,106 @@
-# Objective 3 -Use Different Properties and Methods to Manipulate a Selected Element
-
-You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
+# Objective 3 - Use Cypress to Test Controlled Input
 
 ## <span style="color:red">Overview</span>
 
-Now that we have access to element(s), we can manipulate them and change their characteristics from the original HTML.
+### Interacting with Elements
 
-After we have captured our element (eg. ```const el = document.querySelector('#idName');``` we can use that instance of the element we selected to access and assign values to properties natively contained on it. Once again, there are dozens of properties and methods given to us on each element. Here are a few of the most commonly used properties:
+The tests covered in the previous objectives are the simplest possible tests we can run. But, more practically, we'll want to test how a user interacts with the webpage such that we don't have to click around a page looking for bugs manually. To do that, we'll use a variety of cypress actions and assertions.
 
-### .textContent
-- Gets and sets the text of an element, essentially whatever text is between the open and closing tags of an HTML element.
-- Can use the assignment operator ( = ) to reset the text of an element.
-- Setting this property on a node removes all of its children and replaces them with the new single text node.
-- ```<div>Something Here</div>```
-- ```element.textContent = 'Something New```;
+####  Actions
 
-### .setAttribute() (or .{attr})
-- This method (or property) is used as a way to set or reassign an attribute on the element.
-- `.setAttribute()` is a method that takes two arguments, the attribute to set, and the value to set to that attribute.
-- eg: `element.setAttribute('src', 'http://www.imagsource.com/image.jpg')`
-- Can also use the pattern: `element.'attrName' = 'value'`.
-- eg: `element.src = 'http://www.imagsource.com/image.jpg'`
+We will primarily use Cypress to test whether or not user actions give the returns we expect them to. This is because actions in Cypress (or any testing library) are designed to simulate user actions. For example, some of these actions are click events, double click events, scrolls, or checked boxes, all of which we've been working with in this unit.
 
-### .style
-- Every element contains a style object. This property accesses that style object which contains every available style as a key and a value. It is important to note that these are NOT the CSS styles; these are inline HTML styles.
-- These styles are associated with the HTML inline style set on the element
-  -   eg: `<div style="color: red;">DIV STUFF</div>`
-- You can access and change a property on the style object by using the assignment operator =.
-- eg: element.style.color = 'blue';
-- hanging a property on the style object will effectively give this element an inline style.
-- Inline styles have the highest specificity, overriding any other selector except !important.
-- VERY IMPORTANT to note that this does NOT access or change anything in the CSS file.
+####  Visibility
 
-##  .className, .id
-- .className accesses or assigns a string containing all of the classes on the element.
-- .id accesses or assigns a string containing the id of the element.
+Another important test we'll run is visibility, which are tests to check whether or not an element is hidden. Visibility tests can be chained with the actions above to see how elements appear and disappear depending on user actions.
 
-##  .classList
-- classList will return an array-like object of all the classes on the element. There are many useful methods available on classList.
-  - `classList` is a `DOMTokenList`.
-  - A `DOMTokenList` is an array-like object with a numerical zero-based index, a length property, also the `.contains()` and `.forEach()` methods.
-  - Most notably the methods `.add()` `.remove()` and `.toggle()` exist. All three take a single string representing the class.
-    - `.add('className')` and `.remove('className')` do as their names indicate.
-    - `.toggle('className')` will add the class if it does not exist and remove it if if does.
+In addition to actionability and visibility, Cypress allows us to test scrolling, covering, readOnly, animations, and more. You can view a full list of actions and read more about them in the [Cypress documentation](https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Actionability)
 
-##  .appendChild() and .prepend()
-- These methods add child elements to parent elements.
-- `.appendChild(child)` will take an element and add it to it's children. It will add it to the 'end' physically so if the children are displayed in order it will be the last.
-  - eg: `parentElement.appendChild(childElement)`
-- `.prepend(child)` adds a child to the beginning, displaying it first.
-  - eq: `parentElement.prepend(childElement)`
+### Best Practices
 
-##  .children and .parentNode
-- These properties are used for accessing relatives of the element.
-- `.children` returns an `HTMLCollection` of all the children of that element.
-- `.parentNode` returns the parent element of that element.
+The following cheat sheet of best targeting elements is taken directly from the Cypress documentation. It is rare to get this kind of best practice guidance directly from the language developers; it gives us insight into the best way to write our tests.
 
-## Follow Along
+| Selector	                | Recommended	| Notes
+|---------------------------|-------------|------------|
+cy.get('button').click()	  | ❌Never	    | Worst - too generic, no context.
+cy.get('.btn.btn-large').click()	| ❌Never	| Bad. Coupled to styling. Highly subject to change.
+cy.get('#main').click()	    | ⚠️Sparingly	    | Better. But still coupled to styling or JS event listeners.
+cy.get('[name=submission]').click()	| ⚠️Sparingly	| Coupled to the name attribute which has HTML semantics.
+cy.contains('Submit').click()	| ✅Depends	| Much better. But still coupled to text content that may change.
+cy.get('[data-cy=submit]').click() |	✅Always	| Best. Isolated from all changes.
 
-### DOM Manipulation Tutorial
+### Assertions
 
-Let's get some practice manipulating the DOM. You can use this code as a base for your JavaScript (Links to an external site) (Links to an external site.) or write your HTML and CSS along the way.
+After we set up the simulated user actions, we will want to test that some expectation has been met: text has rendered on the page, a new page has loaded, etc. Again, we'll do these using assertions.
 
-####  Updating Text
-
-When we want to update the text using the DOM, the go-to property is called textContent. We can both read and write text inside of elements using `textContent`.
-
-Given this HTML, lets make some updates to the text:
-```
-  <h2 class="second-heading">I am the DOM</h2>
-```
-First, let's set up a reference to our element on the DOM:
-```
-  const secondHeading = document.querySelector('.second-heading');
-```
-We are now prepared to update the content of our heading. Let's update the content to say "DOM updated!"
-```
-  secondHeading.textContent = "DOM updated!";
-```
-Notice that we are first getting the text node of the element and then setting a new value!
-
-**Security Note** You may read about `innerHTML` in your DOM learning. Avoid using `innerHTML` as it could potentially be used as an attack vector for cross site attacks.
-
-### Updating Attributes
-
-Updating HTML attributes is vital to DOM manipulation. Let's update the style for the h1 in the code below.
+The most common assertion is `.should():` we'll assert that some element should contain some content or do a specific thing. Since Cypress code syntax is English-like, let's look at an example which tests that a link navigates to a new page.
 
 ```
-<header>
-  <h1 class="main-header">Dom Manipulation</h1>
-  <nav class="main-nav">
-    <a href="#" class="nav-item">Home</a>
-    <a href="#" class="nav-item">About</a>
-    <a href="#" class="nav-item">Blog</a>
-    <a href="#" class="nav-item">Contact</a>
-  </nav>
-</header>
-```
-Updating the DOM usually happens in two steps:
+describe('Link Navigation', function() {
+  it('Asserts that the words instagram.com link to instagram.com', function() {
+    cy.visit('index.html')
 
-####  Step 1: Select the element
-```
-const mainHeader = document.querySelector('.main-header');
-```
-####  Step 2: Use the desired attribute property to update the element
-```
-mainHeader.style.color = 'red';
-```
-You can even chain the two steps together like this:
-```
-const mainHeader = document.querySelector('.main-header').style.color = 'red';
-```
-This two-step process can be repeated for other attributes as well! What if we had an empty `src` attribute on an image tag? Let's try it out provided we have this HTML:
-```
-<img class="custom-img" src="" alt="Kitty image" />
-```
-Select the image element's class and update the `src` attribute with this link:
-```
-https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350
-```
-```
-const customImg = document.querySelector('.custom-img');
+    cy.contains('Instagram.com').click()
 
-customImg.src = 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350';
+    // Should be on a new URL which includes '/commands/actions'
+    cy.url().should('include', 'instagram.com/')
 ```
 
-####  JavaScript CSS Syntax
+We saw `.contains()` in the example above. This will check if the selected element contains some specified content (like text or an image). Contains is a little tricky because it can also be used in either the `assertion` or `action` phase of your test. Contain can be used in place of id selectors to select elements based on text. For example, you could use `cy.contains('submit').click()` to simulate a user clicking a submit button, or `cy.contains('Instagram.com')` to grab any element containing the text Instagram.com, as we did above. We'll use contains as an assertion below.
 
-When using JavaScript to update CSS style properties, we need to be careful to remember that JavaScript does not accept dashes as a valid naming value! Therefore, whenever a CSS property contains a dash, we must use camel casing in JavaScript.
+##  Follow Along
 
-Example:
+Let's write a real test to actually test DOM elements.
+
+1.  **Arrange** - First, we need to set up our test with a name and function declaration. As covered in the previous objectives, this is where we describe what the test will do.
 
 ```
-.some-class {
-  background-color: gray;
-}
+describe('Header Text', function() {
+    it('Checks if header text exists', function () { })
+})
 ```
-The JavaScript version would look like this:
+2.  **Act** - Next we need to act. Our action here will simply be loading up the page with cy.visit().
+
+```
+describe('Header Text', function() {
+    it('Checks if header text exists', function () {
+    cy.visit("index.html");
+ })
+})
 ```
 
-  const someClass = document.querySelector('.some-class');
+3.  ***Assert** - Finally, we'll grab the header element of interest and assert that it contains the text "Fun Bus" with cy.get('.logo-heading').contains('Fun Bus');.
 
-  someClass.style.backgroundColor = "gray";
 ```
-**Pro Tip:** Don't forget the string when you assign a value to a CSS property.
+describe('Header Text', function() {
+    it('Checks if header text exists', function () {
+    cy.visit("index.html");
+    cy.get('.logo-heading').contains('Fun Bus');
+    })
+})
+```
 
-## Challenge
+### Failing Test
 
-### DOM Manipulation Challenge
+A test will fail when the expectation, or assertion, is false. In our example above, if the logo-heading file doesn't contain the given text, the test would fail. To illustrate how these work, we could change the `.contains()` text to "Fun Bus!" and, as expected, the test would time out because it can't find what it's looking for.
 
-[Take the example code from your tutorial](https://codepen.io/BloomTech/pen/jvjjGB?editors=1011) and try updating the DOM in various ways.
+```
+//Test will fail because header text does not contain the full string
 
-Here are some ideas:
+describe('Header Text', function() {
+    it('Checks if header text exists', function () {
+        cy.visit("index.html");
+        cy.get('.logo-heading').contains('Fun Bus!');
 
-- Change the color of the paragraphs.
-- Change the text contents of any element of your choosing
-- Change the href of an anchor tag
-- Update the alt tag of an image
-- Update layout styles, try out flex properties with JavaScript syntax
+    })
+})
+```
+![kfbNxpv](kfbNxpv.gif)
+
+##  Challenge
+
+Write a test on your chosen module challenge using an assertion that we did not cover above - get inspired by the documentation [here](https://docs.cypress.io/guides/references/assertions#Chai)
+
 
 
 
