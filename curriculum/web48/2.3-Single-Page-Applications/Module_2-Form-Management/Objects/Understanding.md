@@ -1,104 +1,104 @@
-# Module 2.1.1 - DOM I Check For Understanding
+# Module 2.3.2 - Form Management Check For Understanding
 
 ## Question 1
 
-####  What would the output be for the following code?
+####  Which of the following is the most semantic and correct way to write a form in HTML?
+
+-   
 ```
-console.log(document);
+<div class = "form">
+    <input type = "text" />
+</div>
 ```
-
--  the document body 
-- the document head 
-- he doctype declaration 
-- the entire HTML document 
-
-#### Answer:   (D) 
-
-- Hints: (D)  The code shown would output the entire HTML document.
-
-## Question 2
-
-####  How would you add an src attribute to the empty img element below?
-
-- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
-- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
-
-#### Answer:   (C) 
-
-- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
-
-## Question 3
-
-####  What would result if we applied image.classList.toggle('.bar') to the code below?
+-   
 ```
-<img id="image" src="cat.jpg" class="foo" />
+<form>
+    <label>
+      Username:
+      <input type="text" />
+    </label>
+  </form>
 ```
-
-- ```<img id="image" src="cat.jpg" class="bar" />``` 
-- ```<img id="image" src="cat.jpg" class=".bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
+-   
+```
+<label>
+    <form>
+        Username:
+        <input type="text" />
+    </form>
+</label>
+```
+-   
+```
+<form>
+    <input />
+</form>
+```
 
 #### Answer:   (B) 
 
-- Hints: (C)  `class="foo bar"` is missing a period.
-- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
+## Question 2
 
-## Question 4
+####  If an `onChange` handler was placed on a text input field (i.e. "password") and a user typed "password", how many times would onChange detect a change to state?
 
-####  How would you add all of the fruits in this array to the body of the page?
 
-```
-const fruits = ["apples", "oranges", "lemons", "limes"];
-```
-
-- 
-```
-fruits.forEach(fruit => {
-        document.body.textContent = fruit;
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
- fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(span);
-    });
-``` 
+-  It depends on how fast the user types  
+- 1 
+- 0 
+- 8
 
 #### Answer:   (D) 
 
-- Hints: (C)  The document.createElement is missing
-- Hints: (D)  
+## Question 3
 
-## Question 5
+####  A `handleChange` (ie: onChange) function receives what information as its argument?
 
-####  True or false: document.createElement adds a new element to the DOM
-
-- FALSE
-- TRUE
+-   An event object containing the target of the event 
+-   A submit handler 
+-   A callback that is invoked in the event of success 
+-   The value of the form element 
 
 #### Answer:   (A) 
 
-- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
-- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+## Question 4
+
+####  What is the key difference between submitting a form in a SPA and submitting a form in a traditional web page?
+
+-   Sending information back via POST instead of a GET request 
+-   Preventing default behavior so browser does not reload 
+-   The payload being sent back 
+-   There is no difference 
+
+#### Answer:   (B) 
+
+## Question 5
+
+####  What is the value of bar.a after the code below executes?
+```
+  const prop = 'a'
+  const foo = { a: 1, b: 2 }
+  const bar = { ...foo, [prop]: 3 }
+```
+
+- 2
+- 1
+- 3
+- Error
+
+#### Answer:   (C) 
+
+## Question 6
+
+####  What can cause a controlled input to suddenly become uncontrolled?
+
+-   The application crashing 
+-   The form being submitted 
+-   The onChange prop getting a callback
+-   The value prop becoming undefined
+
+#### Answer:   (D) 
+
+
 
 
 
