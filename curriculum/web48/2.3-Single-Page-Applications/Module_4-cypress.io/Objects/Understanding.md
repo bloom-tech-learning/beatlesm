@@ -1,104 +1,117 @@
-# Module 2.1.1 - DOM I Check For Understanding
+# Module 2.3.4 - cypress.io Check For Understanding
 
 ## Question 1
 
-####  What would the output be for the following code?
-```
-console.log(document);
-```
+####  Why do we use automated testing over manual testing?
 
--  the document body 
-- the document head 
-- he doctype declaration 
-- the entire HTML document 
-
-#### Answer:   (D) 
-
-- Hints: (D)  The code shown would output the entire HTML document.
-
-## Question 2
-
-####  How would you add an src attribute to the empty img element below?
-
-- ```element.getAttribute('http://www.cats.com/image.jpg')``` 
-- ```element.src() = ('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.setAttribute('src', 'http://www.cats.com/image.jpg')``` 
-- ```element.src('src', 'http://www.cats.com/image.jpg')``` 
-
-#### Answer:   (C) 
-
-- Hints: (C)  The setAttribute() method adds the specified attribute to an element, and gives it the specified value.
-
-## Question 3
-
-####  What would result if we applied image.classList.toggle('.bar') to the code below?
-```
-<img id="image" src="cat.jpg" class="foo" />
-```
-
-- ```<img id="image" src="cat.jpg" class="bar" />``` 
-- ```<img id="image" src="cat.jpg" class=".bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo bar" />``` 
-- ```<img id="image" src="cat.jpg" class="foo .bar" />``` 
+-   Because automated testing mimics how the compiler interacts with the page 
+-   To test more comprehensively and consistently 
+-   Because it's good practice to write more code
+-   All of the above 
 
 #### Answer:   (B) 
 
-- Hints: (C)  `class="foo bar"` is missing a period.
-- Hints: (D)  The terms foobar, foo, bar, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. So ```.bar``` is added to the class .
+## Question 2
 
-## Question 4
+####  Which of the following is the correct order for the "AAA" testing cycle?
 
-####  How would you add all of the fruits in this array to the body of the page?
-
-```
-const fruits = ["apples", "oranges", "lemons", "limes"];
-```
-
-- 
-```
-fruits.forEach(fruit => {
-        document.body.textContent = fruit;
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
-fruits.forEach(fruit => {
-        document.body.appendChild(fruit);
-    });
-``` 
-- 
-```
- fruits.forEach(fruit => {
-        const span = document.createElement('span');
-        span.textContent = fruit;
-        document.body.appendChild(span);
-    });
-``` 
+-   Assert, Arrange, Act 
+-   Assert, Act, Arrange 
+-   Act, Arrange, Assert 
+-   Arrange, Act, Assert 
 
 #### Answer:   (D) 
 
-- Hints: (C)  The document.createElement is missing
-- Hints: (D)  
+## Question 3
+
+####  What does the following test do?
+
+```
+describe('Link Navigation', function() {
+  it('does a thing', function() {
+    cy.visit('index.html')
+    cy.contains('Contact').click()
+    cy.url().should('include', '/contact')
+```
+
+-   checks that the route includes the string "contact"
+-   Checks that some element links to the contact route 
+-   Clicks every navigation button on the page 
+-   n/a - this test isn't written properly
+
+#### Answer:   (B) 
+
+## Question 4
+
+####  Write a test to type an email address into a form input field.
+
+- 
+```
+it('can type an email address into an input field', () => {
+    cy.get('input[type="email"]')
+      .keydown('foo@bar.com')
+      .should('exist')
+  })
+``` 
+- 
+```
+it('can type an email address into an input field', () => {
+    cy.get('input[type="email"]')
+      .type('foo@bar.com')
+      .should('have.value', 'foo@bar.com')
+  })
+``` 
+- 
+```
+it('can type an email address into an input field', () => {
+    cy.get('input[type="email"]')
+      .should('have.value', 'foo@bar.com')
+      .type('foo@bar.com')
+  })
+``` 
+- 
+```
+ it('can type an email address into an input field', () => {
+    cy.get('input[type="email"]')
+      .enter('foo@bar.com')
+      .should('read', 'foo@bar.com')
+  })
+``` 
+
+#### Answer:   (B) 
 
 ## Question 5
 
-####  True or false: document.createElement adds a new element to the DOM
+####  The following test would pass if what condition(s) are met?
 
-- FALSE
-- TRUE
+```
+describe('Header Text', function() {
+    it('Checks if header text exists', function () {
+    cy.visit("index.html");
+    cy.get('.logo-heading').contains('Fun Bus');
+    })
+})
+```
 
-#### Answer:   (A) 
+There is a logo on the page 
+The page loads 
+An element with the class 'logo-heading' includes the string "Fun Bus"
+The header exists 
 
-- Hints: (B)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
-- Hints: (A)  In an HTML document, the document.createElement() method creates the HTML element specified by tagName
+#### Answer:   (C) 
+
+## Question 6
+
+####  How do you run tests in cypress from the command line?
+
+npx cypress run -a 
+npx cypress run "test_file.js"
+npx cypress test 
+npx cypress run -s 
+
+#### Answer:   (B) 
+
+
 
 
 
