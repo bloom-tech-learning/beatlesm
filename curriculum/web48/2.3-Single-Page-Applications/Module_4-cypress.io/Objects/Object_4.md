@@ -1,26 +1,41 @@
 # Objective 4 - Create a New Element, Manipulate it, and Add it to the DOM
 
-An essential feature of the DOM is the ability to create brand new elements dynamically. Using the `document.createElement()` method, we will be able to create a brand new element, style it, and add it anywhere on the DOM we would like.
+## <span style="color:red">Overview</span>
 
+Cypress' GUI is great, but sometimes it's nice to be able to run tests right in the console without having to navigate away from your code editor. When making small changes, this can be especially useful.
+
+Thankfully, cypress tests can be run straight from the terminal with `npx cypress run` + `filename`.
+
+### Cypress run
+
+`cypress run` is the command to run all cypress tests. By default, this command will run all tests, including the example tests. There are a plethora of options that we can add in order to tailor the command to our needs. A full list of these options can be found in the documentation, but the most important for us is `--spec`.
+
+`--spec`
+
+`--spec` or `-s` will specify which tests to run. So, `npx cypress run --spec "cypress/integration/sample_test.js"` will run only the tests in the `sample_test.js` file.
+
+You can specify multiple files by separating filenames with a , all inside of the quotation marks.
+
+### Other Commands
+
+The `cypress run` command is by far the most commonly utilized but `cypress open`, `cypress verify`, `cypress version` and `cypress cache` are all accepted as valid.
+
+command	  | purpose
+|---------|----------|
+open	    | Opens the Cypress Test Runner in interactive mode.
+verify	  | Verify that Cypress is installed correctly and is executable.
+version	  | returns package version and binary version for debugging (rarely used)
+cache	    | view or clear cache
 
 ## Follow Along
 
-### .createElement
-- `.createElement` creates a brand new element based on a given string.
-- New element exists in memory, but not on the DOM yet.
-- Can use any DOM property or method to style and manipulate the element.
-- eg: `document.createElement('h1')` will create an `h1` element.
+All we need to do in order to run tests on our fun bus page is use the command `npx cypress run --spec "cypress/integration/sample_test.js"`
 
-### .appendChild() and .prepend()
-- Add child elements to parent elements.
-- `.appendChild(child)` add an element to it's children. Adds to the 'end', so that if displayed in order, the added child will be last.
-  - eg: `parentElement.appendChild(childElement)`
-- `.prepend(child)` adds a child to the beginning, displaying it first.
-  - eq: `parentElement.prepend(childElement)`
+![3RZCcRr](3RZCcRr.gif)
 
 ## Challenge
 
-Practice the concepts covered.
+Run the tests you created in previous objectives in terminal.
 
 
 

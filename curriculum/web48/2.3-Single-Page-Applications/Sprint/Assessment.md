@@ -1,98 +1,55 @@
-# Web48 - 2.1 Sprint Assessment
+# Web48 - 2.3 Sprint Assessment
 
 ## Question 1
 
-####  Fill in the missing code to select all elements in the class 'card-title'.
+####  What is the purpose of an `/about` in a URL in a client-side rendered app?
 
-```
-cardTitles = __________('.card-title');
-```
+- Fetch the 'about' page from a server to render on the DOM
+- specify an existing route 'about' to render
+- no technical purpose, mostly for readability 
 
-- `document.getElement`
-- `document.getElementById`
-- `document.select`
-- `document.querySelectorAll`
-
-#### Answer:   (D) 
+#### Answer:   (B) 
 
 ## Question 2
 
-####  True or false: A child can have many parent elements
+####  Which is a difference between `<Link/>` and `<NavLink/>`?
 
-- TRUE 
-- FALSE 
+- One has an active attribute prop 
+- There is not any difference between and
+- One can be styled 
+- One navigates to a new page 
 
-#### Answer:   (B) 
+#### Answer:   (A) 
 
 ## Question 3
 
-####  In what order does event flow occur after a 'click'?
+####  Fill in the missing code required to set state to be updated to what is being typed in to the input.
 
-- Capture, Bubbling, Target 
-- Capture, Target, Bubbling 
-- Bubbling, Target, Capture 
-- Bubbling, Capture, Target 
+```
+const handleChanges = e => {
+  setNote({ title: e.target._____ });
+};
+```
 
-#### Answer:   (B) 
+- value 
+- Note 
+- change 
+- target 
+
+#### Answer:   (A) 
 
 ## Question 4
 
-####  Add the missing code to be able to use the createPanel function later on in your code.
+####  The following route path will usually render a __ component.
+`/contact/:id/documents`
 
-```
-function createPanel(title, content) {
-      // define new elements
-      const panel = document.createElement('div');
-      const panelBar = document.createElement('div');
-      const panelTitle = document.createElement('h3');
-      const buttonPanel = document.createElement('div');
-      const buttonOpen = document.createElement('button');
-      const buttonClose = document.createElement('button');
-      const panelContent = document.createElement('div');
-
-      // Setup structure of elements
-      panel.appendChild(panelBar)
-      panel.appendChild(panelContent)
-      panelBar.appendChild(panelTitle)
-      panelBar.appendChild(buttonPanel)
-      buttonPanel.appendChild(buttonOpen)
-      buttonPanel.appendChild(buttonClose)
-      return __________;
-    }
-```
-
-- panel 
-- buttonPanel 
-- panel.append 
-- createPanel 
+- nested 
+- URL path 
+- tab 
+- header 
 
 #### Answer:   (A)
 
-## Question 5
-
-####  What type of data does the following code initially return?
-
-```
-axios.get('http://serverlocation.com/data')
-```
-
-- JSON 
-- promise 
-- object 
-- array 
-
-#### Answer:   (B) 
-
-## Question 6
-
-####  Which of the following is not a DOM event name?
-
-- click 
-- scroll 
-- mouse 
-- load 
-
-#### Answer:   (C) 
 
 
 
