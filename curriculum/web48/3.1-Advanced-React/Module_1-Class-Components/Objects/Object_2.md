@@ -177,10 +177,11 @@ Using the following tools:
 -   functional FormComponent, MessageComponent
 -   click, and change handlers
 -   ```setState```
+
 Build out a form that will allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
 
-When a user clicks submit, show the data that's on state in an alert statement.
+When a user clicks submit, show the data that's on state in an `alert` statement.
 
-Stretch loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
+**Stretch** loop over a list of items showing those items to the screen. (Can be a list of strings). Then, when a user clicks submit, push an item into that list instead of logging the item.
 
 [Previous](./Object_1.md) | [Next](./Object_3.md)

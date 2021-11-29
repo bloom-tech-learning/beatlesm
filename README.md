@@ -13,6 +13,8 @@
 -   **[https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)**
 -   **[https://github.com/LambdaSchool/web-guided-project-async-redux](https://github.com/LambdaSchool/web-guided-project-async-redux)**
 
+-   **[https://github.com/Lambda/web-guided-project-class-components](https://github.com/Lambada/web-guided-project-class-components)**
+
 - ⚡ Fun fact: ...
 
 [Class](./curriculum/web48/README.md)
