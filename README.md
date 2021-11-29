@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/)**
+- 🌱 I’m currently learning ... **[Web 3.1](./curriculum/web48/)**
 
 -   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
 -   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
