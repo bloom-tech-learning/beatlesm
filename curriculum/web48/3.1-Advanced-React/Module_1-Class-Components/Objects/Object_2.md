@@ -108,7 +108,7 @@ class App extends React.Component {
 ```
 And there we go! We successfully passed our ```state data``` downstream through ```props``` in WelcomeBanner. At the same time, we can also successful pass data back upstream by executing ```state modifying functions``` passed through props in FormComponent.
 
-## Challenge
+### Challenge
 
 Using the components we just created (App, FormComponent, and MessageComponent), try building out a form to allow a user to handle data. You'll need a button, input field, and some data-bound to a DOM element that displays what the user is submitting.
 
