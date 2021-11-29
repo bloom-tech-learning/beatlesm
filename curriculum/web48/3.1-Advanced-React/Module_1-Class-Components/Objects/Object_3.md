@@ -21,7 +21,7 @@ class Button extends React.Component {
 
 Notice once again the need for that ```this``` object when referencing our ```event handler```. Within class components, just like our props and state, our event handlers are bound to the instance of this class and are accessed through ```this```.
 
-We have also seen that "e" parameter before. This parameter is known is React as a ```synthetic event``` object. Inside this object, we will have access to various pieces of information regarding this event triggered, including the target DOM element, the type of event, and methods that control the propagation of that event like preventDefault. For more details on the ```synthetic event``` objects, check out the reference materials [here](https://reactjs.org/docs/events.html.).
+We have also seen that "e" parameter before. This parameter is known is React as a ```synthetic event``` object. Inside this object, we will have access to various pieces of information regarding this event triggered, including the target DOM element, the type of event, and methods that control the propagation of that event like preventDefault. For more details on the ```synthetic event``` objects, check out the reference materials [here](https://reactjs.org/docs/events.html).
 
 Let's add in some functionality to our event handler.
 
