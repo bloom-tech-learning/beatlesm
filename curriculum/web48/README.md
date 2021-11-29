@@ -1,5 +1,5 @@
 
-- 🌱 I’m currently learning ... **[Web 3.3](./)**
+- 🌱 I’m currently learning ... **[Web 3.3](./README.md)**
 
 -   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
 -   **[https://github.com/beatlesm/web-guided-project-client-auth](https://github.com/beatlesm/web-guided-project-client-auth)**
