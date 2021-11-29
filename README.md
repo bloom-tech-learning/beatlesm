@@ -1,22 +1,17 @@
 ### Hi there 👋
 
-- 🌱 I’m currently learning ... **[Web 3.3](./curriculum/web48/3.3-Advanced-Web-Applications/)**
+- 🌱 I’m currently learning ... **[Web 3.1](./3.1-Advanced-React/)**
 
--   **[https://github.com/beatlesm/web-guided-project-testing-react](https://github.com/beatlesm/web-guided-project-testing-react)**
--   **[https://github.com/beatlesm/web-guided-project-client-auth](https://github.com/beatlesm/web-guided-project-client-auth)**
--   **[https://github.com/beatlesm/web-guided-project-HTTP](https://github.com/beatlesm/web-guided-project-HTTP)**
+-   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
+-   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
+-   **[https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)**
+-   **[https://github.com/beatlesm/web-guided-project-testing-web-apps](https://github.com/beatlesm/web-guided-project-testing-web-apps)**
+-   **[https://github.com/beatlesm/web-sprint-challenge-advanced-react](https://github.com/beatlesm/web-sprint-challenge-advanced-react)**
 
--   **[https://github.com/beatlesm/web-module-project-testing-react](https://github.com/beatlesm/web-module-project-testing-react)**
--   **[https://github.com/beatlesm/web-module-project-client-auth](https://github.com/beatlesm/web-module-project-client-auth)**
--   **[https://github.com/beatlesm/web-module-project-HTTP](https://github.com/beatlesm/web-module-project-HTTP)**
--   **[https://github.com/beatlesm/web-module-project-deploying-web-apps](https://github.com/beatlesm/web-module-project-deploying-web-apps)**
--   **[https://github.com/beatlesm/web-sprint-challenge-advanced-web-applications](https://github.com/beatlesm/web-sprint-challenge-advanced-web-applications)**
-
-
-
--   **[https://github.com/LambdaSchool/web-guided-project-testing-react](https://github.com/LambdaSchool/web-guided-project-testing-react)**
--   **[https://github.com/LambdaSchool/web-guided-project-client-auth](https://github.com/LambdaSchool/web-guided-project-client-auth)**
--   **[https://github.com/LambdaSchool/web-guided-project-HTTP](https://github.com/LambdaSchool/web-guided-project-HTTP)**
+-   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
+-   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)**
+-   **[https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)**
+-   **[https://github.com/LambdaSchool/web-guided-project-async-redux](https://github.com/LambdaSchool/web-guided-project-async-redux)**
 
 - ⚡ Fun fact: ...
 
