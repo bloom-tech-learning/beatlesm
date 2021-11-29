@@ -1,6 +1,5 @@
-# [Module 1 - Class Components](https://github.com/beatlesm/web/tree/main/3.1/Module311)
+# [Module 1 - Class Components](./Objects/Object_1.md)
 
-[back to Web48 - 3.1](../README.md)
 
 #### [Assignment 3.1.1](./Assign311/README.md):
 
