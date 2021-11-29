@@ -1,5 +1,7 @@
 # Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React
 
+Access Video [Here:](https://bloomtech-1.wistia.com/medias/ixahjh7sqq)
+
 You can access the example in this video [here](https://codesandbox.io/s/k0q2wwyj2o)
 
 ##  Overview
