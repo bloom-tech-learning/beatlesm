@@ -1,4 +1,4 @@
-## [Module 2 - The React Lifecycle](https://github.com/beatlesm/web/tree/main/3.1/Module311)
+## [Module 2 - The React Lifecycle](./Objects/Object_1.md)
 
 #### [Assignment 3.1.2](./Assign312/README.md):
 
