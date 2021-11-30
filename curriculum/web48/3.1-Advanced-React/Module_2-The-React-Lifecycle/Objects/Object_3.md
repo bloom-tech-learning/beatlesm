@@ -74,7 +74,7 @@ const getDogs = () => {
 
 Once the dogs are on state, build out a list of <img> tags that display each dog.
 
-[If you get stuck, this is what I'm going for](https://codesandbox.io/s/x96vm3vykq.){:target="_blank"}
+[If you get stuck, this is what I'm going for](https://codesandbox.io/s/x96vm3vykq)
 
 
 
