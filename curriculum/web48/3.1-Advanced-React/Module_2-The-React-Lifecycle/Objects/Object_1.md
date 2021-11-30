@@ -43,7 +43,7 @@ We will explore these in-depth later on but focus on warming up to the documenta
 
 ## Challenge
 
-Read [this medium article](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d){:target="_blank"} about the component lifecycle. Take notes and share what you learned in a paragraph to your Project Manager via Slack.
+Read [this medium article](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d) about the component lifecycle. Take notes and share what you learned in a paragraph to your Project Manager via Slack.
 
 
 [Previous](../README.md) | [Next](./Object_2.md)

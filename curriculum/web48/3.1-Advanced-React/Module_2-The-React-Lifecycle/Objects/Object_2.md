@@ -65,7 +65,7 @@ Continue to think about these methods as the mounting methods in our component L
 
 ## Follow Along
 
-Let's build out some friends together using [this code sandbox link](https://codesandbox.io/s/5v3pql3y8x){:target="_blank"}
+Let's build out some friends together using [this code sandbox link](https://codesandbox.io/s/5v3pql3y8x)
 
 Once there, you should see a page that renders out a ```<h1>``` and ```<p>``` tags. You should also notice a ```people.js``` file that contains an array of objects with this shape.
 
@@ -109,7 +109,7 @@ Now that we imported data, we can loop over that friend's array and generate a D
 
 ## Challenge
 
-Now you're going to extend the Friends App that we built together [link](){:target="_blank"} by completing the following tasks.
+Now you're going to extend the Friends App that we built together [link]() by completing the following tasks.
 
 - Notice that each person object has an array of friends assigned to it.
 - The goal for the stretch problem will be to have a FriendsList drop-down built out that hides the friends for each person until it is clicked on.
