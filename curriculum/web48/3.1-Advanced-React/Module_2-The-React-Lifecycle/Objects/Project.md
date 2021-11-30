@@ -1,18 +1,18 @@
-#  Module 3.1.1 Project Class - Components 
+#  Module 3.1.2 Project - The React Lifecycle
 
-Today we will learn all about classes in React. Then, we will use classes to build out our components. Class components have been a big part of the React ecosystem because they brought a lot of functionality that we normally didn't get with the React API when using function components. Now with hooks, that functionality is available in function components. However, many projects will still have class components in them, and we need to be prepared to work with classes when we see them.
+Every component in React has what we call a lifecycle. The lifecycle is a part of how our components operate under the hood. Being able to demonstrate understanding of the React component lifecycle by knowing how to use a few of the "Methods" provided by it will help you understand how and why React behaves the way it does at times.
 
 ##  Module Project
+[React Github User Card](https://github.com/bloominstituteoftechnology/web-module-project-lifecycle)
 
-[Class Based Components - React Todo](https://github.com/beatlesm/web-module-project-class-components)
+Rebuild the Github User Card app, but this time with React. In this project, you will fetch the data and manage state in class components.
 
-##  Connect your Submission To Codegrade
 
--   If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
--   Connect your fork to Codegrade using the "Connect Git" button.
--   Find your newly created fork from the list and push your work to main.
--   Check this video for details: [www.youtube.com/watch?v=fC2BO7dI6IQ](https://www.youtube.com/watch?v=fC2BO7dI6IQ)
-
+## Connect your Submission To Codegrade
+If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
+Connect your fork to Codegrade using the "Connect Git" button.
+Find your newly created fork from the list and push your work to main.
+[Check this video for details:](www.youtube.com/watch?v=fC2BO7dI6IQ)
 
 
 

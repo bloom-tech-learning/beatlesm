@@ -16,7 +16,7 @@ Until we know more about ```async AJAX``` calls, we'll use ```componentDidMount`
 
 Let's put some of our knowledge together and build a react component that consumes data from a different resource.
 
-To follow along, go ahead and click on [this link](https://codesandbox.io/s/xlx1714w8w.){:target="_blank"} that will take you to a codesandbox.
+To follow along, go ahead and click on [this link](https://codesandbox.io/s/xlx1714w8w) that will take you to a codesandbox.
 
 Your ```index.js``` file should look a lot like this:
 
