@@ -15,7 +15,7 @@
 -   super - [A built in function that give a child class access to a parent class' methods and properties.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
 
 ##  Key Concepts:
--   The History of React Components : [React components have changed alot through the years.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
+-   The History of React Components : [React components have changed alot through the years.](https://www.youtube.com/watch?v=Kzeog8yTFaE)
 -   Prop Drilling - [The process of taking a value and passing it into a nested component for use downstream.](https://kentcdodds.com/blog/prop-drilling)
 -   Passing State through Data Prop Drilling - [The process of sharing application state to subcomponents using prop drilling.](https://www.robinwieruch.de/react-pass-props-to-component#react-props-vs-state)
 -   Updating State through Functional Prop Drilling - [The process of sharing application state to subcomponents using prop drilling.](https://www.robinwieruch.de/react-pass-props-to-component#react-props-vs-state)
