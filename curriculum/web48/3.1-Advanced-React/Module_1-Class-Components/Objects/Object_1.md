@@ -18,14 +18,14 @@ I like to remember these steps by referencing one of my favorite bands: Creedenc
 ```
 class FooComponent extends React.Component {
 ```
-1.  Now we'll set up our constructor and add state.
+2.  Now we'll set up our constructor and add state.
 ```
 constructor() {
   super();
   this.state = {};
 }
 ```
-1.  Render some UI and return some ```JSX```.
+3.  Render some UI and return some ```JSX```.
 ```
 render() {
   return <div>Hello, I am Foo Component</div>;
