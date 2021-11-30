@@ -1,7 +1,5 @@
 ## [Module 2 - The React Lifecycle](https://github.com/beatlesm/web/tree/main/3.1/Module311)
 
-[back to Web48 - 3.1](../README.md)
-
 #### [Assignment 3.1.2](./Assign312/README.md):
 
 -   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)****
