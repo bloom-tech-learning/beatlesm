@@ -7,6 +7,7 @@
 #### [Guided project 3.1.2](./Guided312):
 
 -   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
+-   **[Youtube - Web49 - React Lifecycle with Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
 
 #### [QA Video](./QA_Video/README.md)
 

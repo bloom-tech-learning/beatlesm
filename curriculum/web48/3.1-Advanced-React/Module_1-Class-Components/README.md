@@ -8,6 +8,7 @@
 #### [Guided project 3.1.1](./Guided311):
 
 -   [Youtube - Web 48 - Class Components With Warren C. Longmire](https://www.youtube.com/watch?v=Nc4-l2NrOD4)
+-   [Youtube - Web 48 - Class Components With Warren C. Longmire](https://youtu.be/_WCVNOl3YP4)
 
 
 #### [QA Video](./QA_Video/README.md)
