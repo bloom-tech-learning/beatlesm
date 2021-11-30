@@ -1,4 +1,4 @@
-# Module 1 - Class Components
+# Module 3.1.1 - Class Components QA
 
 ##  Module Materials:
 -   [Module Project: ](https://github.com/BloomInstituteOfTechnology/web-module-project-class-components) 
@@ -32,4 +32,4 @@ Hey all! Today we did a brief review of array methods, classes in (and out) of R
 
 
 
-[Previous](./Project.md) | [Next](./Understand.md)
+[Previous](./Project.md) | [Next](./Understanding.md)
