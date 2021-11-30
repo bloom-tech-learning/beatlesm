@@ -78,4 +78,4 @@ Once the dogs are on state, build out a list of <img> tags that display each dog
 
 
 
-[Previous](./Object_2.md) | [Next](./Understanding.md)
+[Previous](./Object_2.md) | [Next](./Project.md)
