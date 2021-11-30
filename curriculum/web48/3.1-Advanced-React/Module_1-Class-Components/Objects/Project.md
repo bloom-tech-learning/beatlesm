@@ -16,4 +16,4 @@ Today we will learn all about classes in React. Then, we will use classes to bui
 
 
 
-[Previous](./Object_3.md) | [Next](./Understanding.md)
+[Previous](./Object_3.md) | [Next](./QA.md)

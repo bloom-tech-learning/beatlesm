@@ -32,4 +32,4 @@ Hey all! Today we did a brief review of array methods, classes in (and out) of R
 
 
 
-[Previous](./Project_3.md) | [Module 1](../../Module_1-Class-Components/README.md)
+[Previous](./Project.md) | [Next](./Understand.md)

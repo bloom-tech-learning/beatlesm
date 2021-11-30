@@ -104,4 +104,4 @@
 
 
 
-[Previous](./Project_1.md) | [Module 1](../../Module_1-Class-Components/README.md)
+[Previous](./QA.md) | [Module 1](./Object_1.md)
