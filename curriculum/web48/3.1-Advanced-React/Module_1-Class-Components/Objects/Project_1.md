@@ -12,3 +12,8 @@ Today we will learn all about classes in React. Then, we will use classes to bui
 -   Connect your fork to Codegrade using the "Connect Git" button.
 -   Find your newly created fork from the list and push your work to main.
 -   Check this video for details: [www.youtube.com/watch?v=fC2BO7dI6IQ](https://www.youtube.com/watch?v=fC2BO7dI6IQ)
+
+
+
+
+[Previous](./Object_3.md) | [Next](./Understanding.md)

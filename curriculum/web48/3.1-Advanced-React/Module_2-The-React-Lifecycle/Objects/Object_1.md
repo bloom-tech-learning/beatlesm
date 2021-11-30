@@ -26,7 +26,7 @@ In the Growth/Updating phase you're updating compnent data.
 
 ## Follow Along
 
-Dive into the documentation at [ReactJS](https://reactjs.org/docs/react-component.html#the-component-lifecycle){:target="_blank"} and look into some of the key pieces of the LifeCycle API.
+Dive into the documentation at [ReactJS](https://reactjs.org/docs/react-component.html#the-component-lifecycle) and look into some of the key pieces of the LifeCycle API.
 
 The methods that we're going to look at are:
 
@@ -36,7 +36,7 @@ The methods that we're going to look at are:
 - ```componentDidUpdate```
 - ```componentWillUnmount```
 
-Let's also compare where each of these methods belongs within the react lifecycle by looking at [this diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/){:target="_blank"}.
+Let's also compare where each of these methods belongs within the react lifecycle by looking at [this diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/).
 
 We will explore these in-depth later on but focus on warming up to the documentation and the idea that components have a lifecycle.
 
