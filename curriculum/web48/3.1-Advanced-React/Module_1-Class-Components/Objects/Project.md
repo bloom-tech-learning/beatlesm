@@ -6,12 +6,10 @@ Today we will learn all about classes in React. Then, we will use classes to bui
 
 [Class Based Components - React Todo](https://github.com/beatlesm/web-module-project-class-components)
 
-##  Connect your Submission To Codegrade
+## Guided Project - setState 
 
--   If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
--   Connect your fork to Codegrade using the "Connect Git" button.
--   Find your newly created fork from the list and push your work to main.
--   Check this video for details: [www.youtube.com/watch?v=fC2BO7dI6IQ](https://www.youtube.com/watch?v=fC2BO7dI6IQ)
+
+[3.1.1 Guided Project ](https://github.com/beatlesm/web-guided-project-class-components)
 
 
 
