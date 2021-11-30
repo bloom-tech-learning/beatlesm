@@ -1,6 +1,7 @@
 # Module 3.1.2 - The React Lifecycle QA Review
 
-- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
+-   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
+-   **[Youtube - Web49 - React Lifecycle with Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
 
 Hope you all enjoyed today’s guided Lesson! 
 A reminder if that office hours are from 1:30 - 2:30 PST. 
