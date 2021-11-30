@@ -1,34 +1,30 @@
-# Module 3.1.1 - Class Components QA
+# Module 3.1.2 - The React Lifecycle QA Review
+
+- [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
+
+Hope you all enjoyed today’s guided Lesson! 
+A reminder if that office hours are from 1:30 - 2:30 PST. 
+Don’t forget to complete the days Check for Understanding and Pulse Checks!
+Here is a review of today’s material.
 
 ##  Module Materials:
--   [Module Project: ](https://github.com/BloomInstituteOfTechnology/web-module-project-class-components) 
--   [GP Slides: ](https://docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing) 
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/QCvc9-BklME) | [Josh Jacobson](https://youtu.be/L9KvL8f3Z1A) | [Warren C. Longmire](https://youtu.be/6UOlPRte5DM) | [Brian Kirkby](https://youtu.be/DrAOcO12NhI)
+-   [Module Project :](https://github.com/BloomInstituteOfTechnology/web-module-project-lifecycle) 
+-   [GP Slides :](https://docs.google.com/presentation/d/1XMqnuxSv2qh1vWfvV-AvqtVZmaZOYP1llu0RrbbHEwo/edit?usp=sharing) 
+-   [Yesterday’s Module Project Review:](https://bloomtech-1.wistia.com/medias/soew9i8uzw)
+-   **Alternative Lecture Video:** [Dustin Myers](https://youtu.be/HrsVoggrK1Y) | [Josh Jacobson](https://youtu.be/YGPOda5hPm0) | [Warren C. Longmire](https://youtu.be/jsXK-X97h-k) | [Brian Kirkby](https://youtu.be/SFlIfG-WfjI)
 
 ##  Key Terminology:
--   class component - [A type of component that takes the form of a class extended from React.Component class.](https://www.w3schools.com/react/react_components.asp)
--   React.Component class - [A react class that gives allows for the creation of class components and all their special features.](https://reactjs.org/docs/react-component.html)
--   class constructor - [A class method that is called when an instance is first created of from a class.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
--   the render function - [A pre-defined function that allows for a class component to render DOM objects.](https://reactjs.org/docs/components-and-props.html)
--   the this property - [A reference to the current instance of a class. In class components, the place where props, state and internally defined event methods are accessed.](https://www.w3schools.com/js/js_this.asp)
--   filter - [An array method that take a predicate function as an argument returns every item that where that function return true.](https://www.w3schools.com/jsref/jsref_filter.asp)
--   super - [A built in function that give a child class access to a parent class' methods and properties.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
+-   ComponentDidMount - [The React.Component derived method that is triggered after a component initially mounts.](https://linguinecode.com/post/understanding-react-componentdidmount)
+-   ComponentDidUpdate - [The React.Component derived method that is triggered any time a component update props or state.](https://dev.to/cesareferrari/how-to-use-componentdidupdate-in-react-30en)
+-   ComponentWillUnmount - [The React.Component derived method that is triggered when a component is removed from the DOM.](https://learn.co/lessons/react-component-mounting-and-unmounting)
 
 ##  Key Concepts:
--   The History of React Components : [React components have changed alot through the years.](https://www.youtube.com/watch?v=Kzeog8yTFaE)
--   Prop Drilling - [The process of taking a value and passing it into a nested component for use downstream.](https://kentcdodds.com/blog/prop-drilling)
--   Passing State through Data Prop Drilling - [The process of sharing application state to subcomponents using prop drilling.](https://www.robinwieruch.de/react-pass-props-to-component#react-props-vs-state)
--   Updating State through Functional Prop Drilling - [The process of sharing application state to subcomponents using prop drilling.](https://www.robinwieruch.de/react-pass-props-to-component#react-props-vs-state)
--   Application State Vs Component State - [Application state indicates the state shared by a number of components. Component State indicates state local only to a components internal parts.](https://teamtreehouse.com/community/what-is-the-difference-between-application-state-and-component-state-in-react)
--   Form Component Setup - [The process of setting up (component) state, controlled inputs, onChange and onSubmit events to allow component form submission.](https://reactjs.org/docs/forms.html)
+-   React Lifecycle - [The overall flow of code execution throughout the birth, operation and death of a React component.](https://medium.com/how-to-react/react-life-cycle-methods-with-examples-2bdb7465332b)
 
-## QA Video:
+##  Stretch Tutorial:
+-   [Head-to-Toe Class based Component Tutorial](https://medium.com/bb-tutorials-and-thoughts/react-understanding-component-lifecycle-methods-1aaa32b33047)
 
-Hey all! Today we did a brief review of array methods, classes in (and out) of React, and some good old fashion debugging.
 
--   [Youtube - Web 48 - Q&A Class Components With Warren C. Longmire](https://lambdaschool.zoom.us/rec/play/Y3WNsPH8zlLr7n3N0lJoU887F6dux2sZKMGcyz_WSYn6tWnmpFiG3qNv2gmNsNE7V5GfD1Nr7LfMgPbk.BnyCSeNumVJMOV8o?continueMode=true&_x_zm_rtaid=yuY0tWgKQVKBiXm-A_2H8A.1635258407149.7a4195056996b57140d3a7cd4cad2f76&_x_zm_rhtaid=266)
-
--   [Codesandbox - Web 48 - Q&A Class Components With Warren C. Longmire ](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js) 
 
 
 

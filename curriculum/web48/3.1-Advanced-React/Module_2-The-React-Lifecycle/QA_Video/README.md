@@ -1,32 +1,25 @@
-# Module 1 - The Reducer Pattern
+# Module 3.1.2 - The React Lifecycle QA Review
 
 - [youtube - guided project 3.2 1](https://youtu.be/QJkTHWeKOJ8)
 
-## - Module Materials:
+Hope you all enjoyed today’s guided Lesson! 
+A reminder if that office hours are from 1:30 - 2:30 PST. 
+Don’t forget to complete the days Check for Understanding and Pulse Checks!
+Here is a review of today’s material.
 
--   [Module Project:](https://github.com/LambdaSchool/web-module-project-reducer)
--   [GP Slides:](https://docs.google.com/presentation/d/1XhCZWfyGUbxRAuhHvf38baQBcn4sl5jxZjSjKCSPFqw/edit?usp=sharing) 
--   [Thursday’s Module Project Review:](https://www.loom.com/share/94ff7b7e39c349d4875dfd607e10e0e3)
--   **Alternative GP Video:** [Dustin Myers](https://youtu.be/bMWoQfNzn-U) | [Josh Jacobson](https://youtu.be/1Jflvc3Dl_Q) | [Warren C. Longmire](https://youtu.be/E9M6-cRVDt4) | [Brian Kirkby](https://youtu.be/qfarRzchOE4)
+##  Module Materials:
+-   [Module Project :](https://github.com/BloomInstituteOfTechnology/web-module-project-lifecycle) 
+-   [GP Slides :](https://docs.google.com/presentation/d/1XMqnuxSv2qh1vWfvV-AvqtVZmaZOYP1llu0RrbbHEwo/edit?usp=sharing) 
+-   [Yesterday’s Module Project Review:](https://bloomtech-1.wistia.com/medias/soew9i8uzw)
+-   **Alternative Lecture Video:** [Dustin Myers](https://youtu.be/HrsVoggrK1Y) | [Josh Jacobson](https://youtu.be/YGPOda5hPm0) | [Warren C. Longmire](https://youtu.be/jsXK-X97h-k) | [Brian Kirkby](https://youtu.be/SFlIfG-WfjI)
+
 ##  Key Terminology:
--   switch - [a javascript keyword used to streamline complex if else logic](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
--   action - [a single piece of data manipulation in a reducer pattern](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   reducer - [a pure, predictible immutable function that executes action on state data](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   immutiblity - [an object or variable that can not be modified (and thus should only be copied)](https://www.youtube.com/watch?v=5qQQ3yzbKp8)
--   pure functions - [a pure, predictible immutable function that executes action on state data](https://www.youtube.com/watch?v=dZ41D6LDSBg)
+-   ComponentDidMount - [The React.Component derived method that is triggered after a component initially mounts.](https://linguinecode.com/post/understanding-react-componentdidmount)
+-   ComponentDidUpdate - [The React.Component derived method that is triggered any time a component update props or state.](https://dev.to/cesareferrari/how-to-use-componentdidupdate-in-react-30en)
+-   ComponentWillUnmount - [The React.Component derived method that is triggered when a component is removed from the DOM.](https://learn.co/lessons/react-component-mounting-and-unmounting)
+
 ##  Key Concepts:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
--   Application State - [Data that is used across all of our application's components.](https://www.youtube.com/watch?v=7ilYJAG-_Ug)
--   Component State - [Data that is used within the context of a single component](https://stackoverflow.com/questions/22883759/what-is-the-difference-between-application-state-and-component-local-state-in-cl)
--   The Reducer Pattern - [A design pattern for managing and modularizing out application state.](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow)
--   useReducer Hook - [A hook used to connect reducers and state to a React component](https://www.geeksforgeeks.org/reactjs-usereducer-hook/)
--   What does dispatch do? - [Awesome article by our own @Dustin Myers on the inner workings of dispatch](https://dev.to/dustinmyers/what-even-is-a-dispatch-function-27ma)
-## Stretch Tutorial:
--   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
+-   React Lifecycle - [The overall flow of code execution throughout the birth, operation and death of a React component.](https://medium.com/how-to-react/react-life-cycle-methods-with-examples-2bdb7465332b)
 
-## QA Video:
-Today we walked through building a todo app using reducers and some general bug fixes.
-
--   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
-
--   [Code:](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
+##  Stretch Tutorial:
+-   [Head-to-Toe Class based Component Tutorial](https://medium.com/bb-tutorials-and-thoughts/react-understanding-component-lifecycle-methods-1aaa32b33047)
