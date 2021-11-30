@@ -9,10 +9,10 @@ Every component in React has what we call a lifecycle. The lifecycle is a part o
 Rebuild the Github User Card app, but this time with React. In this project, you will fetch the data and manage state in class components.
 
 
-## Guided Project - Search Bar implement
+## Guided Project - Search Bar 
 
 
-[3.1.2 Guided Project ](https://github.com/beatlesm/web-module-project-lifecycle)
+[3.1.2 Guided Project ](https://github.com/beatlesm/web-guided-project-lifecycle)
 
 
 [Previous](./Object_3.md) | [Next](./QA.md)
