@@ -1,6 +1,4 @@
-# [Module 3 - Composing and Sharing Non-Visual Behaviors](https://github.com/beatlesm/web/tree/main/3.1/Module311)
-
-[back to Web48 - 3.1](../README.md)
+# [Module 3 - Composing and Sharing Non-Visual Behaviors](./Objects/Object_1.md)
 
 #### [Assignment 3.1.3](./Assign313/README.md):
 

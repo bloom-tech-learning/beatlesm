@@ -11,7 +11,7 @@
 -   [Youtube - Web 49 - Class Components With Warren C. Longmire](https://youtu.be/_WCVNOl3YP4)
 
 
-#### [QA Video](./QA_Video/README.md)
+
 
 ### [Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM](./Objects/Object_1.md)
 

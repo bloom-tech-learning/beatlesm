@@ -9,7 +9,7 @@
 -   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
 -   **[Youtube - Web49 - React Lifecycle with Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
 
-#### [QA Video](./QA_Video/README.md)
+
 
 ### [Objective 1 - Describe the Three Phases of the React Component Lifecycle](./Objects/Object_1.md)
 
