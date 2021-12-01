@@ -191,7 +191,7 @@ const resetValues = e => {
 
 By building a custom hook, we can skip writing out all of the stateful logic for our non-visual behavior. Custom hooks produce beautiful, DRY code that is easy to read and use. You have built a reusable piece of code that makes it easy for you to import anywhere in your application and build out stateful logic in any of your components.
 
-## Follow Along
+## Challenge
 
 Now that you can identify custom hook logic and how you might create and use it in your components, go back to several components you've built over the last week. Then, refactor the state of those components in some forms you made to use the useInput custom hook from the component in the examples above.
 
