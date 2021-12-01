@@ -4,6 +4,10 @@
 
 Custom hooks are called this because you are building the hook yourself (customizing it) to apply non-visual behavior and stateful logic throughout your components. This way, you can reuse the same hook over and over again. In addition, custom hooks follow the same naming patterns that you've already learned (i.e., prefacing the function name with use, as in useState). Thus, you can build a reusable custom hook for anything from handling controlled inputs to managing event listeners or watching for key presses.
 
+##  Follow Along
+
+Let's start with the same component that we evaluated in the objective above. Go ahead and look over it one more time, this time making sure to understand what the various parts are doing.
+
 ```
 import React, { useState } from "react";
 
