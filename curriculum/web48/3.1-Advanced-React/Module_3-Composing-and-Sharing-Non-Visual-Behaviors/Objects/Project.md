@@ -11,6 +11,7 @@ In this project, you'll take this cryptocurrency tracker app and build two custo
 
 -   [https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook](https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook)
 -   [https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)
+-   [https://github.com/bloom-tech-learning/49313-web-guided-project-custom-hook](https://github.com/bloom-tech-learning/49313-web-guided-project-custom-hook)
 
 #### Youtube
 
