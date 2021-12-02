@@ -23,8 +23,10 @@
 
 #### [Check For Understanding](./Objects/Understanding.md)
 
+#### [Module 3.1.3 - Project: Composing and Sharing Non-Visual Behaviors](./Objects/Project.md)
 
-### Today’s Office Hours:
+
+### Today’s Office Hours for Web 48:
 
 -	Today we covered creating services with promises, desctructing and working through objects when making conditionals.
 

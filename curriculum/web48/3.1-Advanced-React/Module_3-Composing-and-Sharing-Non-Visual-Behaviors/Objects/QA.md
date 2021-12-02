@@ -32,6 +32,15 @@ Here is a review of today’s material.
 
 -   [Model Custom Hook](https://upmostly.com/tutorials/modal-components-react-custom-hooks)
 
+### Today’s Office Hours for Web 48:
+
+-	Today we covered creating services with promises, desctructing and working through objects when making conditionals.
+
+	-	[Youtube - Today’s Office Hours](https://youtu.be/lkmiNfWXbtU)
+	
+-	You can find the code for the destructing section [here](https://codesandbox.io/s/restless-water-v6hkt?file=/src/App.js):
+
+
 
 
 [Previous](./Project.md) | [Next](./Understanding.md)
