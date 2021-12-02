@@ -9,7 +9,9 @@ Every component in React has what we call a lifecycle. The lifecycle is a part o
 Rebuild the Github User Card app, but this time with React. In this project, you will fetch the data and manage state in class components.
 
 
-## Guided Project - Search Bar 
+## Guided Project - Search Bar
+
+-   **[https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle](https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle)**
 
 -   **[Youtube - Web49GP - React Lifecycle by Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
 -   **[Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)**
