@@ -1,5 +1,4 @@
 # WEB - 3.1 - Advanced React
-[back to Unit 3](../README.md)
 
 ## <span style="color:red">Overview</span>
 
