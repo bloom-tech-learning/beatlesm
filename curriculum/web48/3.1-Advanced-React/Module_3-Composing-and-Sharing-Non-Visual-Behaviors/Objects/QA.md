@@ -1,6 +1,8 @@
 #   Module 3.1.3  - Composing and Sharing Non-Visual Behavior : QA Review
 
-- [youtube - web49 guided project 3.1.3](https://youtu.be/GHgSdZb_rOQ)
+-   **[Youtube - Web49GP - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://youtu.be/GHgSdZb_rOQ)**
+-   **[Youtube - Web49OH - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/12012021)**
+
 
 Hope you all enjoyed today’s guided Lesson! A reminder if that office hours are from 1:30 - 2:30 Lambda Time. Don’t forget to complete the days Check for Understanding and Pulse Checks!
 Here is a review of today’s material.
