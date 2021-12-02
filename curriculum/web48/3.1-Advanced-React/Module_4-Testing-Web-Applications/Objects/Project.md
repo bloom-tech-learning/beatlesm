@@ -1,27 +1,26 @@
-#  Module 3.1.2 Project - The React Lifecycle
+#  Module 3.1.4 Project - Testing Web Applications
 
-Every component in React has what we call a lifecycle. The lifecycle is a part of how our components operate under the hood. Being able to demonstrate understanding of the React component lifecycle by knowing how to use a few of the "Methods" provided by it will help you understand how and why React behaves the way it does at times.
+In this module, we will learn about automated testing and how to write unit tests with Jest and the React-testing library.
+
 
 ##  Module Project
 
-[3.1.2 Project - The React Lifecycle - React Github User Card](https://github.com/bloominstituteoftechnology/web-module-project-lifecycle)
+React Testing - Contact Form (Links to an external site.)
 
-Rebuild the Github User Card app, but this time with React. In this project, you will fetch the data and manage state in class components.
+-   [3.1.4 Project - Testing Web Applications](https://github.com/bloominstituteoftechnology/web-module-project-testing-web-apps)
 
+Write tests for a contact form to give you confidence in the component's code.
 
 ## Guided Project - Search Bar
 
--   **[https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle](https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle)**
+-   [https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle](https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle)
 
--   **[https://github.com/bloom-tech-learning/web-guided-project-lifecycle](https://github.com/bloom-tech-learning/web-guided-project-lifecycle)**
+-   [https://github.com/bloom-tech-learning/web-guided-project-lifecycle](https://github.com/bloom-tech-learning/web-guided-project-lifecycle)
 
 ### Youtube
 
--   **[Youtube - Web49GP - React Lifecycle by Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
--   **[Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)**
-
-
-[3.1.2 Guided Project ](https://github.com/beatlesm/web-guided-project-lifecycle)
+-   [Youtube - Web49GP - React Lifecycle by Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)
+-   [Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)
 
 
 [Previous](./Object_2.md) | [Next](./QA.md)
