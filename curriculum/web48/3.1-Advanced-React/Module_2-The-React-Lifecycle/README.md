@@ -7,6 +7,7 @@
 #### [Guided project 3.1.2](./Guided312):
 
 -   **[https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle](https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle)**
+-   **[https://github.com/bloom-tech-learning/web-guided-project-lifecycle](https://github.com/bloom-tech-learning/web-guided-project-lifecycle)**
 
 #### Youtube
 
