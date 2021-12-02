@@ -6,10 +6,13 @@
    
 #### [Guided project 3.1.3](./Guided313):
 
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook](https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook)
+-   [https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)
+
+#### Youtube
+
 -   **[Youtube - Web49GP - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://youtu.be/GHgSdZb_rOQ)**
 -   **[Youtube - Web49OH - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/12012021)**
-
-#### [QA Video](./QA_Video/README.md)
 
 
 ### [Objective 1 - define stateful logic](./Objects/Object_1.md)

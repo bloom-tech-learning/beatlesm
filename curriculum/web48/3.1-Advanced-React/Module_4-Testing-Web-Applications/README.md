@@ -1,6 +1,4 @@
-# [Module 4 - Testing Web Applications](https://github.com/beatlesm/web/tree/main/3.1/Module311)
-
-[back to Web48 - 3.1](../README.md)
+# [Module 4 - Testing Web Applications](./Objects/Object_1.md)
 
 #### [Assignment 3.1.4](./Assign314/README.md):
 
@@ -8,10 +6,14 @@
    
 #### [Guided project 3.1.4](./Guided314):
 
--   **[Youtube - Web 31 - Testing Web Apps](https://www.youtube.com/watch?v=vSL0pETgTek)**
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-testing-web-apps](https://github.com/bloominstituteoftechnology/web-guided-project-testing-web-apps)
+-   [https://github.com/beatlesm/web-guided-project-testing-web-apps](https://github.com/beatlesm/web-guided-project-testing-web-apps)
 
-#### [QA Video](./QA_Video/README.md)
+#### Youtube
 
+-   [Youtube - Web31 - Testing Web Apps](https://www.youtube.com/watch?v=vSL0pETgTek)
+-   [Youtube - Web49GP - Testing Web Apps]()
+-   [Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)
 
 ### [Objective 1 - Use React-Testing Library for Testing React Components](./Objects/Object_1.md)
 
