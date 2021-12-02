@@ -1,8 +1,7 @@
 # Module 4 - Testing Web Applications
 
--   [Youtube - Web49GP - Testing Web Apps]()
+-   [Youtube - Web49GP - Testing Web Apps](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/12022021?preview=Screen+Recording+2021-12-02+at+09.06.03.mov)
 -   [Youtube - Web49OH - React Lifecycle by Warren C. Longmire]()
-- 	[youtube - guided project 3.1.4](https://lambdaschool.zoom.us/rec/share/0UEa6Qpyzu4NJ-eGWTFhcUF7saGssOClX286afRQdd_Ou8KFolAOa5E1c8smbfA.IByD3zPpI-8s5xBp)
 
 ### Here is a review of today’s material.
 
@@ -30,7 +29,7 @@
 -   [Userevent](https://testing-library.com/docs/ecosystem-user-event/)
 -   [Roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-##  Today’s Office Hours:
+##  Today’s Office Hours for web 48:
 
 -	Today we covered async/await, the Promise Object, and general test debugging tips.
 
