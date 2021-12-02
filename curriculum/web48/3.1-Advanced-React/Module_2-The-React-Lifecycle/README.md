@@ -2,9 +2,11 @@
 
 #### [Assignment 3.1.2](./Assign312/README.md):
 
--   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)****
+-   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)**
    
 #### [Guided project 3.1.2](./Guided312):
+
+-   **[Guided Project: https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle](Guided Project: https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle)**
 
 -   **[Youtube - Web48 - React Lifecycle by Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
 -   **[Youtube - Web49GP - React Lifecycle by Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
