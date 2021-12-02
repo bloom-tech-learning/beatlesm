@@ -6,7 +6,8 @@
    
 #### [Guided project 3.1.3](./Guided313):
 
--   **[Youtube - Web48 - React Lifecycle with Warren C. Longmire](https://www.youtube.com/watch?v=Dig2VLr6gbM)**
+-   **[Youtube - Web49GP - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://youtu.be/GHgSdZb_rOQ)**
+-   **[Youtube - Web49OH - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/12012021)**
 
 #### [QA Video](./QA_Video/README.md)
 
