@@ -13,6 +13,10 @@ Rebuild the Github User Card app, but this time with React. In this project, you
 
 -   **[https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle](https://github.com/BloomInstituteOfTechnology/web-guided-project-lifecycle)**
 
+-   **[https://github.com/bloom-tech-learning/web-guided-project-lifecycle](https://github.com/bloom-tech-learning/web-guided-project-lifecycle)**
+
+### Youtube
+
 -   **[Youtube - Web49GP - React Lifecycle by Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
 -   **[Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)**
 
