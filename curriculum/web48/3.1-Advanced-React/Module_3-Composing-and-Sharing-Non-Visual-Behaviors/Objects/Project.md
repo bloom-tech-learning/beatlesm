@@ -10,7 +10,7 @@ In this project, you'll take this cryptocurrency tracker app and build two custo
 ## Guided Project 
 
 
-[3.1.3 Guided Project ](https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook)
+[3.1.3 Guided Project - Composing and Sharing Non-Visual Behavior ](https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook)
 
 
 [Previous](./Object_3.md) | [Next](./QA.md)

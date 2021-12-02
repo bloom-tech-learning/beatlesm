@@ -11,6 +11,9 @@ Rebuild the Github User Card app, but this time with React. In this project, you
 
 ## Guided Project - Search Bar 
 
+-   **[Youtube - Web49GP - React Lifecycle by Warren C. Longmire](https://youtu.be/1m9S2dNQ7To)**
+-   **[Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)**
+
 
 [3.1.2 Guided Project ](https://github.com/beatlesm/web-guided-project-lifecycle)
 
