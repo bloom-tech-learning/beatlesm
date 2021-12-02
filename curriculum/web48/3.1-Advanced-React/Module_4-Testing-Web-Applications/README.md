@@ -13,7 +13,7 @@
 
 -   [Youtube - Web31 - Testing Web Apps](https://www.youtube.com/watch?v=vSL0pETgTek)
 -   [Youtube - Web49GP - Testing Web Apps]()
--   [Youtube - Web49OH - React Lifecycle by Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/11302021?preview=LS_OH_11302021_1335_2.mp4)
+-   [Youtube - Web49OH - React Lifecycle by Warren C. Longmire]()
 
 ### [Objective 1 - Use React-Testing Library for Testing React Components](./Objects/Object_1.md)
 

@@ -1,6 +1,8 @@
 # Module 4 - Testing Web Applications
 
-- [youtube - guided project 3.1.4](https://lambdaschool.zoom.us/rec/share/0UEa6Qpyzu4NJ-eGWTFhcUF7saGssOClX286afRQdd_Ou8KFolAOa5E1c8smbfA.IByD3zPpI-8s5xBp)
+-   [Youtube - Web49GP - Testing Web Apps]()
+-   [Youtube - Web49OH - React Lifecycle by Warren C. Longmire]()
+- [youtube - Office Hour project 3.1.4](https://lambdaschool.zoom.us/rec/share/0UEa6Qpyzu4NJ-eGWTFhcUF7saGssOClX286afRQdd_Ou8KFolAOa5E1c8smbfA.IByD3zPpI-8s5xBp)
 
 ### Here is a review of today’s material.
 
