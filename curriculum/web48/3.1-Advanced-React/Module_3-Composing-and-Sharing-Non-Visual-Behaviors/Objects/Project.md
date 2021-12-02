@@ -7,10 +7,10 @@
 In this project, you'll take this cryptocurrency tracker app and build two custom hooks that, when composed together, will allow users to set and persist a dark mode preference.
 
 
-## Guided Project - 3.1.3 Guided Project - Composing and Sharing Non-Visual Behavior
+## Guided Project - 3.1.3 - Composing and Sharing Non-Visual Behavior
 
 -   [https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook](https://github.com/bloominstituteoftechnology/web-guided-project-custom-hook)
--   [https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)
+-   [https://github.com/beatlesm/48313-web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)
 -   [https://github.com/bloom-tech-learning/49313-web-guided-project-custom-hook](https://github.com/bloom-tech-learning/49313-web-guided-project-custom-hook)
 
 #### Youtube
