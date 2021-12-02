@@ -253,3 +253,6 @@
 [submodule "curriculum/web48/3.4-WEB-Unit-3-Build/ft-anywhere-fitness-7"]
 	path = curriculum/web48/3.4-WEB-Unit-3-Build/ft-anywhere-fitness-7
 	url = git@github.com:beatlesm/ft-anywhere-fitness-7.git
+[submodule "curriculum/web48/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/49313-web-guided-project-custom-hook"]
+	path = curriculum/web48/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/49313-web-guided-project-custom-hook
+	url = https://github.com/bloom-tech-learning/49313-web-guided-project-custom-hook
