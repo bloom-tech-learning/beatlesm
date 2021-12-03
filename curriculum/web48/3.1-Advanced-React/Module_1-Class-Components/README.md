@@ -10,9 +10,6 @@
 -   [Youtube - Web 48 - Class Components With Warren C. Longmire](https://www.youtube.com/watch?v=Nc4-l2NrOD4)
 -   [Youtube - Web 49 - Class Components With Warren C. Longmire](https://youtu.be/_WCVNOl3YP4)
 
-
-
-
 ### [Objective 1 - Explain Class Components, and Use a Class Component to Render Some State Data to the DOM](./Objects/Object_1.md)
 
 
