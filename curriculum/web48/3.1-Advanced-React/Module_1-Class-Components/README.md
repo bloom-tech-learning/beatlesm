@@ -33,6 +33,11 @@
 -	You can find the code for the session [here](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js):
 
 
-### 
+##  Unit 3.1 This week’s Office Hours:
+
+[Monday QA: ](https://bloomtech.zoom.us/rec/share/GG8XmFWPEzoLzo_rGYXlQOqao9p25QqaILEKznRNiP1x8RveT0ZCNCw-lMt8IPHM.i19Ib7zGA9vgTXRV)
+[Tuesday QA: ](https://bloomtech.zoom.us/rec/share/n_pN5vT3RkfhUbT7umAZtTpqV8t1HSJfE9DM4vZkGjhZmPWGD-oZ-SOUsQ0o4ZiP.2EVsEfI7-aISe5Hs)
+[Wednesday QA: ](https://bloomtech.zoom.us/rec/share/2cpifDmw5-cmY5Md2CgZBBC1oBoGVGOn2HyrutUFDvc2qSHDYCqGj9kyp7uXMzbp.PSGH0OypCLfl9Uft)
+[Thursday QA: ](https://bloomtech.zoom.us/rec/share/KaCRGSZmUS68CFkT5M5ukBCtUQk_Q_YXVFLMp1M4VPGhMcWlVXaUSdkYjx66vTRM.VAKp2A19D1ebdzCs)
 
 
