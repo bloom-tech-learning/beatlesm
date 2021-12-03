@@ -26,4 +26,4 @@
 
 #### [3.1.2 - project](./Objects/Project.md)
 
-#### [Check For Understanding](./Objects/Understanding.md)
+#### [3.1.2 - Check For Understanding](./Objects/Understanding.md)
