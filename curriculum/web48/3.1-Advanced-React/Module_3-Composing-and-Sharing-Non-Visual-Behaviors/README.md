@@ -11,6 +11,7 @@
 
 #### Youtube
 
+-   **[Youtube - Web48OH - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://youtu.be/lkmiNfWXbtU)**
 -   **[Youtube - Web49GP - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://youtu.be/GHgSdZb_rOQ)**
 -   **[Youtube - Web49OH - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/12012021)**
 
@@ -21,9 +22,11 @@
 
 ### [Objective 3 - Compose Hooks in a Custom Hook to Extend Multiple Pieces of Stateful Logic](./Objects/Object_3.md)
 
-#### [Check For Understanding](./Objects/Understanding.md)
+-	[3.1.3 - Lecture Slides](https://docs.google.com/presentation/d/1gI4fQ0BK-XetRughunRYfNfAqHsVDUGXIo1zUr1KMp8/edit?usp=sharing)
 
-#### [Module 3.1.3 - Project: Composing and Sharing Non-Visual Behaviors](./Objects/Project.md)
+-	[3.1.3 - Project: Composing and Sharing Non-Visual Behaviors](./Objects/Project.md)
+
+-	[Check For Understanding](./Objects/Understanding.md)
 
 
 ### Today’s Office Hours for Web 48:
