@@ -1,4 +1,4 @@
-# Sprint Challenge: Advanced React - React Plants 🌿  - some issues
+# Sprint Challenge 3.1: Advanced React - React Plants 🌿  - some issues
 
 ##  How to use the empjis properly?
 
