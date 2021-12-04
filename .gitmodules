@@ -256,3 +256,6 @@
 [submodule "curriculum/web48/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/49313-web-guided-project-custom-hook"]
 	path = curriculum/web48/3.1-Advanced-React/Module_3-Composing-and-Sharing-Non-Visual-Behaviors/49313-web-guided-project-custom-hook
 	url = https://github.com/bloom-tech-learning/49313-web-guided-project-custom-hook
+[submodule "curriculum/web48/3.1-Advanced-React/Module_2-The-React-Lifecycle/49312-web-guided-project-lifecycle"]
+	path = curriculum/web48/3.1-Advanced-React/Module_2-The-React-Lifecycle/49312-web-guided-project-lifecycle
+	url = git@github.com:bloom-tech-learning/49312-web-guided-project-lifecycle.git
