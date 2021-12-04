@@ -26,7 +26,7 @@
 
 -	[3.1.3 - Project: Composing and Sharing Non-Visual Behaviors](./Objects/Project.md)
 
--	[Check For Understanding](./Objects/Understanding.md)
+-	[3.1.3 - Check For Understanding](./Objects/Understanding.md)
 
 
 ### Today’s Office Hours for Web 48:
