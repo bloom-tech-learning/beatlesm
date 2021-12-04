@@ -1,54 +1,71 @@
-import React from "react";
-import MutationObserver from 'mutationobserver-shim';
-import { render, screen } from "@testing-library/react";
-import userEvent from '@testing-library/user-event';
-import CheckoutForm from "./CheckoutForm";
+import React from "react"
+import MutationObserver from 'mutationobserver-shim'
+import { render, screen, waitFor } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
+import CheckoutForm from "./CheckoutForm"
 
 // Write up the two tests here and make sure they are testing what the title shows
 
 test("renders without errors", () => {
-    render (<CheckoutForm />)   
-    // type into all six inputs
-    //  1. query for all inputs
-    //  2. run the change event to add text 
-    const firstNameInput = screen.getByLabelText(/First Name:/i)
-    const lastNameInput = screen.getByLabelText(/Last Name:/i)
-    const addressNameInput = screen.getByLabelText(/Address:/i)
-    const cityNameInput = screen.getByLabelText(/City:/i)
-    const stateNameInput = screen.getByLabelText(/State:/i)
-    const zipNameInput = screen.getByLabelText(/Zip:/i)
-
-     
+    //Arrange: render CheckoutForm
+    render(<CheckoutForm />)
 });
 
-test("shows success message on submit with form details", () => {
+test("shows success message on submit with form details", async () => {
+    //Arrange: render CheckoutForm
+    render(<CheckoutForm />);
 
-    render (<CheckoutForm />)   
-    // type into all six inputs
-    //  1. query for all inputs
-    //  2. run the change event to add text 
-    const firstNameInput = screen.getByLabelText(/First Name:/i)
-    const lastNameInput = screen.getByLabelText(/Last Name:/i)
-    const addressNameInput = screen.getByLabelText(/Address:/i)
-    const cityNameInput = screen.getByLabelText(/City:/i)
-    const stateNameInput = screen.getByLabelText(/State:/i)
-    const zipNameInput = screen.getByLabelText(/Zip:/i)
+    // ACT Part:
 
-    // type message
-    userEvent.type(firstNameInput, "Warren");
-    userEvent.type(lastNameInput, "Longman");
-    userEvent.type(addressNameInput, "331 Ladera Dr");
-    userEvent.type(cityNameInput, "Vallejo");
-    userEvent.type(stateNameInput, "California");
-    userEvent.type(zipNameInput, "94591");
+    // 1. Find the first name field.
+    const firstNameField = screen.getByLabelText(/first name:/i)
+    
+    // 2. Type a first name into the field.
+    userEvent.type(firstNameField, "First")
 
-   //  Find our button.
-   const button = screen.getByRole("button");
-   // 8. Click our button.
-   userEvent.click(button);
+    // 3. Find the last name field.
+    const lastNameField = screen.getByLabelText(/last name:/i);
 
-   const outputP = screen.findByText("Warren");
-   outputP.then(output=>  {
-       expect(output).toBeInTheDocument();
-   });
+    // 4. Type a last name into the field.
+    userEvent.type(lastNameField, "Last");
+
+    // 5. Find the address field.
+    const addressField = screen.getByLabelText(/address:/i)
+
+    // 6. Type a address into the field.
+    userEvent.type(addressField, "123 Address Rd.")
+    
+    // 7. Find the city field.
+    const cityField = screen.getByLabelText(/city:/i)
+
+    // 8. Type a city into the field.
+    userEvent.type(cityField, "City")
+    
+    // 7. Find the state field.
+    const stateField = screen.getByLabelText(/state:/i)
+
+    // 8. Type a state into the field.
+    userEvent.type(stateField, "CA")
+    
+    // 9. Find the zip field.
+    const zipField = screen.getByLabelText(/zip:/i)
+
+    // 10. Type a zip into the field.
+    userEvent.type(zipField, "94123")
+
+    // 11. Find the button.
+    const button = screen.getByRole("button")
+
+    // 12. Click our button.
+    userEvent.click(button)
+    
+    // 13. Find a success message element .
+    await waitFor (() => {
+        const successMessageElement = screen.queryByTestId("successMessage");
+
+        //Assert: 
+        //  Verify that a success message appear when all form inputs are filled with valid data.
+        expect(successMessageElement).toBeInTheDocument();
+    })    
+
 });

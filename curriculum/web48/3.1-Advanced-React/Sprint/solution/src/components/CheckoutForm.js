@@ -1,5 +1,5 @@
-import React from "react";
-import useForm from "../hooks/useForm";
+import React from "react"
+import useForm from "../hooks/useForm"
 
 const initialValue = {
   firstName: "",
@@ -10,14 +10,11 @@ const initialValue = {
   zip: "",
 };
 
-// This form should be handled by a "useForm" custom hook
-// Build out the logic needed for a form custom hook (see the useForm.js file)
-// and replace the necessary stateful logic from CheckoutForm with the hook
-
-const CheckoutForm = (props) => {
-  
-  const [values, showSuccessMessage, handleChanges, handleSubmit] = useForm (initialValue);
-
+const CheckoutForm = (props) => {  
+  // This form should be handled by a "useForm" custom hook
+  // Build out the logic needed for a form custom hook (see the useForm.js file)
+  // and replace the necessary stateful logic from CheckoutForm with the hook
+  const [values, showSuccessMessage, handleChanges, handleSubmit] = useForm(initialValue);
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -64,7 +61,7 @@ const CheckoutForm = (props) => {
       {showSuccessMessage && (
         <div className="success-message" data-testid="successMessage">
           <p>
-            You have ordered some plants! Woo-hoo! <span role="img" aria-label="ordered"> 🎉 </span>
+            You have ordered some plants! Woo-hoo! <span role="img" aria-label="sugar"> 🎉</span>
           </p>
           <p>Your new green friends will be shipped to:</p>
           <br />
