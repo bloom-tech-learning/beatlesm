@@ -17,9 +17,9 @@ componentDidMount () {
 
   }  
 
-  componentWillUnmount() {
+componentWillUnmount() {
     this.setState = (state,callback)=>{
       return;
     };
-  }  
+}  
 ```
