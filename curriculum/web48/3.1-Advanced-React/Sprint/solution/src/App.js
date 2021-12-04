@@ -1,5 +1,6 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+
 
 import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
@@ -26,7 +27,7 @@ function App() {
       <Router>
         <nav className="container">
           <h1>
-            React Plants <span role="img" aria-label="plants"> 🌿 </span>
+            React Plants <span role="img" aria-label="fern">🌿</span>
           </h1>
           <ul className="steps">
             <li>

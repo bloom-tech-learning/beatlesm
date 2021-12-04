@@ -2,28 +2,31 @@ import React, { Component } from "react";
 import axios from "axios";
 
 export default class PlantList extends Component {
-  
+  // add state with a property called "plants" - initialize as an empty array
   state = {
-    // add state with a property called "plants" - initialize as an empty array
     plants:[]
-  }  
+  }
 
-  componentDidMount() {
+  componentDidMount () {
+    this._isMounted = true;
     // when the component mounts:
     //   - fetch data from the server endpoint - http://localhost:3333/plants
     //   - set the returned plants array to this.state.plants
     axios.get(`http://localhost:3333/plants`)
-        .then(res=> {
-          // debugger
-          this.setState({
-            ...this.state,
-            plants: res.data
-          });  
+      .then (resp => {        
+        this.setState({
+          // ...this.state,
+          plants: resp.data
         })
-        .catch(err=> {
-            console.log(err);
-        });
-  }
+      })
+      .catch(err => console.log(err))
+  }  
+
+  componentWillUnmount() {
+    this.setState = (state,callback)=>{
+      return;
+    };
+  }  
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
@@ -37,9 +40,9 @@ export default class PlantList extends Component {
               <p className="plant-scientific-name">{plant.scientificName}</p>
               <p>{plant.description}</p>
               <div className="plant-bottom-row">
-                <p>${plant.price}</p>
-                <p> <span role="img" aria-label="light"> ☀️ </span> {plant.light}</p>
-                <p> <span role="img" aria-label="watering"> 💦  </span>{plant.watering}x/month</p>
+                <p >${plant.price}</p>
+                <p> <span role="img" aria-label="light"> ☀️ </span>{plant.light}</p>
+                <p> <span role="img" aria-label="light"> 💦  </span> {plant.watering}x/month</p>
               </div>
               <button
                 className="plant-button"
