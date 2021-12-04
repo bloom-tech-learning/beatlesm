@@ -2,6 +2,8 @@
 
 #### [Sprint Challenge 3.1: Advanced React - React Plants 🌿](./solution/README.md)
 
+#### [Sprint Challenge 3.1: Some Issues](./solution/issues.md)
+
 #### [Sprint 3.1 - Interview Questions](./solution/interview_answers.md)
 
 #### [Sprint 3.1 - Assessment](./Assessment.md)
