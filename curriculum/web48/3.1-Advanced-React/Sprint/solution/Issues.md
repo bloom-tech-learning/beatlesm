@@ -6,9 +6,11 @@
   for example: `<span role="img" aria-label="plants"> 🌿 </span>`
 
 ## 3.1.2 - The issue of 
-![ScreenShot](ScreenShot.png)
+
+  ![ScreenShot](ScreenShot.png)
 
 - The answer is (Plantlist.js):
+
 ```
 componentDidMount () {
     this._isMounted = true;
@@ -17,9 +19,9 @@ componentDidMount () {
 
   }  
 
-  componentWillUnmount() {
+componentWillUnmount() {
     this.setState = (state,callback)=>{
       return;
     };
-  }  
+}  
 ```
