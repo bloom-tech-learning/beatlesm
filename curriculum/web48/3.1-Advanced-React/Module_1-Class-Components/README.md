@@ -17,8 +17,9 @@
 
 ### [Objective 3 - Respond to Events Triggered by User Interaction and Handle User Input via Forms in React](./Objects/Object_3.md)
 
+-   [3.1.1 - Lecture Slides](https://docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
 
-#### [Check For Understanding](./Objects/Understanding.md)
+- 	[Check For Understanding](./Objects/Understanding.md)
 
 
 ### Today’s Office Hours fro web 48:
