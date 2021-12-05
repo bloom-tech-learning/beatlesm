@@ -19,7 +19,7 @@
 
 - 	[Check For Understanding](./Objects/Understanding.md)
 
-### Today’s Office Hours fro web 48:
+#### Today’s Office Hours fro web 48:
 
 -	Hey all! Today we did a brief review of array methods, classes in (and out) of React, and some good old fashion debugging.
 
