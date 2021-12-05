@@ -21,20 +21,14 @@
 #### [Check For Understanding](./Objects/Understanding.md)
 
 
-### Today’s Office Hours:
+### Today’s Office Hours fro web 48:
 
 -	Hey all! Today we did a brief review of array methods, classes in (and out) of React, and some good old fashion debugging.
 
-	-	[Meeting Recording](https://lambdaschool.zoom.us/rec/share/y--FjsRZE6gICVZnuU3zDLIDCz_qbYUg_H0w1zTboroyYtCWPP038AKnUK73Ztac.tkS4VgMxQPMh8uB_)
+	-	[Web 48: 3.1.1 - Meeting Recording](https://lambdaschool.zoom.us/rec/share/y--FjsRZE6gICVZnuU3zDLIDCz_qbYUg_H0w1zTboroyYtCWPP038AKnUK73Ztac.tkS4VgMxQPMh8uB_)
+	-	[Web 49: 3.1.1 -Monday QA: ](https://bloomtech.zoom.us/rec/share/GG8XmFWPEzoLzo_rGYXlQOqao9p25QqaILEKznRNiP1x8RveT0ZCNCw-lMt8IPHM.i19Ib7zGA9vgTXRV)
 
--	You can find the code for the session [here](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js):
+-	You can find the Web 48 code for the session [here](https://codesandbox.io/s/quiet-mountain-08rxn?file=/src/App.js):
 
-
-##  Unit 3.1 This week’s Office Hours:
-
-[Monday QA: ](https://bloomtech.zoom.us/rec/share/GG8XmFWPEzoLzo_rGYXlQOqao9p25QqaILEKznRNiP1x8RveT0ZCNCw-lMt8IPHM.i19Ib7zGA9vgTXRV)
-[Tuesday QA: ](https://bloomtech.zoom.us/rec/share/n_pN5vT3RkfhUbT7umAZtTpqV8t1HSJfE9DM4vZkGjhZmPWGD-oZ-SOUsQ0o4ZiP.2EVsEfI7-aISe5Hs)
-[Wednesday QA: ](https://bloomtech.zoom.us/rec/share/2cpifDmw5-cmY5Md2CgZBBC1oBoGVGOn2HyrutUFDvc2qSHDYCqGj9kyp7uXMzbp.PSGH0OypCLfl9Uft)
-[Thursday QA: ](https://bloomtech.zoom.us/rec/share/KaCRGSZmUS68CFkT5M5ukBCtUQk_Q_YXVFLMp1M4VPGhMcWlVXaUSdkYjx66vTRM.VAKp2A19D1ebdzCs)
 
 
