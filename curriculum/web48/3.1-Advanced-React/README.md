@@ -33,3 +33,7 @@ Every component in React has what we call a lifecycle. The lifecycle is a part o
 In this module, we will learn about automated testing and how to write unit tests with Jest and React-testing-library.
 
 ### [3.1 - Sprint](./Sprint/README.md)
+
+- [Sprint 3.1 - Interview Questions](./solution/interview_answers.md)
+
+- [Sprint 3.1 - Assessment](./Assessment.md)

@@ -2,7 +2,7 @@
 
 #### [Assignment 3.1.3](./Assign313/README.md):
 
--   **[https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)**
+-   [https://github.com/beatlesm/web-module-project-custom-hook](https://github.com/beatlesm/web-module-project-custom-hook)
    
 #### [Guided project 3.1.3](./Guided313):
 
@@ -15,7 +15,6 @@
 -   **[Youtube - Web49GP - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://youtu.be/GHgSdZb_rOQ)**
 -   **[Youtube - Web49OH - Composing and Sharing Non-Visual Behaviors with Warren C. Longmire](https://www.dropbox.com/home/LambdaSchool/U3-W49/W3.1/12012021)**
 
-
 ### [Objective 1 - define stateful logic](./Objects/Object_1.md)
 
 ### [Objective 2 - Apply Non-Visual Behavior (Stateful Logic) With Custom Hooks](./Objects/Object_2.md)
@@ -27,7 +26,6 @@
 -	[3.1.3 - Project: Composing and Sharing Non-Visual Behaviors](./Objects/Project.md)
 
 -	[3.1.3 - Check For Understanding](./Objects/Understanding.md)
-
 
 ### Today’s Office Hours for Web 48:
 
