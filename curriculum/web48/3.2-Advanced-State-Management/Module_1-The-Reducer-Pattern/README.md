@@ -1,4 +1,4 @@
-# Module 1 - The Reducer Pattern
+# [Module 1 - The Reducer Pattern]((./Objects/Object_1.md))
 
 #### [Assignment 3.2.1](./Assign321/README.md):
 
@@ -27,4 +27,4 @@ Today we walked through building a todo app using reducers and some general bug 
 
 -   [CodeSandbox](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
 
--   **[https://github.com/beatlesm/reducer-qa-321](https://github.com/beatlesm/reducer-qa-321)**
+-   [https://github.com/beatlesm/reducer-qa-321](https://github.com/beatlesm/48321-reducer-qa)
