@@ -109,4 +109,4 @@ case "ADD_HOBBY":
 
 
 
-[Previous](./Object_3.md) | [Module 1](../../Module_1-Class-Components/README.md)
+[Previous](./QA.md) | [Module 1](../../Module_1-Class-Components/README.md)
