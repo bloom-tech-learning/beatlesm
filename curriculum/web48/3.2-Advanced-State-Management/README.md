@@ -2,7 +2,7 @@
 
 ## [The Reducer Pattern](./Module_1-The-Reducer-Pattern/README.md)
 
--   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+-   [3.2.1 - Lecture Slides](https://docs.google.com/presentation/d/1XsvFOLkcYtTqXoldXzi5NPvVWwhoBn_JGDqplKDP4yc/edit?usp=sharing)
 
 [Check For Understanding](./Module_1-The-Reducer-Pattern/Objects/Understanding.md)
 
@@ -10,7 +10,7 @@ The difficulties of storing and efficiently performing logic on data within comp
 
 ## [Redux](./Module_2-Redux/README.md)
 
--   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+-   [3.2.1 - Lecture Slides]()
 
 [Check For Understanding](./Module_2-Redux/Objects/Understanding.md)
 
@@ -18,7 +18,7 @@ React is a very sophisticated UI-component library that can be used with a few o
 
 ## [Async Redux](./Module_3-Async-Redux/README.md)
 
--   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+-   [3.2.1 - Lecture Slides]()
 
 [Check For Understanding](./Module_3-Async-Redux/Objects/Understanding.md)
 
@@ -26,7 +26,7 @@ By nature Redux is synchronous. Because of this, we need to apply some middlewar
 
 ## [Context API](./Module_4-Contex-API/README.md)
 
--   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+-   [3.2.1 - Lecture Slides]()
 
 [Check For Understanding](./Module_4-Contex-API/Objects/Understanding.md)
 
