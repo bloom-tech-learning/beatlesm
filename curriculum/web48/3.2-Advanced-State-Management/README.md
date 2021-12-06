@@ -2,11 +2,15 @@
 
 ## [The Reducer Pattern](./Module_1-The-Reducer-Pattern/README.md)
 
+-   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+
 [Check For Understanding](./Module_1-The-Reducer-Pattern/Objects/Understanding.md)
 
 The difficulties of storing and efficiently performing logic on data within components become more and more apparent as the number of data increases. Consequently, as components grow and deal with larger sets of data, the storing and transportation of state across the entire application increasingly becomes more cumbersome. Reducers offer one possible way to address this problem within the component. At the level of the application, an elegant combination of the Context API with reducers provides one possible way that React developers can manage global state.
 
 ## [Redux](./Module_2-Redux/README.md)
+
+-   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
 
 [Check For Understanding](./Module_2-Redux/Objects/Understanding.md)
 
@@ -14,11 +18,15 @@ React is a very sophisticated UI-component library that can be used with a few o
 
 ## [Async Redux](./Module_3-Async-Redux/README.md)
 
+-   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+
 [Check For Understanding](./Module_3-Async-Redux/Objects/Understanding.md)
 
 By nature Redux is synchronous. Because of this, we need to apply some middleware to extend the functionality of our Redux package to allow for things like promises (which are asynchronous). This module will teach you how to set up Redux-Thunk as a middleware for Redux. You will also learn how to use the Redux-Thunk package to extend your actions so that you can consume promises.
 
 ## [Context API](./Module_4-Contex-API/README.md)
+
+-   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
 
 [Check For Understanding](./Module_4-Contex-API/Objects/Understanding.md)
 

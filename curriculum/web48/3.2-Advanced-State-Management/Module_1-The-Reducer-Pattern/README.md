@@ -17,7 +17,8 @@
 
 ### [Objective 3 - employ the useReducer hook to manage state in a component](./Objects/Object_3.md)
 
-### [Check For Understanding](./Objects/Understanding.md)
+-   [3.2.1 - Lecture Slides](https:i//docs.google.com/presentation/d/1OVVjER35KhqjXIW-MD_n6hHubpX5_AruuFfv_Yg6Wb0/edit?usp=sharing)
+-   [Check For Understanding](./Objects/Understanding.md)
 
 ## QA Video for web 48:
 

@@ -22,7 +22,7 @@ Writing immutable code can be challenging - your JavaScript skills will really b
 
 Here is a replit that will help you understand mutable code. In the next objective below, we will learn how to write immutable code.
 
-Follow along with the exercises here (Links to an external site.) (Links to an external site.)
+Follow along with the exercises [here](https://replit.com/@snowkid314/understandingMutations)
 
 ## Challenge
 

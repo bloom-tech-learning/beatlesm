@@ -1,16 +1,12 @@
-#  Module 3.1.1 Project Class - Components 
+#  Module 3.1.1 The Reducer Pattern
 
-Today we will learn all about classes in React. Then, we will use classes to build out our components. Class components have been a big part of the React ecosystem because they brought a lot of functionality that we normally didn't get with the React API when using function components. Now with hooks, that functionality is available in function components. However, many projects will still have class components in them, and we need to be prepared to work with classes when we see them.
+The difficulties of storing and efficiently performing logic on data within components become more and more apparent as the number of data increases. Consequently, as components grow and deal with larger sets of data, the storing and transportation of state across the entire application increasingly becomes more cumbersome. Reducers offer one possible way to address this problem within the component. At the level of the application, an elegant combination of the Context API with reducers provides one possible way that React developers can manage global state.
 
-##  Module Project
+## Module Project
 
-[Class Based Components - React Todo](https://github.com/beatlesm/web-module-project-class-components)
+-   [Reducer Calculator](https://github.com/bloominstituteoftechnology/web-module-project-reducer)
 
-## Guided Project - setState 
-
-
-[3.1.1 Guided Project ](https://github.com/beatlesm/web-guided-project-class-components)
-
+Complete a working in browser calculator using the reducer pattern! In this project, you will work step by step building the functionality behind the pre-build calculator UI.
 
 
 

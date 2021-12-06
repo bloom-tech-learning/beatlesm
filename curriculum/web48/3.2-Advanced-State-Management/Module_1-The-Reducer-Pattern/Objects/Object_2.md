@@ -33,13 +33,13 @@ const reducer = (state) => {
 }
 ```
 
-Again, we are returning a new object and are not directly mutating or overriding the initialState object.
+Again, we are returning a new object and are not directly mutating or overriding the `initialState` object.
 
 This reducer function is a pure function without any side effects. Therefore, reducer functions are the perfect fit for managing changes in state while maintaining the immutability we want in our components.
 
 We've discussed the nature of the incoming state value, but what about the action?
 
-The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a ```type``` property, which will "inform" the reducer actions happening in the app. The type allows the reducer to know what part of the state needs to change.
+The action, represented by an object, contains properties related to some action that happens in our apps. Every action object is required to have a ```type``` property, which will "inform" the reducer actions happening in the app. The `type` allows the reducer to know what part of the state needs to change.
 
 Let's look at how we can use this to manage state in our apps.
 
