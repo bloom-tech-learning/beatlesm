@@ -65,6 +65,6 @@ For fun, you could go as far as you would like for stretch, but the main goal of
 
 
 
-[Previous](./Object_2.md) | [Next](./Understanding.md)
+[Previous](./Object_2.md) | [Next](./Project.md)
 
 
