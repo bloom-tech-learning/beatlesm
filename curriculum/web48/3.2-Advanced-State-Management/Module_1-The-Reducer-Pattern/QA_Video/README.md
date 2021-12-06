@@ -24,7 +24,8 @@
 ## Stretch Tutorial:
 -   Business Logic - [The outline of the data and types of manipulations of data needed to create a working application](https://simplicable.com/new/business-logic)
 
-## QA Video:
+## QA Video web 48:
+
 Today we walked through building a todo app using reducers and some general bug fixes.
 
 -   [Module 1 - The Reducer Pattern QA Video](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
@@ -32,3 +33,12 @@ Today we walked through building a todo app using reducers and some general bug 
 -   [CodeSandbox](https://codesandbox.io/s/condescending-mendel-eco1h?file=/src/App.js)
 
 -   **[https://github.com/beatlesm/reducer-qa-321](https://github.com/beatlesm/reducer-qa-321)**
+
+## QA Video web 49:
+
+Today we walked through building a todo app using reducers and some general bug fixes.
+
+-   [Web 49 3.2.1 OH - The Reducer Pattern QA Video](https://youtu.be/JXdfQebuHI8)
+
+-   [Web 49 3.2.1 OH - CodeSandbox](https://codesandbox.io/s/wizardly-cerf-rtzk5)
+
