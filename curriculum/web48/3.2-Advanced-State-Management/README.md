@@ -1,5 +1,4 @@
 # WEB - 3.2 - Advanced State Management
-[back to Unit 3](../README.md)
 
 ## [The Reducer Pattern](./Module_1-The-Reducer-Pattern/README.md)
 
@@ -26,3 +25,5 @@ By nature Redux is synchronous. Because of this, we need to apply some middlewar
 In this module, we will learn about automated testing and how to write unit tests with Jest and React-testing-library.
 
 In your typical React application, state is passed top-down (parent to child) via props, but this can become very cumbersome quickly, especially when many components across your application require those props. However, with the introduction of React’s context API, you no longer have to pass props down from component to component - what React devs call "prop drilling." Instead, we can now store data on a context object and retrieve that data in the necessary components from the context object, not props!
+
+## [Sprint Challenge](./Sprint)
