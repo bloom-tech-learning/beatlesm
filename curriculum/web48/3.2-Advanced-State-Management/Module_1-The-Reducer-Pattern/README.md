@@ -1,15 +1,15 @@
-# [Module 1 - The Reducer Pattern]((./Objects/Object_1.md))
+# [Module 1 - The Reducer Pattern](./Objects/Object_1.md)
 
 #### [Assignment 3.2.1](./Assign321/README.md):
 
--   **[https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)**
+-   [https://github.com/beatlesm/web-module-project-reducer](https://github.com/beatlesm/web-module-project-reducer)
    
 #### [Guided project 3.2.1](./Guided321):
 
 -   [Youtube - Web48 GP  - The Reducer Pattern](https://youtu.be/QJkTHWeKOJ8)
 -   [Youtube - Web48 OH  - The Reducer Pattern](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
 
-#### [QA Video](./QA_Video/README.md)
+
 
 ### [Objective 1 - Explain What Immutability is in Programming and Demonstrate its Benefits](./Objects/Object_1.md)
 
