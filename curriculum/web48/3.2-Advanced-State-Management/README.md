@@ -10,7 +10,7 @@ The difficulties of storing and efficiently performing logic on data within comp
 
 ## [Redux](./Module_2-Redux/README.md)
 
--   [3.2.1 - Lecture Slides]()
+-   [3.2.2 - Lecture Slides](https://docs.google.com/presentation/d/1d1obD6mw8ZmUuvs5zYOvZvlhS5Nlo_cvI9oLbyx0Mow/edit#slide=id.g6e1547e6a2_0_88)
 
 [Check For Understanding](./Module_2-Redux/Objects/Understanding.md)
 
