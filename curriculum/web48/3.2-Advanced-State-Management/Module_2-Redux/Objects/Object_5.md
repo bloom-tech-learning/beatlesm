@@ -84,6 +84,6 @@ In your app that you were working on earlier, create a reducer that will handle 
 
 
 
-[Previous](./Object_4.md) | [Next](./Understanding.md)
+[Previous](./Object_4.md) | [Next](./Project.md)
 
 
