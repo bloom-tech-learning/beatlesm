@@ -1,13 +1,15 @@
-## [Module 2 - Redux](https://github.com/beatlesm/web/tree/main/3.2/Module322)
+## [Module 2 - Redux](./Objects/Object_1.md)
 
 #### [Assignment 3.2.2](./Assign322/README.md):
 
--   **[https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)**
+-   [https://github.com/beatlesm/web-module-project-redux](https://github.com/beatlesm/web-module-project-redux)
    
 #### [Guided project 3.2.2](./Guided322):
 
-#### [QA Video](./QA_Video/README.md)
+####    Youtube
 
+-  [Web48 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
+-  [Web48 3.2.2 OH - Redux ](https://www.youtube.com/watch?v=shr7l58Weg0)
 
 ### [Objective 1 - Explain What Redux is and the Problem it Solves](./Objects/Object_1.md)
 
@@ -19,4 +21,6 @@
 
 ### [Objective 5 - Write Reducers to Respond to Actions and Update State](./Objects/Object_5.md)
 
-#### [Check For Understanding](./Objects/Understanding.md)
+-   [3.2.2 - Lecture Slides](https://docs.google.com/presentation/d/1d1obD6mw8ZmUuvs5zYOvZvlhS5Nlo_cvI9oLbyx0Mow/edit?usp=sharing) 
+
+-   [Check For Understanding](./Objects/Understanding.md)
