@@ -6,6 +6,8 @@
    
 #### [Guided project 3.2.2](./Guided322):
 
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-redux](https://github.com/bloominstituteoftechnology/web-guided-project-redux)
+
 ####    Youtube
 
 -  [Web48 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
