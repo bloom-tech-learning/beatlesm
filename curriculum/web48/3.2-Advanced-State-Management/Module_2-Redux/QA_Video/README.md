@@ -1,6 +1,7 @@
 # Module 2 - Redux QA Video
 
-- [youtube - guided project 3.2 2](https://youtu.be/HRkQjFVjNH4)
+-  [Web49 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
+-  [Web48 3.2.2 OH - Redux ](https://www.youtube.com/watch?v=shr7l58Weg0)
 
 Hope you all enjoyed today’s guided Lesson!
 A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
