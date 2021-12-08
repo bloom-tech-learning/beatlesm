@@ -18,7 +18,7 @@ React is a very sophisticated UI-component library that can be used with a few o
 
 ## [Async Redux](./Module_3-Async-Redux/README.md)
 
--   [3.2.1 - Lecture Slides]()
+-   [3.2.3 - Lecture Slides](https://docs.google.com/presentation/d/1Pi7EPfPt2yp6-GykL_J-07ZEejnJqKVPy6_wO9kSGr8/edit?usp=sharing)
 
 [Check For Understanding](./Module_3-Async-Redux/Objects/Understanding.md)
 
