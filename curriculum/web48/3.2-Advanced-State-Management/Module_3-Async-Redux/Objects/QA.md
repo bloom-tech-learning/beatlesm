@@ -16,16 +16,16 @@ Here is a review of today’s material.
 
 ##  Key Terminology:
 
--   [redux middleware] - [Code that can be injected into specifically into the redux flow.](https://designingforscale.com/understanding-redux-middleware-and-writing-custom-ones/)
--   -   [redux-thunk] - [A redux middleware package that allows for functional action creators and mulitple calls to dispatch](https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60)
-[Alan Turing] - [English Mathematcian, computer scientist and cryptanalyst that is credited with creating the mathamatical basis of computer science.](https://www.youtube.com/watch?v=dNRDvLACg5Q)
+-   redux middleware - [Code that can be injected into specifically into the redux flow.](https://designingforscale.com/understanding-redux-middleware-and-writing-custom-ones/)
+-   redux-thunk - [A redux middleware package that allows for functional action creators and mulitple calls to dispatch](https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60)
+-   Alan Turing - [English Mathematcian, computer scientist and cryptanalyst that is credited with creating the mathamatical basis of computer science.](https://www.youtube.com/watch?v=dNRDvLACg5Q)
 
 ##  Key Concepts:
 
--   [Finite State Machine] - [A mathematical model used to map the states and transitions between states in a given system.](https://www.youtube.com/watch?v=I0HBrcE_HOI)
--   [middleware] - [Code that can be injected into a larger applications process.](https://redux.js.org/understanding/history-and-design/middleware)
+-   Finite State Machine - [A mathematical model used to map the states and transitions between states in a given system.](https://www.youtube.com/watch?v=I0HBrcE_HOI)
+-   middleware - [Code that can be injected into a larger applications process.](https://redux.js.org/understanding/history-and-design/middleware)
 
-## QA Video:
+
 
 
 
