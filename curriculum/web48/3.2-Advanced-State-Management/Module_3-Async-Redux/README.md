@@ -1,6 +1,6 @@
 ## [Module 3 - Async Redux](./Objects/Object_1.md)
 
-#### [Assignment 3.2.3](./Assign323/README.md):
+#### [Assignment 3.2.3](./Assign323):
 
 -   [https://github.com/beatlesm/web-module-project-async-redux](https://github.com/beatlesm/web-module-project-async-redux)
    
