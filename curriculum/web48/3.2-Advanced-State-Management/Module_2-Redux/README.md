@@ -12,6 +12,8 @@
 
 -  [Web48 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
 -  [Web48 3.2.2 OH - Redux ](https://www.youtube.com/watch?v=shr7l58Weg0)
+-  [Web49 3.2.2 GP - Redux](https://youtu.be/SeKXpBy1WpI)
+-  [Web49 3.2.2 OH - Redux ](https://youtu.be/1QLBGMZiMsw)
 
 ### [Objective 1 - Explain What Redux is and the Problem it Solves](./Objects/Object_1.md)
 
