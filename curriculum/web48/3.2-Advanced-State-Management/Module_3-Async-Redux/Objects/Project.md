@@ -4,7 +4,7 @@ By nature Redux is synchronous. Because of this, we need to apply some Middlewar
 
 ##  Module Project
 
--   [3.2.3 - React-Redux App](Links to an external site.)
+-   [3.2.3 - React-Redux App](https://github.com/bloominstituteoftechnology/web-module-project-async-redux)
 
 Build a React-Redux app that consumes data from an API of your choosing.
 
