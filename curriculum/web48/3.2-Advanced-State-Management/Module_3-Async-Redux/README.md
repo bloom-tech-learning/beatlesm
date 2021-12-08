@@ -15,6 +15,7 @@
 ####    Youtube
 
 -  [Web46 3.2.3 GP - Async Redux](https://www.youtube.com/watch?v=HQo-qedtgBU)
+-  [Web48 3.2.3 GP - Async Redux](https://www.dropbox.com/home/LambdaSchool/U3/w3.2/11032021?preview=LS_11032021_0910_1.mp4)
 -  Web49 3.2.3 OH - Async Redux
 
 ### [Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications](./Objects/Object_1.md)
