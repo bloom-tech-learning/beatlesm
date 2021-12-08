@@ -8,7 +8,7 @@ By nature Redux is synchronous. Because of this, we need to apply some Middlewar
 
 Build a React-Redux app that consumes data from an API of your choosing.
 
-## [Guided project 3.2.3](../Guided323):
+## [Guided project 3.2.3](../Guided323)
 
 -   [https://github.com/bloominstituteoftechnology/web-guided-project-async-redux](https://github.com/bloominstituteoftechnology/web-guided-project-async-redux)
 
