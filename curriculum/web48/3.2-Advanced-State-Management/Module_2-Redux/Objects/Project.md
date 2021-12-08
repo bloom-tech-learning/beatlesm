@@ -9,6 +9,17 @@ React is a very sophisticated UI-component library that can be used with a few o
 
 In this project, you are given the skeleton/structure/styling of a React app. There is even some state built-in for you. Your job will be to implement React-Redux as the state management system for this application.
 
+## [Guided project 3.2.2](./Guided322):
+
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-redux](https://github.com/bloominstituteoftechnology/web-guided-project-redux)
+
+####    Youtube
+
+-  [Web48 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
+-  [Web48 3.2.2 OH - Redux ](https://www.youtube.com/watch?v=shr7l58Weg0)
+-  [Web49 3.2.2 GP - Redux](https://youtu.be/SeKXpBy1WpI)
+-  [Web49 3.2.2 OH - Redux ](https://youtu.be/1QLBGMZiMsw)
+
 
 
 [Previous](./Object_5.md) | [Next](./QA.md)

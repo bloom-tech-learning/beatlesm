@@ -8,6 +8,17 @@ The difficulties of storing and efficiently performing logic on data within comp
 
 Complete a working in browser calculator using the reducer pattern! In this project, you will work step by step building the functionality behind the pre-build calculator UI.
 
+## [Guided project 3.2.1](./Guided321):
+
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-reducer](https://github.com/bloominstituteoftechnology/web-guided-project-reducer)
+
+-   [Youtube - Web48 GP  - The Reducer Pattern](https://youtu.be/QJkTHWeKOJ8)
+-   [Youtube - Web48 OH  - The Reducer Pattern](https://lambdaschool.zoom.us/rec/share/81iJ9a7AjfdcVpw6jGb_B5PKDShz_oi8CETv4tE-Zq0n5gjxlkTepTFXq_6JaDby.qedQrbSC7-hBdM04)
+
+-   [Youtube - Web49 GP  - The Reducer Pattern](https://youtu.be/g9wOD1dNXhI)
+-   [Web 49 3.2.1 OH - The Reducer Pattern QA Video](https://youtu.be/JXdfQebuHI8)
+-   [Web 49 3.2.1 OH - CodeSandbox](https://codesandbox.io/s/wizardly-cerf-rtzk5)
+
 
 
 [Previous](./Object_3.md) | [Next](./QA.md)
