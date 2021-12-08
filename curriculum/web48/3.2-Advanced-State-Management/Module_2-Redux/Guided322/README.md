@@ -1,2 +1,2 @@
-# Module 1 - The Reducer Pattern - guided project
+# Guided Project 3.2.2 -  Redux
 
