@@ -16,7 +16,7 @@ For our purposes, a state machine has:
 
 It helps to think in terms of states instead of transitions.
 
-Redux is NOT a finite state machine, but the thinking in states helps our understanding of how Redux works.
+Redux is **NOT** a finite state machine, but the thinking in states helps our understanding of how Redux works.
 
 A simple example would be an application with two main parts: 1) a control dashboard and 2) a display. The application can be expressed in states and actions like so:
 
