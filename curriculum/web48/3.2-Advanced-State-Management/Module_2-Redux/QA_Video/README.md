@@ -1,7 +1,9 @@
 # Module 2 - Redux QA Video
 
--  [Web49 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
+-  [Web48 3.2.2 GP - Redux](https://youtu.be/HRkQjFVjNH4)
 -  [Web48 3.2.2 OH - Redux ](https://www.youtube.com/watch?v=shr7l58Weg0)
+-  [Web49 3.2.2 GP - Redux](https://youtu.be/SeKXpBy1WpI)
+-  [Web49 3.2.2 OH - Redux ](https://youtu.be/1QLBGMZiMsw)
 
 Hope you all enjoyed today’s guided Lesson!
 A reminder if that office hours are from 1:30 - 2:30 Lambda Time.
@@ -31,9 +33,19 @@ Here is a review of today’s material.
 
 -   [Redux Deep Dive](https://daveceddia.com/redux-tutorial/)
 
-## QA Video:
+## QA Video web 48:
  
  Only video!!!
 
 -   [Module 2 - Redux QA Video](https://www.youtube.com/watch?v=shr7l58Weg0)
+
+## QA Video web 49:
+
+Today’s Office Hours:
+Included some module project debugs and a full todo app walkthrough using redux!
+
+-   [Web 49 3.2.1 OH - The Reducer Pattern QA Video](https://youtu.be/1QLBGMZiMsw)
+
+-   [Web 49 3.2.1 OH - CodeSandbox](https://codesandbox.io/s/focused-leaf-n7fdk)
+
 
