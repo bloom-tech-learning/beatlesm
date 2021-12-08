@@ -10,10 +10,7 @@
 
 ####    Youtube
 
--  [Web48 3.2.3 GP - Async Redux]()
--  [Web48 3.2.3 OH - Async Redux]()
--  [Web49 3.2.3 GP - Async Redux]()
--  [Web49 3.2.3 OH - Async Redux]()
+-  [Web46 3.2.3 GP - Async Redux](https://www.youtube.com/watch?v=HQo-qedtgBU)
 
 ### [Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications](./Objects/Object_1.md)
 
@@ -21,6 +18,6 @@
 
 ### [Objective 3 - Effectively Use Redux-Thunk and Asynchronous Action Creators to Consume Data From External API's](./Objects/Object_3.md)
 
--   [3.2.3 - Lecture Slides]
+-   [3.2.3 - Lecture Slides](https://docs.google.com/presentation/d/1Pi7EPfPt2yp6-GykL_J-07ZEejnJqKVPy6_wO9kSGr8/edit?usp=sharing)
 
 -   [Check For Understanding](./Objects/Understanding.md)
