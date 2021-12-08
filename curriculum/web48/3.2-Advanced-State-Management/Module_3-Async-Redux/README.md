@@ -4,13 +4,14 @@
 
 -   [https://github.com/beatlesm/web-module-project-async-redux](https://github.com/beatlesm/web-module-project-async-redux)
    
-#### [Guided project 3.2.3](./Guided323):
+## [Guided project 3.2.3](./Guided323):
 
--   [https://github.com/beatlesm/web-module-project-async-redux]()
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-async-redux](https://github.com/bloominstituteoftechnology/web-guided-project-async-redux)
 
 ####    Youtube
 
 -  [Web46 3.2.3 GP - Async Redux](https://www.youtube.com/watch?v=HQo-qedtgBU)
+-  [Web46 3.2.3 OH - Async Redux]()
 
 ### [Objective 1 - Describe the Finite State Machine Pattern and Its Relationship to Building Redux Applications](./Objects/Object_1.md)
 

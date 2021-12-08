@@ -1,14 +1,22 @@
-#  Module 3.2.2 Redux
+#  Module 3.2.3 - Async Redux
 
-React is a very sophisticated UI-component library that can be used with a few other libraries to build large-scale single-page applications. But as our applications scale in size, so will the data we are concerned with within our applications. And you can only start to imagine how difficult it might be to manage all of that data inside React components. Redux is a library that can help solve this problem by providing a single source of truth for our data within our application. As your team grows and as your application scales, Redux can help offset the pains that can be brought on due to complexity.
+By nature Redux is synchronous. Because of this, we need to apply some Middleware to extend the functionality of our Redux package to allow for things like promises (which are asynchronous). This module will teach you how to set up Redux-Thunk as a Middleware for Redux. You will also learn how to use the Redux-Thunk package to extend your actions so that you can consume promises.
 
 ##  Module Project
 
-[3.2.2 - Redux: Movie Database](https://github.com/bloominstituteoftechnology/web-module-project-redux)
+-   [3.2.3 - React-Redux App](Links to an external site.)
+
+Build a React-Redux app that consumes data from an API of your choosing.
+
+## [Guided project 3.2.3](./Guided323):
+
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-async-redux](https://github.com/bloominstituteoftechnology/web-guided-project-async-redux)
+
+####    Youtube
+
+-  [Web46 3.2.3 GP - Async Redux](https://www.youtube.com/watch?v=HQo-qedtgBU)
+-  [Web46 3.2.3 OH - Async Redux]()
 
 
-In this project, you are given the skeleton/structure/styling of a React app. There is even some state built-in for you. Your job will be to implement React-Redux as the state management system for this application.
 
-
-
-[Previous](./Object_5.md) | [Next](./QA.md)
+[Previous](./Object_3.md) | [Next](./QA.md)
