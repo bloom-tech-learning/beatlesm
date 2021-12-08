@@ -2,7 +2,7 @@
 
 The difficulties of storing and efficiently performing logic on data within components become more and more apparent as the number of data increases. Consequently, as components grow and deal with larger sets of data, the storing and transportation of state across the entire application increasingly becomes more cumbersome. Reducers offer one possible way to address this problem within the component. At the level of the application, an elegant combination of the Context API with reducers provides one possible way that React developers can manage global state.
 
-## [Module Project 3.2.1]((../Assign321/README.md))
+## [Module Project 3.2.1](../Assign321/README.md)
 
 -   [3.2.1 - Reducer Calculator](https://github.com/bloominstituteoftechnology/web-module-project-reducer)
 
