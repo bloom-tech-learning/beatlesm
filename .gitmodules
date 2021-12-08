@@ -259,3 +259,6 @@
 [submodule "curriculum/web48/3.1-Advanced-React/Module_2-The-React-Lifecycle/49312-web-guided-project-lifecycle"]
 	path = curriculum/web48/3.1-Advanced-React/Module_2-The-React-Lifecycle/49312-web-guided-project-lifecycle
 	url = git@github.com:bloom-tech-learning/49312-web-guided-project-lifecycle.git
+[submodule "curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/49322-web-guided-project-redux"]
+	path = curriculum/web48/3.2-Advanced-State-Management/Module_2-Redux/49322-web-guided-project-redux
+	url = git@github.com:bloom-tech-learning/49322-web-guided-project-redux.git
