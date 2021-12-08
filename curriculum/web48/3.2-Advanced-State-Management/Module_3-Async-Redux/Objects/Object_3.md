@@ -188,6 +188,6 @@ Build out a simple React/Redux app that displays dog images from the dogs API.
 
 
 
-[Previous](./Object_2.md) | [Next](./Understanding.md)
+[Previous](./Object_2.md) | [Next](./Project.md)
 
 
