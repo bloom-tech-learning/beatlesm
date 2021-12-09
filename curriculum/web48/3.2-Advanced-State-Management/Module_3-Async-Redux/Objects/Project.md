@@ -17,6 +17,11 @@ Build a React-Redux app that consumes data from an API of your choosing.
 -  [Web46 3.2.3 GP - Async Redux](https://www.youtube.com/watch?v=HQo-qedtgBU)
 -  [Web46 3.2.3 OH - Async Redux]()
 
+#### ref
+
+-   [https://randomuser.me/documentation#howto](https://randomuser.me/documentation#howto)
+
+
 
 
 [Previous](./Object_3.md) | [Next](./QA.md)
