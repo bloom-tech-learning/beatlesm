@@ -1,5 +1,3 @@
-[back to home](https://github.com/beatlesm/)
-
 ## [Module 4 - Context API](./Objects/Object_1.md)
 
 #### [Assignment 3.2.4](./Assign324/README.md):
@@ -8,7 +6,7 @@
    
 #### [Guided project 3.2.4](./Guided324):
 
-
+-   [https://github.com/bloominstituteoftechnology/web-guided-project-context](https://github.com/bloominstituteoftechnology/web-guided-project-context)
 
 ####    Youtube
 
