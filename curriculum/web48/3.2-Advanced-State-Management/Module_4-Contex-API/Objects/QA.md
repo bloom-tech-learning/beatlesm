@@ -38,3 +38,6 @@ Today we covered some basic debugging and a through review of a redux project fr
 -   [CodeSandbox](https://codesandbox.io/s/admiring-cdn-vkjj1?file=/src/actions/index.js)
 
 -   [https://github.com/beatlesm/redux-qa-324](https://github.com/beatlesm/redux-qa-324)
+
+
+[Previous](./Project.md) | [Next](./Understanding.md)
