@@ -1,4 +1,4 @@
-# Advanced State Management Sprint Challenge
+# 3.2 - Advanced State Management Sprint Challenge
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
