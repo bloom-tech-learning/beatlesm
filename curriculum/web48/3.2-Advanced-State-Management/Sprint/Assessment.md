@@ -1,4 +1,4 @@
-# 3.2 Sprint Assessment
+# 3.2 - Sprint Assessment
 
 ## Question 1
 
