@@ -2,6 +2,10 @@
 
 ## [The Reducer Pattern](./Module_1-The-Reducer-Pattern/README.md)
 
+-   [3.2.1 - Reducer Calculator](https://github.com/bloominstituteoftechnology/web-module-project-reducer)
+
+-   [3.2.1 - Guided Project](https://github.com/bloominstituteoftechnology/web-guided-project-reducer)
+
 -   [3.2.1 - Lecture Slides](https://docs.google.com/presentation/d/1XsvFOLkcYtTqXoldXzi5NPvVWwhoBn_JGDqplKDP4yc/edit?usp=sharing)
 
 [Check For Understanding](./Module_1-The-Reducer-Pattern/Objects/Understanding.md)
@@ -26,7 +30,7 @@ By nature Redux is synchronous. Because of this, we need to apply some middlewar
 
 ## [Context API](./Module_4-Contex-API/README.md)
 
--   [3.2.1 - Lecture Slides]()
+-   [3.2.4 - Lecture Slides](https://docs.google.com/presentation/d/1xiN7mFjhVgJ0aHDvcQ7B4RwcftIODhlPEUlHJasLfag/edit?usp=sharing)
 
 [Check For Understanding](./Module_4-Contex-API/Objects/Understanding.md)
 
