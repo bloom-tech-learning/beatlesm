@@ -1,4 +1,4 @@
-# Sprint Challenge: Advanced React - React Plants 🌿
+# 3.2 - Sprint Challenge: Advanced React - React Plants 🌿
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
