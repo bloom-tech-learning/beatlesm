@@ -52,7 +52,7 @@ In your typical React application, state is passed top-down (parent to child) vi
 
 ## [Sprint Challenge](./Sprint)
 
--   [3.2 - Sprint Project]((https://github.com/bloominstituteoftechnology/web-sprint-challenge-advanced-state-management))
+-   [3.2 - Sprint Project](https://github.com/bloominstituteoftechnology/web-sprint-challenge-advanced-state-management)
 
 #### [Sprint 3.2 - Interview Questions](./Sprint/solution/interview_answers.md)
 
