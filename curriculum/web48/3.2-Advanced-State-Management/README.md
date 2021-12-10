@@ -6,9 +6,9 @@
 
 -   [3.2.1 - Guided Project](https://github.com/bloominstituteoftechnology/web-guided-project-reducer)
 
--   [3.2.1 - Lecture Slides](https://docs.google.com/presentation/d/1XsvFOLkcYtTqXoldXzi5NPvVWwhoBn_JGDqplKDP4yc/edit?usp=sharing)
+[3.2.1 - Lecture Slides](https://docs.google.com/presentation/d/1XsvFOLkcYtTqXoldXzi5NPvVWwhoBn_JGDqplKDP4yc/edit?usp=sharing)
 
-[Check For Understanding](./Module_1-The-Reducer-Pattern/Objects/Understanding.md)
+[3.2.1 - Check For Understanding](./Module_1-The-Reducer-Pattern/Objects/Understanding.md)
 
 The difficulties of storing and efficiently performing logic on data within components become more and more apparent as the number of data increases. Consequently, as components grow and deal with larger sets of data, the storing and transportation of state across the entire application increasingly becomes more cumbersome. Reducers offer one possible way to address this problem within the component. At the level of the application, an elegant combination of the Context API with reducers provides one possible way that React developers can manage global state.
 
