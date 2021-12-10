@@ -12,6 +12,9 @@ In this project you'll take take an existing e-commerce store and refactor the a
 
 -   [https://github.com/bloominstituteoftechnology/web-guided-project-context](https://github.com/bloominstituteoftechnology/web-guided-project-context)
 
+-   [https://github.com/bloom-tech-learning/49324-web-guided-project-context](https://github.com/bloom-tech-learning/49324-web-guided-project-context)
+
+
 ####    Youtube
 
 -  [Web48 3.2.4 GP - Context API](https://youtu.be/YkTsMnWhEvg)
