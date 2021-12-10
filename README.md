@@ -1,17 +1,8 @@
 ### Hi there 👋
 
-- 🌱 I’m currently learning ... **[Web 3.1](./curriculum/web48/)**
+- 🌱 I’m currently learning ... 
 
--   **[https://github.com/beatlesm/web-guided-project-class-components](https://github.com/beatlesm/web-guided-project-class-components)**
--   **[https://github.com/beatlesm/web-guided-project-lifecycle](https://github.com/beatlesm/web-guided-project-lifecycle)**
--   **[https://github.com/beatlesm/web-guided-project-custom-hook](https://github.com/beatlesm/web-guided-project-custom-hook)**
--   **[https://github.com/beatlesm/web-guided-project-testing-web-apps](https://github.com/beatlesm/web-guided-project-testing-web-apps)**
--   **[https://github.com/beatlesm/web-sprint-challenge-advanced-react](https://github.com/beatlesm/web-sprint-challenge-advanced-react)**
 
--   **[https://github.com/beatlesm/web-module-project-class-components](https://github.com/beatlesm/web-module-project-class-components)**
--   **[https://github.com/beatlesm/web-module-project-lifecycle](https://github.com/beatlesm/web-module-project-lifecycle)**
-
--   **[https://github.com/bloominstituteoftechnology/web-guided-project-class-components](https://github.com/bloominstituteoftechnology/web-guided-project-class-components)**
 
 - ⚡ Fun fact: ...
 
