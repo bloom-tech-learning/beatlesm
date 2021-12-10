@@ -20,6 +20,6 @@
 
 #### [Sprint Challenge 3.2: Advanced State Management Sprint Challenge](./solution/README.md)
 
-#### [Sprint 3.1 - Interview Questions](./solution/interview_answers.md)
+#### [Sprint 3.2 - Interview Questions](./solution/interview_answers.md)
 
-#### [Sprint 3.1 - Assessment](./Assessment.md)
+#### [Sprint 3.2 - Assessment](./Assessment.md)
