@@ -15,7 +15,8 @@ Build a React-Redux app that consumes data from an API of your choosing.
 ####    Youtube
 
 -  [Web46 3.2.3 GP - Async Redux](https://www.youtube.com/watch?v=HQo-qedtgBU)
--  [Web46 3.2.3 OH - Async Redux]()
+
+-  [Web46 3.2.3 OH - Async Redux](https://youtu.be/iEQl3QLainI)
 
 #### ref
 
