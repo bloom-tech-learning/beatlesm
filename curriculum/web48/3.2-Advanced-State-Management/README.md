@@ -26,7 +26,7 @@ React is a very sophisticated UI-component library that can be used with a few o
 
 ## [Async Redux](./Module_3-Async-Redux/README.md)
 
--   [3.2.3 - Async-Redux](https://github.com/bloominstituteoftechnology/web-module-project-async-redux)
+-   [3.2.3 - Async Redux](https://github.com/bloominstituteoftechnology/web-module-project-async-redux)
 
 -   [3.2.3 - Guided Project](https://github.com/bloominstituteoftechnology/web-guided-project-async-redux)
 
@@ -38,7 +38,7 @@ By nature Redux is synchronous. Because of this, we need to apply some middlewar
 
 ## [Context API](./Module_4-Contex-API/README.md)
 
-- [Module 3.2.4 - Testing React: React Shopping Cart](https://github.com/bloominstituteoftechnology/web-module-project-context)
+- [3.2.4 - Testing React: React Shopping Cart](https://github.com/bloominstituteoftechnology/web-module-project-context)
 
 - [3.2.4 - Guided Project](https://github.com/bloominstituteoftechnology/web-guided-project-context)
 
@@ -51,6 +51,8 @@ In this module, we will learn about automated testing and how to write unit test
 In your typical React application, state is passed top-down (parent to child) via props, but this can become very cumbersome quickly, especially when many components across your application require those props. However, with the introduction of React’s context API, you no longer have to pass props down from component to component - what React devs call "prop drilling." Instead, we can now store data on a context object and retrieve that data in the necessary components from the context object, not props!
 
 ## [Sprint Challenge](./Sprint)
+
+-   [3.2 - Sprint Project]((https://github.com/bloominstituteoftechnology/web-sprint-challenge-advanced-state-management))
 
 #### [Sprint 3.2 - Interview Questions](./Sprint/solution/interview_answers.md)
 
