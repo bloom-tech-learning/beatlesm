@@ -6,6 +6,5 @@
 
 - ⚡ Fun fact: ...
 
-[Class](./curriculum/web48/README.md)
+[Class](https://github.com/webagora/web-sprints/tree/main/curriculum/bloomtech)
 
-- [Home](https://github.com/beatlesm) / [beatlesm](https://github.com/beatlesm/beatlesm) /  [web](https://github.com/beatlesm/beatlesm/tree/main/curriculum/web48)
